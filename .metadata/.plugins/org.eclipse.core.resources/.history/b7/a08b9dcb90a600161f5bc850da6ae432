@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.scMachineFile org.eventb.core.accurate="false" org.eventb.core.configuration="org.eventb.core.fwd;de.prob.units.mchBase">
+<org.eventb.core.scSeesContext name="'" org.eventb.core.scTarget="/peterson/c0.bcc" org.eventb.core.source="/peterson/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.seesContext#("/>
+<org.eventb.core.scInternalContext name="c0">
+<org.eventb.core.scCarrierSet name="S" org.eventb.core.source="/peterson/c0.buc|org.eventb.core.contextFile#c0|org.eventb.core.carrierSet#'" org.eventb.core.type="ℙ(S)"/>
+</org.eventb.core.scInternalContext>
+<org.eventb.core.scInvariant name="c1" org.eventb.core.label="inv1" org.eventb.core.predicate="w_a∈S" org.eventb.core.source="/peterson/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.invariant#*" org.eventb.core.theorem="false"/>
+<org.eventb.core.scInvariant name="c2" org.eventb.core.label="inv2" org.eventb.core.predicate="w_b∈S" org.eventb.core.source="/peterson/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.invariant#," org.eventb.core.theorem="false"/>
+<org.eventb.core.scVariable de.prob.units.unitPragmaAttribute="" name="w_a" org.eventb.core.abstract="false" org.eventb.core.concrete="true" org.eventb.core.source="/peterson/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.variable#)" org.eventb.core.type="S"/>
+<org.eventb.core.scVariable de.prob.units.unitPragmaAttribute="" name="w_b" org.eventb.core.abstract="false" org.eventb.core.concrete="true" org.eventb.core.source="/peterson/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.variable#+" org.eventb.core.type="S"/>
+<org.eventb.core.scEvent name="w_c" org.eventb.core.accurate="false" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="INITIALISATION" org.eventb.core.source="/peterson/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#'">
+<org.eventb.core.scAction name="'" org.eventb.core.assignment="w_a,w_b :∣ ⊤" org.eventb.core.label="GEN" org.eventb.core.source="/peterson/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#'"/>
+</org.eventb.core.scEvent>
+</org.eventb.core.scMachineFile>
