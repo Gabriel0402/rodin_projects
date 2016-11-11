@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<index_root>
+<pim project="/peterson">
+<rodin_index>
+<descriptor element="/peterson/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.variable#0" name="b">
+<occurrence element="/peterson/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.invariant#8" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="14" loc_char_start="13"/>
+<occurrence element="/peterson/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.variable#0" kind="org.eventb.core.declaration" loc_attribute="org.eventb.core.identifier"/>
+<occurrence element="/peterson/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#6|org.eventb.core.guard#(" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="1" loc_char_start="0"/>
+<occurrence element="/peterson/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#1|org.eventb.core.action#*" kind="org.eventb.core.modification" loc_attribute="org.eventb.core.assignment" loc_char_end="1" loc_char_start="0"/>
+<occurrence element="/peterson/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#6|org.eventb.core.action#*" kind="org.eventb.core.modification" loc_attribute="org.eventb.core.assignment" loc_char_end="1" loc_char_start="0"/>
+<occurrence element="/peterson/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.variable#0" kind="org.eventb.core.redeclaration" loc_attribute="org.eventb.core.identifier"/>
+</descriptor>
+<descriptor element="/peterson/m2.bum|org.eventb.core.machineFile#m2" name="m2">
+<occurrence element="/peterson/m2.bum|org.eventb.core.machineFile#m2" kind="org.eventb.core.declaration"/>
+</descriptor>
+<descriptor element="/peterson/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.variable#," name="turn">
+<occurrence element="/peterson/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#6|org.eventb.core.guard#)" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="12" loc_char_start="8"/>
+<occurrence element="/peterson/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#2|org.eventb.core.action#)" kind="org.eventb.core.modification" loc_attribute="org.eventb.core.assignment" loc_char_end="4" loc_char_start="0"/>
+<occurrence element="/peterson/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.invariant#8" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="4" loc_char_start="0"/>
+<occurrence element="/peterson/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.variable#," kind="org.eventb.core.redeclaration" loc_attribute="org.eventb.core.identifier"/>
+<occurrence element="/peterson/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#3|org.eventb.core.guard#)" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="12" loc_char_start="8"/>
+<occurrence element="/peterson/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.variable#," kind="org.eventb.core.declaration" loc_attribute="org.eventb.core.identifier"/>
+<occurrence element="/peterson/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#1|org.eventb.core.action#+" kind="org.eventb.core.modification" loc_attribute="org.eventb.core.assignment" loc_char_end="4" loc_char_start="0"/>
+<occurrence element="/peterson/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.invariant#9" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="4" loc_char_start="0"/>
+<occurrence element="/peterson/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#5|org.eventb.core.action#)" kind="org.eventb.core.modification" loc_attribute="org.eventb.core.assignment" loc_char_end="4" loc_char_start="0"/>
+</descriptor>
+<descriptor element="/peterson/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#7" name="leave_b">
+<occurrence element="/peterson/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#7" kind="org.eventb.core.declaration" loc_attribute="org.eventb.core.label"/>
+<occurrence element="/peterson/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.event#7|org.eventb.core.refinesEvent#'" kind="org.eventb.core.redeclaration" loc_attribute="org.eventb.core.target"/>
+</descriptor>
+<descriptor element="/peterson/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.event#4" name="leave_a">
+<occurrence element="/peterson/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.event#4" kind="org.eventb.core.declaration" loc_attribute="org.eventb.core.label"/>
+</descriptor>
+<descriptor element="/peterson/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#:" name="leave_b">
+<occurrence element="/peterson/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#:" kind="org.eventb.core.declaration" loc_attribute="org.eventb.core.label"/>
+<occurrence element="/peterson/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#7|org.eventb.core.refinesEvent#'" kind="org.eventb.core.redeclaration" loc_attribute="org.eventb.core.target"/>
+</descriptor>
+<descriptor element="/peterson/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.variable#(" name="w_a">
+<occurrence element="/peterson/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.variable#(" kind="org.eventb.core.declaration" loc_attribute="org.eventb.core.identifier"/>
+<occurrence element="/peterson/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.invariant#8" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="10" loc_char_start="7"/>
+<occurrence element="/peterson/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#2|org.eventb.core.action#(" kind="org.eventb.core.modification" loc_attribute="org.eventb.core.assignment" loc_char_end="3" loc_char_start="0"/>
+<occurrence element="/peterson/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#1|org.eventb.core.action#'" kind="org.eventb.core.modification" loc_attribute="org.eventb.core.assignment" loc_char_end="3" loc_char_start="0"/>
+<occurrence element="/peterson/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.variable#(" kind="org.eventb.core.redeclaration" loc_attribute="org.eventb.core.identifier"/>
+<occurrence element="/peterson/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#2|org.eventb.core.guard#'" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="3" loc_char_start="0"/>
+<occurrence element="/peterson/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#6|org.eventb.core.guard#)" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="3" loc_char_start="0"/>
+<occurrence element="/peterson/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#3|org.eventb.core.guard#'" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="3" loc_char_start="0"/>
+</descriptor>
+<descriptor element="/peterson/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.event#C" name="tick">
+<occurrence element="/peterson/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.event#C" kind="org.eventb.core.declaration" loc_attribute="org.eventb.core.label"/>
+</descriptor>
+<descriptor element="/peterson/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#3" name="enter_a">
+<occurrence element="/peterson/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#3" kind="org.eventb.core.declaration" loc_attribute="org.eventb.core.label"/>
+<occurrence element="/peterson/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.event#3|org.eventb.core.refinesEvent#'" kind="org.eventb.core.redeclaration" loc_attribute="org.eventb.core.target"/>
+</descriptor>
+<descriptor element="/peterson/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.variable#8" name="sta">
+<occurrence element="/peterson/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.event#2|org.eventb.core.action#)" kind="org.eventb.core.modification" loc_attribute="org.eventb.core.assignment" loc_char_end="3" loc_char_start="0"/>
+<occurrence element="/peterson/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.invariant#9" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="3" loc_char_start="0"/>
+<occurrence element="/peterson/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.invariant#D" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="7" loc_char_start="4"/>
+<occurrence element="/peterson/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.variable#8" kind="org.eventb.core.declaration" loc_attribute="org.eventb.core.identifier"/>
+<occurrence element="/peterson/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.event#1|org.eventb.core.action#'" kind="org.eventb.core.modification" loc_attribute="org.eventb.core.assignment" loc_char_end="3" loc_char_start="0"/>
+</descriptor>
+<descriptor element="/peterson/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#6" name="enter_a">
+<occurrence element="/peterson/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#3|org.eventb.core.refinesEvent#'" kind="org.eventb.core.redeclaration" loc_attribute="org.eventb.core.target"/>
+<occurrence element="/peterson/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#6" kind="org.eventb.core.declaration" loc_attribute="org.eventb.core.label"/>
+</descriptor>
+<descriptor element="/peterson/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#'" name="INITIALISATION">
+<occurrence element="/peterson/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#1" kind="org.eventb.core.redeclaration" loc_attribute="org.eventb.core.label"/>
+<occurrence element="/peterson/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#'" kind="org.eventb.core.declaration" loc_attribute="org.eventb.core.label"/>
+</descriptor>
+<descriptor element="/peterson/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.variable#*" name="w_b">
+<occurrence element="/peterson/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.event#7|org.eventb.core.action#*" kind="org.eventb.core.modification" loc_attribute="org.eventb.core.assignment" loc_char_end="3" loc_char_start="0"/>
+<occurrence element="/peterson/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.variable#*" kind="org.eventb.core.declaration" loc_attribute="org.eventb.core.identifier"/>
+<occurrence element="/peterson/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.event#3|org.eventb.core.guard#)" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="3" loc_char_start="0"/>
+<occurrence element="/peterson/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.event#5|org.eventb.core.guard#'" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="3" loc_char_start="0"/>
+<occurrence element="/peterson/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.event#5|org.eventb.core.action#_FzwzoKggEeaqo9wnrH0gew" kind="org.eventb.core.modification" loc_attribute="org.eventb.core.assignment" loc_char_end="3" loc_char_start="0"/>
+<occurrence element="/peterson/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.event#6|org.eventb.core.guard#'" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="3" loc_char_start="0"/>
+</descriptor>
+<descriptor element="/peterson/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.variable#." name="a">
+<occurrence element="/peterson/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.event#3|org.eventb.core.action#(" kind="org.eventb.core.modification" loc_attribute="org.eventb.core.assignment" loc_char_end="1" loc_char_start="0"/>
+<occurrence element="/peterson/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.event#4|org.eventb.core.action#*" kind="org.eventb.core.modification" loc_attribute="org.eventb.core.assignment" loc_char_end="1" loc_char_start="0"/>
+<occurrence element="/peterson/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.variable#." kind="org.eventb.core.declaration" loc_attribute="org.eventb.core.identifier"/>
+<occurrence element="/peterson/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.event#3|org.eventb.core.guard#(" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="1" loc_char_start="0"/>
+<occurrence element="/peterson/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.event#4|org.eventb.core.guard#'" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="1" loc_char_start="0"/>
+</descriptor>
+<descriptor element="/peterson/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.variable#=" name="stb">
+<occurrence element="/peterson/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.event#5|org.eventb.core.action#)" kind="org.eventb.core.modification" loc_attribute="org.eventb.core.assignment" loc_char_end="3" loc_char_start="0"/>
+<occurrence element="/peterson/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.event#1|org.eventb.core.action#)" kind="org.eventb.core.modification" loc_attribute="org.eventb.core.assignment" loc_char_end="3" loc_char_start="0"/>
+<occurrence element="/peterson/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.variable#=" kind="org.eventb.core.declaration" loc_attribute="org.eventb.core.identifier"/>
+<occurrence element="/peterson/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.invariant#&gt;" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="3" loc_char_start="0"/>
+</descriptor>
+<descriptor element="/peterson/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.variable#," name="a">
+<occurrence element="/peterson/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#6|org.eventb.core.action#(" kind="org.eventb.core.modification" loc_attribute="org.eventb.core.assignment" loc_char_end="1" loc_char_start="0"/>
+<occurrence element="/peterson/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.invariant#-" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="1" loc_char_start="0"/>
+<occurrence element="/peterson/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.variable#." kind="org.eventb.core.redeclaration" loc_attribute="org.eventb.core.identifier"/>
+<occurrence element="/peterson/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#'|org.eventb.core.action#)" kind="org.eventb.core.modification" loc_attribute="org.eventb.core.assignment" loc_char_end="1" loc_char_start="0"/>
+<occurrence element="/peterson/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#7|org.eventb.core.action#*" kind="org.eventb.core.modification" loc_attribute="org.eventb.core.assignment" loc_char_end="1" loc_char_start="0"/>
+<occurrence element="/peterson/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#9|org.eventb.core.guard#(" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="1" loc_char_start="0"/>
+<occurrence element="/peterson/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#6|org.eventb.core.guard#(" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="1" loc_char_start="0"/>
+<occurrence element="/peterson/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#7|org.eventb.core.guard#'" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="1" loc_char_start="0"/>
+<occurrence element="/peterson/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.invariant#1" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="9" loc_char_start="8"/>
+<occurrence element="/peterson/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.variable#," kind="org.eventb.core.declaration" loc_attribute="org.eventb.core.identifier"/>
+<occurrence element="/peterson/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.invariant#3" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="1" loc_char_start="0"/>
+</descriptor>
+<descriptor element="/peterson/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.event#1" name="INITIALISATION">
+<occurrence element="/peterson/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.event#1" kind="org.eventb.core.declaration" loc_attribute="org.eventb.core.label"/>
+</descriptor>
+<descriptor element="/peterson/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#7" name="leave_a">
+<occurrence element="/peterson/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#4|org.eventb.core.refinesEvent#'" kind="org.eventb.core.redeclaration" loc_attribute="org.eventb.core.target"/>
+<occurrence element="/peterson/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#7" kind="org.eventb.core.declaration" loc_attribute="org.eventb.core.label"/>
+</descriptor>
+<descriptor element="/peterson/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.variable#(" name="w_a">
+<occurrence element="/peterson/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#6|org.eventb.core.guard#'" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="3" loc_char_start="0"/>
+<occurrence element="/peterson/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.invariant#1" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="3" loc_char_start="0"/>
+<occurrence element="/peterson/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#'|org.eventb.core.action#'" kind="org.eventb.core.modification" loc_attribute="org.eventb.core.assignment" loc_char_end="3" loc_char_start="0"/>
+<occurrence element="/peterson/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#5|org.eventb.core.guard#'" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="3" loc_char_start="0"/>
+<occurrence element="/peterson/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.invariant#)" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="3" loc_char_start="0"/>
+<occurrence element="/peterson/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.variable#(" kind="org.eventb.core.declaration" loc_attribute="org.eventb.core.identifier"/>
+<occurrence element="/peterson/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.variable#(" kind="org.eventb.core.redeclaration" loc_attribute="org.eventb.core.identifier"/>
+<occurrence element="/peterson/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#7|org.eventb.core.action#(" kind="org.eventb.core.modification" loc_attribute="org.eventb.core.assignment" loc_char_end="3" loc_char_start="0"/>
+<occurrence element="/peterson/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#5|org.eventb.core.action#+" kind="org.eventb.core.modification" loc_attribute="org.eventb.core.assignment" loc_char_end="3" loc_char_start="0"/>
+</descriptor>
+<descriptor element="/peterson/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#6" name="enter_b">
+<occurrence element="/peterson/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#6" kind="org.eventb.core.declaration" loc_attribute="org.eventb.core.label"/>
+<occurrence element="/peterson/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.event#6|org.eventb.core.refinesEvent#'" kind="org.eventb.core.redeclaration" loc_attribute="org.eventb.core.target"/>
+</descriptor>
+<descriptor element="/peterson/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.event#5" name="wish_b">
+<occurrence element="/peterson/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.event#5" kind="org.eventb.core.declaration" loc_attribute="org.eventb.core.label"/>
+</descriptor>
+<descriptor element="/peterson/c0.buc|org.eventb.core.contextFile#c0" name="c0">
+<occurrence element="/peterson/c0.buc|org.eventb.core.contextFile#c0" kind="org.eventb.core.declaration"/>
+</descriptor>
+<descriptor element="/peterson/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.variable#:" name="eta">
+<occurrence element="/peterson/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.event#1|org.eventb.core.action#(" kind="org.eventb.core.modification" loc_attribute="org.eventb.core.assignment" loc_char_end="3" loc_char_start="0"/>
+<occurrence element="/peterson/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.event#3|org.eventb.core.action#_FzwMkKggEeaqo9wnrH0gew" kind="org.eventb.core.modification" loc_attribute="org.eventb.core.assignment" loc_char_end="3" loc_char_start="0"/>
+<occurrence element="/peterson/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.invariant#D" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="3" loc_char_start="0"/>
+<occurrence element="/peterson/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.invariant#;" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="3" loc_char_start="0"/>
+<occurrence element="/peterson/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.variable#:" kind="org.eventb.core.declaration" loc_attribute="org.eventb.core.identifier"/>
+<occurrence element="/peterson/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.event#2|org.eventb.core.action#," kind="org.eventb.core.modification" loc_attribute="org.eventb.core.assignment" loc_char_end="3" loc_char_start="0"/>
+</descriptor>
+<descriptor element="/peterson/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#2" name="wish_a">
+<occurrence element="/peterson/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#2" kind="org.eventb.core.declaration" loc_attribute="org.eventb.core.label"/>
+<occurrence element="/peterson/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.event#2|org.eventb.core.refinesEvent#'" kind="org.eventb.core.redeclaration" loc_attribute="org.eventb.core.target"/>
+</descriptor>
+<descriptor element="/peterson/m0.bum|org.eventb.core.machineFile#m0" name="m0">
+<occurrence element="/peterson/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.refinesMachine#'" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.target"/>
+<occurrence element="/peterson/m0.bum|org.eventb.core.machineFile#m0" kind="org.eventb.core.declaration"/>
+</descriptor>
+<descriptor element="/peterson/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.variable#." name="a">
+<occurrence element="/peterson/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#3|org.eventb.core.action#*" kind="org.eventb.core.modification" loc_attribute="org.eventb.core.assignment" loc_char_end="1" loc_char_start="0"/>
+<occurrence element="/peterson/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.variable#." kind="org.eventb.core.declaration" loc_attribute="org.eventb.core.identifier"/>
+<occurrence element="/peterson/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#1|org.eventb.core.action#)" kind="org.eventb.core.modification" loc_attribute="org.eventb.core.assignment" loc_char_end="1" loc_char_start="0"/>
+<occurrence element="/peterson/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.invariant#9" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="14" loc_char_start="13"/>
+<occurrence element="/peterson/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#3|org.eventb.core.guard#(" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="1" loc_char_start="0"/>
+<occurrence element="/peterson/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.variable#." kind="org.eventb.core.redeclaration" loc_attribute="org.eventb.core.identifier"/>
+</descriptor>
+<descriptor element="/peterson/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.event#2" name="wish_a">
+<occurrence element="/peterson/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.event#2" kind="org.eventb.core.declaration" loc_attribute="org.eventb.core.label"/>
+</descriptor>
+<descriptor element="/peterson/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.variable#*" name="w_b">
+<occurrence element="/peterson/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#3|org.eventb.core.guard#)" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="3" loc_char_start="0"/>
+<occurrence element="/peterson/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#5|org.eventb.core.guard#'" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="3" loc_char_start="0"/>
+<occurrence element="/peterson/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.variable#*" kind="org.eventb.core.declaration" loc_attribute="org.eventb.core.identifier"/>
+<occurrence element="/peterson/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.invariant#9" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="10" loc_char_start="7"/>
+<occurrence element="/peterson/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.variable#*" kind="org.eventb.core.redeclaration" loc_attribute="org.eventb.core.identifier"/>
+<occurrence element="/peterson/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#1|org.eventb.core.action#(" kind="org.eventb.core.modification" loc_attribute="org.eventb.core.assignment" loc_char_end="3" loc_char_start="0"/>
+<occurrence element="/peterson/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#5|org.eventb.core.action#(" kind="org.eventb.core.modification" loc_attribute="org.eventb.core.assignment" loc_char_end="3" loc_char_start="0"/>
+<occurrence element="/peterson/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#6|org.eventb.core.guard#'" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="3" loc_char_start="0"/>
+</descriptor>
+<descriptor element="/peterson/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.variable#A" name="clk">
+<occurrence element="/peterson/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.event#2|org.eventb.core.action#," kind="org.eventb.core.reference" loc_attribute="org.eventb.core.assignment" loc_char_end="7" loc_char_start="4"/>
+<occurrence element="/peterson/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.event#5|org.eventb.core.action#)" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.assignment" loc_char_end="7" loc_char_start="4"/>
+<occurrence element="/peterson/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.event#2|org.eventb.core.action#)" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.assignment" loc_char_end="7" loc_char_start="4"/>
+<occurrence element="/peterson/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.event#5|org.eventb.core.action#," kind="org.eventb.core.reference" loc_attribute="org.eventb.core.assignment" loc_char_end="7" loc_char_start="4"/>
+<occurrence element="/peterson/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.event#6|org.eventb.core.action#*" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.assignment" loc_char_end="7" loc_char_start="4"/>
+<occurrence element="/peterson/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.event#1|org.eventb.core.action#+" kind="org.eventb.core.modification" loc_attribute="org.eventb.core.assignment" loc_char_end="3" loc_char_start="0"/>
+<occurrence element="/peterson/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.event#3|org.eventb.core.action#_FzwMkKggEeaqo9wnrH0gew" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.assignment" loc_char_end="7" loc_char_start="4"/>
+<occurrence element="/peterson/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.event#C|org.eventb.core.action#+" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.assignment" loc_char_end="7" loc_char_start="4"/>
+<occurrence element="/peterson/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.variable#A" kind="org.eventb.core.declaration" loc_attribute="org.eventb.core.identifier"/>
+<occurrence element="/peterson/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.event#C|org.eventb.core.action#+" kind="org.eventb.core.modification" loc_attribute="org.eventb.core.assignment" loc_char_end="3" loc_char_start="0"/>
+<occurrence element="/peterson/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.invariant#B" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="3" loc_char_start="0"/>
+</descriptor>
+<descriptor element="/peterson/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#5" name="wish_b">
+<occurrence element="/peterson/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#5" kind="org.eventb.core.declaration" loc_attribute="org.eventb.core.label"/>
+<occurrence element="/peterson/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.event#5|org.eventb.core.refinesEvent#'" kind="org.eventb.core.redeclaration" loc_attribute="org.eventb.core.target"/>
+</descriptor>
+<descriptor element="/peterson/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.event#6" name="enter_b">
+<occurrence element="/peterson/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.event#6" kind="org.eventb.core.declaration" loc_attribute="org.eventb.core.label"/>
+</descriptor>
+<descriptor element="/peterson/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#8" name="wish_b">
+<occurrence element="/peterson/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#5|org.eventb.core.refinesEvent#'" kind="org.eventb.core.redeclaration" loc_attribute="org.eventb.core.target"/>
+<occurrence element="/peterson/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#8" kind="org.eventb.core.declaration" loc_attribute="org.eventb.core.label"/>
+</descriptor>
+<descriptor element="/peterson/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.variable#," name="turn">
+<occurrence element="/peterson/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.variable#," kind="org.eventb.core.declaration" loc_attribute="org.eventb.core.identifier"/>
+<occurrence element="/peterson/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.event#2|org.eventb.core.action#(" kind="org.eventb.core.modification" loc_attribute="org.eventb.core.assignment" loc_char_end="4" loc_char_start="0"/>
+<occurrence element="/peterson/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.event#6|org.eventb.core.guard#)" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="12" loc_char_start="8"/>
+<occurrence element="/peterson/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.event#5|org.eventb.core.action#(" kind="org.eventb.core.modification" loc_attribute="org.eventb.core.assignment" loc_char_end="4" loc_char_start="0"/>
+<occurrence element="/peterson/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.event#3|org.eventb.core.guard#)" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="12" loc_char_start="8"/>
+</descriptor>
+<descriptor element="/peterson/m1.bum|org.eventb.core.machineFile#m1" name="m1">
+<occurrence element="/peterson/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.refinesMachine#'" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.target"/>
+<occurrence element="/peterson/m1.bum|org.eventb.core.machineFile#m1" kind="org.eventb.core.declaration"/>
+</descriptor>
+<descriptor element="/peterson/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#1" name="INITIALISATION">
+<occurrence element="/peterson/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#1" kind="org.eventb.core.declaration" loc_attribute="org.eventb.core.label"/>
+<occurrence element="/peterson/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.event#1" kind="org.eventb.core.redeclaration" loc_attribute="org.eventb.core.label"/>
+</descriptor>
+<descriptor element="/peterson/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.variable#0" name="b">
+<occurrence element="/peterson/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.event#7|org.eventb.core.action#(" kind="org.eventb.core.modification" loc_attribute="org.eventb.core.assignment" loc_char_end="1" loc_char_start="0"/>
+<occurrence element="/peterson/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.variable#0" kind="org.eventb.core.declaration" loc_attribute="org.eventb.core.identifier"/>
+<occurrence element="/peterson/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.event#6|org.eventb.core.guard#(" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="1" loc_char_start="0"/>
+<occurrence element="/peterson/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.event#6|org.eventb.core.action#_FzxasKggEeaqo9wnrH0gew" kind="org.eventb.core.modification" loc_attribute="org.eventb.core.assignment" loc_char_end="1" loc_char_start="0"/>
+<occurrence element="/peterson/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.event#7|org.eventb.core.guard#'" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="1" loc_char_start="0"/>
+</descriptor>
+<descriptor element="/peterson/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.variable#." name="b">
+<occurrence element="/peterson/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.variable#0" kind="org.eventb.core.redeclaration" loc_attribute="org.eventb.core.identifier"/>
+<occurrence element="/peterson/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#9|org.eventb.core.action#(" kind="org.eventb.core.modification" loc_attribute="org.eventb.core.assignment" loc_char_end="1" loc_char_start="0"/>
+<occurrence element="/peterson/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#'|org.eventb.core.action#*" kind="org.eventb.core.modification" loc_attribute="org.eventb.core.assignment" loc_char_end="1" loc_char_start="0"/>
+<occurrence element="/peterson/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#:|org.eventb.core.guard#'" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="1" loc_char_start="0"/>
+<occurrence element="/peterson/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#6|org.eventb.core.guard#)" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="1" loc_char_start="0"/>
+<occurrence element="/peterson/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#9|org.eventb.core.guard#)" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="1" loc_char_start="0"/>
+<occurrence element="/peterson/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#:|org.eventb.core.action#*" kind="org.eventb.core.modification" loc_attribute="org.eventb.core.assignment" loc_char_end="1" loc_char_start="0"/>
+<occurrence element="/peterson/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.invariant#2" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="9" loc_char_start="8"/>
+<occurrence element="/peterson/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.variable#." kind="org.eventb.core.declaration" loc_attribute="org.eventb.core.identifier"/>
+<occurrence element="/peterson/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.invariant#\/" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="1" loc_char_start="0"/>
+<occurrence element="/peterson/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.invariant#3" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="7" loc_char_start="6"/>
+</descriptor>
+<descriptor element="/peterson/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.variable#?" name="etb">
+<occurrence element="/peterson/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.event#1|org.eventb.core.action#*" kind="org.eventb.core.modification" loc_attribute="org.eventb.core.assignment" loc_char_end="3" loc_char_start="0"/>
+<occurrence element="/peterson/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.event#6|org.eventb.core.action#*" kind="org.eventb.core.modification" loc_attribute="org.eventb.core.assignment" loc_char_end="3" loc_char_start="0"/>
+<occurrence element="/peterson/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.event#5|org.eventb.core.action#," kind="org.eventb.core.modification" loc_attribute="org.eventb.core.assignment" loc_char_end="3" loc_char_start="0"/>
+<occurrence element="/peterson/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.variable#?" kind="org.eventb.core.declaration" loc_attribute="org.eventb.core.identifier"/>
+<occurrence element="/peterson/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.invariant#@" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="3" loc_char_start="0"/>
+</descriptor>
+<descriptor element="/peterson/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#9" name="enter_b">
+<occurrence element="/peterson/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#6|org.eventb.core.refinesEvent#'" kind="org.eventb.core.redeclaration" loc_attribute="org.eventb.core.target"/>
+<occurrence element="/peterson/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#9" kind="org.eventb.core.declaration" loc_attribute="org.eventb.core.label"/>
+</descriptor>
+<descriptor element="/peterson/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.variable#*" name="w_b">
+<occurrence element="/peterson/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.invariant#2" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="3" loc_char_start="0"/>
+<occurrence element="/peterson/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#'|org.eventb.core.action#(" kind="org.eventb.core.modification" loc_attribute="org.eventb.core.assignment" loc_char_end="3" loc_char_start="0"/>
+<occurrence element="/peterson/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#8|org.eventb.core.guard#'" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="3" loc_char_start="0"/>
+<occurrence element="/peterson/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#9|org.eventb.core.guard#'" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="3" loc_char_start="0"/>
+<occurrence element="/peterson/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.variable#*" kind="org.eventb.core.declaration" loc_attribute="org.eventb.core.identifier"/>
+<occurrence element="/peterson/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.invariant#+" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="3" loc_char_start="0"/>
+<occurrence element="/peterson/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.variable#*" kind="org.eventb.core.redeclaration" loc_attribute="org.eventb.core.identifier"/>
+<occurrence element="/peterson/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#8|org.eventb.core.action#)" kind="org.eventb.core.modification" loc_attribute="org.eventb.core.assignment" loc_char_end="3" loc_char_start="0"/>
+<occurrence element="/peterson/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#:|org.eventb.core.action#(" kind="org.eventb.core.modification" loc_attribute="org.eventb.core.assignment" loc_char_end="3" loc_char_start="0"/>
+</descriptor>
+<descriptor element="/peterson/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.event#3" name="enter_a">
+<occurrence element="/peterson/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.event#3" kind="org.eventb.core.declaration" loc_attribute="org.eventb.core.label"/>
+</descriptor>
+<descriptor element="/peterson/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#5" name="wish_a">
+<occurrence element="/peterson/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#5" kind="org.eventb.core.declaration" loc_attribute="org.eventb.core.label"/>
+<occurrence element="/peterson/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#2|org.eventb.core.refinesEvent#'" kind="org.eventb.core.redeclaration" loc_attribute="org.eventb.core.target"/>
+</descriptor>
+<descriptor element="/peterson/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.variable#(" name="w_a">
+<occurrence element="/peterson/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.event#4|org.eventb.core.action#+" kind="org.eventb.core.modification" loc_attribute="org.eventb.core.assignment" loc_char_end="3" loc_char_start="0"/>
+<occurrence element="/peterson/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.event#2|org.eventb.core.guard#'" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="3" loc_char_start="0"/>
+<occurrence element="/peterson/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.event#3|org.eventb.core.guard#'" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="3" loc_char_start="0"/>
+<occurrence element="/peterson/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.event#2|org.eventb.core.action#*" kind="org.eventb.core.modification" loc_attribute="org.eventb.core.assignment" loc_char_end="3" loc_char_start="0"/>
+<occurrence element="/peterson/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.event#6|org.eventb.core.guard#)" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="3" loc_char_start="0"/>
+<occurrence element="/peterson/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.variable#(" kind="org.eventb.core.declaration" loc_attribute="org.eventb.core.identifier"/>
+</descriptor>
+<descriptor element="/peterson/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#4" name="leave_a">
+<occurrence element="/peterson/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#4" kind="org.eventb.core.declaration" loc_attribute="org.eventb.core.label"/>
+<occurrence element="/peterson/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.event#4|org.eventb.core.refinesEvent#'" kind="org.eventb.core.redeclaration" loc_attribute="org.eventb.core.target"/>
+</descriptor>
+<descriptor element="/peterson/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.event#7" name="leave_b">
+<occurrence element="/peterson/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.event#7" kind="org.eventb.core.declaration" loc_attribute="org.eventb.core.label"/>
+</descriptor>
+</rodin_index>
+<export_table>
+<export file="/peterson/m2.bum">
+<exported element="/peterson/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.event#1" name="INITIALISATION"/>
+<exported element="/peterson/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.variable#," name="turn"/>
+<exported element="/peterson/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.event#3" name="enter_a"/>
+<exported element="/peterson/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.variable#?" name="etb"/>
+<exported element="/peterson/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.variable#." name="a"/>
+<exported element="/peterson/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.event#5" name="wish_b"/>
+<exported element="/peterson/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.variable#0" name="b"/>
+<exported element="/peterson/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.variable#8" name="sta"/>
+<exported element="/peterson/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.event#4" name="leave_a"/>
+<exported element="/peterson/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.variable#(" name="w_a"/>
+<exported element="/peterson/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.variable#A" name="clk"/>
+<exported element="/peterson/m0.bum|org.eventb.core.machineFile#m0" name="m0"/>
+<exported element="/peterson/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.variable#*" name="w_b"/>
+<exported element="/peterson/m1.bum|org.eventb.core.machineFile#m1" name="m1"/>
+<exported element="/peterson/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.event#2" name="wish_a"/>
+<exported element="/peterson/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.variable#=" name="stb"/>
+<exported element="/peterson/m2.bum|org.eventb.core.machineFile#m2" name="m2"/>
+<exported element="/peterson/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.event#C" name="tick"/>
+<exported element="/peterson/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.variable#:" name="eta"/>
+<exported element="/peterson/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.event#6" name="enter_b"/>
+<exported element="/peterson/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.event#7" name="leave_b"/>
+</export>
+<export file="/peterson/m1.bum">
+<exported element="/peterson/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#3" name="enter_a"/>
+<exported element="/peterson/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#5" name="wish_b"/>
+<exported element="/peterson/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#1" name="INITIALISATION"/>
+<exported element="/peterson/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.variable#," name="turn"/>
+<exported element="/peterson/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.variable#(" name="w_a"/>
+<exported element="/peterson/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.variable#." name="a"/>
+<exported element="/peterson/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.variable#*" name="w_b"/>
+<exported element="/peterson/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.variable#0" name="b"/>
+<exported element="/peterson/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#4" name="leave_a"/>
+<exported element="/peterson/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#2" name="wish_a"/>
+<exported element="/peterson/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#7" name="leave_b"/>
+<exported element="/peterson/m0.bum|org.eventb.core.machineFile#m0" name="m0"/>
+<exported element="/peterson/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#6" name="enter_b"/>
+<exported element="/peterson/m1.bum|org.eventb.core.machineFile#m1" name="m1"/>
+</export>
+<export file="/peterson/m0.bum">
+<exported element="/peterson/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.variable#." name="b"/>
+<exported element="/peterson/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.variable#," name="a"/>
+<exported element="/peterson/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#'" name="INITIALISATION"/>
+<exported element="/peterson/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#8" name="wish_b"/>
+<exported element="/peterson/m0.bum|org.eventb.core.machineFile#m0" name="m0"/>
+<exported element="/peterson/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#5" name="wish_a"/>
+<exported element="/peterson/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#:" name="leave_b"/>
+<exported element="/peterson/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.variable#*" name="w_b"/>
+<exported element="/peterson/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.variable#(" name="w_a"/>
+<exported element="/peterson/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#7" name="leave_a"/>
+<exported element="/peterson/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#6" name="enter_a"/>
+<exported element="/peterson/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#9" name="enter_b"/>
+</export>
+<export file="/peterson/c0.buc">
+<exported element="/peterson/c0.buc|org.eventb.core.contextFile#c0" name="c0"/>
+</export>
+</export_table>
+<graph is_sorted="true">
+<node label="/peterson/m0.bum" mark="false" order_pos="0"/>
+<node label="/peterson/c0.buc" mark="false" order_pos="1"/>
+<node label="/peterson/m1.bum" mark="false" order_pos="2">
+<predecessor label="/peterson/m0.bum"/>
+</node>
+<node label="/peterson/m2.bum" mark="false" order_pos="3">
+<predecessor label="/peterson/m1.bum"/>
+</node>
+</graph>
+<unprocessed file="/peterson/c0.bcc"/>
+<unprocessed file="/peterson/c0.bpo"/>
+<unprocessed file="/peterson/c0.bpr"/>
+<unprocessed file="/peterson/c0.bps"/>
+<unprocessed file="/peterson/m0.bcm"/>
+<unprocessed file="/peterson/m0.bpo"/>
+<unprocessed file="/peterson/m0.bpr"/>
+<unprocessed file="/peterson/m0.bps"/>
+<unprocessed file="/peterson/m1.bcm"/>
+<unprocessed file="/peterson/m1.bpo"/>
+<unprocessed file="/peterson/m1.bpr"/>
+<unprocessed file="/peterson/m1.bps"/>
+<unprocessed file="/peterson/m2.bcm"/>
+<unprocessed file="/peterson/m2.bpo"/>
+<unprocessed file="/peterson/m2.bpr"/>
+<unprocessed file="/peterson/m2.bps"/>
+</pim>
+<delta_list>
+<delta element="/peterson/m0.bcm_tmp" kind="FILE_CHANGED"/>
+</delta_list>
+<indexer_registry>
+<registry_entry element_type="org.eventb.core.machineFile">
+<indexer id="machineIndexer"/>
+</registry_entry>
+<registry_entry element_type="org.eventb.core.contextFile">
+<indexer id="contextIndexer"/>
+</registry_entry>
+</indexer_registry>
+</index_root>
