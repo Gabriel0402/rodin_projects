@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.prFile version="1">
+<org.eventb.core.prProof name="leave_a/grd1/GRD"/>
+<org.eventb.core.prProof name="leave_b/grd1/GRD"/>
+<org.eventb.core.prProof name="critical_a/clk/EQL"/>
+<org.eventb.core.prProof name="critical_b/clk/EQL"/>
+</org.eventb.core.prFile>

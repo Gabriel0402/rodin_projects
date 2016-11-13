@@ -7,8 +7,7 @@
 <org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p1" org.eventb.core.prHyps=""/>
 </org.eventb.core.prAnte>
 </org.eventb.core.prRule>
-<org.eventb.core.prIdent name="turn'" org.eventb.core.type="ℤ"/>
-<org.eventb.core.prPred name="p0" org.eventb.core.predicate="turn'=0∧0=1⇒0=0"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="0 − 0≥0"/>
 <org.eventb.core.prPred name="p1" org.eventb.core.predicate="⊤"/>
 <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
 <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.trueGoal"/>
@@ -39,15 +38,15 @@
 </org.eventb.core.prRule>
 </org.eventb.core.prAnte>
 </org.eventb.core.prRule>
-<org.eventb.core.prIdent name="b" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="clk" org.eventb.core.type="ℤ"/>
 <org.eventb.core.prPred name="p3" org.eventb.core.predicate="w_a=0">
 <org.eventb.core.prIdent name="w_a" org.eventb.core.type="ℤ"/>
 </org.eventb.core.prPred>
 <org.eventb.core.prPred name="p5" org.eventb.core.predicate="⊤"/>
-<org.eventb.core.prPred name="p0" org.eventb.core.predicate="1=0∧1=1⇒b=0"/>
 <org.eventb.core.prPred name="p2" org.eventb.core.predicate="⊤⇒a=0">
 <org.eventb.core.prIdent name="a" org.eventb.core.type="ℤ"/>
 </org.eventb.core.prPred>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="clk − clk≥0"/>
 <org.eventb.core.prPred name="p1" org.eventb.core.predicate="w_a=0⇒a=0">
 <org.eventb.core.prIdent name="a" org.eventb.core.type="ℤ"/>
 <org.eventb.core.prIdent name="w_a" org.eventb.core.type="ℤ"/>
@@ -143,9 +142,9 @@
 <org.eventb.core.prIdent name="turn" org.eventb.core.type="ℤ"/>
 <org.eventb.core.prIdent name="w_b" org.eventb.core.type="ℤ"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.genMPL2"/>
 <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
 <org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.genMPL2"/>
 </org.eventb.core.prProof>
 <org.eventb.core.prProof name="leave_a/inv6/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
 <org.eventb.core.lang name="L"/>
