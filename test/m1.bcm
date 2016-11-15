@@ -12,8 +12,8 @@
 <org.eventb.core.scInvariant name="c4" org.eventb.core.label="inv2" org.eventb.core.predicate="tB∈ℤ" org.eventb.core.source="/test/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.invariant#1" org.eventb.core.theorem="false"/>
 <org.eventb.core.scInvariant name="c5" org.eventb.core.label="inv3" org.eventb.core.predicate="clk∈ℤ" org.eventb.core.source="/test/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.invariant#3" org.eventb.core.theorem="false"/>
 <org.eventb.core.scInvariant name="c6" org.eventb.core.label="inv4" org.eventb.core.predicate="0≤tA∧tA≤clk∧0≤tB∧tB≤clk" org.eventb.core.source="/test/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.invariant#4" org.eventb.core.theorem="false"/>
-<org.eventb.core.scInvariant name="c7" org.eventb.core.label="inv5" org.eventb.core.predicate="tA≤tB⇒tB − tA≤5" org.eventb.core.source="/test/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.invariant#5" org.eventb.core.theorem="false"/>
-<org.eventb.core.scInvariant name="c8" org.eventb.core.label="inv6" org.eventb.core.predicate="oA=TRUE∧oB=FALSE⇒clk − tA≤5" org.eventb.core.source="/test/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.invariant#_BVvT4Kq3EeaTqcvyE5SUOA" org.eventb.core.theorem="false"/>
+<org.eventb.core.scInvariant name="c7" org.eventb.core.label="inv5" org.eventb.core.predicate="tA≤tB⇒tB − tA≤d" org.eventb.core.source="/test/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.invariant#5" org.eventb.core.theorem="false"/>
+<org.eventb.core.scInvariant name="c8" org.eventb.core.label="inv6" org.eventb.core.predicate="oA=TRUE∧oB=FALSE⇒clk − tA≤d" org.eventb.core.source="/test/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.invariant#_twUZkKsQEea16diop8JXWA" org.eventb.core.theorem="false"/>
 <org.eventb.core.scVariable de.prob.units.unitPragmaAttribute="" name="clk" org.eventb.core.abstract="false" org.eventb.core.concrete="true" org.eventb.core.source="/test/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.variable#2" org.eventb.core.type="ℤ"/>
 <org.eventb.core.scVariable de.prob.units.unitPragmaAttribute="" name="oA" org.eventb.core.abstract="true" org.eventb.core.concrete="true" org.eventb.core.source="/test/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.variable#(" org.eventb.core.type="BOOL"/>
 <org.eventb.core.scVariable de.prob.units.unitPragmaAttribute="" name="oB" org.eventb.core.abstract="true" org.eventb.core.concrete="true" org.eventb.core.source="/test/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.variable#*" org.eventb.core.type="BOOL"/>
@@ -41,7 +41,7 @@
 <org.eventb.core.scAction name="+" org.eventb.core.assignment="tB ≔ clk" org.eventb.core.label="act2" org.eventb.core.source="/test/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#-|org.eventb.core.action#*"/>
 </org.eventb.core.scEvent>
 <org.eventb.core.scEvent name="clo" org.eventb.core.accurate="true" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="Tick" org.eventb.core.source="/test/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#6">
-<org.eventb.core.scGuard name="'" org.eventb.core.label="grd1" org.eventb.core.predicate="oA=TRUE∧oB=FALSE⇒clk+1 − tA≤5" org.eventb.core.source="/test/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#6|org.eventb.core.guard#'" org.eventb.core.theorem="false"/>
+<org.eventb.core.scGuard name="'" org.eventb.core.label="grd1" org.eventb.core.predicate="oA=TRUE∧oB=FALSE⇒clk+1 − tA≤d" org.eventb.core.source="/test/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#6|org.eventb.core.guard#'" org.eventb.core.theorem="false"/>
 <org.eventb.core.scAction name="(" org.eventb.core.assignment="clk ≔ clk+1" org.eventb.core.label="act1" org.eventb.core.source="/test/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#6|org.eventb.core.action#("/>
 </org.eventb.core.scEvent>
 </org.eventb.core.scMachineFile>

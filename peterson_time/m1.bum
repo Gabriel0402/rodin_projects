@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.machineFile org.eventb.core.configuration="org.eventb.core.fwd;de.prob.units.mchBase" org.eventb.texttools.text_lastmodified="1479221839572" org.eventb.texttools.text_representation="machine m1 refines m0  sees c0&#10;&#10;variables w_a w_b turn a b&#10;&#10;invariants&#10;  @inv1 turn=0∧w_a=1⇒b=0&#10;  @inv2 turn=1∧w_b=1⇒a=0&#10;&#10;events&#10;  event INITIALISATION&#10;    then&#10;      @act1 w_a ≔ 0&#10;      @act2 w_b ≔ 0&#10;      @act4 a ≔ 0&#10;      @act5 b ≔ 0&#10;      @act6 turn:∈{0,1}&#10;  end&#10;&#10;  event wish_a refines wish_a&#10;    where&#10;      @grd1 w_a=0&#10;    then&#10;      @act1 w_a≔1&#10;      @act2 turn≔1&#10;  end&#10;&#10;  event enter_a refines enter_a&#10;    where&#10;      @grd1 w_a=1&#10;      @grd2 a=0&#10;      @grd3 w_b=0 ∨ turn=0&#10;    then&#10;      @act1 a≔1&#10;  end&#10;&#10;  event leave_a extends leave_a&#10;  end&#10;&#10;  event wish_b refines wish_b&#10;    where&#10;      @grd1 w_b = 0&#10;    then&#10;      @act1 w_b≔1&#10;      @act2 turn≔0&#10;  end&#10;&#10;  event enter_b refines enter_b&#10;    where&#10;      @grd1 w_b=1&#10;      @grd2 b=0&#10;      @grd3 w_a=0 ∨ turn=1&#10;    then&#10;      @act1 b≔1&#10;  end&#10;&#10;  event leave_b extends leave_b&#10;  end&#10;end&#10;" version="5">
+<org.eventb.core.refinesMachine name="_bKiisKs7Eea5beP2ZPHwyg" org.eventb.core.target="m0"/>
+<org.eventb.core.seesContext name="_bKiisas7Eea5beP2ZPHwyg" org.eventb.core.target="c0"/>
+<org.eventb.core.event name="'" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="INITIALISATION">
+<org.eventb.core.action name="_bKjJwKs7Eea5beP2ZPHwyg" org.eventb.core.assignment="w_a ≔ 0" org.eventb.core.label="act1"/>
+<org.eventb.core.action name="_bKjJwas7Eea5beP2ZPHwyg" org.eventb.core.assignment="w_b ≔ 0" org.eventb.core.label="act2"/>
+<org.eventb.core.action name="_bKjJwqs7Eea5beP2ZPHwyg" org.eventb.core.assignment="a ≔ 0" org.eventb.core.label="act4"/>
+<org.eventb.core.action name="_bKjJw6s7Eea5beP2ZPHwyg" org.eventb.core.assignment="b ≔ 0" org.eventb.core.label="act5"/>
+<org.eventb.core.action name="_bKjJxKs7Eea5beP2ZPHwyg" org.eventb.core.assignment="turn:∈{0,1}" org.eventb.core.label="act6"/>
+</org.eventb.core.event>
+<org.eventb.core.variable name="_bKjJxas7Eea5beP2ZPHwyg" org.eventb.core.identifier="w_a"/>
+<org.eventb.core.variable name="_bKjJxqs7Eea5beP2ZPHwyg" org.eventb.core.identifier="w_b"/>
+<org.eventb.core.variable name="_bKjJx6s7Eea5beP2ZPHwyg" org.eventb.core.identifier="turn"/>
+<org.eventb.core.variable name="_bKjJyKs7Eea5beP2ZPHwyg" org.eventb.core.identifier="a"/>
+<org.eventb.core.variable name="_bKjJyas7Eea5beP2ZPHwyg" org.eventb.core.identifier="b"/>
+<org.eventb.core.invariant name="_bKjJyqs7Eea5beP2ZPHwyg" org.eventb.core.label="inv1" org.eventb.core.predicate="turn=0∧w_a=1⇒b=0"/>
+<org.eventb.core.invariant name="_bKjJy6s7Eea5beP2ZPHwyg" org.eventb.core.label="inv2" org.eventb.core.predicate="turn=1∧w_b=1⇒a=0"/>
+<org.eventb.core.event name="_bKjJzKs7Eea5beP2ZPHwyg" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="wish_a">
+<org.eventb.core.refinesEvent name="_bKjJzas7Eea5beP2ZPHwyg" org.eventb.core.target="wish_a"/>
+<org.eventb.core.guard name="_bKjJzqs7Eea5beP2ZPHwyg" org.eventb.core.label="grd1" org.eventb.core.predicate="w_a=0"/>
+<org.eventb.core.action name="_bKjJz6s7Eea5beP2ZPHwyg" org.eventb.core.assignment="w_a≔1" org.eventb.core.label="act1"/>
+<org.eventb.core.action name="_bKjJ0Ks7Eea5beP2ZPHwyg" org.eventb.core.assignment="turn≔1" org.eventb.core.label="act2"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_bKjJ0as7Eea5beP2ZPHwyg" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="enter_a">
+<org.eventb.core.refinesEvent name="_bKjJ0qs7Eea5beP2ZPHwyg" org.eventb.core.target="enter_a"/>
+<org.eventb.core.guard name="_bKjJ06s7Eea5beP2ZPHwyg" org.eventb.core.label="grd1" org.eventb.core.predicate="w_a=1"/>
+<org.eventb.core.guard name="_bKjJ1Ks7Eea5beP2ZPHwyg" org.eventb.core.label="grd2" org.eventb.core.predicate="a=0"/>
+<org.eventb.core.guard name="_bKjJ1as7Eea5beP2ZPHwyg" org.eventb.core.label="grd3" org.eventb.core.predicate="w_b=0 ∨ turn=0"/>
+<org.eventb.core.action name="_bKjJ1qs7Eea5beP2ZPHwyg" org.eventb.core.assignment="a≔1" org.eventb.core.label="act1"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_bKjJ16s7Eea5beP2ZPHwyg" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="leave_a">
+<org.eventb.core.refinesEvent name="_bKjJ2Ks7Eea5beP2ZPHwyg" org.eventb.core.target="leave_a"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_bKjJ2as7Eea5beP2ZPHwyg" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="wish_b">
+<org.eventb.core.refinesEvent name="_bKjJ2qs7Eea5beP2ZPHwyg" org.eventb.core.target="wish_b"/>
+<org.eventb.core.guard name="_bKjw0Ks7Eea5beP2ZPHwyg" org.eventb.core.label="grd1" org.eventb.core.predicate="w_b = 0"/>
+<org.eventb.core.action name="_bKjw0as7Eea5beP2ZPHwyg" org.eventb.core.assignment="w_b≔1" org.eventb.core.label="act1"/>
+<org.eventb.core.action name="_bKjw0qs7Eea5beP2ZPHwyg" org.eventb.core.assignment="turn≔0" org.eventb.core.label="act2"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_bKjw06s7Eea5beP2ZPHwyg" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="enter_b">
+<org.eventb.core.refinesEvent name="_bKjw1Ks7Eea5beP2ZPHwyg" org.eventb.core.target="enter_b"/>
+<org.eventb.core.guard name="_bKjw1as7Eea5beP2ZPHwyg" org.eventb.core.label="grd1" org.eventb.core.predicate="w_b=1"/>
+<org.eventb.core.guard name="_bKjw1qs7Eea5beP2ZPHwyg" org.eventb.core.label="grd2" org.eventb.core.predicate="b=0"/>
+<org.eventb.core.guard name="_bKjw16s7Eea5beP2ZPHwyg" org.eventb.core.label="grd3" org.eventb.core.predicate="w_a=0 ∨ turn=1"/>
+<org.eventb.core.action name="_bKjw2Ks7Eea5beP2ZPHwyg" org.eventb.core.assignment="b≔1" org.eventb.core.label="act1"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_bKjw2as7Eea5beP2ZPHwyg" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="leave_b">
+<org.eventb.core.refinesEvent name="_bKjw2qs7Eea5beP2ZPHwyg" org.eventb.core.target="leave_b"/>
+</org.eventb.core.event>
+</org.eventb.core.machineFile>
