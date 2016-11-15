@@ -1,22 +1,25 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <org.eventb.core.psFile>
-<org.eventb.core.psStatus name="INITIALISATION/inv6/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="33" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="INITIALISATION/inv7/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="33" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="INITIALISATION/inv8/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="33" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="INITIALISATION/inv9/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="33" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="INITIALISATION/inv10/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="55" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="wish_a/inv6/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="55" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="wish_a/inv8/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="55" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="wish_a/inv10/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="55" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="enter_a/inv6/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="55" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="enter_a/inv10/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="55" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="leave_a/inv10/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="55" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="wish_b/inv7/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="55" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="wish_b/inv9/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="55" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="wish_b/inv10/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="55" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="enter_b/inv7/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="55" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="leave_b/inv10/INV" org.eventb.core.confidence="0" org.eventb.core.poStamp="55" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="tick/inv8/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="55" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="tick/inv9/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="55" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="tick/inv10/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="55" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="INITIALISATION/inv6/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="98" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="INITIALISATION/inv7/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="98" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="INITIALISATION/inv8/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="98" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="INITIALISATION/inv9/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="98" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="INITIALISATION/inv10/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="105" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="INITIALISATION/inv11/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="105" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="INITIALISATION/inv12/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="105" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="wish_a/inv6/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="105" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="wish_a/inv8/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="105" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="wish_a/inv10/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="105" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="wish_a/inv11/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="105" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="wish_a/inv12/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="105" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="enter_a/inv6/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="105" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="enter_a/inv10/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="105" org.eventb.core.psBroken="true" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="enter_a/inv11/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="105" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="wish_b/inv7/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="105" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="wish_b/inv9/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="105" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="enter_b/inv7/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="105" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="tick/inv8/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="105" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="tick/inv9/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="105" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="tick/inv11/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="105" org.eventb.core.psBroken="true" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="tick/inv12/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="105" org.eventb.core.psBroken="true" org.eventb.core.psManual="false"/>
 </org.eventb.core.psFile>

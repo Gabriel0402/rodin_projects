@@ -1,14 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<org.eventb.core.poFile org.eventb.core.poStamp="36">
+<org.eventb.core.poFile org.eventb.core.poStamp="6">
 <org.eventb.core.poPredicateSet name="CTXHYP" org.eventb.core.poStamp="0"/>
-<org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.parentSet="/peterson/m3.bpo|org.eventb.core.poFile#m3|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="36">
+<org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.parentSet="/peterson/m3.bpo|org.eventb.core.poFile#m3|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="6">
 <org.eventb.core.poIdentifier name="a" org.eventb.core.type="ℤ"/>
 <org.eventb.core.poIdentifier name="b" org.eventb.core.type="ℤ"/>
 <org.eventb.core.poIdentifier name="clk" org.eventb.core.type="ℤ"/>
 <org.eventb.core.poIdentifier name="eta" org.eventb.core.type="ℤ"/>
 <org.eventb.core.poIdentifier name="etb" org.eventb.core.type="ℤ"/>
-<org.eventb.core.poIdentifier name="exa" org.eventb.core.type="ℤ"/>
-<org.eventb.core.poIdentifier name="exb" org.eventb.core.type="ℤ"/>
 <org.eventb.core.poIdentifier name="sta" org.eventb.core.type="ℤ"/>
 <org.eventb.core.poIdentifier name="stb" org.eventb.core.type="ℤ"/>
 <org.eventb.core.poIdentifier name="turn" org.eventb.core.type="ℤ"/>
@@ -32,15 +30,15 @@
 <org.eventb.core.poPredicate name="tur~" org.eventb.core.predicate="stb≤etb" org.eventb.core.source="/peterson/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.invariant#E"/>
 <org.eventb.core.poPredicate name="tus'" org.eventb.core.predicate="sta≤clk" org.eventb.core.source="/peterson/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.invariant#F"/>
 <org.eventb.core.poPredicate name="tus(" org.eventb.core.predicate="stb≤clk" org.eventb.core.source="/peterson/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.invariant#G"/>
-<org.eventb.core.poPredicate name="tus)" org.eventb.core.predicate="w_a=1∧a=0∧(w_b=0∨turn=0)⇒clk − sta≤5" org.eventb.core.source="/peterson/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.invariant#_UPV8IKqAEeaUAtwwjdaaJA"/>
+<org.eventb.core.poPredicate name="tus)" org.eventb.core.predicate="eta − sta≤5" org.eventb.core.source="/peterson/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.invariant#_qkC3AKqxEeaTqcvyE5SUOA"/>
+<org.eventb.core.poPredicate name="tus*" org.eventb.core.predicate="clk − eta≤5" org.eventb.core.source="/peterson/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.invariant#_qkC3AaqxEeaTqcvyE5SUOA"/>
+<org.eventb.core.poPredicate name="tus+" org.eventb.core.predicate="clk − sta≤10" org.eventb.core.source="/peterson/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.invariant#_qkC3AqqxEeaTqcvyE5SUOA"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTIDENTturo" org.eventb.core.parentSet="/peterson/m3.bpo|org.eventb.core.poFile#m3|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="1">
-<org.eventb.core.poIdentifier name="exa'" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poPredicateSet name="EVTIDENTturo" org.eventb.core.parentSet="/peterson/m3.bpo|org.eventb.core.poFile#m3|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="0">
 <org.eventb.core.poIdentifier name="a'" org.eventb.core.type="ℤ"/>
 <org.eventb.core.poIdentifier name="eta'" org.eventb.core.type="ℤ"/>
 <org.eventb.core.poIdentifier name="clk'" org.eventb.core.type="ℤ"/>
 <org.eventb.core.poIdentifier name="stb'" org.eventb.core.type="ℤ"/>
-<org.eventb.core.poIdentifier name="exb'" org.eventb.core.type="ℤ"/>
 <org.eventb.core.poIdentifier name="b'" org.eventb.core.type="ℤ"/>
 <org.eventb.core.poIdentifier name="turn'" org.eventb.core.type="ℤ"/>
 <org.eventb.core.poIdentifier name="etb'" org.eventb.core.type="ℤ"/>
@@ -48,177 +46,65 @@
 <org.eventb.core.poIdentifier name="sta'" org.eventb.core.type="ℤ"/>
 <org.eventb.core.poIdentifier name="w_a'" org.eventb.core.type="ℤ"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTALLHYPturo" org.eventb.core.parentSet="/peterson/m3.bpo|org.eventb.core.poFile#m3|org.eventb.core.poPredicateSet#EVTIDENTturo" org.eventb.core.poStamp="1"/>
-<org.eventb.core.poPredicateSet name="EVTIDENTturp" org.eventb.core.parentSet="/peterson/m3.bpo|org.eventb.core.poFile#m3|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="36">
+<org.eventb.core.poPredicateSet name="EVTALLHYPturo" org.eventb.core.parentSet="/peterson/m3.bpo|org.eventb.core.poFile#m3|org.eventb.core.poPredicateSet#EVTIDENTturo" org.eventb.core.poStamp="0"/>
+<org.eventb.core.poPredicateSet name="EVTIDENTturp" org.eventb.core.parentSet="/peterson/m3.bpo|org.eventb.core.poFile#m3|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="6">
 <org.eventb.core.poIdentifier name="eta'" org.eventb.core.type="ℤ"/>
 <org.eventb.core.poIdentifier name="turn'" org.eventb.core.type="ℤ"/>
 <org.eventb.core.poIdentifier name="sta'" org.eventb.core.type="ℤ"/>
 <org.eventb.core.poIdentifier name="w_a'" org.eventb.core.type="ℤ"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTALLHYPturp" org.eventb.core.parentSet="/peterson/m3.bpo|org.eventb.core.poFile#m3|org.eventb.core.poPredicateSet#EVTIDENTturp" org.eventb.core.poStamp="36">
+<org.eventb.core.poPredicateSet name="EVTALLHYPturp" org.eventb.core.parentSet="/peterson/m3.bpo|org.eventb.core.poFile#m3|org.eventb.core.poPredicateSet#EVTIDENTturp" org.eventb.core.poStamp="6">
 <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="w_a=0" org.eventb.core.source="/peterson/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.event#2|org.eventb.core.guard#'"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poSequent name="enter_a/clk/EQL" org.eventb.core.accurate="true" org.eventb.core.poDesc="Equality of common variables" org.eventb.core.poStamp="36">
-<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/peterson/m3.bpo|org.eventb.core.poFile#m3|org.eventb.core.poPredicateSet#EVTALLHYPturq"/>
-<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="clk+1=clk" org.eventb.core.source="/peterson/m3.bum|org.eventb.core.machineFile#m3|org.eventb.core.event#D|org.eventb.core.action#+"/>
-<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/peterson/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.event#3"/>
-<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/peterson/m3.bum|org.eventb.core.machineFile#m3|org.eventb.core.event#D"/>
-<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/peterson/m3.bpo|org.eventb.core.poFile#m3|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/peterson/m3.bpo|org.eventb.core.poFile#m3|org.eventb.core.poSequent#enter_a\/clk\/EQL|org.eventb.core.poPredicateSet#SEQHYP"/>
-</org.eventb.core.poSequent>
-<org.eventb.core.poPredicateSet name="EVTIDENTturq" org.eventb.core.parentSet="/peterson/m3.bpo|org.eventb.core.poFile#m3|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="36">
-<org.eventb.core.poIdentifier name="exa'" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poPredicateSet name="EVTIDENTturq" org.eventb.core.parentSet="/peterson/m3.bpo|org.eventb.core.poFile#m3|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="6">
 <org.eventb.core.poIdentifier name="a'" org.eventb.core.type="ℤ"/>
 <org.eventb.core.poIdentifier name="eta'" org.eventb.core.type="ℤ"/>
-<org.eventb.core.poIdentifier name="clk'" org.eventb.core.type="ℤ"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTALLHYPturq" org.eventb.core.parentSet="/peterson/m3.bpo|org.eventb.core.poFile#m3|org.eventb.core.poPredicateSet#EVTIDENTturq" org.eventb.core.poStamp="36">
-<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="w_a=1" org.eventb.core.source="/peterson/m3.bum|org.eventb.core.machineFile#m3|org.eventb.core.event#D|org.eventb.core.guard#'"/>
-<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="a=0" org.eventb.core.source="/peterson/m3.bum|org.eventb.core.machineFile#m3|org.eventb.core.event#D|org.eventb.core.guard#("/>
-<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="w_b=0∨turn=0" org.eventb.core.source="/peterson/m3.bum|org.eventb.core.machineFile#m3|org.eventb.core.event#D|org.eventb.core.guard#)"/>
+<org.eventb.core.poPredicateSet name="EVTALLHYPturq" org.eventb.core.parentSet="/peterson/m3.bpo|org.eventb.core.poFile#m3|org.eventb.core.poPredicateSet#EVTIDENTturq" org.eventb.core.poStamp="6">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="w_a=1" org.eventb.core.source="/peterson/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.event#3|org.eventb.core.guard#'"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="a=0" org.eventb.core.source="/peterson/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.event#3|org.eventb.core.guard#("/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="w_b=0∨turn=0" org.eventb.core.source="/peterson/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.event#3|org.eventb.core.guard#)"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poSequent name="leave_a/clk/EQL" org.eventb.core.accurate="true" org.eventb.core.poDesc="Equality of common variables" org.eventb.core.poStamp="36">
-<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/peterson/m3.bpo|org.eventb.core.poFile#m3|org.eventb.core.poPredicateSet#EVTALLHYPturr"/>
-<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="clk+1=clk" org.eventb.core.source="/peterson/m3.bum|org.eventb.core.machineFile#m3|org.eventb.core.event#E|org.eventb.core.action#,"/>
-<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/peterson/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.event#4"/>
-<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/peterson/m3.bum|org.eventb.core.machineFile#m3|org.eventb.core.event#E"/>
-<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/peterson/m3.bpo|org.eventb.core.poFile#m3|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/peterson/m3.bpo|org.eventb.core.poFile#m3|org.eventb.core.poSequent#leave_a\/clk\/EQL|org.eventb.core.poPredicateSet#SEQHYP"/>
-</org.eventb.core.poSequent>
-<org.eventb.core.poPredicateSet name="EVTIDENTturr" org.eventb.core.parentSet="/peterson/m3.bpo|org.eventb.core.poFile#m3|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="36">
+<org.eventb.core.poPredicateSet name="EVTIDENTturr" org.eventb.core.parentSet="/peterson/m3.bpo|org.eventb.core.poFile#m3|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="6">
 <org.eventb.core.poIdentifier name="a'" org.eventb.core.type="ℤ"/>
-<org.eventb.core.poIdentifier name="clk'" org.eventb.core.type="ℤ"/>
 <org.eventb.core.poIdentifier name="w_a'" org.eventb.core.type="ℤ"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTALLHYPturr" org.eventb.core.parentSet="/peterson/m3.bpo|org.eventb.core.poFile#m3|org.eventb.core.poPredicateSet#EVTIDENTturr" org.eventb.core.poStamp="36">
-<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="a=1" org.eventb.core.source="/peterson/m3.bum|org.eventb.core.machineFile#m3|org.eventb.core.event#E|org.eventb.core.guard#'"/>
+<org.eventb.core.poPredicateSet name="EVTALLHYPturr" org.eventb.core.parentSet="/peterson/m3.bpo|org.eventb.core.poFile#m3|org.eventb.core.poPredicateSet#EVTIDENTturr" org.eventb.core.poStamp="6">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="a=1" org.eventb.core.source="/peterson/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.event#4|org.eventb.core.guard#'"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTIDENTturs" org.eventb.core.parentSet="/peterson/m3.bpo|org.eventb.core.poFile#m3|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="36">
+<org.eventb.core.poPredicateSet name="EVTIDENTturs" org.eventb.core.parentSet="/peterson/m3.bpo|org.eventb.core.poFile#m3|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="6">
 <org.eventb.core.poIdentifier name="stb'" org.eventb.core.type="ℤ"/>
 <org.eventb.core.poIdentifier name="turn'" org.eventb.core.type="ℤ"/>
 <org.eventb.core.poIdentifier name="etb'" org.eventb.core.type="ℤ"/>
 <org.eventb.core.poIdentifier name="w_b'" org.eventb.core.type="ℤ"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTALLHYPturs" org.eventb.core.parentSet="/peterson/m3.bpo|org.eventb.core.poFile#m3|org.eventb.core.poPredicateSet#EVTIDENTturs" org.eventb.core.poStamp="36">
+<org.eventb.core.poPredicateSet name="EVTALLHYPturs" org.eventb.core.parentSet="/peterson/m3.bpo|org.eventb.core.poFile#m3|org.eventb.core.poPredicateSet#EVTIDENTturs" org.eventb.core.poStamp="6">
 <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="w_b=0" org.eventb.core.source="/peterson/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.event#5|org.eventb.core.guard#'"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poSequent name="enter_b/clk/EQL" org.eventb.core.accurate="true" org.eventb.core.poDesc="Equality of common variables" org.eventb.core.poStamp="36">
-<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/peterson/m3.bpo|org.eventb.core.poFile#m3|org.eventb.core.poPredicateSet#EVTALLHYPturt"/>
-<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="clk+1=clk" org.eventb.core.source="/peterson/m3.bum|org.eventb.core.machineFile#m3|org.eventb.core.event#G|org.eventb.core.action#_7t8kgai_Eea7EZMsE_G9Sg"/>
-<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/peterson/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.event#6"/>
-<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/peterson/m3.bum|org.eventb.core.machineFile#m3|org.eventb.core.event#G"/>
-<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/peterson/m3.bpo|org.eventb.core.poFile#m3|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/peterson/m3.bpo|org.eventb.core.poFile#m3|org.eventb.core.poSequent#enter_b\/clk\/EQL|org.eventb.core.poPredicateSet#SEQHYP"/>
-</org.eventb.core.poSequent>
-<org.eventb.core.poPredicateSet name="EVTIDENTturt" org.eventb.core.parentSet="/peterson/m3.bpo|org.eventb.core.poFile#m3|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="36">
-<org.eventb.core.poIdentifier name="clk'" org.eventb.core.type="ℤ"/>
-<org.eventb.core.poIdentifier name="exb'" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poPredicateSet name="EVTIDENTturt" org.eventb.core.parentSet="/peterson/m3.bpo|org.eventb.core.poFile#m3|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="6">
 <org.eventb.core.poIdentifier name="b'" org.eventb.core.type="ℤ"/>
 <org.eventb.core.poIdentifier name="etb'" org.eventb.core.type="ℤ"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTALLHYPturt" org.eventb.core.parentSet="/peterson/m3.bpo|org.eventb.core.poFile#m3|org.eventb.core.poPredicateSet#EVTIDENTturt" org.eventb.core.poStamp="36">
-<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="w_a=0∨turn=1" org.eventb.core.source="/peterson/m3.bum|org.eventb.core.machineFile#m3|org.eventb.core.event#G|org.eventb.core.guard#)"/>
-<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="w_b=1" org.eventb.core.source="/peterson/m3.bum|org.eventb.core.machineFile#m3|org.eventb.core.event#G|org.eventb.core.guard#_3bcfgKpqEeaUAtwwjdaaJA"/>
-<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="b=0" org.eventb.core.source="/peterson/m3.bum|org.eventb.core.machineFile#m3|org.eventb.core.event#G|org.eventb.core.guard#("/>
+<org.eventb.core.poPredicateSet name="EVTALLHYPturt" org.eventb.core.parentSet="/peterson/m3.bpo|org.eventb.core.poFile#m3|org.eventb.core.poPredicateSet#EVTIDENTturt" org.eventb.core.poStamp="6">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="w_b=1" org.eventb.core.source="/peterson/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.event#6|org.eventb.core.guard#'"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="b=0" org.eventb.core.source="/peterson/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.event#6|org.eventb.core.guard#("/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="w_a=0∨turn=1" org.eventb.core.source="/peterson/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.event#6|org.eventb.core.guard#)"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poSequent name="leave_b/clk/EQL" org.eventb.core.accurate="true" org.eventb.core.poDesc="Equality of common variables" org.eventb.core.poStamp="36">
-<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/peterson/m3.bpo|org.eventb.core.poFile#m3|org.eventb.core.poPredicateSet#EVTALLHYPturu"/>
-<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="clk+1=clk" org.eventb.core.source="/peterson/m3.bum|org.eventb.core.machineFile#m3|org.eventb.core.event#H|org.eventb.core.action#_7t9LkKi_Eea7EZMsE_G9Sg"/>
-<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/peterson/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.event#7"/>
-<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/peterson/m3.bum|org.eventb.core.machineFile#m3|org.eventb.core.event#H"/>
-<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/peterson/m3.bpo|org.eventb.core.poFile#m3|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/peterson/m3.bpo|org.eventb.core.poFile#m3|org.eventb.core.poSequent#leave_b\/clk\/EQL|org.eventb.core.poPredicateSet#SEQHYP"/>
-</org.eventb.core.poSequent>
-<org.eventb.core.poPredicateSet name="EVTIDENTturu" org.eventb.core.parentSet="/peterson/m3.bpo|org.eventb.core.poFile#m3|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="36">
-<org.eventb.core.poIdentifier name="clk'" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poPredicateSet name="EVTIDENTturu" org.eventb.core.parentSet="/peterson/m3.bpo|org.eventb.core.poFile#m3|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="6">
 <org.eventb.core.poIdentifier name="b'" org.eventb.core.type="ℤ"/>
 <org.eventb.core.poIdentifier name="w_b'" org.eventb.core.type="ℤ"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTALLHYPturu" org.eventb.core.parentSet="/peterson/m3.bpo|org.eventb.core.poFile#m3|org.eventb.core.poPredicateSet#EVTIDENTturu" org.eventb.core.poStamp="36">
-<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="b=1" org.eventb.core.source="/peterson/m3.bum|org.eventb.core.machineFile#m3|org.eventb.core.event#H|org.eventb.core.guard#'"/>
+<org.eventb.core.poPredicateSet name="EVTALLHYPturu" org.eventb.core.parentSet="/peterson/m3.bpo|org.eventb.core.poFile#m3|org.eventb.core.poPredicateSet#EVTIDENTturu" org.eventb.core.poStamp="6">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="b=1" org.eventb.core.source="/peterson/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.event#7|org.eventb.core.guard#'"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poSequent name="critical_a/grd1/GRD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Guard strengthening (split)" org.eventb.core.poStamp="36">
-<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/peterson/m3.bpo|org.eventb.core.poFile#m3|org.eventb.core.poPredicateSet#EVTALLHYPturv"/>
-<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="w_a=1∧a=0∧(w_b=0∨turn=0)⇒clk+1 − sta≤5" org.eventb.core.source="/peterson/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.event#C|org.eventb.core.guard#'"/>
-<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/peterson/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.event#C"/>
-<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/peterson/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.event#C|org.eventb.core.guard#'"/>
-<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/peterson/m3.bum|org.eventb.core.machineFile#m3|org.eventb.core.event#M"/>
-<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/peterson/m3.bpo|org.eventb.core.poFile#m3|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/peterson/m3.bpo|org.eventb.core.poFile#m3|org.eventb.core.poSequent#critical_a\/grd1\/GRD|org.eventb.core.poPredicateSet#SEQHYP"/>
-</org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="critical_a/grd2/GRD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Guard strengthening (split)" org.eventb.core.poStamp="36">
-<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/peterson/m3.bpo|org.eventb.core.poFile#m3|org.eventb.core.poPredicateSet#EVTALLHYPturv"/>
-<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="a=1⇒clk+1 − eta≤5" org.eventb.core.source="/peterson/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.event#C|org.eventb.core.guard#_0hI6cKp-EeaUAtwwjdaaJA"/>
-<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/peterson/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.event#C"/>
-<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/peterson/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.event#C|org.eventb.core.guard#_0hI6cKp-EeaUAtwwjdaaJA"/>
-<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/peterson/m3.bum|org.eventb.core.machineFile#m3|org.eventb.core.event#M"/>
-<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/peterson/m3.bpo|org.eventb.core.poFile#m3|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/peterson/m3.bpo|org.eventb.core.poFile#m3|org.eventb.core.poSequent#critical_a\/grd2\/GRD|org.eventb.core.poPredicateSet#SEQHYP"/>
-</org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="critical_a/grd3/GRD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Guard strengthening (split)" org.eventb.core.poStamp="36">
-<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/peterson/m3.bpo|org.eventb.core.poFile#m3|org.eventb.core.poPredicateSet#EVTALLHYPturv"/>
-<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="w_b=1∧b=0∧(w_a=0∨turn=1)⇒clk+1 − stb≤5" org.eventb.core.source="/peterson/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.event#C|org.eventb.core.guard#_0hI6cKp-EeaUAtwwjdaaJB"/>
-<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/peterson/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.event#C"/>
-<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/peterson/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.event#C|org.eventb.core.guard#_0hI6cKp-EeaUAtwwjdaaJB"/>
-<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/peterson/m3.bum|org.eventb.core.machineFile#m3|org.eventb.core.event#M"/>
-<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/peterson/m3.bpo|org.eventb.core.poFile#m3|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/peterson/m3.bpo|org.eventb.core.poFile#m3|org.eventb.core.poSequent#critical_a\/grd3\/GRD|org.eventb.core.poPredicateSet#SEQHYP"/>
-</org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="critical_a/grd4/GRD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Guard strengthening (split)" org.eventb.core.poStamp="36">
-<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/peterson/m3.bpo|org.eventb.core.poFile#m3|org.eventb.core.poPredicateSet#EVTALLHYPturv"/>
-<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="b=1⇒clk+1 − etb≤5" org.eventb.core.source="/peterson/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.event#C|org.eventb.core.guard#_0hI6cKp-EeaUAtwwjdaaJC"/>
-<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/peterson/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.event#C"/>
-<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/peterson/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.event#C|org.eventb.core.guard#_0hI6cKp-EeaUAtwwjdaaJC"/>
-<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/peterson/m3.bum|org.eventb.core.machineFile#m3|org.eventb.core.event#M"/>
-<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/peterson/m3.bpo|org.eventb.core.poFile#m3|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/peterson/m3.bpo|org.eventb.core.poFile#m3|org.eventb.core.poSequent#critical_a\/grd4\/GRD|org.eventb.core.poPredicateSet#SEQHYP"/>
-</org.eventb.core.poSequent>
-<org.eventb.core.poPredicateSet name="EVTIDENTturv" org.eventb.core.parentSet="/peterson/m3.bpo|org.eventb.core.poFile#m3|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="36">
-<org.eventb.core.poIdentifier name="exa'" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poPredicateSet name="EVTIDENTturv" org.eventb.core.parentSet="/peterson/m3.bpo|org.eventb.core.poFile#m3|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="6">
 <org.eventb.core.poIdentifier name="clk'" org.eventb.core.type="ℤ"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTALLHYPturv" org.eventb.core.parentSet="/peterson/m3.bpo|org.eventb.core.poFile#m3|org.eventb.core.poPredicateSet#EVTIDENTturv" org.eventb.core.poStamp="36">
-<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="clk&gt;0" org.eventb.core.source="/peterson/m3.bum|org.eventb.core.machineFile#m3|org.eventb.core.event#M|org.eventb.core.guard#-"/>
-<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="w_b=0∨turn=0" org.eventb.core.source="/peterson/m3.bum|org.eventb.core.machineFile#m3|org.eventb.core.event#M|org.eventb.core.guard#'"/>
-<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="exa&lt;5" org.eventb.core.source="/peterson/m3.bum|org.eventb.core.machineFile#m3|org.eventb.core.event#M|org.eventb.core.guard#("/>
-<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="a=1" org.eventb.core.source="/peterson/m3.bum|org.eventb.core.machineFile#m3|org.eventb.core.event#M|org.eventb.core.guard#)"/>
+<org.eventb.core.poPredicateSet name="EVTALLHYPturv" org.eventb.core.parentSet="/peterson/m3.bpo|org.eventb.core.poFile#m3|org.eventb.core.poPredicateSet#EVTIDENTturv" org.eventb.core.poStamp="6">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="w_a=1∧a=0∧(w_b=0∨turn=0)⇒clk+1 − sta≤5" org.eventb.core.source="/peterson/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.event#C|org.eventb.core.guard#'"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="a=1⇒clk+1 − eta≤5" org.eventb.core.source="/peterson/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.event#C|org.eventb.core.guard#_0hI6cKp-EeaUAtwwjdaaJA"/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="w_b=1∧b=0∧(w_a=0∨turn=1)⇒clk+1 − stb≤5" org.eventb.core.source="/peterson/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.event#C|org.eventb.core.guard#_0hI6cKp-EeaUAtwwjdaaJB"/>
+<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="b=1⇒clk+1 − etb≤5" org.eventb.core.source="/peterson/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.event#C|org.eventb.core.guard#_0hI6cKp-EeaUAtwwjdaaJC"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poSequent name="critical_b/grd1/GRD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Guard strengthening (split)" org.eventb.core.poStamp="36">
-<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/peterson/m3.bpo|org.eventb.core.poFile#m3|org.eventb.core.poPredicateSet#EVTALLHYPturw"/>
-<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="w_a=1∧a=0∧(w_b=0∨turn=0)⇒clk+1 − sta≤5" org.eventb.core.source="/peterson/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.event#C|org.eventb.core.guard#'"/>
-<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/peterson/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.event#C"/>
-<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/peterson/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.event#C|org.eventb.core.guard#'"/>
-<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/peterson/m3.bum|org.eventb.core.machineFile#m3|org.eventb.core.event#N"/>
-<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/peterson/m3.bpo|org.eventb.core.poFile#m3|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/peterson/m3.bpo|org.eventb.core.poFile#m3|org.eventb.core.poSequent#critical_b\/grd1\/GRD|org.eventb.core.poPredicateSet#SEQHYP"/>
-</org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="critical_b/grd2/GRD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Guard strengthening (split)" org.eventb.core.poStamp="36">
-<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/peterson/m3.bpo|org.eventb.core.poFile#m3|org.eventb.core.poPredicateSet#EVTALLHYPturw"/>
-<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="a=1⇒clk+1 − eta≤5" org.eventb.core.source="/peterson/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.event#C|org.eventb.core.guard#_0hI6cKp-EeaUAtwwjdaaJA"/>
-<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/peterson/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.event#C"/>
-<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/peterson/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.event#C|org.eventb.core.guard#_0hI6cKp-EeaUAtwwjdaaJA"/>
-<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/peterson/m3.bum|org.eventb.core.machineFile#m3|org.eventb.core.event#N"/>
-<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/peterson/m3.bpo|org.eventb.core.poFile#m3|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/peterson/m3.bpo|org.eventb.core.poFile#m3|org.eventb.core.poSequent#critical_b\/grd2\/GRD|org.eventb.core.poPredicateSet#SEQHYP"/>
-</org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="critical_b/grd3/GRD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Guard strengthening (split)" org.eventb.core.poStamp="36">
-<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/peterson/m3.bpo|org.eventb.core.poFile#m3|org.eventb.core.poPredicateSet#EVTALLHYPturw"/>
-<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="w_b=1∧b=0∧(w_a=0∨turn=1)⇒clk+1 − stb≤5" org.eventb.core.source="/peterson/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.event#C|org.eventb.core.guard#_0hI6cKp-EeaUAtwwjdaaJB"/>
-<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/peterson/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.event#C"/>
-<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/peterson/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.event#C|org.eventb.core.guard#_0hI6cKp-EeaUAtwwjdaaJB"/>
-<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/peterson/m3.bum|org.eventb.core.machineFile#m3|org.eventb.core.event#N"/>
-<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/peterson/m3.bpo|org.eventb.core.poFile#m3|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/peterson/m3.bpo|org.eventb.core.poFile#m3|org.eventb.core.poSequent#critical_b\/grd3\/GRD|org.eventb.core.poPredicateSet#SEQHYP"/>
-</org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="critical_b/grd4/GRD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Guard strengthening (split)" org.eventb.core.poStamp="36">
-<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/peterson/m3.bpo|org.eventb.core.poFile#m3|org.eventb.core.poPredicateSet#EVTALLHYPturw"/>
-<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="b=1⇒clk+1 − etb≤5" org.eventb.core.source="/peterson/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.event#C|org.eventb.core.guard#_0hI6cKp-EeaUAtwwjdaaJC"/>
-<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/peterson/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.event#C"/>
-<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/peterson/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.event#C|org.eventb.core.guard#_0hI6cKp-EeaUAtwwjdaaJC"/>
-<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/peterson/m3.bum|org.eventb.core.machineFile#m3|org.eventb.core.event#N"/>
-<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/peterson/m3.bpo|org.eventb.core.poFile#m3|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/peterson/m3.bpo|org.eventb.core.poFile#m3|org.eventb.core.poSequent#critical_b\/grd4\/GRD|org.eventb.core.poPredicateSet#SEQHYP"/>
-</org.eventb.core.poSequent>
-<org.eventb.core.poPredicateSet name="EVTIDENTturw" org.eventb.core.parentSet="/peterson/m3.bpo|org.eventb.core.poFile#m3|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="36">
-<org.eventb.core.poIdentifier name="clk'" org.eventb.core.type="ℤ"/>
-<org.eventb.core.poIdentifier name="exb'" org.eventb.core.type="ℤ"/>
-</org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTALLHYPturw" org.eventb.core.parentSet="/peterson/m3.bpo|org.eventb.core.poFile#m3|org.eventb.core.poPredicateSet#EVTIDENTturw" org.eventb.core.poStamp="36">
-<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="clk&gt;0" org.eventb.core.source="/peterson/m3.bum|org.eventb.core.machineFile#m3|org.eventb.core.event#N|org.eventb.core.guard#."/>
-<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="turn=1∨w_a=0" org.eventb.core.source="/peterson/m3.bum|org.eventb.core.machineFile#m3|org.eventb.core.event#N|org.eventb.core.guard#'"/>
-<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="exb&lt;5" org.eventb.core.source="/peterson/m3.bum|org.eventb.core.machineFile#m3|org.eventb.core.event#N|org.eventb.core.guard#("/>
-<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="b=1" org.eventb.core.source="/peterson/m3.bum|org.eventb.core.machineFile#m3|org.eventb.core.event#N|org.eventb.core.guard#)"/>
-</org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/peterson/m3.bpo|org.eventb.core.poFile#m3|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="36">
-<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="exa∈ℤ" org.eventb.core.source="/peterson/m3.bum|org.eventb.core.machineFile#m3|org.eventb.core.invariant#J"/>
-<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="exb∈ℤ" org.eventb.core.source="/peterson/m3.bum|org.eventb.core.machineFile#m3|org.eventb.core.invariant#L"/>
-</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/peterson/m3.bpo|org.eventb.core.poFile#m3|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="6"/>
 </org.eventb.core.poFile>
