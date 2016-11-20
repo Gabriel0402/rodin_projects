@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.machineFile org.eventb.core.configuration="org.eventb.core.fwd;de.prob.units.mchBase" org.eventb.texttools.text_lastmodified="1478791962980" org.eventb.texttools.text_representation="machine m0&#10;&#10;variables w_a w_b a b&#10;&#10;invariants&#10;  @inv1 w_a ∈ {0,1}&#10;  @inv2 w_b ∈ {0,1}&#10;  @inv4 a ∈ {0,1}&#10;  @inv5 b ∈ {0,1}&#10;  @inv6 w_a=0 ⇒ a=0&#10;  @inv7 w_b=0 ⇒ b=0&#10;  @inv8 a=0 ∨ b = 0&#10;&#10;events&#10;  event INITIALISATION&#10;    then&#10;      @act1 w_a ≔ 0&#10;      @act2 w_b ≔ 0&#10;      @act4 a ≔ 0&#10;      @act5 b ≔ 0&#10;  end&#10;&#10;  event wish_a&#10;    where&#10;      @grd1 w_a=0&#10;    then&#10;      @act1 w_a≔1&#10;  end&#10;&#10;  event enter_a&#10;    where&#10;      @grd1 w_a=1&#10;      @grd2 a=0&#10;      @grd3 b=0&#10;    then&#10;      @act1 a≔1&#10;  end&#10;&#10;  event leave_a&#10;    where&#10;      @grd1 a=1&#10;    then&#10;      @act1 a≔0&#10;      @act2 w_a≔0&#10;  end&#10;&#10;  event wish_b&#10;    where&#10;      @grd1 w_b = 0&#10;    then&#10;      @act1 w_b≔1&#10;  end&#10;&#10;  event enter_b&#10;    where&#10;      @grd1 w_b=1&#10;      @grd2 a=0&#10;      @grd3 b=0&#10;    then&#10;      @act1 b≔1&#10;  end&#10;&#10;  event leave_b&#10;    where&#10;      @grd1 b=1&#10;    then&#10;      @act1 b≔0&#10;      @act2 w_b≔0&#10;  end&#10;end&#10;" version="5">
+<org.eventb.core.event name="'" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="INITIALISATION">
+<org.eventb.core.action name="'" org.eventb.core.assignment="w_a ≔ 0" org.eventb.core.label="act1"/>
+<org.eventb.core.action name="(" org.eventb.core.assignment="w_b ≔ 0" org.eventb.core.label="act2"/>
+<org.eventb.core.action name=")" org.eventb.core.assignment="a ≔ 0" org.eventb.core.label="act4"/>
+<org.eventb.core.action name="*" org.eventb.core.assignment="b ≔ 0" org.eventb.core.label="act5"/>
+</org.eventb.core.event>
+<org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="(" org.eventb.core.identifier="w_a"/>
+<org.eventb.core.invariant name=")" org.eventb.core.label="inv1" org.eventb.core.predicate="w_a ∈ {0,1}"/>
+<org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="*" org.eventb.core.identifier="w_b"/>
+<org.eventb.core.invariant name="+" org.eventb.core.label="inv2" org.eventb.core.predicate="w_b ∈ {0,1}"/>
+<org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="," org.eventb.core.identifier="a"/>
+<org.eventb.core.invariant name="-" org.eventb.core.label="inv4" org.eventb.core.predicate="a ∈ {0,1}"/>
+<org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="." org.eventb.core.identifier="b"/>
+<org.eventb.core.invariant name="/" org.eventb.core.label="inv5" org.eventb.core.predicate="b ∈ {0,1}"/>
+<org.eventb.core.invariant name="1" org.eventb.core.label="inv6" org.eventb.core.predicate="w_a=0 ⇒ a=0"/>
+<org.eventb.core.invariant name="2" org.eventb.core.label="inv7" org.eventb.core.predicate="w_b=0 ⇒ b=0"/>
+<org.eventb.core.invariant name="3" org.eventb.core.label="inv8" org.eventb.core.predicate="a=0 ∨ b = 0"/>
+<org.eventb.core.event name="5" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="wish_a">
+<org.eventb.core.guard name="'" org.eventb.core.label="grd1" org.eventb.core.predicate="w_a=0"/>
+<org.eventb.core.action name="+" org.eventb.core.assignment="w_a≔1" org.eventb.core.label="act1"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="6" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="enter_a">
+<org.eventb.core.guard name="'" org.eventb.core.label="grd1" org.eventb.core.predicate="w_a=1"/>
+<org.eventb.core.guard name="(" org.eventb.core.label="grd2" org.eventb.core.predicate="a=0"/>
+<org.eventb.core.guard name=")" org.eventb.core.label="grd3" org.eventb.core.predicate="b=0"/>
+<org.eventb.core.action name="(" org.eventb.core.assignment="a≔1" org.eventb.core.label="act1"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="7" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="leave_a">
+<org.eventb.core.guard name="'" org.eventb.core.label="grd1" org.eventb.core.predicate="a=1"/>
+<org.eventb.core.action name="(" org.eventb.core.assignment="w_a≔0" org.eventb.core.label="act2"/>
+<org.eventb.core.action name="*" org.eventb.core.assignment="a≔0" org.eventb.core.label="act1"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="8" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="wish_b">
+<org.eventb.core.guard name="'" org.eventb.core.label="grd1" org.eventb.core.predicate="w_b = 0"/>
+<org.eventb.core.action name=")" org.eventb.core.assignment="w_b≔1" org.eventb.core.label="act1"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="9" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="enter_b">
+<org.eventb.core.guard name="'" org.eventb.core.label="grd1" org.eventb.core.predicate="w_b=1"/>
+<org.eventb.core.guard name="(" org.eventb.core.label="grd2" org.eventb.core.predicate="a=0"/>
+<org.eventb.core.guard name=")" org.eventb.core.label="grd3" org.eventb.core.predicate="b=0"/>
+<org.eventb.core.action name="(" org.eventb.core.assignment="b≔1" org.eventb.core.label="act1"/>
+</org.eventb.core.event>
+<org.eventb.core.event name=":" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="leave_b">
+<org.eventb.core.guard name="'" org.eventb.core.label="grd1" org.eventb.core.predicate="b=1"/>
+<org.eventb.core.action name="(" org.eventb.core.assignment="w_b≔0" org.eventb.core.label="act2"/>
+<org.eventb.core.action name="*" org.eventb.core.assignment="b≔0" org.eventb.core.label="act1"/>
+</org.eventb.core.event>
+<org.eventb.core.seesContext name=";" org.eventb.core.target="c0"/>
+</org.eventb.core.machineFile>

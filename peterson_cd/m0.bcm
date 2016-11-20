@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.scMachineFile org.eventb.core.accurate="true" org.eventb.core.configuration="org.eventb.core.fwd;de.prob.units.mchBase">
+<org.eventb.core.scSeesContext name="'" org.eventb.core.scTarget="/peterson_cd/c0.bcc" org.eventb.core.source="/peterson_cd/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.seesContext#;"/>
+<org.eventb.core.scInternalContext name="c0">
+<org.eventb.core.scAxiom name="'" org.eventb.core.label="axm1" org.eventb.core.predicate="d=5" org.eventb.core.source="/peterson_cd/c0.buc|org.eventb.core.contextFile#c0|org.eventb.core.axiom#(" org.eventb.core.theorem="false"/>
+<org.eventb.core.scConstant de.prob.symbolic.symbolicAttribute="false" de.prob.units.unitPragmaAttribute="" name="d" org.eventb.core.source="/peterson_cd/c0.buc|org.eventb.core.contextFile#c0|org.eventb.core.constant#'" org.eventb.core.type="ℤ"/>
+</org.eventb.core.scInternalContext>
+<org.eventb.core.scInvariant name="c1" org.eventb.core.label="inv1" org.eventb.core.predicate="w_a∈{0,1}" org.eventb.core.source="/peterson_cd/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.invariant#)" org.eventb.core.theorem="false"/>
+<org.eventb.core.scInvariant name="c2" org.eventb.core.label="inv2" org.eventb.core.predicate="w_b∈{0,1}" org.eventb.core.source="/peterson_cd/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.invariant#+" org.eventb.core.theorem="false"/>
+<org.eventb.core.scInvariant name="c3" org.eventb.core.label="inv4" org.eventb.core.predicate="a∈{0,1}" org.eventb.core.source="/peterson_cd/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.invariant#-" org.eventb.core.theorem="false"/>
+<org.eventb.core.scInvariant name="c4" org.eventb.core.label="inv5" org.eventb.core.predicate="b∈{0,1}" org.eventb.core.source="/peterson_cd/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.invariant#\/" org.eventb.core.theorem="false"/>
+<org.eventb.core.scInvariant name="c5" org.eventb.core.label="inv6" org.eventb.core.predicate="w_a=0⇒a=0" org.eventb.core.source="/peterson_cd/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.invariant#1" org.eventb.core.theorem="false"/>
+<org.eventb.core.scInvariant name="c6" org.eventb.core.label="inv7" org.eventb.core.predicate="w_b=0⇒b=0" org.eventb.core.source="/peterson_cd/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.invariant#2" org.eventb.core.theorem="false"/>
+<org.eventb.core.scInvariant name="c7" org.eventb.core.label="inv8" org.eventb.core.predicate="a=0∨b=0" org.eventb.core.source="/peterson_cd/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.invariant#3" org.eventb.core.theorem="false"/>
+<org.eventb.core.scVariable de.prob.units.unitPragmaAttribute="" name="a" org.eventb.core.abstract="false" org.eventb.core.concrete="true" org.eventb.core.source="/peterson_cd/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.variable#," org.eventb.core.type="ℤ"/>
+<org.eventb.core.scVariable de.prob.units.unitPragmaAttribute="" name="b" org.eventb.core.abstract="false" org.eventb.core.concrete="true" org.eventb.core.source="/peterson_cd/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.variable#." org.eventb.core.type="ℤ"/>
+<org.eventb.core.scVariable de.prob.units.unitPragmaAttribute="" name="w_a" org.eventb.core.abstract="false" org.eventb.core.concrete="true" org.eventb.core.source="/peterson_cd/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.variable#(" org.eventb.core.type="ℤ"/>
+<org.eventb.core.scVariable de.prob.units.unitPragmaAttribute="" name="w_b" org.eventb.core.abstract="false" org.eventb.core.concrete="true" org.eventb.core.source="/peterson_cd/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.variable#*" org.eventb.core.type="ℤ"/>
+<org.eventb.core.scEvent name="w_c" org.eventb.core.accurate="true" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="INITIALISATION" org.eventb.core.source="/peterson_cd/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#'">
+<org.eventb.core.scAction name="'" org.eventb.core.assignment="w_a ≔ 0" org.eventb.core.label="act1" org.eventb.core.source="/peterson_cd/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#'|org.eventb.core.action#'"/>
+<org.eventb.core.scAction name="(" org.eventb.core.assignment="w_b ≔ 0" org.eventb.core.label="act2" org.eventb.core.source="/peterson_cd/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#'|org.eventb.core.action#("/>
+<org.eventb.core.scAction name=")" org.eventb.core.assignment="a ≔ 0" org.eventb.core.label="act4" org.eventb.core.source="/peterson_cd/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#'|org.eventb.core.action#)"/>
+<org.eventb.core.scAction name="*" org.eventb.core.assignment="b ≔ 0" org.eventb.core.label="act5" org.eventb.core.source="/peterson_cd/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#'|org.eventb.core.action#*"/>
+</org.eventb.core.scEvent>
+<org.eventb.core.scEvent name="w_d" org.eventb.core.accurate="true" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="wish_a" org.eventb.core.source="/peterson_cd/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#5">
+<org.eventb.core.scGuard name="'" org.eventb.core.label="grd1" org.eventb.core.predicate="w_a=0" org.eventb.core.source="/peterson_cd/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#5|org.eventb.core.guard#'" org.eventb.core.theorem="false"/>
+<org.eventb.core.scAction name="(" org.eventb.core.assignment="w_a ≔ 1" org.eventb.core.label="act1" org.eventb.core.source="/peterson_cd/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#5|org.eventb.core.action#+"/>
+</org.eventb.core.scEvent>
+<org.eventb.core.scEvent name="w_e" org.eventb.core.accurate="true" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="enter_a" org.eventb.core.source="/peterson_cd/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#6">
+<org.eventb.core.scGuard name="'" org.eventb.core.label="grd1" org.eventb.core.predicate="w_a=1" org.eventb.core.source="/peterson_cd/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#6|org.eventb.core.guard#'" org.eventb.core.theorem="false"/>
+<org.eventb.core.scGuard name="(" org.eventb.core.label="grd2" org.eventb.core.predicate="a=0" org.eventb.core.source="/peterson_cd/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#6|org.eventb.core.guard#(" org.eventb.core.theorem="false"/>
+<org.eventb.core.scGuard name=")" org.eventb.core.label="grd3" org.eventb.core.predicate="b=0" org.eventb.core.source="/peterson_cd/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#6|org.eventb.core.guard#)" org.eventb.core.theorem="false"/>
+<org.eventb.core.scAction name="*" org.eventb.core.assignment="a ≔ 1" org.eventb.core.label="act1" org.eventb.core.source="/peterson_cd/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#6|org.eventb.core.action#("/>
+</org.eventb.core.scEvent>
+<org.eventb.core.scEvent name="w_f" org.eventb.core.accurate="true" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="leave_a" org.eventb.core.source="/peterson_cd/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#7">
+<org.eventb.core.scGuard name="'" org.eventb.core.label="grd1" org.eventb.core.predicate="a=1" org.eventb.core.source="/peterson_cd/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#7|org.eventb.core.guard#'" org.eventb.core.theorem="false"/>
+<org.eventb.core.scAction name="(" org.eventb.core.assignment="w_a ≔ 0" org.eventb.core.label="act2" org.eventb.core.source="/peterson_cd/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#7|org.eventb.core.action#("/>
+<org.eventb.core.scAction name=")" org.eventb.core.assignment="a ≔ 0" org.eventb.core.label="act1" org.eventb.core.source="/peterson_cd/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#7|org.eventb.core.action#*"/>
+</org.eventb.core.scEvent>
+<org.eventb.core.scEvent name="w_g" org.eventb.core.accurate="true" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="wish_b" org.eventb.core.source="/peterson_cd/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#8">
+<org.eventb.core.scGuard name="'" org.eventb.core.label="grd1" org.eventb.core.predicate="w_b=0" org.eventb.core.source="/peterson_cd/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#8|org.eventb.core.guard#'" org.eventb.core.theorem="false"/>
+<org.eventb.core.scAction name="(" org.eventb.core.assignment="w_b ≔ 1" org.eventb.core.label="act1" org.eventb.core.source="/peterson_cd/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#8|org.eventb.core.action#)"/>
+</org.eventb.core.scEvent>
+<org.eventb.core.scEvent name="w_h" org.eventb.core.accurate="true" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="enter_b" org.eventb.core.source="/peterson_cd/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#9">
+<org.eventb.core.scGuard name="'" org.eventb.core.label="grd1" org.eventb.core.predicate="w_b=1" org.eventb.core.source="/peterson_cd/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#9|org.eventb.core.guard#'" org.eventb.core.theorem="false"/>
+<org.eventb.core.scGuard name="(" org.eventb.core.label="grd2" org.eventb.core.predicate="a=0" org.eventb.core.source="/peterson_cd/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#9|org.eventb.core.guard#(" org.eventb.core.theorem="false"/>
+<org.eventb.core.scGuard name=")" org.eventb.core.label="grd3" org.eventb.core.predicate="b=0" org.eventb.core.source="/peterson_cd/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#9|org.eventb.core.guard#)" org.eventb.core.theorem="false"/>
+<org.eventb.core.scAction name="*" org.eventb.core.assignment="b ≔ 1" org.eventb.core.label="act1" org.eventb.core.source="/peterson_cd/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#9|org.eventb.core.action#("/>
+</org.eventb.core.scEvent>
+<org.eventb.core.scEvent name="w_i" org.eventb.core.accurate="true" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="leave_b" org.eventb.core.source="/peterson_cd/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#:">
+<org.eventb.core.scGuard name="'" org.eventb.core.label="grd1" org.eventb.core.predicate="b=1" org.eventb.core.source="/peterson_cd/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#:|org.eventb.core.guard#'" org.eventb.core.theorem="false"/>
+<org.eventb.core.scAction name="(" org.eventb.core.assignment="w_b ≔ 0" org.eventb.core.label="act2" org.eventb.core.source="/peterson_cd/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#:|org.eventb.core.action#("/>
+<org.eventb.core.scAction name=")" org.eventb.core.assignment="b ≔ 0" org.eventb.core.label="act1" org.eventb.core.source="/peterson_cd/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#:|org.eventb.core.action#*"/>
+</org.eventb.core.scEvent>
+</org.eventb.core.scMachineFile>

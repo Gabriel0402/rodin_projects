@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<org.eventb.core.contextFile org.eventb.core.configuration="org.eventb.core.fwd;de.prob.symbolic.ctxBase;de.prob.units.mchBase" org.eventb.texttools.text_lastmodified="1479221759953" org.eventb.texttools.text_representation="context c0&#10;&#10;constants d&#10;&#10;axioms&#10;  @axm1 d =5&#10;end&#10;" version="3">
-<org.eventb.core.constant name="_PTLTIKs7Eea5beP2ZPHwyg" org.eventb.core.identifier="d"/>
-<org.eventb.core.axiom name="_PTLTIas7Eea5beP2ZPHwyg" org.eventb.core.label="axm1" org.eventb.core.predicate="d =5"/>
-</org.eventb.core.contextFile>
