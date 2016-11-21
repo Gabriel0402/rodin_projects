@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<org.eventb.core.machineFile org.eventb.core.configuration="org.eventb.core.fwd;de.prob.units.mchBase" org.eventb.texttools.text_lastmodified="1479723688097" org.eventb.texttools.text_representation="machine m2 refines m1  sees c0&#10;&#10;variables w_a w_b a b sta stb eta etb clk turn&#10;&#10;invariants&#10;  @inv1 turn ∈ {0,1}&#10;  @inv2 turn=0∧w_a=1⇒b=0&#10;  @inv3 turn=1∧w_b=1⇒a=0&#10;  @inv4 sta≤eta⇒eta−sta≤d&#10;  @inv5 (w_a=1 ∧ a=0 ∧ (w_b=0 ∨ turn=0))⇒clk−sta≤d&#10;  @inv6 a=1⇒clk−eta≤d&#10;  @inv7 (w_b=1 ∧ b=0 ∧ (w_a=0 ∨ turn=1))⇒clk−stb≤d&#10;  @inv8 b=1⇒clk−etb≤d&#10;&#10;events&#10;  event INITIALISATION extends INITIALISATION&#10;    then&#10;      @act11 turn :∈ {0,1}&#10;  end&#10;&#10;  event wish_a refines wish_a&#10;    where&#10;      @grd1 w_a=0&#10;    then&#10;      @act1 w_a≔1&#10;      @act2 sta≔clk&#10;      @act3 turn≔1&#10;  end&#10;&#10;  event enter_a refines enter_a&#10;    where&#10;      @grd1 w_a=1&#10;      @grd2 a=0&#10;      @grd3 w_b=0 ∨ turn=0&#10;    then&#10;      @act1 a≔1&#10;      @act2 eta≔clk&#10;  end&#10;&#10;  event leave_a extends leave_a&#10;  end&#10;&#10;  event wish_b refines wish_b&#10;    where&#10;      @grd1 w_b = 0&#10;    then&#10;      @act1 w_b≔1&#10;      @act2 stb≔clk&#10;      @act3 turn≔0&#10;  end&#10;&#10;  event enter_b refines enter_b&#10;    where&#10;      @grd1 w_b=1&#10;      @grd2 w_a=0 ∨ turn=1&#10;      @grd3 b=0&#10;    then&#10;      @act1 b≔1&#10;      @act2 etb≔clk&#10;  end&#10;&#10;  event leave_b extends leave_b&#10;  end&#10;&#10;  event tick refines tick&#10;    where&#10;      @grd1 (w_a=1 ∧ a=0 ∧ (w_b=0 ∨ turn=0))⇒clk+1−sta≤d&#10;      @grd2 a=1⇒clk+1−eta≤d&#10;      @grd3 (w_b=1 ∧ b=0 ∧ (w_a=0 ∨ turn=1))⇒clk+1−stb≤d&#10;      @grd4 b=1⇒clk+1−etb≤d&#10;    then&#10;      @act1 clk≔clk+1&#10;  end&#10;end&#10;" version="5">
+<org.eventb.core.machineFile org.eventb.core.configuration="org.eventb.core.fwd;de.prob.units.mchBase" org.eventb.texttools.text_lastmodified="1479724213413" org.eventb.texttools.text_representation="machine m2 refines m1  sees c0&#10;&#10;variables w_a w_b a b sta stb eta etb clk turn ddla ddlb&#10;&#10;invariants&#10;  @inv1 turn ∈ {0,1}&#10;  @inv2 turn=0∧w_a=1⇒b=0&#10;  @inv3 turn=1∧w_b=1⇒a=0&#10;  @inv4 sta≤eta⇒eta−sta≤ddla&#10;  @inv5 (w_a=1 ∧ a=0 ∧ (w_b=0 ∨ turn=0))⇒clk−sta≤ddla&#10;  @inv6 a=1⇒clk−eta≤ddla&#10;  @inv7 (w_b=1 ∧ b=0 ∧ (w_a=0 ∨ turn=1))⇒clk−stb≤ddlb&#10;  @inv8 b=1⇒clk−etb≤ddlb&#10;  @inv9 ddla ∈ ℕ&#10;  @inv10 ddlb ∈ ℕ&#10;&#10;events&#10;  event INITIALISATION extends INITIALISATION&#10;    then&#10;      @act11 turn :∈ {0,1}&#10;      @act12 ddla :∈ ℕ&#10;      @act13 ddlb :∈ ℕ&#10;  end&#10;&#10;  event wish_a refines wish_a&#10;    where&#10;      @grd1 w_a=0&#10;    then&#10;      @act1 w_a≔1&#10;      @act2 sta≔clk&#10;      @act3 turn≔1&#10;  end&#10;&#10;  event enter_a refines enter_a&#10;    where&#10;      @grd1 w_a=1&#10;      @grd2 a=0&#10;      @grd3 w_b=0 ∨ turn=0&#10;    then&#10;      @act1 a≔1&#10;      @act2 eta≔clk&#10;  end&#10;&#10;  event leave_a extends leave_a&#10;  end&#10;&#10;  event wish_b refines wish_b&#10;    where&#10;      @grd1 w_b = 0&#10;    then&#10;      @act1 w_b≔1&#10;      @act2 stb≔clk&#10;      @act3 turn≔0&#10;  end&#10;&#10;  event enter_b refines enter_b&#10;    where&#10;      @grd1 w_b=1&#10;      @grd2 w_a=0 ∨ turn=1&#10;      @grd3 b=0&#10;    then&#10;      @act1 b≔1&#10;      @act2 etb≔clk&#10;  end&#10;&#10;  event leave_b extends leave_b&#10;  end&#10;&#10;  event tick refines tick&#10;    where&#10;      @grd1 (w_a=1 ∧ a=0 ∧ (w_b=0 ∨ turn=0))⇒clk+1−sta≤ddla&#10;      @grd2 a=1⇒clk+1−eta≤ddla&#10;      @grd3 (w_b=1 ∧ b=0 ∧ (w_a=0 ∨ turn=1))⇒clk+1−stb≤ddlb&#10;      @grd4 b=1⇒clk+1−etb≤ddlb&#10;    then&#10;      @act1 clk≔clk+1&#10;  end&#10;end&#10;" version="5">
 <org.eventb.core.refinesMachine name="'" org.eventb.core.target="m1"/>
 <org.eventb.core.seesContext name=";" org.eventb.core.target="c0"/>
 <org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="(" org.eventb.core.identifier="w_a"/>
@@ -13,6 +13,8 @@
 <org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="L" org.eventb.core.identifier="clk"/>
 <org.eventb.core.event name="M" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="INITIALISATION">
 <org.eventb.core.action name="'" org.eventb.core.assignment="turn :∈ {0,1}" org.eventb.core.label="act11"/>
+<org.eventb.core.action name="(" org.eventb.core.assignment="ddla :∈ ℕ" org.eventb.core.label="act12"/>
+<org.eventb.core.action name=")" org.eventb.core.assignment="ddlb :∈ ℕ" org.eventb.core.label="act13"/>
 </org.eventb.core.event>
 <org.eventb.core.event name="N" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="wish_a">
 <org.eventb.core.refinesEvent name="'" org.eventb.core.target="wish_a"/>
@@ -53,18 +55,22 @@
 <org.eventb.core.event name="T" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="tick">
 <org.eventb.core.refinesEvent name="'" org.eventb.core.target="tick"/>
 <org.eventb.core.action name="'" org.eventb.core.assignment="clk≔clk+1" org.eventb.core.label="act1"/>
-<org.eventb.core.guard name="(" org.eventb.core.label="grd1" org.eventb.core.predicate="(w_a=1 ∧ a=0 ∧ (w_b=0 ∨ turn=0))⇒clk+1−sta≤d"/>
-<org.eventb.core.guard name="_4bHaEK_LEeaEWYvkF9G15A" org.eventb.core.label="grd2" org.eventb.core.predicate="a=1⇒clk+1−eta≤d"/>
-<org.eventb.core.guard name="_4bHaEa_LEeaEWYvkF9G15A" org.eventb.core.label="grd3" org.eventb.core.predicate="(w_b=1 ∧ b=0 ∧ (w_a=0 ∨ turn=1))⇒clk+1−stb≤d"/>
-<org.eventb.core.guard name="_4bHaEq_LEeaEWYvkF9G15A" org.eventb.core.label="grd4" org.eventb.core.predicate="b=1⇒clk+1−etb≤d"/>
+<org.eventb.core.guard name="(" org.eventb.core.label="grd1" org.eventb.core.predicate="(w_a=1 ∧ a=0 ∧ (w_b=0 ∨ turn=0))⇒clk+1−sta≤ddla"/>
+<org.eventb.core.guard name="_4bHaEK_LEeaEWYvkF9G15A" org.eventb.core.label="grd2" org.eventb.core.predicate="a=1⇒clk+1−eta≤ddla"/>
+<org.eventb.core.guard name="_4bHaEa_LEeaEWYvkF9G15A" org.eventb.core.label="grd3" org.eventb.core.predicate="(w_b=1 ∧ b=0 ∧ (w_a=0 ∨ turn=1))⇒clk+1−stb≤ddlb"/>
+<org.eventb.core.guard name="_4bHaEq_LEeaEWYvkF9G15A" org.eventb.core.label="grd4" org.eventb.core.predicate="b=1⇒clk+1−etb≤ddlb"/>
 </org.eventb.core.event>
 <org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="U" org.eventb.core.identifier="turn"/>
 <org.eventb.core.invariant name="V" org.eventb.core.label="inv1" org.eventb.core.predicate="turn ∈ {0,1}"/>
 <org.eventb.core.invariant name="W" org.eventb.core.label="inv2" org.eventb.core.predicate="turn=0∧w_a=1⇒b=0"/>
 <org.eventb.core.invariant name="X" org.eventb.core.label="inv3" org.eventb.core.predicate="turn=1∧w_b=1⇒a=0"/>
-<org.eventb.core.invariant name="_x_QJ4K_LEeaEWYvkF9G15A" org.eventb.core.label="inv4" org.eventb.core.predicate="sta≤eta⇒eta−sta≤d"/>
-<org.eventb.core.invariant name="_x_QJ4a_LEeaEWYvkF9G15A" org.eventb.core.label="inv5" org.eventb.core.predicate="(w_a=1 ∧ a=0 ∧ (w_b=0 ∨ turn=0))⇒clk−sta≤d"/>
-<org.eventb.core.invariant name="_x_QJ4q_LEeaEWYvkF9G15A" org.eventb.core.label="inv6" org.eventb.core.predicate="a=1⇒clk−eta≤d"/>
-<org.eventb.core.invariant name="_x_QJ46_LEeaEWYvkF9G15A" org.eventb.core.label="inv7" org.eventb.core.predicate="(w_b=1 ∧ b=0 ∧ (w_a=0 ∨ turn=1))⇒clk−stb≤d"/>
-<org.eventb.core.invariant name="_x_Qw8K_LEeaEWYvkF9G15A" org.eventb.core.label="inv8" org.eventb.core.predicate="b=1⇒clk−etb≤d"/>
+<org.eventb.core.invariant name="_x_QJ4K_LEeaEWYvkF9G15A" org.eventb.core.label="inv4" org.eventb.core.predicate="sta≤eta⇒eta−sta≤ddla"/>
+<org.eventb.core.invariant name="_x_QJ4a_LEeaEWYvkF9G15A" org.eventb.core.label="inv5" org.eventb.core.predicate="(w_a=1 ∧ a=0 ∧ (w_b=0 ∨ turn=0))⇒clk−sta≤ddla"/>
+<org.eventb.core.invariant name="_x_QJ4q_LEeaEWYvkF9G15A" org.eventb.core.label="inv6" org.eventb.core.predicate="a=1⇒clk−eta≤ddla"/>
+<org.eventb.core.invariant name="_x_QJ46_LEeaEWYvkF9G15A" org.eventb.core.label="inv7" org.eventb.core.predicate="(w_b=1 ∧ b=0 ∧ (w_a=0 ∨ turn=1))⇒clk−stb≤ddlb"/>
+<org.eventb.core.invariant name="_x_Qw8K_LEeaEWYvkF9G15A" org.eventb.core.label="inv8" org.eventb.core.predicate="b=1⇒clk−etb≤ddlb"/>
+<org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="_x_Qw8K_LEeaEWYvkF9G15B" org.eventb.core.identifier="ddla"/>
+<org.eventb.core.invariant name="_x_Qw8K_LEeaEWYvkF9G15C" org.eventb.core.label="inv9" org.eventb.core.predicate="ddla ∈ ℕ"/>
+<org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="_x_Qw8K_LEeaEWYvkF9G15D" org.eventb.core.identifier="ddlb"/>
+<org.eventb.core.invariant name="_x_Qw8K_LEeaEWYvkF9G15E" org.eventb.core.label="inv10" org.eventb.core.predicate="ddlb ∈ ℕ"/>
 </org.eventb.core.machineFile>
