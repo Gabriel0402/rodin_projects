@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<org.eventb.core.machineFile org.eventb.core.configuration="org.eventb.core.fwd;de.prob.units.mchBase" org.eventb.texttools.text_lastmodified="1479661303092" org.eventb.texttools.text_representation="machine m1 refines m0  sees c0&#10;&#10;variables w_a w_b a b countA countB&#10;&#10;invariants&#10;  @inv1 countA ∈ ℕ&#10;  @inv2 countB ∈ ℕ&#10;&#10;events&#10;  event INITIALISATION extends INITIALISATION&#10;    then&#10;      @act6 countA ≔d&#10;      @act7 countB ≔d&#10;  end&#10;&#10;  event wish_a refines wish_a&#10;    where&#10;      @grd1 w_a=0&#10;      @grd2 countB &gt;0&#10;    then&#10;      @act1 w_a≔1&#10;      @act2 countA ≔d&#10;      @act3 countB ≔ countB−1&#10;  end&#10;&#10;  event enter_a refines enter_a&#10;    where&#10;      @grd1 w_a=1&#10;      @grd2 a=0&#10;      @grd3 b=0&#10;      @grd4 countB&gt;0&#10;    then&#10;      @act1 a≔1&#10;      @act2 countB ≔ countB−1&#10;  end&#10;&#10;  event leave_a refines leave_a&#10;    where&#10;      @grd1 a=1&#10;      @grd2 countB≥0&#10;    then&#10;      @act2 w_a≔0&#10;      @act1 a≔0&#10;  end&#10;&#10;  event wish_b refines wish_b&#10;    where&#10;      @grd1 w_b = 0&#10;      @grd2 countA&gt;0&#10;    then&#10;      @act1 w_b≔1&#10;      @act2 countA ≔ countA −1&#10;      @act3 countB ≔d&#10;  end&#10;&#10;  event enter_b refines enter_b&#10;    where&#10;      @grd1 w_b=1&#10;      @grd2 a=0&#10;      @grd3 b=0&#10;      @grd4 countA&gt;0&#10;    then&#10;      @act1 b≔1&#10;      @act2 countA ≔ countA −1&#10;  end&#10;&#10;  event leave_b refines leave_b&#10;    where&#10;      @grd1 b=1&#10;      @grd2 countA≥0&#10;    then&#10;      @act2 w_b≔0&#10;      @act1 b≔0&#10;  end&#10;end&#10;" version="5">
+<org.eventb.core.machineFile org.eventb.core.configuration="org.eventb.core.fwd;de.prob.units.mchBase" org.eventb.texttools.text_lastmodified="1479722690664" org.eventb.texttools.text_representation="machine m1 refines m0  sees c0&#10;&#10;variables w_a w_b a b countA countB&#10;&#10;invariants&#10;  @inv1 countA ∈ ℕ&#10;  @inv2 countB ∈ ℕ&#10;&#10;events&#10;  event INITIALISATION extends INITIALISATION&#10;    then&#10;      @act6 countA :∈ ℕ&#10;      @act7 countB :∈ ℕ&#10;  end&#10;&#10;  event wish_a refines wish_a&#10;    where&#10;      @grd1 w_a=0&#10;      @grd2 countB &gt;0&#10;    then&#10;      @act1 w_a≔1&#10;      @act2 countA :∈ ℕ&#10;      @act3 countB ≔ countB−1&#10;  end&#10;&#10;  event enter_a refines enter_a&#10;    where&#10;      @grd1 w_a=1&#10;      @grd2 a=0&#10;      @grd3 b=0&#10;      @grd4 countB&gt;0&#10;    then&#10;      @act1 a≔1&#10;      @act2 countB ≔ countB−1&#10;  end&#10;&#10;  event leave_a refines leave_a&#10;    where&#10;      @grd1 a=1&#10;      @grd2 countB≥0&#10;    then&#10;      @act2 w_a≔0&#10;      @act1 a≔0&#10;  end&#10;&#10;  event wish_b refines wish_b&#10;    where&#10;      @grd1 w_b = 0&#10;      @grd2 countA&gt;0&#10;    then&#10;      @act1 w_b≔1&#10;      @act2 countA ≔ countA −1&#10;      @act3 countB :∈ ℕ&#10;  end&#10;&#10;  event enter_b refines enter_b&#10;    where&#10;      @grd1 w_b=1&#10;      @grd2 a=0&#10;      @grd3 b=0&#10;      @grd4 countA&gt;0&#10;    then&#10;      @act1 b≔1&#10;      @act2 countA ≔ countA −1&#10;  end&#10;&#10;  event leave_b refines leave_b&#10;    where&#10;      @grd1 b=1&#10;      @grd2 countA≥0&#10;    then&#10;      @act2 w_b≔0&#10;      @act1 b≔0&#10;  end&#10;end&#10;" version="5">
 <org.eventb.core.refinesMachine name="'" org.eventb.core.target="m0"/>
 <org.eventb.core.seesContext name=";" org.eventb.core.target="c0"/>
 <org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="(" org.eventb.core.identifier="w_a"/>
@@ -7,14 +7,14 @@
 <org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="," org.eventb.core.identifier="a"/>
 <org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="." org.eventb.core.identifier="b"/>
 <org.eventb.core.event name="=" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="INITIALISATION">
-<org.eventb.core.action name="'" org.eventb.core.assignment="countA ≔d" org.eventb.core.label="act6"/>
-<org.eventb.core.action name="(" org.eventb.core.assignment="countB ≔d" org.eventb.core.label="act7"/>
+<org.eventb.core.action name="'" org.eventb.core.assignment="countA :∈ ℕ" org.eventb.core.label="act6"/>
+<org.eventb.core.action name="(" org.eventb.core.assignment="countB :∈ ℕ" org.eventb.core.label="act7"/>
 </org.eventb.core.event>
 <org.eventb.core.event name="&gt;" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="wish_a">
 <org.eventb.core.refinesEvent name="'" org.eventb.core.target="wish_a"/>
 <org.eventb.core.guard name="'" org.eventb.core.label="grd1" org.eventb.core.predicate="w_a=0"/>
 <org.eventb.core.action name="+" org.eventb.core.assignment="w_a≔1" org.eventb.core.label="act1"/>
-<org.eventb.core.action name="," org.eventb.core.assignment="countA ≔d" org.eventb.core.label="act2"/>
+<org.eventb.core.action name="," org.eventb.core.assignment="countA :∈ ℕ" org.eventb.core.label="act2"/>
 <org.eventb.core.action name="-" org.eventb.core.assignment="countB ≔ countB−1" org.eventb.core.label="act3"/>
 <org.eventb.core.guard name="." org.eventb.core.label="grd2" org.eventb.core.predicate="countB &gt;0"/>
 </org.eventb.core.event>
@@ -40,7 +40,7 @@
 <org.eventb.core.action name=")" org.eventb.core.assignment="w_b≔1" org.eventb.core.label="act1"/>
 <org.eventb.core.action name="*" org.eventb.core.assignment="countA ≔ countA −1" org.eventb.core.label="act2"/>
 <org.eventb.core.guard name="," org.eventb.core.label="grd2" org.eventb.core.predicate="countA&gt;0"/>
-<org.eventb.core.action name="+" org.eventb.core.assignment="countB ≔d" org.eventb.core.label="act3"/>
+<org.eventb.core.action name="+" org.eventb.core.assignment="countB :∈ ℕ" org.eventb.core.label="act3"/>
 </org.eventb.core.event>
 <org.eventb.core.event name="B" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="enter_b">
 <org.eventb.core.refinesEvent name="'" org.eventb.core.target="enter_b"/>

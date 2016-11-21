@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<org.eventb.core.machineFile org.eventb.core.configuration="org.eventb.core.fwd;de.prob.units.mchBase" version="5">
+<org.eventb.core.machineFile org.eventb.core.configuration="org.eventb.core.fwd;de.prob.units.mchBase" org.eventb.texttools.text_lastmodified="1479722773346" org.eventb.texttools.text_representation="machine m2 refines m1  sees c0&#10;&#10;variables w_a w_b a b countA countB turn&#10;&#10;invariants&#10;  @inv1 turn ∈ {0,1}&#10;  @inv2 turn=0 ∧ w_a=1 ⇒ b=0&#10;  @inv3 turn=1 ∧ w_b=1 ⇒ a=0&#10;  @inv4 w_a=1 ∧ a=0 ⇒ countA≥0&#10;  @inv5 w_b=1 ∧ b=0 ⇒ countB≥0&#10;&#10;events&#10;  event INITIALISATION extends INITIALISATION&#10;    then&#10;      @act8 turn :∈{0,1}&#10;  end&#10;&#10;  event wish_a refines wish_a&#10;    where&#10;      @grd1 w_a=0&#10;      @grd2 countB &gt;0&#10;    then&#10;      @act1 w_a≔1&#10;      @act2 countA :∈ ℕ&#10;      @act3 countB ≔ countB−1&#10;      @act4 turn≔1&#10;  end&#10;&#10;  event enter_a refines enter_a&#10;    where&#10;      @grd1 w_a=1&#10;      @grd2 a=0&#10;      @grd3 w_b=0 ∨ turn=0&#10;      @grd4 countB&gt;0&#10;    then&#10;      @act1 a≔1&#10;      @act2 countB ≔ countB−1&#10;  end&#10;&#10;  event leave_a extends leave_a&#10;  end&#10;&#10;  event wish_b refines wish_b&#10;    where&#10;      @grd1 w_b = 0&#10;      @grd2 countA&gt;0&#10;    then&#10;      @act1 w_b≔1&#10;      @act2 countA ≔ countA −1&#10;      @act3 countB :∈ ℕ&#10;      @act4 turn≔0&#10;  end&#10;&#10;  event enter_b refines enter_b&#10;    where&#10;      @grd1 w_b=1&#10;      @grd2 w_a=0 ∨ turn=1&#10;      @grd3 b=0&#10;      @grd4 countA&gt;0&#10;    then&#10;      @act1 b≔1&#10;      @act2 countA ≔ countA −1&#10;  end&#10;&#10;  event leave_b extends leave_b&#10;  end&#10;end&#10;" version="5">
 <org.eventb.core.refinesMachine name="'" org.eventb.core.target="m1"/>
 <org.eventb.core.seesContext name=";" org.eventb.core.target="c0"/>
 <org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="(" org.eventb.core.identifier="w_a"/>
@@ -15,7 +15,7 @@
 <org.eventb.core.refinesEvent name="'" org.eventb.core.target="wish_a"/>
 <org.eventb.core.guard name="'" org.eventb.core.label="grd1" org.eventb.core.predicate="w_a=0"/>
 <org.eventb.core.action name="+" org.eventb.core.assignment="w_a≔1" org.eventb.core.label="act1"/>
-<org.eventb.core.action name="," org.eventb.core.assignment="countA ≔d" org.eventb.core.label="act2"/>
+<org.eventb.core.action name="," org.eventb.core.assignment="countA :∈ ℕ" org.eventb.core.label="act2"/>
 <org.eventb.core.action name="-" org.eventb.core.assignment="countB ≔ countB−1" org.eventb.core.label="act3"/>
 <org.eventb.core.guard name="." org.eventb.core.label="grd2" org.eventb.core.predicate="countB &gt;0"/>
 <org.eventb.core.action name="/" org.eventb.core.assignment="turn≔1" org.eventb.core.label="act4"/>
@@ -38,17 +38,17 @@
 <org.eventb.core.action name=")" org.eventb.core.assignment="w_b≔1" org.eventb.core.label="act1"/>
 <org.eventb.core.action name="*" org.eventb.core.assignment="countA ≔ countA −1" org.eventb.core.label="act2"/>
 <org.eventb.core.guard name="," org.eventb.core.label="grd2" org.eventb.core.predicate="countA&gt;0"/>
-<org.eventb.core.action name="+" org.eventb.core.assignment="countB ≔d" org.eventb.core.label="act3"/>
-<org.eventb.core.action name="-" org.eventb.core.assignment="turn≔0" org.eventb.core.label="act4"/>
+<org.eventb.core.action name="internal1" org.eventb.core.assignment="countB :∈ ℕ" org.eventb.core.label="act3"/>
+<org.eventb.core.action name="+" org.eventb.core.assignment="turn≔0" org.eventb.core.label="act4"/>
 </org.eventb.core.event>
 <org.eventb.core.event name="L" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="enter_b">
 <org.eventb.core.refinesEvent name="'" org.eventb.core.target="enter_b"/>
 <org.eventb.core.guard name="'" org.eventb.core.label="grd1" org.eventb.core.predicate="w_b=1"/>
 <org.eventb.core.guard name="(" org.eventb.core.label="grd2" org.eventb.core.predicate="w_a=0 ∨ turn=1"/>
 <org.eventb.core.guard name=")" org.eventb.core.label="grd3" org.eventb.core.predicate="b=0"/>
-<org.eventb.core.action name="(" org.eventb.core.assignment="b≔1" org.eventb.core.label="act1"/>
+<org.eventb.core.action name="(" org.eventb.core.assignment="countA ≔ countA −1" org.eventb.core.label="act2"/>
 <org.eventb.core.guard name="+" org.eventb.core.label="grd4" org.eventb.core.predicate="countA&gt;0"/>
-<org.eventb.core.action name="+" org.eventb.core.assignment="countA ≔ countA −1" org.eventb.core.label="act2"/>
+<org.eventb.core.action name="-" org.eventb.core.assignment="b≔1" org.eventb.core.label="act1"/>
 </org.eventb.core.event>
 <org.eventb.core.event name="M" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="leave_b">
 <org.eventb.core.refinesEvent name="'" org.eventb.core.target="leave_b"/>
