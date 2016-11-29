@@ -1,9 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<org.eventb.core.poFile org.eventb.core.poStamp="13">
-<org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.poStamp="11">
+<org.eventb.core.poFile org.eventb.core.poStamp="17">
+<org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.poStamp="15">
 <org.eventb.core.poIdentifier name="d" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="ddla" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="ddlb" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="delay" org.eventb.core.type="ℤ"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/Copy of peterson_tick/c0.bpo|org.eventb.core.poFile#c0|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="13">
+<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/Copy of peterson_tick/c0.bpo|org.eventb.core.poFile#c0|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="17">
 <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="d=5" org.eventb.core.source="/Copy of peterson_tick/c0.buc|org.eventb.core.contextFile#c0|org.eventb.core.axiom#("/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="ddla∈ℕ" org.eventb.core.source="/Copy of peterson_tick/c0.buc|org.eventb.core.contextFile#c0|org.eventb.core.axiom#*"/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="ddlb∈ℕ" org.eventb.core.source="/Copy of peterson_tick/c0.buc|org.eventb.core.contextFile#c0|org.eventb.core.axiom#,"/>
+<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="delay∈ℕ" org.eventb.core.source="/Copy of peterson_tick/c0.buc|org.eventb.core.contextFile#c0|org.eventb.core.axiom#."/>
+<org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="ddla&gt;ddlb∧ddlb≥delay" org.eventb.core.source="/Copy of peterson_tick/c0.buc|org.eventb.core.contextFile#c0|org.eventb.core.axiom#_zFN8ALYkEeaMLNh_5FqGKA"/>
 </org.eventb.core.poPredicateSet>
 </org.eventb.core.poFile>
