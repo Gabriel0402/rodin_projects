@@ -1,30 +1,54 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<org.eventb.core.machineFile org.eventb.core.configuration="org.eventb.core.fwd;de.prob.units.mchBase" version="5">
+<org.eventb.core.machineFile org.eventb.core.configuration="org.eventb.core.fwd;de.prob.units.mchBase" org.eventb.texttools.text_lastmodified="1480504315471" org.eventb.texttools.text_representation="machine m12 refines m1  sees c0&#10;&#10;variables w_a w_b a b turn&#10;&#10;invariants&#10;  @inv1 turn ∈ {0,1}&#10;  @inv2 turn=0 ∧ w_a=1 ⇒ b=0&#10;  @inv3 turn=1 ∧ w_b=1 ⇒ a=0&#10;  @inv4 turn∈{0,1} ⇔ countA∈ℕ1&#10;  @inv5 turn∈{0,1} ⇔ countB∈ℕ1&#10;&#10;events&#10;  event INITIALISATION&#10;    then&#10;      @act1 w_a ≔ 0&#10;      @act2 w_b ≔ 0&#10;      @act4 a ≔ 0&#10;      @act5 b ≔ 0&#10;      @act8 turn :∈{0,1}&#10;  end&#10;&#10;  event wish_a refines wish_a&#10;    where&#10;      @grd1 w_a=0&#10;    then&#10;      @act1 w_a≔1&#10;      @act2 turn≔1&#10;  end&#10;&#10;  event enter_a refines enter_a&#10;    where&#10;      @grd1 w_a=1&#10;      @grd2 a=0&#10;      @grd3 w_b=0 ∨  turn=0&#10;    then&#10;      @act1 a≔1&#10;  end&#10;&#10;  event leave_a extends leave_a&#10;  end&#10;&#10;  event wish_b refines wish_b&#10;    where&#10;      @grd1 w_b = 0&#10;    then&#10;      @act1 w_b≔1&#10;      @act2 turn≔0&#10;  end&#10;&#10;  event enter_b refines enter_b&#10;    where&#10;      @grd1 w_b=1&#10;      @grd2 w_a=0 ∨ turn=1&#10;      @grd3 b=0&#10;    then&#10;      @act1 b≔1&#10;  end&#10;&#10;  event leave_b extends leave_b&#10;  end&#10;end&#10;" version="5">
 <org.eventb.core.refinesMachine name="'" org.eventb.core.target="m1"/>
 <org.eventb.core.seesContext name=";" org.eventb.core.target="c0"/>
 <org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="(" org.eventb.core.identifier="w_a"/>
 <org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="*" org.eventb.core.identifier="w_b"/>
 <org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="," org.eventb.core.identifier="a"/>
 <org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="." org.eventb.core.identifier="b"/>
-<org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="D" org.eventb.core.identifier="countA"/>
-<org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="F" org.eventb.core.identifier="countB"/>
-<org.eventb.core.event name="G" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="INITIALISATION"/>
-<org.eventb.core.event name="H" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="wish_a">
-<org.eventb.core.refinesEvent name="'" org.eventb.core.target="wish_a"/>
+<org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="D" org.eventb.core.identifier="turn"/>
+<org.eventb.core.event name="G" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="INITIALISATION">
+<org.eventb.core.action name="'" org.eventb.core.assignment="w_a ≔ 0" org.eventb.core.label="act1"/>
+<org.eventb.core.action name="(" org.eventb.core.assignment="w_b ≔ 0" org.eventb.core.label="act2"/>
+<org.eventb.core.action name=")" org.eventb.core.assignment="a ≔ 0" org.eventb.core.label="act4"/>
+<org.eventb.core.action name="*" org.eventb.core.assignment="b ≔ 0" org.eventb.core.label="act5"/>
+<org.eventb.core.action name="internal1" org.eventb.core.assignment="turn :∈{0,1}" org.eventb.core.label="act8"/>
 </org.eventb.core.event>
-<org.eventb.core.event name="I" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="enter_a">
+<org.eventb.core.event name="H" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="wish_a">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="wish_a"/>
+<org.eventb.core.guard name="'" org.eventb.core.label="grd1" org.eventb.core.predicate="w_a=0"/>
+<org.eventb.core.action name="internal2" org.eventb.core.assignment="w_a≔1" org.eventb.core.label="act1"/>
+<org.eventb.core.action name="internal3" org.eventb.core.assignment="turn≔1" org.eventb.core.label="act2"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="I" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="enter_a">
 <org.eventb.core.refinesEvent name="'" org.eventb.core.target="enter_a"/>
+<org.eventb.core.guard name="(" org.eventb.core.label="grd1" org.eventb.core.predicate="w_a=1"/>
+<org.eventb.core.guard name="." org.eventb.core.label="grd2" org.eventb.core.predicate="a=0"/>
+<org.eventb.core.guard name=")" org.eventb.core.label="grd3" org.eventb.core.predicate="w_b=0 ∨  turn=0"/>
+<org.eventb.core.action name="+" org.eventb.core.assignment="a≔1" org.eventb.core.label="act1"/>
 </org.eventb.core.event>
 <org.eventb.core.event name="J" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="leave_a">
 <org.eventb.core.refinesEvent name="'" org.eventb.core.target="leave_a"/>
 </org.eventb.core.event>
-<org.eventb.core.event name="K" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="wish_b">
+<org.eventb.core.event name="K" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="wish_b">
 <org.eventb.core.refinesEvent name="'" org.eventb.core.target="wish_b"/>
+<org.eventb.core.guard name="_QMnycLMkEea0nZ8ABmpX-w" org.eventb.core.label="grd1" org.eventb.core.predicate="w_b = 0"/>
+<org.eventb.core.action name="_qrM50LbkEeaMLNh_5FqGKA" org.eventb.core.assignment="w_b≔1" org.eventb.core.label="act1"/>
+<org.eventb.core.action name="," org.eventb.core.assignment="turn≔0" org.eventb.core.label="act2"/>
 </org.eventb.core.event>
-<org.eventb.core.event name="L" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="enter_b">
+<org.eventb.core.event name="L" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="enter_b">
 <org.eventb.core.refinesEvent name="'" org.eventb.core.target="enter_b"/>
+<org.eventb.core.guard name="_q23JALDKEeaEWYvkF9G15A" org.eventb.core.label="grd1" org.eventb.core.predicate="w_b=1"/>
+<org.eventb.core.guard name="," org.eventb.core.label="grd2" org.eventb.core.predicate="w_a=0 ∨ turn=1"/>
+<org.eventb.core.guard name="+" org.eventb.core.label="grd3" org.eventb.core.predicate="b=0"/>
+<org.eventb.core.action name="_qrM50bbkEeaMLNh_5FqGKA" org.eventb.core.assignment="b≔1" org.eventb.core.label="act1"/>
 </org.eventb.core.event>
 <org.eventb.core.event name="M" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="leave_b">
 <org.eventb.core.refinesEvent name="'" org.eventb.core.target="leave_b"/>
 </org.eventb.core.event>
+<org.eventb.core.invariant name="O" org.eventb.core.label="inv1" org.eventb.core.predicate="turn ∈ {0,1}"/>
+<org.eventb.core.invariant name="_tgbP8LbjEeaMLNh_5FqGKA" org.eventb.core.label="inv2" org.eventb.core.predicate="turn=0 ∧ w_a=1 ⇒ b=0"/>
+<org.eventb.core.invariant name="_tgbP8bbjEeaMLNh_5FqGKA" org.eventb.core.label="inv3" org.eventb.core.predicate="turn=1 ∧ w_b=1 ⇒ a=0"/>
+<org.eventb.core.invariant name="_qrM50rbkEeaMLNh_5FqGKA" org.eventb.core.label="inv4" org.eventb.core.predicate="turn∈{0,1} ⇔ countA∈ℕ1"/>
+<org.eventb.core.invariant name="_vJ1oULbkEeaMLNh_5FqGKA" org.eventb.core.label="inv5" org.eventb.core.predicate="turn∈{0,1} ⇔ countB∈ℕ1"/>
 </org.eventb.core.machineFile>

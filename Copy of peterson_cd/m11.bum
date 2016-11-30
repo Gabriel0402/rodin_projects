@@ -40,4 +40,5 @@
 <org.eventb.core.event name="M" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="leave_b">
 <org.eventb.core.refinesEvent name="'" org.eventb.core.target="leave_b"/>
 </org.eventb.core.event>
+<org.eventb.core.invariant name="N" org.eventb.core.label="inv1" org.eventb.core.predicate="w_a=1 ∧ a=0 ⇒ countB − countA≤2 ∨ countA−countB≤2"/>
 </org.eventb.core.machineFile>
