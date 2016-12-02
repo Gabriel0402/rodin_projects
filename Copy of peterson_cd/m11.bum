@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<org.eventb.core.machineFile org.eventb.core.configuration="org.eventb.core.fwd;de.prob.units.mchBase" version="5">
+<org.eventb.core.machineFile org.eventb.core.configuration="org.eventb.core.fwd;de.prob.units.mchBase" org.eventb.texttools.text_lastmodified="1480690424113" org.eventb.texttools.text_representation="machine m11 refines m1  sees c0&#10;&#10;variables w_a w_b a b countA countB&#10;&#10;invariants&#10;  @inv1 w_a=1 ∧ a=0 ⇒ countB − countA≤1 ∨ countA−countB≤1&#10;&#10;events&#10;  event INITIALISATION&#10;    then&#10;      @act1 w_a ≔ 0&#10;      @act2 w_b ≔ 0&#10;      @act4 a ≔ 0&#10;      @act5 b ≔ 0&#10;      @act6 countA ≔2&#10;      @act7 countB ≔2&#10;  end&#10;&#10;  event wish_a refines wish_a&#10;    where&#10;      @grd1 w_a=0&#10;    then&#10;      @act1 w_a≔1&#10;      @act2 countA ≔2&#10;  end&#10;&#10;  event enter_a extends enter_a&#10;  end&#10;&#10;  event leave_a extends leave_a&#10;  end&#10;&#10;  event wish_b refines wish_b&#10;    where&#10;      @grd1 w_b = 0&#10;    then&#10;      @act1 w_b≔1&#10;      @act3 countB ≔2&#10;  end&#10;&#10;  event enter_b extends enter_b&#10;  end&#10;&#10;  event leave_b extends leave_b&#10;  end&#10;end&#10;" version="5">
 <org.eventb.core.refinesMachine name="'" org.eventb.core.target="m1"/>
 <org.eventb.core.seesContext name=";" org.eventb.core.target="c0"/>
 <org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="(" org.eventb.core.identifier="w_a"/>
@@ -13,8 +13,8 @@
 <org.eventb.core.action name="(" org.eventb.core.assignment="w_b ≔ 0" org.eventb.core.label="act2"/>
 <org.eventb.core.action name=")" org.eventb.core.assignment="a ≔ 0" org.eventb.core.label="act4"/>
 <org.eventb.core.action name="*" org.eventb.core.assignment="b ≔ 0" org.eventb.core.label="act5"/>
-<org.eventb.core.action name="internal1" org.eventb.core.assignment="countA ≔1" org.eventb.core.label="act6"/>
-<org.eventb.core.action name="internal2" org.eventb.core.assignment="countB ≔1" org.eventb.core.label="act7"/>
+<org.eventb.core.action name="internal1" org.eventb.core.assignment="countA ≔2" org.eventb.core.label="act6"/>
+<org.eventb.core.action name="internal2" org.eventb.core.assignment="countB ≔2" org.eventb.core.label="act7"/>
 </org.eventb.core.event>
 <org.eventb.core.event name="H" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="wish_a">
 <org.eventb.core.refinesEvent name="'" org.eventb.core.target="wish_a"/>
@@ -40,5 +40,5 @@
 <org.eventb.core.event name="M" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="leave_b">
 <org.eventb.core.refinesEvent name="'" org.eventb.core.target="leave_b"/>
 </org.eventb.core.event>
-<org.eventb.core.invariant name="N" org.eventb.core.label="inv1" org.eventb.core.predicate="w_a=1 ∧ a=0 ⇒ countB − countA≤2 ∨ countA−countB≤2"/>
+<org.eventb.core.invariant name="N" org.eventb.core.label="inv1" org.eventb.core.predicate="w_a=1 ∧ a=0 ⇒ countB − countA≤1 ∨ countA−countB≤1"/>
 </org.eventb.core.machineFile>
