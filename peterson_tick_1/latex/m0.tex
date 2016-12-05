@@ -1,0 +1,86 @@
+\documentclass[10pt,a4paper]{report}
+\usepackage{bsymb,b2latex}
+\begin{document}
+\SingleHeader{m0}
+\MACHINE{m0}{}{c0}{}
+\VARIABLES{
+	\Variable{w\_a}{}
+	\Variable{w\_b}{}
+	\Variable{a}{}
+	\Variable{b}{}
+}
+\INVARIANTS{
+	\Invariant{inv1}{false}{$w\_a \in{} \{0,1\}$}{}
+	\Invariant{inv2}{false}{$w\_b \in{} \{0,1\}$}{}
+	\Invariant{inv4}{false}{$a \in{} \{0,1\}$}{}
+	\Invariant{inv5}{false}{$b \in{} \{0,1\}$}{}
+	\Invariant{inv6}{false}{$w\_a=0 \limp{} a=0$}{}
+	\Invariant{inv7}{false}{$w\_b=0 \limp{} b=0$}{}
+	\Invariant{inv8}{false}{$a=0 \lor{} b = 0$}{}
+}
+\EVENTS{
+\INITIALISATION{false}{}{
+	\ACTIONS{false}{
+		\Action{act1}{$w\_a \bcmeq{} 0$}{true}{}
+		\Action{act2}{$w\_b \bcmeq{} 0$}{true}{}
+		\Action{act4}{$a \bcmeq{} 0$}{true}{}
+		\Action{act5}{$b \bcmeq{} 0$}{true}{}
+	}
+}
+\EVT{wish\_a}{false}{ordinary}{}{}{
+	\GUARDS{false}{
+		\Guard{grd1}{false}{$w\_a=0$}{true}{}
+	}
+	\ACTIONS{true}{
+		\Action{act1}{$w\_a\bcmeq{}1$}{true}{}
+	}
+}
+\EVT{enter\_a}{false}{ordinary}{}{}{
+	\GUARDS{false}{
+		\Guard{grd1}{false}{$w\_a=1$}{true}{}
+		\Guard{grd2}{false}{$a=0$}{true}{}
+		\Guard{grd3}{false}{$b=0$}{true}{}
+	}
+	\ACTIONS{true}{
+		\Action{act1}{$a\bcmeq{}1$}{true}{}
+	}
+}
+\EVT{leave\_a}{false}{ordinary}{}{}{
+	\GUARDS{false}{
+		\Guard{grd1}{false}{$a=1$}{true}{}
+	}
+	\ACTIONS{true}{
+		\Action{act2}{$w\_a\bcmeq{}0$}{true}{}
+		\Action{act1}{$a\bcmeq{}0$}{true}{}
+	}
+}
+\EVT{wish\_b}{false}{ordinary}{}{}{
+	\GUARDS{false}{
+		\Guard{grd1}{false}{$w\_b = 0$}{true}{}
+	}
+	\ACTIONS{true}{
+		\Action{act1}{$w\_b\bcmeq{}1$}{true}{}
+	}
+}
+\EVT{enter\_b}{false}{ordinary}{}{}{
+	\GUARDS{false}{
+		\Guard{grd1}{false}{$w\_b=1$}{true}{}
+		\Guard{grd2}{false}{$a=0$}{true}{}
+		\Guard{grd3}{false}{$b=0$}{true}{}
+	}
+	\ACTIONS{true}{
+		\Action{act1}{$b\bcmeq{}1$}{true}{}
+	}
+}
+\EVT{leave\_b}{false}{ordinary}{}{}{
+	\GUARDS{false}{
+		\Guard{grd1}{false}{$b=1$}{true}{}
+	}
+	\ACTIONS{true}{
+		\Action{act2}{$w\_b\bcmeq{}0$}{true}{}
+		\Action{act1}{$b\bcmeq{}0$}{true}{}
+	}
+}
+}
+\END
+\end{document}

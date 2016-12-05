@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.machineFile org.eventb.core.configuration="org.eventb.core.fwd;de.prob.units.mchBase" org.eventb.texttools.text_lastmodified="1480946932624" org.eventb.texttools.text_representation="machine m0 sees c0&#10;&#10;variables wait position&#10;&#10;invariants&#10;  @inv1 wait ⊆ PROCESS&#10;  @inv2 position ∈ wait↣POSITION&#10;  @inv3 finite(ran(position))&#10;&#10;events&#10;  event INITIALISATION&#10;    then&#10;      @act1 wait ≔∅&#10;      @act2 position ≔ ∅&#10;  end&#10;&#10;  event enqueue&#10;    any pro pos&#10;    where&#10;      @grd1 pro∈PROCESS∖wait&#10;      @grd2 pos∈POSITION&#10;      @grd3 pos∉ran(position)&#10;      @grd4 position≠∅⇒pos&gt;max(ran(position))&#10;    then&#10;      @act1 wait≔wait ∪ {pro}&#10;      @act2 position≔position ∪ {pro↦pos}&#10;  end&#10;&#10;  event dequeue&#10;    any pro&#10;    where&#10;      @grd3 pro∈dom(position)&#10;      @grd2 position(pro)=min(ran(position))&#10;      @grd1 pro∈wait&#10;    then&#10;      @act1 wait≔wait∖{pro}&#10;      @act2 position≔{pro}⩤position&#10;  end&#10;end&#10;" version="5">
+<org.eventb.core.seesContext name="*" org.eventb.core.target="c0"/>
+<org.eventb.core.event name="'" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="INITIALISATION">
+<org.eventb.core.action name="'" org.eventb.core.assignment="wait ≔∅" org.eventb.core.label="act1"/>
+<org.eventb.core.action name="(" org.eventb.core.assignment="position ≔ ∅" org.eventb.core.label="act2"/>
+</org.eventb.core.event>
+<org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="(" org.eventb.core.identifier="wait"/>
+<org.eventb.core.invariant name=")" org.eventb.core.label="inv1" org.eventb.core.predicate="wait ⊆ PROCESS"/>
+<org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="+" org.eventb.core.identifier="position"/>
+<org.eventb.core.invariant name="," org.eventb.core.label="inv2" org.eventb.core.predicate="position ∈ wait↣POSITION"/>
+<org.eventb.core.event name="-" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="enqueue">
+<org.eventb.core.parameter name="'" org.eventb.core.identifier="pro"/>
+<org.eventb.core.parameter name="(" org.eventb.core.identifier="pos"/>
+<org.eventb.core.guard name=")" org.eventb.core.label="grd1" org.eventb.core.predicate="pro∈PROCESS∖wait"/>
+<org.eventb.core.guard name="*" org.eventb.core.label="grd2" org.eventb.core.predicate="pos∈POSITION"/>
+<org.eventb.core.guard name="+" org.eventb.core.label="grd3" org.eventb.core.predicate="pos∉ran(position)"/>
+<org.eventb.core.action name="," org.eventb.core.assignment="wait≔wait ∪ {pro}" org.eventb.core.label="act1"/>
+<org.eventb.core.action name="-" org.eventb.core.assignment="position≔position ∪ {pro↦pos}" org.eventb.core.label="act2"/>
+<org.eventb.core.guard name="." org.eventb.core.label="grd4" org.eventb.core.predicate="position≠∅⇒pos&gt;max(ran(position))"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="." org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="dequeue">
+<org.eventb.core.parameter name="'" org.eventb.core.identifier="pro"/>
+<org.eventb.core.guard name="(" org.eventb.core.label="grd3" org.eventb.core.predicate="pro∈dom(position)"/>
+<org.eventb.core.action name="*" org.eventb.core.assignment="wait≔wait∖{pro}" org.eventb.core.label="act1"/>
+<org.eventb.core.action name="+" org.eventb.core.assignment="position≔{pro}⩤position" org.eventb.core.label="act2"/>
+<org.eventb.core.guard name="/" org.eventb.core.label="grd2" org.eventb.core.predicate="position(pro)=min(ran(position))"/>
+<org.eventb.core.guard name="_-D_yALrrEeafDq8axj2HVQ" org.eventb.core.label="grd1" org.eventb.core.predicate="pro∈wait"/>
+</org.eventb.core.event>
+<org.eventb.core.invariant name="/" org.eventb.core.label="inv3" org.eventb.core.predicate="finite(ran(position))"/>
+</org.eventb.core.machineFile>
