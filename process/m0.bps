@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <org.eventb.core.psFile>
-<org.eventb.core.psStatus name="INITIALISATION/inv2/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="18" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="INITIALISATION/inv3/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="18" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="enqueue/grd4/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="18" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="enqueue/inv2/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="18" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="enqueue/inv3/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="18" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="dequeue/grd2/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="18" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="dequeue/inv2/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="18" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="dequeue/inv3/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="18" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="INITIALISATION/inv2/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="19" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="INITIALISATION/inv3/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="19" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="enqueue/grd4/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="19" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="enqueue/inv2/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="19" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="enqueue/inv3/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="19" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="dequeue/grd2/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="19" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="dequeue/inv2/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="19" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="dequeue/inv3/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="19" org.eventb.core.psManual="false"/>
 </org.eventb.core.psFile>

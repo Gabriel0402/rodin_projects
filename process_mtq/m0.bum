@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.machineFile org.eventb.core.configuration="org.eventb.core.fwd;de.prob.units.mchBase" org.eventb.texttools.text_lastmodified="1481037421521" org.eventb.texttools.text_representation="machine m0 sees c0&#10;&#10;variables wait position queue&#10;&#10;invariants&#10;  @inv1 wait ⊆ PROCESS&#10;  @inv2 queue ⊆ QUEUE&#10;  @inv3 position ∈ queue→(wait⤔POSITION)&#10;  @inv4 ∀q·q∈dom(position)⇒finite(ran(position(q)))&#10;  @inv5 ∀q1,q2·q1∈queue∧q2∈queue∧q1≠q2⇒dom(position(q1))∩ dom(position(q2))=∅&#10;  @inv6 ∀q·q∈queue⇒finite(ran(position(q)))&#10;&#10;events&#10;  event INITIALISATION&#10;    then&#10;      @act1 wait ≔∅&#10;      @act2 position≔QUEUE×{∅}&#10;      @act3 queue ≔QUEUE&#10;  end&#10;&#10;  event enqueue&#10;    any pro pos q&#10;    where&#10;      @grd1 pro∈PROCESS∖wait&#10;      @grd2 q∈queue&#10;      @grd3 pos∈POSITION∖ran(position(q))&#10;      @grd4 position(q)≠∅⇒pos&gt;max(ran(position(q)))&#10;    then&#10;      @act1 wait≔wait ∪ {pro}&#10;      @act2 position(q)≔position(q) ∪ {pro↦pos}&#10;  end&#10;&#10;  event dequeue&#10;    any pro q&#10;    where&#10;      @grd4 q∈queue&#10;      @grd3 pro∈dom(position(q))&#10;      @grd2 position(q)(pro)=min(ran(position(q)))&#10;      @grd1 pro∈wait&#10;    then&#10;      @act1 wait≔wait∖{pro}&#10;      @act2 position(q)≔{pro}⩤position(q)&#10;  end&#10;end&#10;" version="5">
+<org.eventb.core.seesContext name="*" org.eventb.core.target="c0"/>
+<org.eventb.core.event name="'" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="INITIALISATION">
+<org.eventb.core.action name="'" org.eventb.core.assignment="wait ≔∅" org.eventb.core.label="act1"/>
+<org.eventb.core.action name="(" org.eventb.core.assignment="position≔QUEUE×{∅}" org.eventb.core.label="act2"/>
+<org.eventb.core.action name="," org.eventb.core.assignment="queue ≔QUEUE" org.eventb.core.label="act3"/>
+</org.eventb.core.event>
+<org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="(" org.eventb.core.identifier="wait"/>
+<org.eventb.core.invariant name=")" org.eventb.core.label="inv1" org.eventb.core.predicate="wait ⊆ PROCESS"/>
+<org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="+" org.eventb.core.identifier="position"/>
+<org.eventb.core.invariant name="," org.eventb.core.label="inv2" org.eventb.core.predicate="queue ⊆ QUEUE"/>
+<org.eventb.core.event name="-" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="enqueue">
+<org.eventb.core.parameter name="'" org.eventb.core.identifier="pro"/>
+<org.eventb.core.parameter name="(" org.eventb.core.identifier="pos"/>
+<org.eventb.core.guard name=")" org.eventb.core.label="grd1" org.eventb.core.predicate="pro∈PROCESS∖wait"/>
+<org.eventb.core.guard name="*" org.eventb.core.label="grd2" org.eventb.core.predicate="q∈queue"/>
+<org.eventb.core.guard name="+" org.eventb.core.label="grd3" org.eventb.core.predicate="pos∈POSITION∖ran(position(q))"/>
+<org.eventb.core.guard name="." org.eventb.core.label="grd4" org.eventb.core.predicate="position(q)≠∅⇒pos&gt;max(ran(position(q)))"/>
+<org.eventb.core.parameter name="_r8OkALueEea1PvyHgbivgw" org.eventb.core.identifier="q"/>
+<org.eventb.core.action name=")" org.eventb.core.assignment="wait≔wait ∪ {pro}" org.eventb.core.label="act1"/>
+<org.eventb.core.action name="-" org.eventb.core.assignment="position(q)≔position(q) ∪ {pro↦pos}" org.eventb.core.label="act2"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="." org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="dequeue">
+<org.eventb.core.guard name="(" org.eventb.core.label="grd4" org.eventb.core.predicate="q∈queue"/>
+<org.eventb.core.guard name="/" org.eventb.core.label="grd3" org.eventb.core.predicate="pro∈dom(position(q))"/>
+<org.eventb.core.guard name="_-D_yALrrEeafDq8axj2HVQ" org.eventb.core.label="grd2" org.eventb.core.predicate="position(q)(pro)=min(ran(position(q)))"/>
+<org.eventb.core.parameter name="_r8PLELueEea1PvyHgbivgw" org.eventb.core.identifier="pro"/>
+<org.eventb.core.parameter name="_r8PLEbueEea1PvyHgbivgw" org.eventb.core.identifier="q"/>
+<org.eventb.core.guard name="_r8PLErueEea1PvyHgbivgw" org.eventb.core.label="grd1" org.eventb.core.predicate="pro∈wait"/>
+<org.eventb.core.action name="-" org.eventb.core.assignment="wait≔wait∖{pro}" org.eventb.core.label="act1"/>
+<org.eventb.core.action name="*" org.eventb.core.assignment="position(q)≔{pro}⩤position(q)" org.eventb.core.label="act2"/>
+</org.eventb.core.event>
+<org.eventb.core.invariant name="/" org.eventb.core.label="inv3" org.eventb.core.predicate="position ∈ queue→(wait⤔POSITION)"/>
+<org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="0" org.eventb.core.identifier="queue"/>
+<org.eventb.core.invariant name="1" org.eventb.core.label="inv4" org.eventb.core.predicate="∀q·q∈dom(position)⇒finite(ran(position(q)))"/>
+<org.eventb.core.invariant name="_r8PyILueEea1PvyHgbivgw" org.eventb.core.label="inv5" org.eventb.core.predicate="∀q1,q2·q1∈queue∧q2∈queue∧q1≠q2⇒dom(position(q1))∩ dom(position(q2))=∅"/>
+<org.eventb.core.invariant name="_p9WO8Lu-Eea1PvyHgbivgw" org.eventb.core.label="inv6" org.eventb.core.predicate="∀q·q∈queue⇒finite(ran(position(q)))"/>
+</org.eventb.core.machineFile>
