@@ -24,4 +24,5 @@
 <org.eventb.core.action name=")" org.eventb.core.assignment="process≔process∖{pro}" org.eventb.core.label="act1"/>
 </org.eventb.core.event>
 <org.eventb.core.invariant name="2" org.eventb.core.label="inv2" org.eventb.core.predicate="finite(process)"/>
+<org.eventb.core.invariant name="3" org.eventb.core.label="inv3" org.eventb.core.predicate="card(process)≤1"/>
 </org.eventb.core.machineFile>

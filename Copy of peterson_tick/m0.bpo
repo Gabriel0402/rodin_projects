@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<org.eventb.core.poFile org.eventb.core.poStamp="23">
-<org.eventb.core.poPredicateSet name="CTXHYP" org.eventb.core.poStamp="23">
+<org.eventb.core.poFile org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="CTXHYP" org.eventb.core.poStamp="0">
 <org.eventb.core.poIdentifier name="d" org.eventb.core.type="ℤ"/>
 <org.eventb.core.poIdentifier name="ddla" org.eventb.core.type="ℤ"/>
 <org.eventb.core.poIdentifier name="ddlb" org.eventb.core.type="ℤ"/>
@@ -11,13 +11,13 @@
 <org.eventb.core.poPredicate name="dela}" org.eventb.core.predicate="delay∈ℕ" org.eventb.core.source="/Copy of peterson_tick/c0.buc|org.eventb.core.contextFile#c0|org.eventb.core.axiom#."/>
 <org.eventb.core.poPredicate name="dela~" org.eventb.core.predicate="ddla&gt;ddlb∧ddlb≥delay" org.eventb.core.source="/Copy of peterson_tick/c0.buc|org.eventb.core.contextFile#c0|org.eventb.core.axiom#_zFN8ALYkEeaMLNh_5FqGKA"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.parentSet="/Copy of peterson_tick/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="23">
+<org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.parentSet="/Copy of peterson_tick/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="0">
 <org.eventb.core.poIdentifier name="a" org.eventb.core.type="ℤ"/>
 <org.eventb.core.poIdentifier name="b" org.eventb.core.type="ℤ"/>
 <org.eventb.core.poIdentifier name="w_a" org.eventb.core.type="ℤ"/>
 <org.eventb.core.poIdentifier name="w_b" org.eventb.core.type="ℤ"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poSequent name="INITIALISATION/inv1/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="23">
+<org.eventb.core.poSequent name="INITIALISATION/inv1/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Copy of peterson_tick/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#EVTALLHYPw_c"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="0∈{0,1}" org.eventb.core.source="/Copy of peterson_tick/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.invariant#)"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Copy of peterson_tick/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#'"/>
@@ -25,7 +25,7 @@
 <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Copy of peterson_tick/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/Copy of peterson_tick/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poSequent#INITIALISATION\/inv1\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
 <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Copy of peterson_tick/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD0"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="INITIALISATION/inv2/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="23">
+<org.eventb.core.poSequent name="INITIALISATION/inv2/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Copy of peterson_tick/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#EVTALLHYPw_c"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="0∈{0,1}" org.eventb.core.source="/Copy of peterson_tick/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.invariant#+"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Copy of peterson_tick/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#'"/>
@@ -33,7 +33,7 @@
 <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Copy of peterson_tick/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/Copy of peterson_tick/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poSequent#INITIALISATION\/inv2\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
 <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Copy of peterson_tick/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD1"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="INITIALISATION/inv4/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="23">
+<org.eventb.core.poSequent name="INITIALISATION/inv4/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Copy of peterson_tick/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#EVTALLHYPw_c"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="0∈{0,1}" org.eventb.core.source="/Copy of peterson_tick/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.invariant#-"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Copy of peterson_tick/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#'"/>
@@ -41,7 +41,7 @@
 <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Copy of peterson_tick/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/Copy of peterson_tick/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poSequent#INITIALISATION\/inv4\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
 <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Copy of peterson_tick/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD2"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="INITIALISATION/inv5/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="23">
+<org.eventb.core.poSequent name="INITIALISATION/inv5/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Copy of peterson_tick/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#EVTALLHYPw_c"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="0∈{0,1}" org.eventb.core.source="/Copy of peterson_tick/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.invariant#\/"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Copy of peterson_tick/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#'"/>
@@ -49,7 +49,7 @@
 <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Copy of peterson_tick/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/Copy of peterson_tick/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poSequent#INITIALISATION\/inv5\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
 <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Copy of peterson_tick/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD3"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="INITIALISATION/inv6/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="23">
+<org.eventb.core.poSequent name="INITIALISATION/inv6/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Copy of peterson_tick/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#EVTALLHYPw_c"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="0=0⇒0=0" org.eventb.core.source="/Copy of peterson_tick/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.invariant#1"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Copy of peterson_tick/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#'"/>
@@ -57,7 +57,7 @@
 <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Copy of peterson_tick/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/Copy of peterson_tick/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poSequent#INITIALISATION\/inv6\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
 <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Copy of peterson_tick/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD4"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="INITIALISATION/inv7/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="23">
+<org.eventb.core.poSequent name="INITIALISATION/inv7/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Copy of peterson_tick/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#EVTALLHYPw_c"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="0=0⇒0=0" org.eventb.core.source="/Copy of peterson_tick/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.invariant#2"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Copy of peterson_tick/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#'"/>
@@ -65,7 +65,7 @@
 <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Copy of peterson_tick/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/Copy of peterson_tick/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poSequent#INITIALISATION\/inv7\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
 <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Copy of peterson_tick/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD5"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="INITIALISATION/inv8/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="23">
+<org.eventb.core.poSequent name="INITIALISATION/inv8/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Copy of peterson_tick/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#EVTALLHYPw_c"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="0=0∨0=0" org.eventb.core.source="/Copy of peterson_tick/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.invariant#3"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Copy of peterson_tick/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#'"/>
@@ -73,14 +73,14 @@
 <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Copy of peterson_tick/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/Copy of peterson_tick/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poSequent#INITIALISATION\/inv8\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
 <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Copy of peterson_tick/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD6"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poPredicateSet name="EVTIDENTw_c" org.eventb.core.parentSet="/Copy of peterson_tick/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="23">
+<org.eventb.core.poPredicateSet name="EVTIDENTw_c" org.eventb.core.parentSet="/Copy of peterson_tick/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="0">
 <org.eventb.core.poIdentifier name="a'" org.eventb.core.type="ℤ"/>
 <org.eventb.core.poIdentifier name="b'" org.eventb.core.type="ℤ"/>
 <org.eventb.core.poIdentifier name="w_b'" org.eventb.core.type="ℤ"/>
 <org.eventb.core.poIdentifier name="w_a'" org.eventb.core.type="ℤ"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTALLHYPw_c" org.eventb.core.parentSet="/Copy of peterson_tick/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#EVTIDENTw_c" org.eventb.core.poStamp="23"/>
-<org.eventb.core.poSequent name="wish_a/inv1/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="23">
+<org.eventb.core.poPredicateSet name="EVTALLHYPw_c" org.eventb.core.parentSet="/Copy of peterson_tick/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#EVTIDENTw_c" org.eventb.core.poStamp="0"/>
+<org.eventb.core.poSequent name="wish_a/inv1/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Copy of peterson_tick/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#EVTALLHYPw_d"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="1∈{0,1}" org.eventb.core.source="/Copy of peterson_tick/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.invariant#)"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Copy of peterson_tick/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#5"/>
@@ -88,7 +88,7 @@
 <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Copy of peterson_tick/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Copy of peterson_tick/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poSequent#wish_a\/inv1\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
 <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Copy of peterson_tick/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD0"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="wish_a/inv6/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="23">
+<org.eventb.core.poSequent name="wish_a/inv6/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Copy of peterson_tick/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#EVTALLHYPw_d"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="1=0⇒a=0" org.eventb.core.source="/Copy of peterson_tick/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.invariant#1"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Copy of peterson_tick/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#5"/>
@@ -96,13 +96,13 @@
 <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Copy of peterson_tick/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Copy of peterson_tick/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poSequent#wish_a\/inv6\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
 <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Copy of peterson_tick/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD4"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poPredicateSet name="EVTIDENTw_d" org.eventb.core.parentSet="/Copy of peterson_tick/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="23">
+<org.eventb.core.poPredicateSet name="EVTIDENTw_d" org.eventb.core.parentSet="/Copy of peterson_tick/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
 <org.eventb.core.poIdentifier name="w_a'" org.eventb.core.type="ℤ"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTALLHYPw_d" org.eventb.core.parentSet="/Copy of peterson_tick/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#EVTIDENTw_d" org.eventb.core.poStamp="23">
+<org.eventb.core.poPredicateSet name="EVTALLHYPw_d" org.eventb.core.parentSet="/Copy of peterson_tick/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#EVTIDENTw_d" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="w_a=0" org.eventb.core.source="/Copy of peterson_tick/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#5|org.eventb.core.guard#'"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poSequent name="enter_a/inv4/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="23">
+<org.eventb.core.poSequent name="enter_a/inv4/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Copy of peterson_tick/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#EVTALLHYPw_e"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="1∈{0,1}" org.eventb.core.source="/Copy of peterson_tick/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.invariant#-"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Copy of peterson_tick/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#6"/>
@@ -110,7 +110,7 @@
 <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Copy of peterson_tick/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Copy of peterson_tick/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poSequent#enter_a\/inv4\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
 <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Copy of peterson_tick/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD2"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="enter_a/inv6/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="23">
+<org.eventb.core.poSequent name="enter_a/inv6/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Copy of peterson_tick/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#EVTALLHYPw_e"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="w_a=0⇒1=0" org.eventb.core.source="/Copy of peterson_tick/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.invariant#1"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Copy of peterson_tick/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#6"/>
@@ -118,7 +118,7 @@
 <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Copy of peterson_tick/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Copy of peterson_tick/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poSequent#enter_a\/inv6\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
 <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Copy of peterson_tick/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD4"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="enter_a/inv8/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="23">
+<org.eventb.core.poSequent name="enter_a/inv8/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Copy of peterson_tick/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#EVTALLHYPw_e"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="1=0∨b=0" org.eventb.core.source="/Copy of peterson_tick/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.invariant#3"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Copy of peterson_tick/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#6"/>
@@ -126,15 +126,15 @@
 <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Copy of peterson_tick/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Copy of peterson_tick/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poSequent#enter_a\/inv8\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
 <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Copy of peterson_tick/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD6"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poPredicateSet name="EVTIDENTw_e" org.eventb.core.parentSet="/Copy of peterson_tick/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="23">
+<org.eventb.core.poPredicateSet name="EVTIDENTw_e" org.eventb.core.parentSet="/Copy of peterson_tick/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
 <org.eventb.core.poIdentifier name="a'" org.eventb.core.type="ℤ"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTALLHYPw_e" org.eventb.core.parentSet="/Copy of peterson_tick/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#EVTIDENTw_e" org.eventb.core.poStamp="23">
+<org.eventb.core.poPredicateSet name="EVTALLHYPw_e" org.eventb.core.parentSet="/Copy of peterson_tick/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#EVTIDENTw_e" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="w_a=1" org.eventb.core.source="/Copy of peterson_tick/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#6|org.eventb.core.guard#'"/>
 <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="a=0" org.eventb.core.source="/Copy of peterson_tick/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#6|org.eventb.core.guard#("/>
 <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="b=0" org.eventb.core.source="/Copy of peterson_tick/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#6|org.eventb.core.guard#)"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poSequent name="leave_a/inv1/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="23">
+<org.eventb.core.poSequent name="leave_a/inv1/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Copy of peterson_tick/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#EVTALLHYPw_f"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="0∈{0,1}" org.eventb.core.source="/Copy of peterson_tick/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.invariant#)"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Copy of peterson_tick/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#7"/>
@@ -142,7 +142,7 @@
 <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Copy of peterson_tick/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Copy of peterson_tick/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poSequent#leave_a\/inv1\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
 <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Copy of peterson_tick/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD0"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="leave_a/inv4/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="23">
+<org.eventb.core.poSequent name="leave_a/inv4/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Copy of peterson_tick/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#EVTALLHYPw_f"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="0∈{0,1}" org.eventb.core.source="/Copy of peterson_tick/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.invariant#-"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Copy of peterson_tick/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#7"/>
@@ -150,7 +150,7 @@
 <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Copy of peterson_tick/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Copy of peterson_tick/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poSequent#leave_a\/inv4\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
 <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Copy of peterson_tick/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD2"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="leave_a/inv6/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="23">
+<org.eventb.core.poSequent name="leave_a/inv6/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Copy of peterson_tick/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#EVTALLHYPw_f"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="0=0⇒0=0" org.eventb.core.source="/Copy of peterson_tick/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.invariant#1"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Copy of peterson_tick/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#7"/>
@@ -158,7 +158,7 @@
 <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Copy of peterson_tick/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Copy of peterson_tick/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poSequent#leave_a\/inv6\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
 <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Copy of peterson_tick/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD4"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="leave_a/inv8/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="23">
+<org.eventb.core.poSequent name="leave_a/inv8/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Copy of peterson_tick/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#EVTALLHYPw_f"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="0=0∨b=0" org.eventb.core.source="/Copy of peterson_tick/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.invariant#3"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Copy of peterson_tick/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#7"/>
@@ -166,14 +166,14 @@
 <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Copy of peterson_tick/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Copy of peterson_tick/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poSequent#leave_a\/inv8\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
 <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Copy of peterson_tick/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD6"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poPredicateSet name="EVTIDENTw_f" org.eventb.core.parentSet="/Copy of peterson_tick/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="23">
+<org.eventb.core.poPredicateSet name="EVTIDENTw_f" org.eventb.core.parentSet="/Copy of peterson_tick/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
 <org.eventb.core.poIdentifier name="a'" org.eventb.core.type="ℤ"/>
 <org.eventb.core.poIdentifier name="w_a'" org.eventb.core.type="ℤ"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTALLHYPw_f" org.eventb.core.parentSet="/Copy of peterson_tick/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#EVTIDENTw_f" org.eventb.core.poStamp="23">
+<org.eventb.core.poPredicateSet name="EVTALLHYPw_f" org.eventb.core.parentSet="/Copy of peterson_tick/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#EVTIDENTw_f" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="a=1" org.eventb.core.source="/Copy of peterson_tick/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#7|org.eventb.core.guard#'"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poSequent name="wish_b/inv2/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="23">
+<org.eventb.core.poSequent name="wish_b/inv2/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Copy of peterson_tick/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#EVTALLHYPw_g"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="1∈{0,1}" org.eventb.core.source="/Copy of peterson_tick/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.invariant#+"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Copy of peterson_tick/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#8"/>
@@ -181,7 +181,7 @@
 <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Copy of peterson_tick/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Copy of peterson_tick/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poSequent#wish_b\/inv2\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
 <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Copy of peterson_tick/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD1"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="wish_b/inv7/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="23">
+<org.eventb.core.poSequent name="wish_b/inv7/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Copy of peterson_tick/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#EVTALLHYPw_g"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="1=0⇒b=0" org.eventb.core.source="/Copy of peterson_tick/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.invariant#2"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Copy of peterson_tick/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#8"/>
@@ -189,13 +189,13 @@
 <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Copy of peterson_tick/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Copy of peterson_tick/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poSequent#wish_b\/inv7\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
 <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Copy of peterson_tick/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD5"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poPredicateSet name="EVTIDENTw_g" org.eventb.core.parentSet="/Copy of peterson_tick/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="23">
+<org.eventb.core.poPredicateSet name="EVTIDENTw_g" org.eventb.core.parentSet="/Copy of peterson_tick/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
 <org.eventb.core.poIdentifier name="w_b'" org.eventb.core.type="ℤ"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTALLHYPw_g" org.eventb.core.parentSet="/Copy of peterson_tick/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#EVTIDENTw_g" org.eventb.core.poStamp="23">
+<org.eventb.core.poPredicateSet name="EVTALLHYPw_g" org.eventb.core.parentSet="/Copy of peterson_tick/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#EVTIDENTw_g" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="w_b=0" org.eventb.core.source="/Copy of peterson_tick/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#8|org.eventb.core.guard#'"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poSequent name="enter_b/inv5/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="23">
+<org.eventb.core.poSequent name="enter_b/inv5/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Copy of peterson_tick/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#EVTALLHYPw_h"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="1∈{0,1}" org.eventb.core.source="/Copy of peterson_tick/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.invariant#\/"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Copy of peterson_tick/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#9"/>
@@ -203,7 +203,7 @@
 <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Copy of peterson_tick/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Copy of peterson_tick/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poSequent#enter_b\/inv5\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
 <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Copy of peterson_tick/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD3"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="enter_b/inv7/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="23">
+<org.eventb.core.poSequent name="enter_b/inv7/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Copy of peterson_tick/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#EVTALLHYPw_h"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="w_b=0⇒1=0" org.eventb.core.source="/Copy of peterson_tick/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.invariant#2"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Copy of peterson_tick/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#9"/>
@@ -211,7 +211,7 @@
 <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Copy of peterson_tick/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Copy of peterson_tick/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poSequent#enter_b\/inv7\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
 <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Copy of peterson_tick/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD5"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="enter_b/inv8/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="23">
+<org.eventb.core.poSequent name="enter_b/inv8/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Copy of peterson_tick/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#EVTALLHYPw_h"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="a=0∨1=0" org.eventb.core.source="/Copy of peterson_tick/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.invariant#3"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Copy of peterson_tick/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#9"/>
@@ -219,15 +219,15 @@
 <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Copy of peterson_tick/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Copy of peterson_tick/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poSequent#enter_b\/inv8\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
 <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Copy of peterson_tick/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD6"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poPredicateSet name="EVTIDENTw_h" org.eventb.core.parentSet="/Copy of peterson_tick/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="23">
+<org.eventb.core.poPredicateSet name="EVTIDENTw_h" org.eventb.core.parentSet="/Copy of peterson_tick/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
 <org.eventb.core.poIdentifier name="b'" org.eventb.core.type="ℤ"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTALLHYPw_h" org.eventb.core.parentSet="/Copy of peterson_tick/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#EVTIDENTw_h" org.eventb.core.poStamp="23">
+<org.eventb.core.poPredicateSet name="EVTALLHYPw_h" org.eventb.core.parentSet="/Copy of peterson_tick/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#EVTIDENTw_h" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="w_b=1" org.eventb.core.source="/Copy of peterson_tick/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#9|org.eventb.core.guard#'"/>
 <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="a=0" org.eventb.core.source="/Copy of peterson_tick/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#9|org.eventb.core.guard#("/>
 <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="b=0" org.eventb.core.source="/Copy of peterson_tick/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#9|org.eventb.core.guard#)"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poSequent name="leave_b/inv2/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="23">
+<org.eventb.core.poSequent name="leave_b/inv2/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Copy of peterson_tick/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#EVTALLHYPw_i"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="0∈{0,1}" org.eventb.core.source="/Copy of peterson_tick/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.invariant#+"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Copy of peterson_tick/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#:"/>
@@ -235,7 +235,7 @@
 <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Copy of peterson_tick/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Copy of peterson_tick/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poSequent#leave_b\/inv2\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
 <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Copy of peterson_tick/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD1"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="leave_b/inv5/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="23">
+<org.eventb.core.poSequent name="leave_b/inv5/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Copy of peterson_tick/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#EVTALLHYPw_i"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="0∈{0,1}" org.eventb.core.source="/Copy of peterson_tick/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.invariant#\/"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Copy of peterson_tick/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#:"/>
@@ -243,7 +243,7 @@
 <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Copy of peterson_tick/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Copy of peterson_tick/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poSequent#leave_b\/inv5\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
 <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Copy of peterson_tick/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD3"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="leave_b/inv7/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="23">
+<org.eventb.core.poSequent name="leave_b/inv7/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Copy of peterson_tick/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#EVTALLHYPw_i"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="0=0⇒0=0" org.eventb.core.source="/Copy of peterson_tick/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.invariant#2"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Copy of peterson_tick/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#:"/>
@@ -251,7 +251,7 @@
 <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Copy of peterson_tick/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Copy of peterson_tick/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poSequent#leave_b\/inv7\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
 <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Copy of peterson_tick/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD5"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="leave_b/inv8/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="23">
+<org.eventb.core.poSequent name="leave_b/inv8/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Copy of peterson_tick/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#EVTALLHYPw_i"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="a=0∨0=0" org.eventb.core.source="/Copy of peterson_tick/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.invariant#3"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Copy of peterson_tick/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#:"/>
@@ -259,14 +259,14 @@
 <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Copy of peterson_tick/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Copy of peterson_tick/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poSequent#leave_b\/inv8\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
 <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Copy of peterson_tick/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD6"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poPredicateSet name="EVTIDENTw_i" org.eventb.core.parentSet="/Copy of peterson_tick/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="23">
+<org.eventb.core.poPredicateSet name="EVTIDENTw_i" org.eventb.core.parentSet="/Copy of peterson_tick/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
 <org.eventb.core.poIdentifier name="b'" org.eventb.core.type="ℤ"/>
 <org.eventb.core.poIdentifier name="w_b'" org.eventb.core.type="ℤ"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTALLHYPw_i" org.eventb.core.parentSet="/Copy of peterson_tick/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#EVTIDENTw_i" org.eventb.core.poStamp="23">
+<org.eventb.core.poPredicateSet name="EVTALLHYPw_i" org.eventb.core.parentSet="/Copy of peterson_tick/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#EVTIDENTw_i" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="b=1" org.eventb.core.source="/Copy of peterson_tick/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#:|org.eventb.core.guard#'"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/Copy of peterson_tick/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="23">
+<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/Copy of peterson_tick/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="w_a∈{0,1}" org.eventb.core.source="/Copy of peterson_tick/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.invariant#)"/>
 <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="w_b∈{0,1}" org.eventb.core.source="/Copy of peterson_tick/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.invariant#+"/>
 <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="a∈{0,1}" org.eventb.core.source="/Copy of peterson_tick/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.invariant#-"/>
