@@ -1,0 +1,54 @@
+\documentclass[10pt,a4paper]{report}
+\usepackage{bsymb,b2latex}
+\begin{document}
+\SingleHeader{m0}
+\MACHINE{m0}{}{c0}{}
+\VARIABLES{
+	\Variable{wait}{}
+	\Variable{position}{}
+}
+\INVARIANTS{
+	\Invariant{inv1}{false}{$wait \subseteq{} PROCESS$}{}
+	\Invariant{inv2}{false}{$position \in{} wait\tinj{}POSITION$}{}
+	\Invariant{inv3}{false}{$finite(ran(position))$}{}
+}
+\EVENTS{
+\INITIALISATION{false}{}{
+	\ACTIONS{false}{
+		\Action{act1}{$wait \bcmeq{}\emptyset{}$}{true}{}
+		\Action{act2}{$position \bcmeq{} \emptyset{}$}{true}{}
+	}
+}
+\EVT{enqueue}{false}{ordinary}{}{}{
+	\ANY{
+		\Param{pro}{true}{}
+		\Param{pos}{true}{}
+	}
+	\GUARDS{true}{
+		\Guard{grd1}{false}{$pro\in{}PROCESS\setminus{}wait$}{true}{}
+		\Guard{grd2}{false}{$pos\in{}POSITION$}{true}{}
+		\Guard{grd3}{false}{$pos\notin{}ran(position)$}{true}{}
+		\Guard{grd4}{false}{$position\neq{}\emptyset{}\limp{}pos>max(ran(position))$}{true}{}
+	}
+	\ACTIONS{true}{
+		\Action{act1}{$wait\bcmeq{}wait \bunion{} \{pro\}$}{true}{}
+		\Action{act2}{$position\bcmeq{}position \bunion{} \{pro\mapsto{}pos\}$}{true}{}
+	}
+}
+\EVT{dequeue}{false}{ordinary}{}{}{
+	\ANY{
+		\Param{pro}{true}{}
+	}
+	\GUARDS{true}{
+		\Guard{grd3}{false}{$pro\in{}dom(position)$}{true}{}
+		\Guard{grd2}{false}{$position(pro)=min(ran(position))$}{true}{}
+		\Guard{grd1}{false}{$pro\in{}wait$}{true}{}
+	}
+	\ACTIONS{true}{
+		\Action{act1}{$wait\bcmeq{}wait\setminus{}\{pro\}$}{true}{}
+		\Action{act2}{$position\bcmeq{}\{pro\}\domsub{}position$}{true}{}
+	}
+}
+}
+\END
+\end{document}

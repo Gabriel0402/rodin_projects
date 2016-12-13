@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.poFile org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="CTXHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="PROCESS" org.eventb.core.type="ℙ(PROCESS)"/>
+<org.eventb.core.poIdentifier name="POSITION" org.eventb.core.type="ℙ(ℤ)"/>
+<org.eventb.core.poIdentifier name="ddl1" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="ddl2" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poPredicate name="POSITIOO" org.eventb.core.predicate="POSITION=ℕ" org.eventb.core.source="/process/c0.buc|org.eventb.core.contextFile#c0|org.eventb.core.axiom#("/>
+<org.eventb.core.poPredicate name="POSITIOP" org.eventb.core.predicate="ddl1=2" org.eventb.core.source="/process/c0.buc|org.eventb.core.contextFile#c0|org.eventb.core.axiom#+"/>
+<org.eventb.core.poPredicate name="POSITIOQ" org.eventb.core.predicate="ddl2=5" org.eventb.core.source="/process/c0.buc|org.eventb.core.contextFile#c0|org.eventb.core.axiom#-"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.parentSet="/process/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="position" org.eventb.core.type="ℙ(PROCESS×ℤ)"/>
+<org.eventb.core.poIdentifier name="wait" org.eventb.core.type="ℙ(PROCESS)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="INITIALISATION/inv2/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/process/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#EVTALLHYPpositioo"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="(∅ ⦂ ℙ(PROCESS×ℤ))∈(∅ ⦂ ℙ(PROCESS)) ↣ POSITION" org.eventb.core.source="/process/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.invariant#,"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/process/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#'"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/process/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.invariant#,"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/process/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/process/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poSequent#INITIALISATION\/inv2\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/process/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD1"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="INITIALISATION/inv3/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/process/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#EVTALLHYPpositioo"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="finite(ran(∅ ⦂ ℙ(PROCESS×ℤ)))" org.eventb.core.source="/process/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.invariant#\/"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/process/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#'"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/process/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.invariant#\/"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/process/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/process/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poSequent#INITIALISATION\/inv3\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/process/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD2"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTpositioo" org.eventb.core.parentSet="/process/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="wait'" org.eventb.core.type="ℙ(PROCESS)"/>
+<org.eventb.core.poIdentifier name="position'" org.eventb.core.type="ℙ(PROCESS×ℤ)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPpositioo" org.eventb.core.parentSet="/process/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#EVTIDENTpositioo" org.eventb.core.poStamp="0"/>
+<org.eventb.core.poSequent name="enqueue/grd4/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/process/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#EVTHYPpositiop)"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="position≠(∅ ⦂ ℙ(PROCESS×ℤ))⇒ran(position)≠(∅ ⦂ ℙ(ℤ))∧(∃b⦂ℤ·∀x⦂ℤ·x∈ran(position)⇒b≥x)" org.eventb.core.source="/process/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#-|org.eventb.core.guard#."/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/process/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#-|org.eventb.core.guard#."/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/process/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/process/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#EVTHYPpositiop)"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="enqueue/inv2/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/process/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#EVTALLHYPpositiop"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="position∪{pro ↦ pos}∈wait∪{pro} ↣ POSITION" org.eventb.core.source="/process/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.invariant#,"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/process/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#-"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/process/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.invariant#,"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/process/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/process/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poSequent#enqueue\/inv2\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/process/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD1"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="enqueue/inv3/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/process/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#EVTALLHYPpositiop"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="finite(ran(position∪{pro ↦ pos}))" org.eventb.core.source="/process/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.invariant#\/"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/process/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#-"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/process/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.invariant#\/"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/process/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/process/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poSequent#enqueue\/inv3\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/process/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD2"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTpositiop" org.eventb.core.parentSet="/process/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="pos" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="wait'" org.eventb.core.type="ℙ(PROCESS)"/>
+<org.eventb.core.poIdentifier name="pro" org.eventb.core.type="PROCESS"/>
+<org.eventb.core.poIdentifier name="position'" org.eventb.core.type="ℙ(PROCESS×ℤ)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTHYPpositiop)" org.eventb.core.parentSet="/process/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#EVTIDENTpositiop" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="pro∈PROCESS ∖ wait" org.eventb.core.source="/process/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#-|org.eventb.core.guard#)"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="pos∈POSITION" org.eventb.core.source="/process/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#-|org.eventb.core.guard#*"/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="pos∉ran(position)" org.eventb.core.source="/process/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#-|org.eventb.core.guard#+"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPpositiop" org.eventb.core.parentSet="/process/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#EVTHYPpositiop)" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="position≠(∅ ⦂ ℙ(PROCESS×ℤ))⇒pos&gt;max(ran(position))" org.eventb.core.source="/process/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#-|org.eventb.core.guard#."/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="dequeue/grd2/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/process/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#EVTHYPpositioq'"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="pro∈dom(position)∧position∈PROCESS ⇸ ℤ∧ran(position)≠(∅ ⦂ ℙ(ℤ))∧(∃b⦂ℤ·∀x⦂ℤ·x∈ran(position)⇒b≤x)" org.eventb.core.source="/process/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#.|org.eventb.core.guard#\/"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/process/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#.|org.eventb.core.guard#\/"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/process/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/process/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#EVTHYPpositioq'"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="dequeue/inv2/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/process/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#EVTALLHYPpositioq"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="{pro} ⩤ position∈wait ∖ {pro} ↣ POSITION" org.eventb.core.source="/process/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.invariant#,"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/process/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#."/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/process/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.invariant#,"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/process/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/process/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poSequent#dequeue\/inv2\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/process/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD1"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="dequeue/inv3/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/process/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#EVTALLHYPpositioq"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="finite(ran({pro} ⩤ position))" org.eventb.core.source="/process/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.invariant#\/"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/process/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#."/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/process/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.invariant#\/"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/process/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/process/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poSequent#dequeue\/inv3\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/process/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD2"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTpositioq" org.eventb.core.parentSet="/process/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="wait'" org.eventb.core.type="ℙ(PROCESS)"/>
+<org.eventb.core.poIdentifier name="pro" org.eventb.core.type="PROCESS"/>
+<org.eventb.core.poIdentifier name="position'" org.eventb.core.type="ℙ(PROCESS×ℤ)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTHYPpositioq'" org.eventb.core.parentSet="/process/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#EVTIDENTpositioq" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="pro∈dom(position)" org.eventb.core.source="/process/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#.|org.eventb.core.guard#("/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPpositioq" org.eventb.core.parentSet="/process/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#EVTHYPpositioq'" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="position(pro)=min(ran(position))" org.eventb.core.source="/process/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#.|org.eventb.core.guard#\/"/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="pro∈wait" org.eventb.core.source="/process/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#.|org.eventb.core.guard#_-D_yALrrEeafDq8axj2HVQ"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/process/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="wait⊆PROCESS" org.eventb.core.source="/process/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.invariant#)"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="position∈wait ↣ POSITION" org.eventb.core.source="/process/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.invariant#,"/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="finite(ran(position))" org.eventb.core.source="/process/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.invariant#\/"/>
+</org.eventb.core.poPredicateSet>
+</org.eventb.core.poFile>

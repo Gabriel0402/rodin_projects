@@ -14,7 +14,7 @@
 <org.eventb.core.psStatus name="enter_a/inv3/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="0" org.eventb.core.psManual="false"/>
 <org.eventb.core.psStatus name="enter_a/inv4/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="0" org.eventb.core.psManual="false"/>
 <org.eventb.core.psStatus name="enter_a/grd3/GRD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="0" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="enter_a/grd4/GRD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="1" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="enter_a/grd4/GRD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="0" org.eventb.core.psManual="false"/>
 <org.eventb.core.psStatus name="leave_a/inv2/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="0" org.eventb.core.psManual="false"/>
 <org.eventb.core.psStatus name="leave_a/inv3/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="0" org.eventb.core.psManual="false"/>
 <org.eventb.core.psStatus name="leave_a/inv4/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="0" org.eventb.core.psManual="false"/>
@@ -26,7 +26,7 @@
 <org.eventb.core.psStatus name="enter_b/inv2/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="0" org.eventb.core.psManual="false"/>
 <org.eventb.core.psStatus name="enter_b/inv5/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="0" org.eventb.core.psManual="false"/>
 <org.eventb.core.psStatus name="enter_b/grd2/GRD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="0" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="enter_b/grd4/GRD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="1" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="enter_b/grd4/GRD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="0" org.eventb.core.psManual="false"/>
 <org.eventb.core.psStatus name="leave_b/inv2/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="0" org.eventb.core.psManual="false"/>
 <org.eventb.core.psStatus name="leave_b/inv3/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="0" org.eventb.core.psManual="false"/>
 <org.eventb.core.psStatus name="leave_b/inv5/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="0" org.eventb.core.psManual="false"/>

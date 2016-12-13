@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<org.eventb.core.poFile org.eventb.core.poStamp="1">
+<org.eventb.core.poFile org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicateSet name="CTXHYP" org.eventb.core.poStamp="0">
 <org.eventb.core.poIdentifier name="d" org.eventb.core.type="ℤ"/>
 <org.eventb.core.poPredicate name="e" org.eventb.core.predicate="d=5" org.eventb.core.source="/Copy of peterson_cd/c0.buc|org.eventb.core.contextFile#c0|org.eventb.core.axiom#("/>
@@ -173,7 +173,7 @@
 <org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/Copy of peterson_cd/m12.bum|org.eventb.core.machineFile#m12|org.eventb.core.event#I"/>
 <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Copy of peterson_cd/m12.bpo|org.eventb.core.poFile#m12|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Copy of peterson_cd/m12.bpo|org.eventb.core.poFile#m12|org.eventb.core.poSequent#enter_a\/grd3\/GRD|org.eventb.core.poPredicateSet#SEQHYP"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="enter_a/grd4/GRD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Guard strengthening (split)" org.eventb.core.poStamp="1">
+<org.eventb.core.poSequent name="enter_a/grd4/GRD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Guard strengthening (split)" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Copy of peterson_cd/m12.bpo|org.eventb.core.poFile#m12|org.eventb.core.poPredicateSet#EVTALLHYPcountE"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="countB&gt;0∨w_b=0" org.eventb.core.source="/Copy of peterson_cd/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#?|org.eventb.core.guard#_QMnycLMkEea0nZ8ABmpX-w"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Copy of peterson_cd/m11.bum|org.eventb.core.machineFile#m11|org.eventb.core.event#I"/>
@@ -303,7 +303,7 @@
 <org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/Copy of peterson_cd/m12.bum|org.eventb.core.machineFile#m12|org.eventb.core.event#L"/>
 <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Copy of peterson_cd/m12.bpo|org.eventb.core.poFile#m12|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Copy of peterson_cd/m12.bpo|org.eventb.core.poFile#m12|org.eventb.core.poSequent#enter_b\/grd2\/GRD|org.eventb.core.poPredicateSet#SEQHYP"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="enter_b/grd4/GRD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Guard strengthening (split)" org.eventb.core.poStamp="1">
+<org.eventb.core.poSequent name="enter_b/grd4/GRD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Guard strengthening (split)" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Copy of peterson_cd/m12.bpo|org.eventb.core.poFile#m12|org.eventb.core.poPredicateSet#EVTALLHYPcountH"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="countA&gt;0∨w_a=0" org.eventb.core.source="/Copy of peterson_cd/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#B|org.eventb.core.guard#_QMoZgLMkEea0nZ8ABmpX-w"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Copy of peterson_cd/m11.bum|org.eventb.core.machineFile#m11|org.eventb.core.event#L"/>
