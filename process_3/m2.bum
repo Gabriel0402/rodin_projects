@@ -10,6 +10,7 @@
 <org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="=" org.eventb.core.identifier="t3"/>
 <org.eventb.core.event name="&gt;" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="INITIALISATION">
 <org.eventb.core.action name="'" org.eventb.core.assignment="position≔∅" org.eventb.core.label="act7"/>
+<org.eventb.core.action name="(" org.eventb.core.assignment="index ≔∅" org.eventb.core.label="act8"/>
 </org.eventb.core.event>
 <org.eventb.core.event name="?" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="wish">
 <org.eventb.core.refinesEvent name="'" org.eventb.core.target="wish"/>
@@ -18,6 +19,7 @@
 <org.eventb.core.action name="*" org.eventb.core.assignment="position≔position ∪ {pro↦pos}" org.eventb.core.label="act3"/>
 <org.eventb.core.guard name="+" org.eventb.core.label="grd4" org.eventb.core.predicate="pos∉ran(position)"/>
 <org.eventb.core.guard name="," org.eventb.core.label="grd5" org.eventb.core.predicate="position≠∅⇒pos=max(ran(position))+1"/>
+<org.eventb.core.action name="-" org.eventb.core.assignment="index(pro)≔pos" org.eventb.core.label="act4"/>
 </org.eventb.core.event>
 <org.eventb.core.event name="@" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="enter">
 <org.eventb.core.refinesEvent name="'" org.eventb.core.target="enter"/>
@@ -35,4 +37,7 @@
 <org.eventb.core.invariant name="D" org.eventb.core.label="inv1" org.eventb.core.predicate="position ∈ wait↣POSITION"/>
 <org.eventb.core.invariant name="_t_PdMMFHEeaNdrCByuh-EQ" org.eventb.core.label="inv2" org.eventb.core.predicate="finite(ran(position))"/>
 <org.eventb.core.invariant name="_t_PdMMFHEeaNdrCByuh-ER" org.eventb.core.label="inv3" org.eventb.core.predicate="finite(wait)"/>
+<org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="_t_PdMMFHEeaNdrCByuh-ES" org.eventb.core.identifier="index"/>
+<org.eventb.core.invariant name="_t_PdMMFHEeaNdrCByuh-ET" org.eventb.core.label="inv4" org.eventb.core.predicate="index ∈ PROCESS ⇸ ℕ"/>
+<org.eventb.core.invariant name="_t_PdMMFHEeaNdrCByuh-EU" org.eventb.core.label="inv5" org.eventb.core.predicate="∀p·p∈dom(index)∧p∈dom(t1)∧p∈dom(t2)∧t2(p)≥t1(p)⇒t2(p)−t1(p)≤ddl1+(ddl1+ddl2)∗index(p)"/>
 </org.eventb.core.machineFile>
