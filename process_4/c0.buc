@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.contextFile org.eventb.core.configuration="org.eventb.core.fwd;de.prob.symbolic.ctxBase;de.prob.units.mchBase" version="3">
+<org.eventb.core.constant de.prob.symbolic.symbolicAttribute="false" de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="'" org.eventb.core.identifier="POSITION"/>
+<org.eventb.core.axiom name="(" org.eventb.core.label="axm1" org.eventb.core.predicate="POSITION = ℕ"/>
+<org.eventb.core.carrierSet name=")" org.eventb.core.identifier="PROCESS"/>
+<org.eventb.core.constant de.prob.symbolic.symbolicAttribute="false" de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="*" org.eventb.core.identifier="ddl1"/>
+<org.eventb.core.axiom name="+" org.eventb.core.label="axm2" org.eventb.core.predicate="ddl1 =2"/>
+<org.eventb.core.constant de.prob.symbolic.symbolicAttribute="false" de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="," org.eventb.core.identifier="ddl2"/>
+<org.eventb.core.axiom name="-" org.eventb.core.label="axm3" org.eventb.core.predicate="ddl2 =5"/>
+<org.eventb.core.constant de.prob.symbolic.symbolicAttribute="false" de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="." org.eventb.core.identifier="ddl3"/>
+<org.eventb.core.axiom name="/" org.eventb.core.label="axm4" org.eventb.core.predicate="ddl3 =10"/>
+</org.eventb.core.contextFile>

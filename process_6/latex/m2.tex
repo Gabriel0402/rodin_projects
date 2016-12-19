@@ -1,0 +1,95 @@
+\documentclass[10pt,a4paper]{report}
+\usepackage{bsymb,b2latex}
+\begin{document}
+\SingleHeader{m2}
+\MACHINE{m2}{m1}{c0}{}
+\VARIABLES{
+	\Variable{wait}{}
+	\Variable{process}{}
+	\Variable{clk}{}
+	\Variable{t1}{}
+	\Variable{t2}{}
+	\Variable{t3}{}
+	\Variable{position}{}
+	\Variable{index}{}
+}
+\INVARIANTS{
+	\Invariant{inv1}{false}{$position \in{} wait\tinj{}POSITION$}{}
+	\Invariant{inv2}{false}{$finite(ran(position))$}{}
+	\Invariant{inv3}{false}{$finite(wait)$}{}
+	\Invariant{inv4}{false}{$index \in{} PROCESS \pfun{} \nat{}$}{}
+}
+\EVENTS{
+\INITIALISATION{true}{}{
+	\ACTIONS{false}{
+		\Action{act1}{$wait \bcmeq{} \emptyset{}$}{false}{}
+		\Action{act2}{$process \bcmeq{} \emptyset{}$}{false}{}
+		\Action{act3}{$clk \bcmeq{} 0$}{false}{}
+		\Action{act4}{$t1 \bcmeq{} \emptyset{}$}{false}{}
+		\Action{act5}{$t2 \bcmeq{} \emptyset{}$}{false}{}
+		\Action{act6}{$t3 \bcmeq{} \emptyset{}$}{false}{}
+		\Action{act7}{$position\bcmeq{}\emptyset{}$}{true}{}
+		\Action{act8}{$index \bcmeq{}\emptyset{}$}{true}{}
+	}
+}
+\EVT{wish}{true}{ordinary}{wish}{}{
+	\ANY{
+		\Param{pro}{false}{}
+		\Param{pos}{true}{}
+	}
+	\GUARDS{true}{
+		\Guard{grd1}{false}{$pro\in{}PROCESS\setminus{}wait$}{false}{}
+		\Guard{grd2}{false}{$pro\in{}PROCESS\setminus{}process$}{false}{}
+		\Guard{grd3}{false}{$pos\in{}POSITION$}{true}{}
+		\Guard{grd4}{false}{$pos\notin{}ran(position)$}{true}{}
+		\Guard{grd5}{false}{$position\neq{}\emptyset{}\limp{}pos=max(ran(position))+1$}{true}{}
+	}
+	\ACTIONS{true}{
+		\Action{act1}{$wait\bcmeq{}wait\bunion{}\{pro\}$}{false}{}
+		\Action{act2}{$t1(pro)\bcmeq{}clk$}{false}{}
+		\Action{act3}{$position\bcmeq{}position \bunion{} \{pro\mapsto{}pos\}$}{true}{}
+		\Action{act4}{$index(pro)\bcmeq{}pos$}{true}{}
+	}
+}
+\EVT{enter}{true}{ordinary}{enter}{}{
+	\ANY{
+		\Param{pro}{false}{}
+	}
+	\GUARDS{true}{
+		\Guard{grd1}{false}{$pro\in{}wait$}{false}{}
+		\Guard{grd2}{false}{$card(process)=0$}{false}{}
+		\Guard{grd3}{false}{$pro\in{}dom(position)$}{true}{}
+		\Guard{grd4}{false}{$position(pro)=min(ran(position))$}{true}{}
+	}
+	\ACTIONS{true}{
+		\Action{act1}{$wait\bcmeq{}wait\setminus{}\{pro\}$}{false}{}
+		\Action{act2}{$process\bcmeq{}process \bunion{} \{pro\}$}{false}{}
+		\Action{act3}{$t2(pro)\bcmeq{}clk$}{false}{}
+		\Action{act5}{$position\bcmeq{}(\{pro\}\domsub{}position)\ovl{}(\lambda{}p\qdot{}p\in{}wait\setminus{}\{pro\}|position(p)-1)$}{true}{}
+	}
+}
+\EVT{leave}{true}{ordinary}{leave}{}{
+	\ANY{
+		\Param{pro}{false}{}
+	}
+	\GUARDS{true}{
+		\Guard{grd1}{false}{$pro\in{}process$}{false}{}
+	}
+	\ACTIONS{true}{
+		\Action{act1}{$process\bcmeq{}process\setminus{}\{pro\}$}{false}{}
+		\Action{act3}{$t3(pro)\bcmeq{}clk$}{false}{}
+	}
+}
+\EVT{tick}{true}{ordinary}{tick}{}{
+	\GUARDS{false}{
+		\Guard{grd1}{false}{$\forall{}t,p\qdot{}(p\in{}process \land{} p\in{}dom(t2) \land{} t=t2(p))\limp{}clk+1-t\leq{}ddl2$}{false}{}
+		\Guard{grd2}{false}{$\forall{}t,p\qdot{}(p\in{}wait \land{} p\in{}dom(t1) \land{} t=t1(p))\limp{}clk+1-t\leq{}ddl1$}{false}{}
+		\Guard{grd3}{false}{$\forall{}t,p\qdot{}(p\in{}process \land{} p\in{}dom(t1) \land{} t=t1(p))\limp{}clk+1-t\leq{}ddl3$}{false}{}
+	}
+	\ACTIONS{true}{
+		\Action{act1}{$clk\bcmeq{}clk+1$}{false}{}
+	}
+}
+}
+\END
+\end{document}
