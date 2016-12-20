@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<org.eventb.core.machineFile org.eventb.core.configuration="org.eventb.core.fwd;de.prob.units.mchBase" org.eventb.texttools.text_lastmodified="1482146113987" org.eventb.texttools.text_representation="machine m2 refines m1  sees c0&#10;&#10;variables wait process clk t1 t2 t3 position index&#10;&#10;invariants&#10;  @inv1 position ∈ wait↣POSITION&#10;  @inv2 finite(ran(position))&#10;  @inv3 finite(wait)&#10;  @inv4 index ∈ PROCESS ⇸ ℕ&#10;&#10;events&#10;  event INITIALISATION extends INITIALISATION&#10;    then&#10;      @act7 position≔∅&#10;      @act8 index ≔∅&#10;  end&#10;&#10;  event wish extends wish&#10;    any pos&#10;    where&#10;      @grd3 pos∈POSITION&#10;      @grd4 pos∉ran(position)&#10;      @grd5 position≠∅⇒pos=max(ran(position))+1&#10;    then&#10;      @act3 position≔position ∪ {pro↦pos}&#10;      @act4 index(pro)≔pos&#10;  end&#10;&#10;  event enter extends enter&#10;    where&#10;      @grd3 pro∈dom(position)&#10;      @grd4 position(pro)=min(ran(position))&#10;    then&#10;      @act5 position≔({pro}⩤position)(λp·p∈wait∖{pro}∣position(p)−1)&#10;  end&#10;&#10;  event leave extends leave&#10;  end&#10;&#10;  event tick extends tick&#10;  end&#10;end&#10;" version="5">
+<org.eventb.core.machineFile org.eventb.core.configuration="org.eventb.core.fwd;de.prob.units.mchBase" org.eventb.texttools.text_lastmodified="1482229354566" org.eventb.texttools.text_representation="machine m2 refines m1  sees c0&#10;&#10;variables wait process clk t1 t2 t3 position index&#10;&#10;invariants&#10;  @inv1 position ∈ wait↣POSITION&#10;  @inv3 finite(wait)&#10;  @inv4 index ∈ PROCESS ⇸ ℕ&#10;&#10;events&#10;  event INITIALISATION extends INITIALISATION&#10;    then&#10;      @act7 position≔∅&#10;      @act8 index ≔∅&#10;  end&#10;&#10;  event wish extends wish&#10;    any pos&#10;    where&#10;      @grd3 pos∈POSITION&#10;      @grd4 pos∉ran(position)&#10;      @grd5 position≠∅&#10;      @grd7 finite(ran(position))&#10;      @grd6 pos=max(ran(position))+1&#10;    then&#10;      @act3 position≔position ∪ {pro↦pos}&#10;      @act4 index(pro)≔pos&#10;  end&#10;&#10;  event wishA extends wish&#10;    any pos&#10;    where&#10;      @grd3 pos∈POSITION&#10;      @grd4 pos∉ran(position)&#10;      @grd5 position=∅&#10;      @grd6 pos=1&#10;    then&#10;      @act3 position≔position ∪ {pro↦pos}&#10;      @act4 index(pro)≔pos&#10;  end&#10;&#10;  event enter extends enter&#10;    where&#10;      @grd3 pro∈dom(position)&#10;      @grd4 position(pro)=min(ran(position))&#10;    then&#10;      @act5 position≔λp·p∈wait∖{pro}∣position(p)−1&#10;  end&#10;&#10;  event leave extends leave&#10;  end&#10;&#10;  event tick extends tick&#10;  end&#10;end&#10;" version="5">
 <org.eventb.core.refinesMachine name="'" org.eventb.core.target="m1"/>
 <org.eventb.core.seesContext name="/" org.eventb.core.target="c0"/>
 <org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="(" org.eventb.core.identifier="wait"/>
@@ -18,25 +18,36 @@
 <org.eventb.core.guard name=")" org.eventb.core.label="grd3" org.eventb.core.predicate="pos∈POSITION"/>
 <org.eventb.core.action name="*" org.eventb.core.assignment="position≔position ∪ {pro↦pos}" org.eventb.core.label="act3"/>
 <org.eventb.core.guard name="+" org.eventb.core.label="grd4" org.eventb.core.predicate="pos∉ran(position)"/>
-<org.eventb.core.guard name="," org.eventb.core.label="grd5" org.eventb.core.predicate="position≠∅⇒pos=max(ran(position))+1"/>
+<org.eventb.core.guard name="," org.eventb.core.label="grd5" org.eventb.core.predicate="position≠∅"/>
 <org.eventb.core.action name="-" org.eventb.core.assignment="index(pro)≔pos" org.eventb.core.label="act4"/>
+<org.eventb.core.guard name="(" org.eventb.core.label="grd7" org.eventb.core.predicate="finite(ran(position))"/>
+<org.eventb.core.guard name="_zTOAMMaVEeanH8TXIitD4A" org.eventb.core.label="grd6" org.eventb.core.predicate="pos=max(ran(position))+1"/>
 </org.eventb.core.event>
-<org.eventb.core.event name="@" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="enter">
-<org.eventb.core.refinesEvent name="'" org.eventb.core.target="enter"/>
-<org.eventb.core.guard name="(" org.eventb.core.label="grd3" org.eventb.core.predicate="pro∈dom(position)"/>
-<org.eventb.core.guard name=")" org.eventb.core.label="grd4" org.eventb.core.predicate="position(pro)=min(ran(position))"/>
-<org.eventb.core.action name="*" org.eventb.core.assignment="position≔({pro}⩤position)(λp·p∈wait∖{pro}∣position(p)−1)" org.eventb.core.label="act5"/>
+<org.eventb.core.event name="@" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="wishA">
+<org.eventb.core.refinesEvent name="_nai-gMaUEeanH8TXIitD4A" org.eventb.core.target="wish"/>
+<org.eventb.core.action name="*" org.eventb.core.assignment="position≔position ∪ {pro↦pos}" org.eventb.core.label="act3"/>
+<org.eventb.core.parameter name="_najlkMaUEeanH8TXIitD4A" org.eventb.core.identifier="pos"/>
+<org.eventb.core.guard name="_najlkcaUEeanH8TXIitD4A" org.eventb.core.label="grd3" org.eventb.core.predicate="pos∈POSITION"/>
+<org.eventb.core.action name="_najlksaUEeanH8TXIitD4A" org.eventb.core.assignment="index(pro)≔pos" org.eventb.core.label="act4"/>
+<org.eventb.core.guard name="_najllMaUEeanH8TXIitD4A" org.eventb.core.label="grd4" org.eventb.core.predicate="pos∉ran(position)"/>
+<org.eventb.core.guard name="_najllcaUEeanH8TXIitD4A" org.eventb.core.label="grd5" org.eventb.core.predicate="position=∅"/>
+<org.eventb.core.guard name="_vI6_cMaUEeanH8TXIitD4A" org.eventb.core.label="grd6" org.eventb.core.predicate="pos=1"/>
 </org.eventb.core.event>
-<org.eventb.core.event name="A" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="leave">
-<org.eventb.core.refinesEvent name="'" org.eventb.core.target="leave"/>
+<org.eventb.core.event name="A" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="enter">
+<org.eventb.core.refinesEvent name="_najlk8aUEeanH8TXIitD4A" org.eventb.core.target="enter"/>
+<org.eventb.core.action name="_najllsaUEeanH8TXIitD4A" org.eventb.core.assignment="position≔λp·p∈wait∖{pro}∣position(p)−1" org.eventb.core.label="act5"/>
+<org.eventb.core.guard name="_vI6_ccaUEeanH8TXIitD4A" org.eventb.core.label="grd3" org.eventb.core.predicate="pro∈dom(position)"/>
+<org.eventb.core.guard name="_zTOnQMaVEeanH8TXIitD4A" org.eventb.core.label="grd4" org.eventb.core.predicate="position(pro)=min(ran(position))"/>
 </org.eventb.core.event>
-<org.eventb.core.event name="B" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="tick">
-<org.eventb.core.refinesEvent name="'" org.eventb.core.target="tick"/>
+<org.eventb.core.event name="B" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="leave">
+<org.eventb.core.refinesEvent name="_najll8aUEeanH8TXIitD4A" org.eventb.core.target="leave"/>
 </org.eventb.core.event>
 <org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="C" org.eventb.core.identifier="position"/>
 <org.eventb.core.invariant name="D" org.eventb.core.label="inv1" org.eventb.core.predicate="position ∈ wait↣POSITION"/>
-<org.eventb.core.invariant name="_t_PdMMFHEeaNdrCByuh-EQ" org.eventb.core.label="inv2" org.eventb.core.predicate="finite(ran(position))"/>
-<org.eventb.core.invariant name="_t_PdMMFHEeaNdrCByuh-ER" org.eventb.core.label="inv3" org.eventb.core.predicate="finite(wait)"/>
+<org.eventb.core.invariant name="_t_PdMMFHEeaNdrCByuh-EQ" org.eventb.core.label="inv3" org.eventb.core.predicate="finite(wait)"/>
+<org.eventb.core.invariant name="_t_PdMMFHEeaNdrCByuh-ER" org.eventb.core.label="inv4" org.eventb.core.predicate="index ∈ PROCESS ⇸ ℕ"/>
 <org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="_t_PdMMFHEeaNdrCByuh-ES" org.eventb.core.identifier="index"/>
-<org.eventb.core.invariant name="_t_PdMMFHEeaNdrCByuh-ET" org.eventb.core.label="inv4" org.eventb.core.predicate="index ∈ PROCESS ⇸ ℕ"/>
+<org.eventb.core.event name="_najlmMaUEeanH8TXIitD4A" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="tick">
+<org.eventb.core.refinesEvent name="_najlmcaUEeanH8TXIitD4A" org.eventb.core.target="tick"/>
+</org.eventb.core.event>
 </org.eventb.core.machineFile>
