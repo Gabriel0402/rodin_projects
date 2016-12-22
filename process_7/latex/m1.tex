@@ -16,8 +16,15 @@
 	\Invariant{inv2}{false}{$t1 \in{} PROCESS \pfun{} \nat{}$}{}
 	\Invariant{inv3}{false}{$t2 \in{} PROCESS \pfun{} \nat{}$}{}
 	\Invariant{inv4}{false}{$finite(wait)$}{}
-	\Invariant{inv5}{false}{$t3 \in{} \nat{}$}{}
-	\Invariant{inv6}{false}{$card(process)=0\limp{}clk-t3\leq{}ddl1$}{}
+	\Invariant{inv5}{false}{$t3 \in{} PROCESS \pfun{} \nat{}$}{}
+	\Invariant{inv6}{false}{$\forall{}t,p\qdot{}(p\in{}wait \land{} p\in{}dom(t1) \land{} t=t1(p))\limp{}clk-t\leq{}ddl1$}{\\deadline(t1,t2,ddl1)}
+	\Invariant{inv8}{false}{$\forall{}p\qdot{}(p\in{}dom(t1)\land{}p\in{}dom(t2)\land{}t2(p)\geq{}t1(p))\limp{}t2(p)-t1(p)\leq{}ddl1$}{}
+	\Invariant{inv13}{false}{$\forall{}t,p\qdot{}(p\in{}process \land{} p\in{}dom(t1) \land{} t=t1(p))\limp{}clk-t\leq{}ddl3$}{\\deadline(t1,t3,ddl3)}
+	\Invariant{inv14}{false}{$\forall{}p\qdot{}(p\in{}dom(t1)\land{}p\in{}dom(t3)\land{}t3(p)\geq{}t1(p))\limp{}t3(p)-t1(p)\leq{}ddl3$}{}
+	\Invariant{inv10}{false}{$\forall{}p\qdot{}p\in{}dom(t1)\limp{}0\leq{}t1(p)\land{}t1(p)\leq{}clk$}{}
+	\Invariant{inv11}{false}{$\forall{}p\qdot{}p\in{}dom(t2)\limp{}0\leq{}t2(p)\land{}t2(p)\leq{}clk$}{}
+	\Invariant{inv12}{false}{$\forall{}p\qdot{}p\in{}dom(t3)\limp{}0\leq{}t3(p)\land{}t3(p)\leq{}clk$}{}
+	\Invariant{inv15}{false}{$\forall{}t,p\qdot{}(p\in{}process \land{} p\in{}dom(t1) \land{} t=t1(p))\limp{} p\in{}dom(t2) \land{} t2(p)\geq{}t1(p)$}{}
 }
 \EVENTS{
 \INITIALISATION{true}{}{
@@ -27,7 +34,7 @@
 		\Action{act3}{$clk \bcmeq{} 0$}{true}{}
 		\Action{act4}{$t1 \bcmeq{} \emptyset{}$}{true}{}
 		\Action{act5}{$t2 \bcmeq{} \emptyset{}$}{true}{}
-		\Action{act6}{$t3 \bcmeq{} 0$}{true}{}
+		\Action{act6}{$t3 \bcmeq{} \emptyset{}$}{true}{}
 	}
 }
 \EVT{wish}{true}{ordinary}{wish}{}{
@@ -66,13 +73,13 @@
 	}
 	\ACTIONS{true}{
 		\Action{act1}{$process\bcmeq{}process\setminus{}\{pro\}$}{false}{}
-		\Action{act3}{$t3\bcmeq{}clk$}{true}{}
+		\Action{act3}{$t3(pro)\bcmeq{}clk$}{true}{}
 	}
 }
 \EVT{tick}{false}{ordinary}{}{}{
 	\GUARDS{false}{
-		\Guard{grd1}{false}{$\forall{}t,p\qdot{}(p\in{}process \land{} p\in{}dom(t2) \land{} t=t2(p))\limp{}clk+1-t\leq{}ddl2$}{true}{}
-		\Guard{grd2}{false}{$card(process)=0\limp{}clk+1-t3\leq{}ddl1$}{true}{}
+		\Guard{grd2}{false}{$\forall{}t,p\qdot{}(p\in{}wait \land{} p\in{}dom(t1) \land{} t=t1(p))\limp{}clk+1-t\leq{}ddl1$}{true}{}
+		\Guard{grd3}{false}{$\forall{}t,p\qdot{}(p\in{}process \land{} p\in{}dom(t1) \land{} t=t1(p))\limp{}clk+1-t\leq{}ddl3$}{true}{}
 	}
 	\ACTIONS{true}{
 		\Action{act1}{$clk\bcmeq{}clk+1$}{true}{}

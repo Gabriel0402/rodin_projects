@@ -16,6 +16,7 @@
 \INVARIANTS{
 	\Invariant{inv1}{false}{$\forall{}t,p\qdot{}(p\in{}process \land{} p\in{}dom(t2) \land{} t=t2(p))\limp{}clk-t\leq{}ddl2$}{}
 	\Invariant{inv2}{false}{$\forall{}p\qdot{}(p\in{}dom(t2)\land{}p\in{}dom(t3)\land{}t3(p)\geq{}t2(p))\limp{}t3(p)-t2(p)\leq{}ddl2$}{\\deadline(t2,t3,ddl1)}
+	\Invariant{inv3}{false}{$\forall{}t,p\qdot{}(p\in{}process \land{} p\in{}dom(t1) \land{} p\in{}dom(t2) \land{} t=t2(p) \land{} t2(p)\geq{}t1(p))\limp{}t2(p)-t1(p)\leq{}ddl1$}{}
 	\Invariant{inv4}{false}{$position \in{} wait\tinj{}POSITION$}{}
 	\Invariant{inv5}{false}{$index \in{} PROCESS \pfun{} \nat{}$}{}
 }
@@ -85,7 +86,6 @@
 	\GUARDS{false}{
 		\Guard{grd2}{false}{$\forall{}t,p\qdot{}(p\in{}wait \land{} p\in{}dom(t1) \land{} t=t1(p))\limp{}clk+1-t\leq{}ddl1$}{true}{}
 		\Guard{grd4}{false}{$\forall{}t,p\qdot{}(p\in{}process \land{} p\in{}dom(t2) \land{} t=t2(p))\limp{}clk+1-t\leq{}ddl2$}{true}{}
-		\Guard{grd3}{false}{$\forall{}t,p\qdot{}(p\in{}process \land{} p\in{}dom(t1) \land{} t=t1(p))\limp{}clk+1-t\leq{}ddl3$}{true}{}
 	}
 	\ACTIONS{true}{
 		\Action{act1}{$clk\bcmeq{}clk+1$}{true}{}
