@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.machineFile org.eventb.core.configuration="org.eventb.core.fwd;de.prob.units.mchBase" org.eventb.texttools.text_lastmodified="1483118546077" org.eventb.texttools.text_representation="machine m3 refines m2  sees c0&#10;&#10;variables wait process clk t1 t2 t3 position index&#10;&#10;invariants&#10;  @inv1 ∀p·(process=∅ ∧ wait≠∅ ∧ t3≠∅∧p∈dom(t1))⇒clk−max(ran(t3))≤ddl4&#10;  @inv2 ∀p·(process=∅ ∧ wait≠∅ ∧ t3=∅∧p∈dom(t1))⇒clk−t1(p)≤ddl4&#10;  @inv3 finite(ran(t3))&#10;  @inv4 ∀p·(p∈dom(t1)∧p∈dom(t2)∧t2(p)≥t1(p))⇒t2(p)−t1(p)≤ddl4+index(p)∗(ddl4+ddl2)&#10;  @inv6 ∀p·(process=∅ ∧ wait≠∅ ∧ t3≠∅∧p∈dom(t1)∧t1(p)≤max(ran(t3)))⇒clk−max(ran(t3))≤ddl4&#10;  @inv7 ∀p·p∈dom(t1)∧ t3≠∅⇒max(ran(t3))−t1(p)≤ index(p)∗(ddl4+ddl2)&#10;&#10;events&#10;  event INITIALISATION extends INITIALISATION&#10;  end&#10;&#10;  event wish extends wish&#10;  end&#10;&#10;  event enter extends enter&#10;  end&#10;&#10;  event leave extends leave&#10;  end&#10;&#10;  event tick extends tick&#10;    where&#10;      @grd5 ∀p·(process=∅ ∧ wait≠∅ ∧ t3≠∅∧p∈dom(t1))⇒clk+1−max(ran(t3))≤ddl4&#10;      @grd6 process≠∅ ∨  wait≠∅&#10;      @grd7 ∀p·(process=∅ ∧ wait≠∅ ∧ t3=∅∧p∈dom(t1))⇒clk+1−t1(p)≤ddl4&#10;  end&#10;end&#10;" version="5">
+<org.eventb.core.refinesMachine name="'" org.eventb.core.target="m2"/>
+<org.eventb.core.seesContext name="/" org.eventb.core.target="c0"/>
+<org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="(" org.eventb.core.identifier="wait"/>
+<org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="*" org.eventb.core.identifier="process"/>
+<org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="4" org.eventb.core.identifier="clk"/>
+<org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="6" org.eventb.core.identifier="t1"/>
+<org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="8" org.eventb.core.identifier="t2"/>
+<org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="=" org.eventb.core.identifier="t3"/>
+<org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="_kKOucMX-EeanH8TXIitD4B" org.eventb.core.identifier="position"/>
+<org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="_kKOucMX-EeanH8TXIitD4D" org.eventb.core.identifier="index"/>
+<org.eventb.core.event name="_kKOucMX-EeanH8TXIitD4E" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="INITIALISATION"/>
+<org.eventb.core.event name="_kKOucMX-EeanH8TXIitD4F" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="wish">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="wish"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_kKOucMX-EeanH8TXIitD4G" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="enter">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="enter"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_kKOucMX-EeanH8TXIitD4H" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="leave">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="leave"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_kKOucMX-EeanH8TXIitD4I" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="tick">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="tick"/>
+<org.eventb.core.guard name="(" org.eventb.core.label="grd5" org.eventb.core.predicate="∀p·(process=∅ ∧ wait≠∅ ∧ t3≠∅∧p∈dom(t1))⇒clk+1−max(ran(t3))≤ddl4"/>
+<org.eventb.core.guard name="_h6u9UM3bEean9sqRvwkEQg" org.eventb.core.label="grd6" org.eventb.core.predicate="process≠∅ ∨  wait≠∅"/>
+<org.eventb.core.guard name="_9zH5IM3eEean9sqRvwkEQg" org.eventb.core.label="grd7" org.eventb.core.predicate="∀p·(process=∅ ∧ wait≠∅ ∧ t3=∅∧p∈dom(t1))⇒clk+1−t1(p)≤ddl4"/>
+</org.eventb.core.event>
+<org.eventb.core.invariant name="_kKOucMX-EeanH8TXIitD4J" org.eventb.core.label="inv1" org.eventb.core.predicate="∀p·(process=∅ ∧ wait≠∅ ∧ t3≠∅∧p∈dom(t1))⇒clk−max(ran(t3))≤ddl4"/>
+<org.eventb.core.invariant name="_dqJ58M3QEean9sqRvwkEQg" org.eventb.core.label="inv2" org.eventb.core.predicate="∀p·(process=∅ ∧ wait≠∅ ∧ t3=∅∧p∈dom(t1))⇒clk−t1(p)≤ddl4"/>
+<org.eventb.core.invariant name="_WvW3wM3gEean9sqRvwkEQg" org.eventb.core.label="inv3" org.eventb.core.predicate="finite(ran(t3))"/>
+<org.eventb.core.invariant name="_Z7xCAM3jEean9sqRvwkEQg" org.eventb.core.label="inv4" org.eventb.core.predicate="∀p·(p∈dom(t1)∧p∈dom(t2)∧t2(p)≥t1(p))⇒t2(p)−t1(p)≤ddl4+index(p)∗(ddl4+ddl2)"/>
+<org.eventb.core.invariant name="_neJo8M3jEean9sqRvwkEQg" org.eventb.core.label="inv6" org.eventb.core.predicate="∀p·(process=∅ ∧ wait≠∅ ∧ t3≠∅∧p∈dom(t1)∧t1(p)≤max(ran(t3)))⇒clk−max(ran(t3))≤ddl4"/>
+<org.eventb.core.invariant name="_nnCNMM6pEean9sqRvwkEQg" org.eventb.core.label="inv7" org.eventb.core.predicate="∀p·p∈dom(t1)∧ t3≠∅⇒max(ran(t3))−t1(p)≤ index(p)∗(ddl4+ddl2)"/>
+</org.eventb.core.machineFile>
