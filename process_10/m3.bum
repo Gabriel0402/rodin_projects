@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.machineFile org.eventb.core.configuration="org.eventb.core.fwd;de.prob.units.mchBase" org.eventb.texttools.text_lastmodified="1484130920104" org.eventb.texttools.text_representation="machine m3 refines m2  sees c0&#10;&#10;variables wait process clk t1 t2 t3 position index qsize dleave&#10;&#10;invariants&#10;  @inv3 finite(ran(t3))&#10;  @inv1 ∀p·p∈dom(t1)⇒p∈dom(index)&#10;  //@inv4 ∀p·(p∈dom(t1)∧p∈dom(t2)∧t2(p)≥t1(p))⇒t2(p)−t1(p)≤index(p)∗(ddl2+ddl4)+ddl4&#10;  @inv5 dleave ∈ PROCESS ⇸ ℕ&#10;  @inv6 ran(position)⊆dom(t1)&#10;  @inv7 process=∅ ∧ wait≠∅ ∧dleave=∅⇒clk−t1(position(1))≤ddl4&#10;&#10;events&#10;  event INITIALISATION extends INITIALISATION&#10;    then&#10;      @act10 dleave ≔ ∅&#10;  end&#10;&#10;  event wish extends wish&#10;  end&#10;&#10;  event enter extends enter&#10;    then&#10;      @act7 dleave≔{pro}⩤dleave&#10;  end&#10;&#10;  event leave extends leave&#10;    where&#10;      @grd2 position≠∅&#10;    then&#10;      @act4 dleave(position(1))≔clk&#10;  end&#10;&#10;  event leave_idle refines leave&#10;    any pro&#10;    where&#10;      @grd1 pro∈process&#10;      @grd2 position=∅&#10;    then&#10;      @act1 process≔process∖{pro}&#10;      @act2 t3(pro)≔clk&#10;  end&#10;&#10;  event tick refines tick&#10;    where&#10;      @grd4 ∀p·(p∈process ∧ p∈dom(t2))⇒clk+1−t2(p)≤ddl2&#10;      @grd5 process=∅ ∧ wait≠∅ ∧dleave=∅⇒clk+1−t1(position(1))≤ddl4&#10;      @grd7 process=∅ ∧ wait≠∅ ∧ dleave≠∅⇒clk+1−dleave(position(1))≤ddl4&#10;    then&#10;      @act1 clk≔clk+1&#10;  end&#10;end&#10;" version="5">
+<org.eventb.core.refinesMachine name="'" org.eventb.core.target="m2"/>
+<org.eventb.core.seesContext name="/" org.eventb.core.target="c0"/>
+<org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="(" org.eventb.core.identifier="wait"/>
+<org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="*" org.eventb.core.identifier="process"/>
+<org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="4" org.eventb.core.identifier="clk"/>
+<org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="6" org.eventb.core.identifier="t1"/>
+<org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="8" org.eventb.core.identifier="t2"/>
+<org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="=" org.eventb.core.identifier="t3"/>
+<org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="_kKOucMX-EeanH8TXIitD4B" org.eventb.core.identifier="position"/>
+<org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="_kKOucMX-EeanH8TXIitD4D" org.eventb.core.identifier="index"/>
+<org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="_kKOucMX-EeanH8TXIitD4E" org.eventb.core.identifier="qsize"/>
+<org.eventb.core.event name="_kKOucMX-EeanH8TXIitD4F" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="INITIALISATION">
+<org.eventb.core.action name="_EArrYNdSEea_Xv6ojnvGJQ" org.eventb.core.assignment="dleave ≔ ∅" org.eventb.core.label="act10"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_kKOucMX-EeanH8TXIitD4G" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="wish">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="wish"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_kKOucMX-EeanH8TXIitD4H" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="enter">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="enter"/>
+<org.eventb.core.action name="_EArrYddSEea_Xv6ojnvGJQ" org.eventb.core.assignment="dleave≔{pro}⩤dleave" org.eventb.core.label="act7"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_kKOucMX-EeanH8TXIitD4I" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="leave">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="leave"/>
+<org.eventb.core.guard name="_EArrYtdSEea_Xv6ojnvGJQ" org.eventb.core.label="grd2" org.eventb.core.predicate="position≠∅"/>
+<org.eventb.core.action name="_EArrY9dSEea_Xv6ojnvGJQ" org.eventb.core.assignment="dleave(position(1))≔clk" org.eventb.core.label="act4"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_kKOucMX-EeanH8TXIitD4J" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="leave_idle">
+<org.eventb.core.refinesEvent name="_EArrZNdSEea_Xv6ojnvGJQ" org.eventb.core.target="leave"/>
+<org.eventb.core.parameter name="_EArrZddSEea_Xv6ojnvGJQ" org.eventb.core.identifier="pro"/>
+<org.eventb.core.guard name="_EArrZtdSEea_Xv6ojnvGJQ" org.eventb.core.label="grd1" org.eventb.core.predicate="pro∈process"/>
+<org.eventb.core.guard name="_EArrZ9dSEea_Xv6ojnvGJQ" org.eventb.core.label="grd2" org.eventb.core.predicate="position=∅"/>
+<org.eventb.core.action name="_EArraNdSEea_Xv6ojnvGJQ" org.eventb.core.assignment="process≔process∖{pro}" org.eventb.core.label="act1"/>
+<org.eventb.core.action name="_EArraddSEea_Xv6ojnvGJQ" org.eventb.core.assignment="t3(pro)≔clk" org.eventb.core.label="act2"/>
+</org.eventb.core.event>
+<org.eventb.core.variable name="_EArratdSEea_Xv6ojnvGJQ" org.eventb.core.identifier="dleave"/>
+<org.eventb.core.invariant name="_EArra9dSEea_Xv6ojnvGJQ" org.eventb.core.label="inv3" org.eventb.core.predicate="finite(ran(t3))"/>
+<org.eventb.core.invariant name="_EArrbNdSEea_Xv6ojnvGJQ" org.eventb.core.comment="@inv4 ∀p·(p∈dom(t1)∧p∈dom(t2)∧t2(p)≥t1(p))⇒t2(p)−t1(p)≤index(p)∗(ddl2+ddl4)+ddl4" org.eventb.core.label="inv1" org.eventb.core.predicate="∀p·p∈dom(t1)⇒p∈dom(index)"/>
+<org.eventb.core.invariant name="_EAsScNdSEea_Xv6ojnvGJQ" org.eventb.core.label="inv5" org.eventb.core.predicate="dleave ∈ PROCESS ⇸ ℕ"/>
+<org.eventb.core.invariant name="_EAsScddSEea_Xv6ojnvGJQ" org.eventb.core.label="inv6" org.eventb.core.predicate="ran(position)⊆dom(t1)"/>
+<org.eventb.core.event name="_EAsSd9dSEea_Xv6ojnvGJQ" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="tick">
+<org.eventb.core.refinesEvent name="_EAsSeNdSEea_Xv6ojnvGJQ" org.eventb.core.target="tick"/>
+<org.eventb.core.guard name="_ZRyh0saZEean9sqRvwkEQg" org.eventb.core.label="grd4" org.eventb.core.predicate="∀p·(p∈process ∧ p∈dom(t2))⇒clk+1−t2(p)≤ddl2"/>
+<org.eventb.core.action name="_UHvn0NdNEea_Xv6ojnvGJQ" org.eventb.core.assignment="clk≔clk+1" org.eventb.core.label="act1"/>
+<org.eventb.core.guard name="_mQKT0NdPEea_Xv6ojnvGJQ" org.eventb.core.label="grd5" org.eventb.core.predicate="process=∅ ∧ wait≠∅ ∧dleave=∅⇒clk+1−t1(position(1))≤ddl4"/>
+<org.eventb.core.guard name="_EAsSeddSEea_Xv6ojnvGJQ" org.eventb.core.label="grd7" org.eventb.core.predicate="process=∅ ∧ wait≠∅ ∧ dleave≠∅⇒clk+1−dleave(position(1))≤ddl4"/>
+</org.eventb.core.event>
+<org.eventb.core.invariant name="_f0TP8NfZEea_Xv6ojnvGJQ" org.eventb.core.label="inv7" org.eventb.core.predicate="process=∅ ∧ wait≠∅ ∧dleave=∅⇒clk−t1(position(1))≤ddl4"/>
+</org.eventb.core.machineFile>

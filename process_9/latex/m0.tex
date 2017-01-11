@@ -1,0 +1,61 @@
+\documentclass[10pt,a4paper]{report}
+\usepackage{bsymb,b2latex}
+\begin{document}
+\SingleHeader{m0}
+\MACHINE{m0}{}{c0}{}
+\VARIABLES{
+	\Variable{wait}{}
+	\Variable{process}{}
+}
+\INVARIANTS{
+	\Invariant{inv1}{false}{$wait \subseteq{} PROCESS$}{}
+	\Invariant{inv2}{false}{$process \subseteq{} PROCESS$}{}
+	\Invariant{inv3}{false}{$finite(process)$}{}
+	\Invariant{inv4}{false}{$card(process)\leq{}1$}{}
+}
+\EVENTS{
+\INITIALISATION{true}{}{
+	\ACTIONS{false}{
+		\Action{act1}{$wait \bcmeq{} \emptyset{}$}{true}{}
+		\Action{act2}{$process \bcmeq{} \emptyset{}$}{true}{}
+	}
+}
+\EVT{wish}{false}{ordinary}{}{}{
+	\ANY{
+		\Param{pro}{true}{}
+	}
+	\GUARDS{true}{
+		\Guard{grd1}{false}{$pro\in{}PROCESS\setminus{}wait$}{true}{}
+		\Guard{grd2}{false}{$pro\in{}PROCESS\setminus{}process$}{true}{}
+	}
+	\ACTIONS{true}{
+		\Action{act1}{$wait\bcmeq{}wait\bunion{}\{pro\}$}{true}{}
+	}
+}
+\EVT{enter}{false}{ordinary}{}{}{
+	\ANY{
+		\Param{pro}{true}{}
+	}
+	\GUARDS{true}{
+		\Guard{grd1}{false}{$pro\in{}wait$}{true}{}
+		\Guard{grd2}{false}{$card(process)=0$}{true}{}
+	}
+	\ACTIONS{true}{
+		\Action{act1}{$wait\bcmeq{}wait\setminus{}\{pro\}$}{true}{}
+		\Action{act2}{$process\bcmeq{}process \bunion{} \{pro\}$}{true}{}
+	}
+}
+\EVT{leave}{false}{ordinary}{}{}{
+	\ANY{
+		\Param{pro}{true}{}
+	}
+	\GUARDS{true}{
+		\Guard{grd1}{false}{$pro\in{}process$}{true}{}
+	}
+	\ACTIONS{true}{
+		\Action{act1}{$process\bcmeq{}process\setminus{}\{pro\}$}{true}{}
+	}
+}
+}
+\END
+\end{document}
