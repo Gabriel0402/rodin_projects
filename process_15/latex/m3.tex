@@ -1,0 +1,136 @@
+\documentclass[10pt,a4paper]{report}
+\usepackage{bsymb,b2latex}
+\begin{document}
+\SingleHeader{m3}
+\MACHINE{m3}{m2}{c0}{}
+\VARIABLES{
+	\Variable{wait}{}
+	\Variable{process}{}
+	\Variable{clk}{}
+	\Variable{t1}{}
+	\Variable{t2}{}
+	\Variable{qsize}{}
+	\Variable{queue}{}
+	\Variable{dqueue}{}
+	\Variable{t3}{}
+	\Variable{index}{}
+}
+\INVARIANTS{
+	\Invariant{inv1}{false}{$dqueue \in{} PROCESS \pfun{} \nat{}$}{}
+	\Invariant{inv3}{false}{$\forall{}p\qdot{}p\in{}dom(dqueue)\limp{}0\leq{}dqueue(p)\land{}dqueue(p)\leq{}clk$}{}
+	\Invariant{inv4}{false}{$\forall{}p\qdot{}(p\in{}wait \land{} p\in{}dom(dqueue)\land{} p=queue(1)\land{}process=\emptyset{})\limp{}clk-dqueue(p)\leq{}ddl4$}{}
+	\Invariant{inv5}{false}{$\forall{}p\qdot{}(p\in{}dom(dqueue)\land{}p\in{}dom(t2)\land{}t2(p)\geq{}dqueue(p))\limp{}t2(p)-dqueue(p)\leq{}ddl4$}{\\deadline(wish$\_$empty/leave,enter,ddl4)}
+	\Invariant{inv6}{false}{$t3 \in{} PROCESS \pfun{} \nat{}$}{}
+	\Invariant{inv7}{false}{$\forall{}p\qdot{}(p\in{}process \land{} p\in{}dom(t2))\limp{}clk-t2(p)\leq{}ddl2$}{}
+	\Invariant{inv8}{false}{$\forall{}p\qdot{}p\in{}dom(t3)\limp{}0\leq{}t3(p)\land{}t3(p)\leq{}clk$}{}
+	\Invariant{inv9}{false}{$\forall{}p\qdot{}(p\in{}dom(t2)\land{}p\in{}dom(t3)\land{}t3(p)\geq{}t2(p))\limp{}t3(p)-t2(p)\leq{}ddl2$}{\\deadline(enter,leave,ddl2)}
+	\Invariant{inv11}{false}{$index \in{} PROCESS \pfun{} \nat{}$}{}
+	\Invariant{inv10}{false}{$\forall{}p\qdot{}(p\in{}dom(t2)\land{}p\in{}dom(t3)\land{}t3(p)\geq{}t2(p)\land{}t3(p)=dqueue(queue(1))\land{}queue\neq{}\emptyset{})\limp{}dqueue(queue(1))-t2(p)\leq{}ddl2$}{\\deadline(enter,leave,ddl2)}
+}
+\EVENTS{
+\INITIALISATION{true}{}{
+	\ACTIONS{false}{
+		\Action{act1}{$wait \bcmeq{} \emptyset{}$}{false}{}
+		\Action{act2}{$process \bcmeq{} \emptyset{}$}{false}{}
+		\Action{act3}{$clk \bcmeq{} 0$}{false}{}
+		\Action{act4}{$t1 \bcmeq{} \emptyset{}$}{false}{}
+		\Action{act5}{$t2 \bcmeq{} \emptyset{}$}{false}{}
+		\Action{act7}{$qsize \bcmeq{} 0$}{false}{}
+		\Action{act8}{$queue\bcmeq{}\emptyset{}$}{false}{}
+		\Action{act9}{$dqueue \bcmeq{} \emptyset{}$}{true}{}
+		\Action{act10}{$t3 \bcmeq{} \emptyset{}$}{true}{}
+		\Action{act11}{$index\bcmeq{}\emptyset{}$}{true}{}
+	}
+}
+\EVT{wish\_empty}{true}{ordinary}{wish}{}{
+	\ANY{
+		\Param{pro}{false}{}
+	}
+	\GUARDS{true}{
+		\Guard{grd1}{false}{$pro\in{}PROCESS\setminus{}wait$}{false}{}
+		\Guard{grd2}{false}{$pro\in{}PROCESS\setminus{}process$}{false}{}
+		\Guard{grd3}{false}{$wait=\emptyset{}\land{}process=\emptyset{}$}{true}{}
+	}
+	\ACTIONS{true}{
+		\Action{act1}{$wait\bcmeq{}wait\bunion{}\{pro\}$}{false}{}
+		\Action{act2}{$t1(pro)\bcmeq{}clk$}{false}{}
+		\Action{act3}{$queue(qsize+1)\bcmeq{}pro$}{false}{}
+		\Action{act4}{$qsize\bcmeq{}qsize+1$}{false}{}
+		\Action{act5}{$dqueue(pro)\bcmeq{}clk$}{true}{}
+		\Action{act6}{$index(pro)\bcmeq{}qsize$}{true}{}
+	}
+}
+\EVT{wish\_nonempty}{true}{ordinary}{wish}{}{
+	\ANY{
+		\Param{pro}{false}{}
+	}
+	\GUARDS{true}{
+		\Guard{grd1}{false}{$pro\in{}PROCESS\setminus{}wait$}{false}{}
+		\Guard{grd2}{false}{$pro\in{}PROCESS\setminus{}process$}{false}{}
+		\Guard{grd3}{false}{$wait\neq{}\emptyset{}\lor{}process\neq{}\emptyset{}$}{true}{}
+	}
+	\ACTIONS{true}{
+		\Action{act1}{$wait\bcmeq{}wait\bunion{}\{pro\}$}{false}{}
+		\Action{act2}{$t1(pro)\bcmeq{}clk$}{false}{}
+		\Action{act3}{$queue(qsize+1)\bcmeq{}pro$}{false}{}
+		\Action{act4}{$qsize\bcmeq{}qsize+1$}{false}{}
+		\Action{act6}{$index(pro)\bcmeq{}qsize$}{true}{}
+	}
+}
+\EVT{enter}{true}{ordinary}{enter}{}{
+	\ANY{
+		\Param{pro}{false}{}
+	}
+	\GUARDS{true}{
+		\Guard{grd1}{false}{$pro\in{}wait$}{false}{}
+		\Guard{grd2}{false}{$card(process)=0$}{false}{}
+		\Guard{grd3}{false}{$qsize>0$}{false}{}
+		\Guard{grd4}{false}{$pro=queue(1)$}{false}{}
+	}
+	\ACTIONS{true}{
+		\Action{act1}{$wait\bcmeq{}wait\setminus{}\{pro\}$}{false}{}
+		\Action{act2}{$process\bcmeq{}process \bunion{} \{pro\}$}{false}{}
+		\Action{act3}{$t2(pro)\bcmeq{}clk$}{false}{}
+		\Action{act4}{$queue\bcmsuch{}queue'\in{}1\upto{}qsize-1\tbij{}wait\setminus{}\{queue(1)\}\land{}(\forall{}i\qdot{}i\in{}1\upto{}qsize-1\limp{}queue'(i)=queue(i+1))$}{false}{}
+		\Action{act5}{$qsize\bcmeq{}qsize-1$}{false}{}
+	}
+}
+\EVT{leave}{true}{ordinary}{leave}{}{
+	\ANY{
+		\Param{pro}{false}{}
+	}
+	\GUARDS{true}{
+		\Guard{grd1}{false}{$pro\in{}process$}{false}{}
+		\Guard{grd2}{false}{$queue\neq{}\emptyset{}$}{true}{}
+	}
+	\ACTIONS{true}{
+		\Action{act1}{$process\bcmeq{}process\setminus{}\{pro\}$}{false}{}
+		\Action{act3}{$dqueue(queue(1))\bcmeq{}clk$}{true}{}
+		\Action{act4}{$t3(pro)\bcmeq{}clk$}{true}{}
+	}
+}
+\EVT{leave\_idle}{true}{ordinary}{leave}{}{
+	\ANY{
+		\Param{pro}{false}{}
+	}
+	\GUARDS{true}{
+		\Guard{grd1}{false}{$pro\in{}process$}{false}{}
+		\Guard{grd2}{false}{$queue=\emptyset{}$}{true}{}
+	}
+	\ACTIONS{true}{
+		\Action{act1}{$process\bcmeq{}process\setminus{}\{pro\}$}{false}{}
+		\Action{act2}{$t3(pro)\bcmeq{}clk$}{true}{}
+	}
+}
+\EVT{tick}{false}{ordinary}{tick}{}{
+	\GUARDS{false}{
+		\Guard{grd2}{false}{$\forall{}p\qdot{}(p\in{}process \land{} p\in{}dom(t2))\limp{}clk+1-t2(p)\leq{}ddl2$}{true}{}
+		\Guard{grd3}{false}{$\forall{}p\qdot{}(p\in{}wait \land{} p\in{}dom(dqueue) \land{} p=queue(1) \land{} process=\emptyset{})\limp{}clk+1-dqueue(p)\leq{}ddl4$}{true}{}
+	}
+	\ACTIONS{true}{
+		\Action{act1}{$clk\bcmeq{}clk+1$}{true}{}
+	}
+}
+}
+\END
+\end{document}

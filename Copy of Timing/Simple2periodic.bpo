@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.poFile org.eventb.core.poStamp="9">
+<org.eventb.core.poPredicateSet name="CTXHYP" org.eventb.core.poStamp="3">
+<org.eventb.core.poIdentifier name="d1" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="d2" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="d3" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="p" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poPredicate name="d4" org.eventb.core.predicate="d1&gt;0" org.eventb.core.source="/Copy of Timing/SimpleC1.buc|org.eventb.core.contextFile#SimpleC1|org.eventb.core.axiom#("/>
+<org.eventb.core.poPredicate name="d5" org.eventb.core.predicate="d2&gt;0" org.eventb.core.source="/Copy of Timing/SimpleC1.buc|org.eventb.core.contextFile#SimpleC1|org.eventb.core.axiom#*"/>
+<org.eventb.core.poPredicate name="d6" org.eventb.core.predicate="d3&gt;0" org.eventb.core.source="/Copy of Timing/SimpleC1.buc|org.eventb.core.contextFile#SimpleC1|org.eventb.core.axiom#-"/>
+<org.eventb.core.poPredicate name="d7" org.eventb.core.predicate="d2+d3≤d1" org.eventb.core.source="/Copy of Timing/SimpleC1.buc|org.eventb.core.contextFile#SimpleC1|org.eventb.core.axiom#,"/>
+<org.eventb.core.poPredicate name="d8" org.eventb.core.predicate="1&lt;p∧p≤d1" org.eventb.core.source="/Copy of Timing/SimpleC1.buc|org.eventb.core.contextFile#SimpleC1|org.eventb.core.axiom#\/"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.parentSet="/Copy of Timing/Simple2periodic.bpo|org.eventb.core.poFile#Simple2periodic|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="9">
+<org.eventb.core.poIdentifier name="clk" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="dA" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="oA" org.eventb.core.type="BOOL"/>
+<org.eventb.core.poIdentifier name="oC" org.eventb.core.type="BOOL"/>
+<org.eventb.core.poIdentifier name="tA" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="tC" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="tP" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poPredicate name="cll" org.eventb.core.predicate="oC=TRUE⇒oA=TRUE" org.eventb.core.source="/Copy of Timing/Simple1.bum|org.eventb.core.machineFile#Simple1|org.eventb.core.invariant#)"/>
+<org.eventb.core.poPredicate name="clm" org.eventb.core.predicate="clk∈ℕ" org.eventb.core.source="/Copy of Timing/Simple2.bum|org.eventb.core.machineFile#Simple2|org.eventb.core.invariant#\/"/>
+<org.eventb.core.poPredicate name="cln" org.eventb.core.predicate="0≤dA∧dA≤clk" org.eventb.core.source="/Copy of Timing/Simple2.bum|org.eventb.core.machineFile#Simple2|org.eventb.core.invariant#1"/>
+<org.eventb.core.poPredicate name="clo" org.eventb.core.predicate="0≤tC∧tC≤clk" org.eventb.core.source="/Copy of Timing/Simple2.bum|org.eventb.core.machineFile#Simple2|org.eventb.core.invariant#inv1"/>
+<org.eventb.core.poPredicate name="clp" org.eventb.core.predicate="dA≤tC⇒tC − dA≤d1" org.eventb.core.source="/Copy of Timing/Simple2.bum|org.eventb.core.machineFile#Simple2|org.eventb.core.invariant#3"/>
+<org.eventb.core.poPredicate name="clq" org.eventb.core.predicate="oA=TRUE∧oC=FALSE⇒clk≤tA" org.eventb.core.source="/Copy of Timing/Simple2.bum|org.eventb.core.machineFile#Simple2|org.eventb.core.invariant#_wd7qUND3Eean9sqRvwkEQg"/>
+<org.eventb.core.poPredicate name="clr" org.eventb.core.predicate="oA=TRUE⇒tA=dA+d1" org.eventb.core.source="/Copy of Timing/Simple2.bum|org.eventb.core.machineFile#Simple2|org.eventb.core.invariant#_shYCcN1eEeahcoCGGLLb2w"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="C/inv1/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="9">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Copy of Timing/Simple2periodic.bpo|org.eventb.core.poFile#Simple2periodic|org.eventb.core.poPredicateSet#EVTALLHYPSimpleC;"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="0≤clk∧clk≤clk" org.eventb.core.source="/Copy of Timing/Simple2periodic.bum|org.eventb.core.machineFile#Simple2periodic|org.eventb.core.invariant#inv9"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Copy of Timing/Simple2.bum|org.eventb.core.machineFile#Simple2|org.eventb.core.event#-"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/Copy of Timing/Simple2periodic.bum|org.eventb.core.machineFile#Simple2periodic|org.eventb.core.event#inv5"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Copy of Timing/Simple2periodic.bum|org.eventb.core.machineFile#Simple2periodic|org.eventb.core.invariant#inv9"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Copy of Timing/Simple2periodic.bpo|org.eventb.core.poFile#Simple2periodic|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Copy of Timing/Simple2periodic.bpo|org.eventb.core.poFile#Simple2periodic|org.eventb.core.poSequent#C\/inv1\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/Copy of Timing/Simple2periodic.bpo|org.eventb.core.poFile#Simple2periodic|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD0"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="C/inv2/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="9">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Copy of Timing/Simple2periodic.bpo|org.eventb.core.poFile#Simple2periodic|org.eventb.core.poPredicateSet#EVTALLHYPSimpleC;"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="clk − clk≤p" org.eventb.core.source="/Copy of Timing/Simple2periodic.bum|org.eventb.core.machineFile#Simple2periodic|org.eventb.core.invariant#inv:"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Copy of Timing/Simple2.bum|org.eventb.core.machineFile#Simple2|org.eventb.core.event#-"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/Copy of Timing/Simple2periodic.bum|org.eventb.core.machineFile#Simple2periodic|org.eventb.core.event#inv5"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Copy of Timing/Simple2periodic.bum|org.eventb.core.machineFile#Simple2periodic|org.eventb.core.invariant#inv:"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Copy of Timing/Simple2periodic.bpo|org.eventb.core.poFile#Simple2periodic|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Copy of Timing/Simple2periodic.bpo|org.eventb.core.poFile#Simple2periodic|org.eventb.core.poSequent#C\/inv2\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/Copy of Timing/Simple2periodic.bpo|org.eventb.core.poFile#Simple2periodic|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD1"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="C/inv3/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="9">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Copy of Timing/Simple2periodic.bpo|org.eventb.core.poFile#Simple2periodic|org.eventb.core.poPredicateSet#EVTALLHYPSimpleC;"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="oA=TRUE∧TRUE=FALSE⇒clk≤tA" org.eventb.core.source="/Copy of Timing/Simple2periodic.bum|org.eventb.core.machineFile#Simple2periodic|org.eventb.core.invariant#inv;"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Copy of Timing/Simple2.bum|org.eventb.core.machineFile#Simple2|org.eventb.core.event#-"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/Copy of Timing/Simple2periodic.bum|org.eventb.core.machineFile#Simple2periodic|org.eventb.core.event#inv5"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Copy of Timing/Simple2periodic.bum|org.eventb.core.machineFile#Simple2periodic|org.eventb.core.invariant#inv;"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Copy of Timing/Simple2periodic.bpo|org.eventb.core.poFile#Simple2periodic|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Copy of Timing/Simple2periodic.bpo|org.eventb.core.poFile#Simple2periodic|org.eventb.core.poSequent#C\/inv3\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/Copy of Timing/Simple2periodic.bpo|org.eventb.core.poFile#Simple2periodic|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD2"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTSimpleC;" org.eventb.core.parentSet="/Copy of Timing/Simple2periodic.bpo|org.eventb.core.poFile#Simple2periodic|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="9">
+<org.eventb.core.poIdentifier name="tP'" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="tC'" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="oC'" org.eventb.core.type="BOOL"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPSimpleC;" org.eventb.core.parentSet="/Copy of Timing/Simple2periodic.bpo|org.eventb.core.poFile#Simple2periodic|org.eventb.core.poPredicateSet#EVTIDENTSimpleC;" org.eventb.core.poStamp="9">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="oC=FALSE" org.eventb.core.source="/Copy of Timing/Simple1.bum|org.eventb.core.machineFile#Simple1|org.eventb.core.event#evt1|org.eventb.core.guard#("/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="oA=TRUE" org.eventb.core.source="/Copy of Timing/Simple1.bum|org.eventb.core.machineFile#Simple1|org.eventb.core.event#evt1|org.eventb.core.guard#*"/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="clk − tP=p" org.eventb.core.source="/Copy of Timing/Simple2periodic.bum|org.eventb.core.machineFile#Simple2periodic|org.eventb.core.event#inv5|org.eventb.core.guard#("/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="nC/inv1/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="9">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Copy of Timing/Simple2periodic.bpo|org.eventb.core.poFile#Simple2periodic|org.eventb.core.poPredicateSet#EVTALLHYPSimpleC="/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="0≤clk∧clk≤clk" org.eventb.core.source="/Copy of Timing/Simple2periodic.bum|org.eventb.core.machineFile#Simple2periodic|org.eventb.core.invariant#inv9"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Copy of Timing/Simple2periodic.bum|org.eventb.core.machineFile#Simple2periodic|org.eventb.core.event#inv7"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Copy of Timing/Simple2periodic.bum|org.eventb.core.machineFile#Simple2periodic|org.eventb.core.invariant#inv9"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Copy of Timing/Simple2periodic.bpo|org.eventb.core.poFile#Simple2periodic|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Copy of Timing/Simple2periodic.bpo|org.eventb.core.poFile#Simple2periodic|org.eventb.core.poSequent#nC\/inv1\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Copy of Timing/Simple2periodic.bpo|org.eventb.core.poFile#Simple2periodic|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD0"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="nC/inv2/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="9">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Copy of Timing/Simple2periodic.bpo|org.eventb.core.poFile#Simple2periodic|org.eventb.core.poPredicateSet#EVTALLHYPSimpleC="/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="clk − clk≤p" org.eventb.core.source="/Copy of Timing/Simple2periodic.bum|org.eventb.core.machineFile#Simple2periodic|org.eventb.core.invariant#inv:"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Copy of Timing/Simple2periodic.bum|org.eventb.core.machineFile#Simple2periodic|org.eventb.core.event#inv7"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Copy of Timing/Simple2periodic.bum|org.eventb.core.machineFile#Simple2periodic|org.eventb.core.invariant#inv:"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Copy of Timing/Simple2periodic.bpo|org.eventb.core.poFile#Simple2periodic|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Copy of Timing/Simple2periodic.bpo|org.eventb.core.poFile#Simple2periodic|org.eventb.core.poSequent#nC\/inv2\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Copy of Timing/Simple2periodic.bpo|org.eventb.core.poFile#Simple2periodic|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD1"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="nC/inv3/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="9">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Copy of Timing/Simple2periodic.bpo|org.eventb.core.poFile#Simple2periodic|org.eventb.core.poPredicateSet#EVTALLHYPSimpleC="/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="oA=TRUE∧oC=FALSE⇒clk≤tA" org.eventb.core.source="/Copy of Timing/Simple2periodic.bum|org.eventb.core.machineFile#Simple2periodic|org.eventb.core.invariant#inv;"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Copy of Timing/Simple2periodic.bum|org.eventb.core.machineFile#Simple2periodic|org.eventb.core.event#inv7"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Copy of Timing/Simple2periodic.bum|org.eventb.core.machineFile#Simple2periodic|org.eventb.core.invariant#inv;"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Copy of Timing/Simple2periodic.bpo|org.eventb.core.poFile#Simple2periodic|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Copy of Timing/Simple2periodic.bpo|org.eventb.core.poFile#Simple2periodic|org.eventb.core.poSequent#nC\/inv3\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Copy of Timing/Simple2periodic.bpo|org.eventb.core.poFile#Simple2periodic|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD2"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTSimpleC=" org.eventb.core.parentSet="/Copy of Timing/Simple2periodic.bpo|org.eventb.core.poFile#Simple2periodic|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="9">
+<org.eventb.core.poIdentifier name="tP'" org.eventb.core.type="ℤ"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPSimpleC=" org.eventb.core.parentSet="/Copy of Timing/Simple2periodic.bpo|org.eventb.core.poFile#Simple2periodic|org.eventb.core.poPredicateSet#EVTIDENTSimpleC=" org.eventb.core.poStamp="9">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="clk − tP=p" org.eventb.core.source="/Copy of Timing/Simple2periodic.bum|org.eventb.core.machineFile#Simple2periodic|org.eventb.core.event#inv7|org.eventb.core.guard#'"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="¬(oC=FALSE∧oA=TRUE)" org.eventb.core.source="/Copy of Timing/Simple2periodic.bum|org.eventb.core.machineFile#Simple2periodic|org.eventb.core.event#inv7|org.eventb.core.guard#)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="Tick/inv1/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="9">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Copy of Timing/Simple2periodic.bpo|org.eventb.core.poFile#Simple2periodic|org.eventb.core.poPredicateSet#EVTALLHYPSimpleC&gt;"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="0≤tP∧tP≤clk+1" org.eventb.core.source="/Copy of Timing/Simple2periodic.bum|org.eventb.core.machineFile#Simple2periodic|org.eventb.core.invariant#inv9"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Copy of Timing/Simple2.bum|org.eventb.core.machineFile#Simple2|org.eventb.core.event#inv3"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/Copy of Timing/Simple2periodic.bum|org.eventb.core.machineFile#Simple2periodic|org.eventb.core.event#inv6"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Copy of Timing/Simple2periodic.bum|org.eventb.core.machineFile#Simple2periodic|org.eventb.core.invariant#inv9"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Copy of Timing/Simple2periodic.bpo|org.eventb.core.poFile#Simple2periodic|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Copy of Timing/Simple2periodic.bpo|org.eventb.core.poFile#Simple2periodic|org.eventb.core.poSequent#Tick\/inv1\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/Copy of Timing/Simple2periodic.bpo|org.eventb.core.poFile#Simple2periodic|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD0"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="Tick/inv2/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="9">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Copy of Timing/Simple2periodic.bpo|org.eventb.core.poFile#Simple2periodic|org.eventb.core.poPredicateSet#EVTALLHYPSimpleC&gt;"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="clk+1 − tP≤p" org.eventb.core.source="/Copy of Timing/Simple2periodic.bum|org.eventb.core.machineFile#Simple2periodic|org.eventb.core.invariant#inv:"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Copy of Timing/Simple2.bum|org.eventb.core.machineFile#Simple2|org.eventb.core.event#inv3"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/Copy of Timing/Simple2periodic.bum|org.eventb.core.machineFile#Simple2periodic|org.eventb.core.event#inv6"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Copy of Timing/Simple2periodic.bum|org.eventb.core.machineFile#Simple2periodic|org.eventb.core.invariant#inv:"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Copy of Timing/Simple2periodic.bpo|org.eventb.core.poFile#Simple2periodic|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Copy of Timing/Simple2periodic.bpo|org.eventb.core.poFile#Simple2periodic|org.eventb.core.poSequent#Tick\/inv2\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/Copy of Timing/Simple2periodic.bpo|org.eventb.core.poFile#Simple2periodic|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD1"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="Tick/grd1/GRD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Guard strengthening (split)" org.eventb.core.poStamp="9">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Copy of Timing/Simple2periodic.bpo|org.eventb.core.poFile#Simple2periodic|org.eventb.core.poPredicateSet#EVTALLHYPSimpleC&gt;"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="oA=TRUE∧oC=FALSE⇒clk+1≤tA" org.eventb.core.source="/Copy of Timing/Simple2.bum|org.eventb.core.machineFile#Simple2|org.eventb.core.event#inv3|org.eventb.core.guard#("/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Copy of Timing/Simple2.bum|org.eventb.core.machineFile#Simple2|org.eventb.core.event#inv3"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Copy of Timing/Simple2.bum|org.eventb.core.machineFile#Simple2|org.eventb.core.event#inv3|org.eventb.core.guard#("/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/Copy of Timing/Simple2periodic.bum|org.eventb.core.machineFile#Simple2periodic|org.eventb.core.event#inv6"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Copy of Timing/Simple2periodic.bpo|org.eventb.core.poFile#Simple2periodic|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Copy of Timing/Simple2periodic.bpo|org.eventb.core.poFile#Simple2periodic|org.eventb.core.poSequent#Tick\/grd1\/GRD|org.eventb.core.poPredicateSet#SEQHYP"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTSimpleC&gt;" org.eventb.core.parentSet="/Copy of Timing/Simple2periodic.bpo|org.eventb.core.poFile#Simple2periodic|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="clk'" org.eventb.core.type="ℤ"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPSimpleC&gt;" org.eventb.core.parentSet="/Copy of Timing/Simple2periodic.bpo|org.eventb.core.poFile#Simple2periodic|org.eventb.core.poPredicateSet#EVTIDENTSimpleC&gt;" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="clk+1 − tP≤p" org.eventb.core.source="/Copy of Timing/Simple2periodic.bum|org.eventb.core.machineFile#Simple2periodic|org.eventb.core.event#inv6|org.eventb.core.guard#)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/Copy of Timing/Simple2periodic.bpo|org.eventb.core.poFile#Simple2periodic|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="9">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="0≤tP∧tP≤clk" org.eventb.core.source="/Copy of Timing/Simple2periodic.bum|org.eventb.core.machineFile#Simple2periodic|org.eventb.core.invariant#inv9"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="clk − tP≤p" org.eventb.core.source="/Copy of Timing/Simple2periodic.bum|org.eventb.core.machineFile#Simple2periodic|org.eventb.core.invariant#inv:"/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="oA=TRUE∧oC=FALSE⇒tP≤tA" org.eventb.core.source="/Copy of Timing/Simple2periodic.bum|org.eventb.core.machineFile#Simple2periodic|org.eventb.core.invariant#inv;"/>
+</org.eventb.core.poPredicateSet>
+</org.eventb.core.poFile>

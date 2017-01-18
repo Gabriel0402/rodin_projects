@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.machineFile org.eventb.core.comment="add deadline" org.eventb.core.configuration="org.eventb.core.fwd;de.prob.units.mchBase" org.eventb.texttools.text_lastmodified="1484734546576" org.eventb.texttools.text_representation="machine Simple2 // add deadline&#10; refines Simple1  sees SimpleC1&#10;&#10;variables oA oC clk tA tC dA&#10;&#10;invariants&#10;  @inv1 clk ∈ ℕ&#10;  @inv2 0≤dA ∧ dA≤clk&#10;  @inv3 0≤tC ∧ tC≤clk&#10;  @inv4 dA ≤ tC  ⇒  tC−dA ≤ d1 // deadline(A,B,d1)&#10;  @inv5 oA=TRUE ∧ oC=FALSE  ⇒  clk ≤ tA  // oA=TRUE ∧ oC=FALSE  ⇒  clk−tA ≤ d1&#10;  @inv6 oA=TRUE⇒tA=dA+d1&#10;&#10;events&#10;  event INITIALISATION extends INITIALISATION&#10;    then&#10;      @act3 clk ≔ 0&#10;      @act4 tA ≔ 0&#10;      @act5 tC ≔ 0&#10;      @act6 dA ≔0&#10;  end&#10;&#10;  event A extends A&#10;    then&#10;      @act2 tA ≔ clk+d1&#10;      @act3 dA ≔clk&#10;  end&#10;&#10;  event C extends C&#10;    then&#10;      @act2 tC ≔ clk&#10;  end&#10;&#10;  event Tick&#10;    where&#10;      @grd1 oA=TRUE ∧ oC=FALSE&#10;            ⇒  clk+1 ≤ tA&#10;      /* oA=TRUE ∧ oC=FALSE&#10;         ⇒  clk+1 − tA ≤ d1 */&#10;    then&#10;      @act1 clk ≔ clk+1&#10;  end&#10;end&#10;" version="5">
+<org.eventb.core.refinesMachine name="'" org.eventb.core.target="Simple1"/>
+<org.eventb.core.seesContext name="inv2" org.eventb.core.target="SimpleC1"/>
+<org.eventb.core.variable name="(" org.eventb.core.identifier="oA"/>
+<org.eventb.core.variable name="*" org.eventb.core.identifier="oC"/>
+<org.eventb.core.event name="+" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="INITIALISATION">
+<org.eventb.core.action name="'" org.eventb.core.assignment="clk ≔ 0" org.eventb.core.label="act3"/>
+<org.eventb.core.action name="(" org.eventb.core.assignment="tA ≔ 0" org.eventb.core.label="act4"/>
+<org.eventb.core.action name=")" org.eventb.core.assignment="tC ≔ 0" org.eventb.core.label="act5"/>
+<org.eventb.core.action name="_QGA1EN1eEeahcoCGGLLb2w" org.eventb.core.assignment="dA ≔0" org.eventb.core.label="act6"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="," org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="A">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="A"/>
+<org.eventb.core.action name="act1" org.eventb.core.assignment="tA ≔ clk+d1" org.eventb.core.label="act2"/>
+<org.eventb.core.action name="'" org.eventb.core.assignment="dA ≔clk" org.eventb.core.label="act3"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="-" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="C">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="C"/>
+<org.eventb.core.action name="_HPUhMN1eEeahcoCGGLLb2w" org.eventb.core.assignment="tC ≔ clk" org.eventb.core.label="act2"/>
+</org.eventb.core.event>
+<org.eventb.core.variable name="." org.eventb.core.identifier="clk"/>
+<org.eventb.core.invariant name="/" org.eventb.core.label="inv1" org.eventb.core.predicate="clk ∈ ℕ"/>
+<org.eventb.core.variable name="0" org.eventb.core.identifier="tA"/>
+<org.eventb.core.invariant name="1" org.eventb.core.label="inv2" org.eventb.core.predicate="0≤dA ∧ dA≤clk"/>
+<org.eventb.core.invariant name="inv1" org.eventb.core.label="inv3" org.eventb.core.predicate="0≤tC ∧ tC≤clk"/>
+<org.eventb.core.variable name="2" org.eventb.core.identifier="tC"/>
+<org.eventb.core.invariant name="3" org.eventb.core.comment="deadline(A,B,d1)" org.eventb.core.label="inv4" org.eventb.core.predicate="dA ≤ tC  ⇒  tC−dA ≤ d1"/>
+<org.eventb.core.event name="inv3" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="Tick">
+<org.eventb.core.guard name="(" org.eventb.core.comment="oA=TRUE ∧ oC=FALSE&#10;         ⇒  clk+1 − tA ≤ d1 " org.eventb.core.label="grd1" org.eventb.core.predicate="oA=TRUE ∧ oC=FALSE&#10;            ⇒  clk+1 ≤ tA"/>
+<org.eventb.core.action name="_QGBcIN1eEeahcoCGGLLb2w" org.eventb.core.assignment="clk ≔ clk+1" org.eventb.core.label="act1"/>
+</org.eventb.core.event>
+<org.eventb.core.invariant name="_wd7qUND3Eean9sqRvwkEQg" org.eventb.core.comment="oA=TRUE ∧ oC=FALSE  ⇒  clk−tA ≤ d1" org.eventb.core.label="inv5" org.eventb.core.predicate="oA=TRUE ∧ oC=FALSE  ⇒  clk ≤ tA"/>
+<org.eventb.core.variable name="_MkpnIN1eEeahcoCGGLLb2w" org.eventb.core.identifier="dA"/>
+<org.eventb.core.invariant name="_shYCcN1eEeahcoCGGLLb2w" org.eventb.core.label="inv6" org.eventb.core.predicate="oA=TRUE⇒tA=dA+d1"/>
+</org.eventb.core.machineFile>

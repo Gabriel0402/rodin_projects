@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.machineFile org.eventb.core.comment="introduce intermediate event between A and C&#10;Retain end-to-end deadline" org.eventb.core.configuration="org.eventb.core.fwd" version="5">
+<org.eventb.core.refinesMachine name="'" org.eventb.core.target="Simple2"/>
+<org.eventb.core.seesContext name="inv2" org.eventb.core.target="SimpleC1"/>
+<org.eventb.core.variable name="(" org.eventb.core.identifier="oA"/>
+<org.eventb.core.variable name="*" org.eventb.core.identifier="oC"/>
+<org.eventb.core.variable name="." org.eventb.core.identifier="clk"/>
+<org.eventb.core.variable name="0" org.eventb.core.identifier="tA"/>
+<org.eventb.core.variable name="2" org.eventb.core.identifier="tC"/>
+<org.eventb.core.event name="inv3" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="INITIALISATION">
+<org.eventb.core.action name="'" org.eventb.core.assignment="oB ≔ FALSE" org.eventb.core.label="act6"/>
+<org.eventb.core.action name="(" org.eventb.core.assignment="tB ≔ 0" org.eventb.core.label="act7"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="inv4" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="A">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="A"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="inv9" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="B">
+<org.eventb.core.guard name="'" org.eventb.core.label="grd1" org.eventb.core.predicate="oB = FALSE"/>
+<org.eventb.core.guard name="(" org.eventb.core.label="grd2" org.eventb.core.predicate="oA = TRUE"/>
+<org.eventb.core.action name=")" org.eventb.core.assignment="oB ≔ TRUE" org.eventb.core.label="act1"/>
+<org.eventb.core.action name="*" org.eventb.core.assignment="tB ≔ clk" org.eventb.core.label="act2"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="inv5" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="C">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="C"/>
+<org.eventb.core.guard name="internal1" org.eventb.core.label="grd1" org.eventb.core.predicate="oC = FALSE"/>
+<org.eventb.core.action name=")" org.eventb.core.assignment="oC ≔ TRUE" org.eventb.core.label="act1"/>
+<org.eventb.core.guard name="*" org.eventb.core.label="grd2" org.eventb.core.predicate="oB = TRUE"/>
+<org.eventb.core.action name="act1" org.eventb.core.assignment="tC ≔ clk" org.eventb.core.label="act2"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="inv6" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="Tick">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="Tick"/>
+</org.eventb.core.event>
+<org.eventb.core.variable name="inv7" org.eventb.core.identifier="oB"/>
+<org.eventb.core.invariant name="inv8" org.eventb.core.label="inv1" org.eventb.core.predicate="oB=TRUE ⇒ oA=TRUE"/>
+<org.eventb.core.variable name="inv:" org.eventb.core.identifier="tB"/>
+<org.eventb.core.invariant name="inv;" org.eventb.core.label="inv2" org.eventb.core.predicate="0≤tB ∧ tB≤clk"/>
+</org.eventb.core.machineFile>

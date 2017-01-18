@@ -12,11 +12,18 @@
 	\Variable{t3}{}
 	\Variable{position}{}
 	\Variable{index}{}
+	\Variable{dleave}{}
 }
 \INVARIANTS{
 	\Invariant{inv3}{false}{$finite(ran(t3))$}{}
 	\Invariant{inv1}{false}{$\forall{}p\qdot{}p\in{}dom(t1)\limp{}p\in{}dom(index)$}{}
 	\Invariant{inv4}{false}{$\forall{}p\qdot{}(p\in{}dom(t1)\land{}p\in{}dom(t2)\land{}t2(p)\geq{}t1(p))\limp{}t2(p)-t1(p)\leq{}index(p)*(ddl2+ddl4)+ddl4$}{}
+	\Invariant{inv5}{false}{$dleave \in{} PROCESS \pfun{} \nat{}$}{}
+	\Invariant{inv6}{false}{$wait\neq{}\emptyset{}\limp{}position\neq{}\emptyset{}$}{}
+	\Invariant{inv7}{false}{$position\neq{}\emptyset{}\limp{}min(ran(position))=0$}{}
+	\Invariant{inv8}{false}{$dom(position)\subseteq{}dom(t1)$}{}
+	\Invariant{inv9}{false}{$process=\emptyset{} \land{} wait\neq{}\emptyset{} \land{}dleave=\emptyset{}\limp{}clk-t1(position\converse{}(0))\leq{}ddl4$}{}
+	\Invariant{inv10}{false}{$\forall{}p\qdot{}(p\in{}dom(t1)\land{}p\in{}dom(t2)\land{}t2(p)\geq{}t1(p)\land{}dleave=\emptyset{})\limp{}t2(p)-t1(p)\leq{}ddl4$}{}
 }
 \EVENTS{
 \INITIALISATION{true}{}{
@@ -29,6 +36,7 @@
 		\Action{act6}{$t3 \bcmeq{} \emptyset{}$}{false}{}
 		\Action{act7}{$position \bcmeq{} \emptyset{}$}{false}{}
 		\Action{act8}{$index \bcmeq{} \emptyset{}$}{false}{}
+		\Action{act9}{$dleave \bcmeq{} \emptyset{}$}{true}{}
 	}
 }
 \EVT{wish}{true}{ordinary}{wish}{}{
@@ -48,8 +56,8 @@
 	\ACTIONS{true}{
 		\Action{act1}{$wait\bcmeq{}wait\bunion{}\{pro\}$}{false}{}
 		\Action{act2}{$t1(pro)\bcmeq{}clk$}{false}{}
-		\Action{act3}{$position\bcmeq{}position \bunion{} \{pro\mapsto{}pos\}$}{false}{}
 		\Action{act4}{$index(pro)\bcmeq{}pos$}{false}{}
+		\Action{act3}{$position(pro)\bcmeq{}pos$}{false}{}
 	}
 }
 \EVT{enter}{true}{ordinary}{enter}{}{
@@ -67,6 +75,7 @@
 		\Action{act2}{$process\bcmeq{}process \bunion{} \{pro\}$}{false}{}
 		\Action{act3}{$t2(pro)\bcmeq{}clk$}{false}{}
 		\Action{act5}{$position\bcmeq{}\lambda{}p\qdot{}p\in{}wait\setminus{}\{pro\}|position(p)-1$}{false}{}
+		\Action{act6}{$dleave\bcmeq{}\{pro\}\domsub{}dleave$}{true}{}
 	}
 }
 \EVT{leave}{true}{ordinary}{leave}{}{
@@ -75,21 +84,35 @@
 	}
 	\GUARDS{true}{
 		\Guard{grd1}{false}{$pro\in{}process$}{false}{}
+		\Guard{grd2}{false}{$position\neq{}\emptyset{}$}{true}{}
 	}
 	\ACTIONS{true}{
 		\Action{act1}{$process\bcmeq{}process\setminus{}\{pro\}$}{false}{}
 		\Action{act3}{$t3(pro)\bcmeq{}clk$}{false}{}
+		\Action{act4}{$dleave(position\converse{}(0))\bcmeq{}clk$}{true}{}
 	}
 }
-\EVT{tick}{true}{ordinary}{tick}{}{
-	\GUARDS{false}{
-		\Guard{grd2}{false}{$\forall{}t,p\qdot{}(p\in{}wait \land{} p\in{}dom(t1) \land{} t=t1(p))\limp{}clk+1-t\leq{}ddl1$}{false}{}
-		\Guard{grd4}{false}{$\forall{}t,p\qdot{}(p\in{}process \land{} p\in{}dom(t2) \land{} t=t2(p))\limp{}clk+1-t\leq{}ddl2$}{false}{}
-		\Guard{grd5}{false}{$\forall{}p\qdot{}(process=\emptyset{} \land{} wait\neq{}\emptyset{} \land{}p\in{}dom(t1) \land{} t3=\emptyset{})\limp{}clk+1-t1(p)\leq{}ddl4$}{true}{}
-		\Guard{grd7}{false}{$\forall{}p\qdot{}(process=\emptyset{} \land{} wait\neq{}\emptyset{} \land{}p\in{}dom(t1) \land{} t3\neq{}\emptyset{})\limp{}clk+1-max(ran(t3))\leq{}ddl4$}{true}{}
+\EVT{leave\_idle}{false}{ordinary}{leave}{}{
+	\ANY{
+		\Param{pro}{true}{}
+	}
+	\GUARDS{true}{
+		\Guard{grd1}{false}{$pro\in{}process$}{true}{}
+		\Guard{grd2}{false}{$position=\emptyset{}$}{true}{}
 	}
 	\ACTIONS{true}{
-		\Action{act1}{$clk\bcmeq{}clk+1$}{false}{}
+		\Action{act1}{$process\bcmeq{}process\setminus{}\{pro\}$}{true}{}
+		\Action{act2}{$t3(pro)\bcmeq{}clk$}{true}{}
+	}
+}
+\EVT{tick}{false}{ordinary}{tick}{}{
+	\GUARDS{false}{
+		\Guard{grd4}{false}{$\forall{}p\qdot{}(p\in{}process \land{} p\in{}dom(t2))\limp{}clk+1-t2(p)\leq{}ddl2$}{true}{}
+		\Guard{grd5}{false}{$process=\emptyset{} \land{} wait\neq{}\emptyset{} \land{}dleave=\emptyset{}\limp{}clk+1-t1(position\converse{}(0))\leq{}ddl4$}{true}{}
+		\Guard{grd7}{false}{$process=\emptyset{} \land{} wait\neq{}\emptyset{} \land{} dleave\neq{}\emptyset{}\limp{}clk+1-dleave(position\converse{}(0))\leq{}ddl4$}{true}{}
+	}
+	\ACTIONS{true}{
+		\Action{act1}{$clk\bcmeq{}clk+1$}{true}{}
 	}
 }
 }

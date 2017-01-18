@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.scContextFile org.eventb.core.accurate="true" org.eventb.core.configuration="org.eventb.core.fwd;de.prob.symbolic.ctxBase;de.prob.units.mchBase">
+<org.eventb.core.scAxiom name="'" org.eventb.core.label="axm1" org.eventb.core.predicate="POSITION=ℕ" org.eventb.core.source="/process_15/c0.buc|org.eventb.core.contextFile#c0|org.eventb.core.axiom#(" org.eventb.core.theorem="false"/>
+<org.eventb.core.scAxiom name="(" org.eventb.core.label="axm2" org.eventb.core.predicate="ddl1=15" org.eventb.core.source="/process_15/c0.buc|org.eventb.core.contextFile#c0|org.eventb.core.axiom#+" org.eventb.core.theorem="false"/>
+<org.eventb.core.scAxiom name=")" org.eventb.core.label="axm3" org.eventb.core.predicate="ddl2=2" org.eventb.core.source="/process_15/c0.buc|org.eventb.core.contextFile#c0|org.eventb.core.axiom#-" org.eventb.core.theorem="false"/>
+<org.eventb.core.scAxiom name="*" org.eventb.core.label="axm4" org.eventb.core.predicate="ddl3=17" org.eventb.core.source="/process_15/c0.buc|org.eventb.core.contextFile#c0|org.eventb.core.axiom#\/" org.eventb.core.theorem="false"/>
+<org.eventb.core.scAxiom name="+" org.eventb.core.label="axm5" org.eventb.core.predicate="finite(PROCESS)" org.eventb.core.source="/process_15/c0.buc|org.eventb.core.contextFile#c0|org.eventb.core.axiom#0" org.eventb.core.theorem="false"/>
+<org.eventb.core.scAxiom name="," org.eventb.core.label="axm6" org.eventb.core.predicate="card(PROCESS)=2" org.eventb.core.source="/process_15/c0.buc|org.eventb.core.contextFile#c0|org.eventb.core.axiom#1" org.eventb.core.theorem="false"/>
+<org.eventb.core.scAxiom name="-" org.eventb.core.label="axm7" org.eventb.core.predicate="ddl4=1" org.eventb.core.source="/process_15/c0.buc|org.eventb.core.contextFile#c0|org.eventb.core.axiom#3" org.eventb.core.theorem="false"/>
+<org.eventb.core.scConstant de.prob.symbolic.symbolicAttribute="false" de.prob.units.unitPragmaAttribute="" name="POSITION" org.eventb.core.source="/process_15/c0.buc|org.eventb.core.contextFile#c0|org.eventb.core.constant#'" org.eventb.core.type="ℙ(ℤ)"/>
+<org.eventb.core.scCarrierSet name="PROCESS" org.eventb.core.source="/process_15/c0.buc|org.eventb.core.contextFile#c0|org.eventb.core.carrierSet#)" org.eventb.core.type="ℙ(PROCESS)"/>
+<org.eventb.core.scConstant de.prob.symbolic.symbolicAttribute="false" de.prob.units.unitPragmaAttribute="" name="ddl1" org.eventb.core.source="/process_15/c0.buc|org.eventb.core.contextFile#c0|org.eventb.core.constant#*" org.eventb.core.type="ℤ"/>
+<org.eventb.core.scConstant de.prob.symbolic.symbolicAttribute="false" de.prob.units.unitPragmaAttribute="" name="ddl2" org.eventb.core.source="/process_15/c0.buc|org.eventb.core.contextFile#c0|org.eventb.core.constant#," org.eventb.core.type="ℤ"/>
+<org.eventb.core.scConstant de.prob.symbolic.symbolicAttribute="false" de.prob.units.unitPragmaAttribute="" name="ddl3" org.eventb.core.source="/process_15/c0.buc|org.eventb.core.contextFile#c0|org.eventb.core.constant#." org.eventb.core.type="ℤ"/>
+<org.eventb.core.scConstant de.prob.symbolic.symbolicAttribute="false" de.prob.units.unitPragmaAttribute="" name="ddl4" org.eventb.core.source="/process_15/c0.buc|org.eventb.core.contextFile#c0|org.eventb.core.constant#2" org.eventb.core.type="ℤ"/>
+</org.eventb.core.scContextFile>
