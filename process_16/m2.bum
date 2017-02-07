@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.machineFile org.eventb.core.configuration="org.eventb.core.fwd;de.prob.units.mchBase" org.eventb.texttools.text_lastmodified="1486486469348" org.eventb.texttools.text_representation="machine m2 refines m1  sees c0&#10;&#10;variables wait process cs clk t1 t2 qsize queue&#10;&#10;invariants&#10;  @inv1 qsize ∈ ℕ&#10;  @inv2 queue ∈ 1‥qsize⤖wait&#10;&#10;events&#10;  event INITIALISATION extends INITIALISATION&#10;&#9;  then&#10;&#9;      @act7 qsize ≔ 0&#10;&#9;      @act8 queue≔∅&#10;  end&#10;&#10;  event wish extends wish&#10;&#9;  then&#10;&#9;      @act3 queue(qsize+1)≔pro&#10;&#9;      @act4 qsize≔qsize+1&#10;  end&#10;&#10;  event enter extends enter&#10;&#9;  where&#10;&#9;      @grd4 qsize&gt;0&#10;&#9;      @grd5 pro=queue(1)&#10;&#9;    then&#10;&#9;      @act5 queue:∣queue'∈1‥qsize−1⤖wait∖{queue(1)}∧(∀j·j∈1‥qsize−1⇒queue'(j)=queue(j+1))&#10;&#9;      @act6 qsize≔qsize−1&#10;  end&#10;&#10;  event leave extends leave&#10;  end&#10;&#10;  event tick extends tick&#10;  end&#10;end&#10;" version="5">
+<org.eventb.core.refinesMachine name="'" org.eventb.core.target="m1"/>
+<org.eventb.core.seesContext name="/" org.eventb.core.target="c0"/>
+<org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="(" org.eventb.core.identifier="wait"/>
+<org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="*" org.eventb.core.identifier="process"/>
+<org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="2" org.eventb.core.identifier="cs"/>
+<org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="7" org.eventb.core.identifier="clk"/>
+<org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="9" org.eventb.core.identifier="t1"/>
+<org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name=";" org.eventb.core.identifier="t2"/>
+<org.eventb.core.event name="=" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="INITIALISATION">
+<org.eventb.core.action name="_jEmkgO1NEeanNe0iiRALsA" org.eventb.core.assignment="qsize ≔ 0" org.eventb.core.label="act7"/>
+<org.eventb.core.action name="_jEmkge1NEeanNe0iiRALsA" org.eventb.core.assignment="queue≔∅" org.eventb.core.label="act8"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="&gt;" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="wish">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="wish"/>
+<org.eventb.core.action name="_jEmkgu1NEeanNe0iiRALsA" org.eventb.core.assignment="queue(qsize+1)≔pro" org.eventb.core.label="act3"/>
+<org.eventb.core.action name="_jEmkg-1NEeanNe0iiRALsA" org.eventb.core.assignment="qsize≔qsize+1" org.eventb.core.label="act4"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="?" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="enter">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="enter"/>
+<org.eventb.core.guard name="_jEmkhO1NEeanNe0iiRALsA" org.eventb.core.label="grd4" org.eventb.core.predicate="qsize&gt;0"/>
+<org.eventb.core.guard name="_jEmkhe1NEeanNe0iiRALsA" org.eventb.core.label="grd5" org.eventb.core.predicate="pro=queue(1)"/>
+<org.eventb.core.action name="_jEmkhu1NEeanNe0iiRALsA" org.eventb.core.assignment="queue:∣queue'∈1‥qsize−1⤖wait∖{queue(1)}∧(∀j·j∈1‥qsize−1⇒queue'(j)=queue(j+1))" org.eventb.core.label="act5"/>
+<org.eventb.core.action name="_jEnLkO1NEeanNe0iiRALsA" org.eventb.core.assignment="qsize≔qsize−1" org.eventb.core.label="act6"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="@" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="leave">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="leave"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="A" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="tick">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="tick"/>
+</org.eventb.core.event>
+<org.eventb.core.variable name="_jEnLke1NEeanNe0iiRALsA" org.eventb.core.identifier="qsize"/>
+<org.eventb.core.variable name="_jEnLku1NEeanNe0iiRALsA" org.eventb.core.identifier="queue"/>
+<org.eventb.core.invariant name="_jEnLk-1NEeanNe0iiRALsA" org.eventb.core.label="inv1" org.eventb.core.predicate="qsize ∈ ℕ"/>
+<org.eventb.core.invariant name="_jEnLlO1NEeanNe0iiRALsA" org.eventb.core.label="inv2" org.eventb.core.predicate="queue ∈ 1‥qsize⤖wait"/>
+</org.eventb.core.machineFile>

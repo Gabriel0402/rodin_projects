@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.machineFile org.eventb.core.configuration="org.eventb.core.fwd;de.prob.units.mchBase" org.eventb.texttools.text_lastmodified="1486485801217" org.eventb.texttools.text_representation="machine m0 sees c0&#10;&#10;variables wait process cs&#10;&#10;invariants&#10;  @inv1 wait ⊆ PROCESS&#10;  @inv2 process ⊆ PROCESS&#10;  @inv5 cs ∈ process↣1‥csnum&#10;&#10;events&#10;  event INITIALISATION extends INITIALISATION&#10;    then&#10;      @act1 wait ≔ ∅&#10;      @act2 process ≔ ∅&#10;      @act3 cs ≔ ∅&#10;  end&#10;&#10;  event wish&#10;    any pro&#10;    where&#10;      @grd1 pro∈PROCESS∖wait&#10;      @grd2 pro∈PROCESS∖process&#10;    then&#10;      @act1 wait≔wait∪{pro}&#10;  end&#10;&#10;  event enter&#10;    any pro i&#10;    where&#10;      @grd1 pro∈wait&#10;      @grd2 i∈1‥csnum&#10;      @grd3 i∉ran(cs)&#10;    then&#10;      @act1 wait≔wait∖{pro}&#10;      @act2 process≔process ∪ {pro}&#10;      @act3 cs(pro)≔i&#10;  end&#10;&#10;  event leave&#10;    any pro&#10;    where&#10;      @grd1 pro∈process&#10;    then&#10;      @act1 process≔process∖{pro}&#10;      @act2 cs≔{pro}⩤cs&#10;  end&#10;end&#10;" version="5">
+<org.eventb.core.seesContext name="/" org.eventb.core.target="c0"/>
+<org.eventb.core.event name="'" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="INITIALISATION">
+<org.eventb.core.action name="'" org.eventb.core.assignment="wait ≔ ∅" org.eventb.core.label="act1"/>
+<org.eventb.core.action name="(" org.eventb.core.assignment="process ≔ ∅" org.eventb.core.label="act2"/>
+<org.eventb.core.action name=")" org.eventb.core.assignment="cs ≔ ∅" org.eventb.core.label="act3"/>
+</org.eventb.core.event>
+<org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="(" org.eventb.core.identifier="wait"/>
+<org.eventb.core.invariant name=")" org.eventb.core.label="inv1" org.eventb.core.predicate="wait ⊆ PROCESS"/>
+<org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="*" org.eventb.core.identifier="process"/>
+<org.eventb.core.invariant name="+" org.eventb.core.label="inv2" org.eventb.core.predicate="process ⊆ PROCESS"/>
+<org.eventb.core.event name="," org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="wish">
+<org.eventb.core.parameter name="'" org.eventb.core.identifier="pro"/>
+<org.eventb.core.guard name="(" org.eventb.core.label="grd1" org.eventb.core.predicate="pro∈PROCESS∖wait"/>
+<org.eventb.core.guard name=")" org.eventb.core.label="grd2" org.eventb.core.predicate="pro∈PROCESS∖process"/>
+<org.eventb.core.action name="*" org.eventb.core.assignment="wait≔wait∪{pro}" org.eventb.core.label="act1"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="-" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="enter">
+<org.eventb.core.parameter name="'" org.eventb.core.identifier="pro"/>
+<org.eventb.core.guard name="(" org.eventb.core.label="grd1" org.eventb.core.predicate="pro∈wait"/>
+<org.eventb.core.action name=")" org.eventb.core.assignment="wait≔wait∖{pro}" org.eventb.core.label="act1"/>
+<org.eventb.core.action name="*" org.eventb.core.assignment="process≔process ∪ {pro}" org.eventb.core.label="act2"/>
+<org.eventb.core.guard name="+" org.eventb.core.label="grd2" org.eventb.core.predicate="i∈1‥csnum"/>
+<org.eventb.core.parameter name="_CazvMO1KEeanNe0iiRALsA" org.eventb.core.identifier="i"/>
+<org.eventb.core.guard name="_Ca1kYO1KEeanNe0iiRALsA" org.eventb.core.label="grd3" org.eventb.core.predicate="i∉ran(cs)"/>
+<org.eventb.core.action name="_Ca2LcO1KEeanNe0iiRALsA" org.eventb.core.assignment="cs(pro)≔i" org.eventb.core.label="act3"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="." org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="leave">
+<org.eventb.core.parameter name="_Ca2Lce1KEeanNe0iiRALsA" org.eventb.core.identifier="pro"/>
+<org.eventb.core.action name="_Ca2ygO1KEeanNe0iiRALsA" org.eventb.core.assignment="process≔process∖{pro}" org.eventb.core.label="act1"/>
+<org.eventb.core.action name="_b7f7MO1KEeanNe0iiRALsA" org.eventb.core.assignment="cs≔{pro}⩤cs" org.eventb.core.label="act2"/>
+<org.eventb.core.guard name="_nXwtsO1LEeanNe0iiRALsA" org.eventb.core.label="grd1" org.eventb.core.predicate="pro∈process"/>
+</org.eventb.core.event>
+<org.eventb.core.invariant name="0" org.eventb.core.label="inv5" org.eventb.core.predicate="cs ∈ process↣1‥csnum"/>
+<org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="2" org.eventb.core.identifier="cs"/>
+</org.eventb.core.machineFile>

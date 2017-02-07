@@ -1,0 +1,117 @@
+\documentclass[10pt,a4paper]{report}
+\usepackage{bsymb,b2latex}
+\begin{document}
+\SingleHeader{m3}
+\MACHINE{m3}{m2}{c0}{}
+\VARIABLES{
+	\Variable{wait}{}
+	\Variable{process}{}
+	\Variable{clk}{}
+	\Variable{t1}{}
+	\Variable{t2}{}
+	\Variable{t3}{}
+	\Variable{position}{}
+	\Variable{index}{}
+	\Variable{qsize}{}
+	\Variable{dleave}{}
+}
+\INVARIANTS{
+	\Invariant{inv3}{false}{$finite(ran(t3))$}{}
+	\Invariant{inv1}{false}{$\forall{}p\qdot{}p\in{}dom(t1)\limp{}p\in{}dom(index)$}{\\@inv4 $\forall{}$p$\qdot{}$(p$\in{}$dom(t1)$\land{}$p$\in{}$dom(t2)$\land{}$t2(p)$\geq{}$t1(p))$\limp{}$t2(p)$-$t1(p)$\leq{}$index(p)$*$(ddl2+ddl4)+ddl4}
+	\Invariant{inv5}{false}{$dleave \in{} \nat{}$}{}
+	\Invariant{inv6}{false}{$ran(position)\subseteq{}dom(t1)$}{}
+	\Invariant{inv7}{false}{$process=\emptyset{} \land{} wait\neq{}\emptyset{} \land{}dleave=0\limp{}clk-t1(position(1))\leq{}ddl4$}{}
+	\Invariant{inv8}{false}{$process=\emptyset{} \land{} wait\neq{}\emptyset{} \land{} dleave\neq{}0\limp{}clk-dleave\leq{}ddl4$}{}
+	\Invariant{inv9}{false}{$dleave\geq{}0  \land{} dleave\leq{}clk$}{}
+	\Invariant{inv10}{false}{$\forall{}p\qdot{}(p\in{}wait\land{}p\in{}dom(t1))\limp{}clk-t1(p)\leq{}index(p)*(ddl2+ddl4)+ddl4$}{}
+}
+\EVENTS{
+\INITIALISATION{true}{}{
+	\ACTIONS{false}{
+		\Action{act1}{$wait \bcmeq{} \emptyset{}$}{false}{}
+		\Action{act2}{$process \bcmeq{} \emptyset{}$}{false}{}
+		\Action{act3}{$clk \bcmeq{} 0$}{false}{}
+		\Action{act4}{$t1 \bcmeq{} \emptyset{}$}{false}{}
+		\Action{act5}{$t2 \bcmeq{} \emptyset{}$}{false}{}
+		\Action{act6}{$t3 \bcmeq{} \emptyset{}$}{false}{}
+		\Action{act7}{$position \bcmeq{} \emptyset{}$}{false}{}
+		\Action{act8}{$index \bcmeq{} \emptyset{}$}{false}{}
+		\Action{act9}{$qsize \bcmeq{} 0$}{false}{}
+		\Action{act10}{$dleave \bcmeq{} 0$}{true}{}
+	}
+}
+\EVT{wish}{true}{ordinary}{wish}{}{
+	\ANY{
+		\Param{pro}{false}{}
+	}
+	\GUARDS{true}{
+		\Guard{grd1}{false}{$pro\in{}PROCESS\setminus{}wait$}{false}{}
+		\Guard{grd2}{false}{$pro\in{}PROCESS\setminus{}process$}{false}{}
+	}
+	\ACTIONS{true}{
+		\Action{act1}{$wait\bcmeq{}wait\bunion{}\{pro\}$}{false}{}
+		\Action{act2}{$t1(pro)\bcmeq{}clk$}{false}{}
+		\Action{act4}{$index(pro)\bcmeq{}qsize$}{false}{}
+		\Action{act3}{$position(qsize+1)\bcmeq{}pro$}{false}{}
+		\Action{act5}{$qsize\bcmeq{}qsize+1$}{false}{}
+	}
+}
+\EVT{enter}{true}{ordinary}{enter}{}{
+	\ANY{
+		\Param{pro}{false}{}
+	}
+	\GUARDS{true}{
+		\Guard{grd1}{false}{$pro\in{}wait$}{false}{}
+		\Guard{grd2}{false}{$card(process)=0$}{false}{}
+		\Guard{grd3}{false}{$qsize>0$}{false}{}
+		\Guard{grd4}{false}{$pro=position(1)$}{false}{}
+	}
+	\ACTIONS{true}{
+		\Action{act1}{$wait\bcmeq{}wait\setminus{}\{pro\}$}{false}{}
+		\Action{act2}{$process\bcmeq{}process \bunion{} \{pro\}$}{false}{}
+		\Action{act3}{$t2(pro)\bcmeq{}clk$}{false}{}
+		\Action{act5}{$position\bcmsuch{}position'\in{}1\upto{}qsize-1\tbij{}wait\setminus{}\{position(1)\}\land{}(\forall{}i\qdot{}i\in{}1\upto{}qsize-1\limp{}position'(i)=position(i+1))$}{false}{}
+		\Action{act6}{$qsize\bcmeq{}qsize-1$}{false}{}
+		\Action{act7}{$dleave\bcmeq{}0$}{true}{}
+	}
+}
+\EVT{leave}{true}{ordinary}{leave}{}{
+	\ANY{
+		\Param{pro}{false}{}
+	}
+	\GUARDS{true}{
+		\Guard{grd1}{false}{$pro\in{}process$}{false}{}
+		\Guard{grd2}{false}{$position\neq{}\emptyset{}$}{true}{}
+	}
+	\ACTIONS{true}{
+		\Action{act1}{$process\bcmeq{}process\setminus{}\{pro\}$}{false}{}
+		\Action{act3}{$t3(pro)\bcmeq{}clk$}{false}{}
+		\Action{act4}{$dleave\bcmeq{}clk$}{true}{}
+	}
+}
+\EVT{leave\_idle}{false}{ordinary}{leave}{}{
+	\ANY{
+		\Param{pro}{true}{}
+	}
+	\GUARDS{true}{
+		\Guard{grd1}{false}{$pro\in{}process$}{true}{}
+		\Guard{grd2}{false}{$position=\emptyset{}$}{true}{}
+	}
+	\ACTIONS{true}{
+		\Action{act1}{$process\bcmeq{}process\setminus{}\{pro\}$}{true}{}
+		\Action{act2}{$t3(pro)\bcmeq{}clk$}{true}{}
+	}
+}
+\EVT{tick}{false}{ordinary}{tick}{}{
+	\GUARDS{false}{
+		\Guard{grd4}{false}{$\forall{}p\qdot{}(p\in{}process \land{} p\in{}dom(t2))\limp{}clk+1-t2(p)\leq{}ddl2$}{true}{}
+		\Guard{grd5}{false}{$process=\emptyset{} \land{} wait\neq{}\emptyset{} \land{}dleave=0\limp{}clk+1-t1(position(1))\leq{}ddl4$}{true}{}
+		\Guard{grd7}{false}{$process=\emptyset{} \land{} wait\neq{}\emptyset{} \land{} dleave\neq{}0\limp{}clk+1-dleave\leq{}ddl4$}{true}{}
+	}
+	\ACTIONS{true}{
+		\Action{act1}{$clk\bcmeq{}clk+1$}{true}{}
+	}
+}
+}
+\END
+\end{document}
