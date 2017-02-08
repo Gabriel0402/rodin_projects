@@ -6,18 +6,19 @@
 \VARIABLES{
 	\Variable{wait}{}
 	\Variable{process}{}
+	\Variable{cs}{}
 }
 \INVARIANTS{
 	\Invariant{inv1}{false}{$wait \subseteq{} PROCESS$}{}
 	\Invariant{inv2}{false}{$process \subseteq{} PROCESS$}{}
-	\Invariant{inv3}{false}{$finite(process)$}{}
-	\Invariant{inv4}{false}{$card(process)\leq{}1$}{}
+	\Invariant{inv5}{false}{$cs \in{} process\tinj{}1\upto{}csnum$}{}
 }
 \EVENTS{
 \INITIALISATION{true}{}{
 	\ACTIONS{false}{
 		\Action{act1}{$wait \bcmeq{} \emptyset{}$}{true}{}
 		\Action{act2}{$process \bcmeq{} \emptyset{}$}{true}{}
+		\Action{act3}{$cs \bcmeq{} \emptyset{}$}{true}{}
 	}
 }
 \EVT{wish}{false}{ordinary}{}{}{
@@ -35,14 +36,17 @@
 \EVT{enter}{false}{ordinary}{}{}{
 	\ANY{
 		\Param{pro}{true}{}
+		\Param{i}{true}{}
 	}
 	\GUARDS{true}{
 		\Guard{grd1}{false}{$pro\in{}wait$}{true}{}
-		\Guard{grd2}{false}{$card(process)=0$}{true}{}
+		\Guard{grd2}{false}{$i\in{}1\upto{}csnum$}{true}{}
+		\Guard{grd3}{false}{$i\notin{}ran(cs)$}{true}{}
 	}
 	\ACTIONS{true}{
 		\Action{act1}{$wait\bcmeq{}wait\setminus{}\{pro\}$}{true}{}
 		\Action{act2}{$process\bcmeq{}process \bunion{} \{pro\}$}{true}{}
+		\Action{act3}{$cs(pro)\bcmeq{}i$}{true}{}
 	}
 }
 \EVT{leave}{false}{ordinary}{}{}{
@@ -54,6 +58,7 @@
 	}
 	\ACTIONS{true}{
 		\Action{act1}{$process\bcmeq{}process\setminus{}\{pro\}$}{true}{}
+		\Action{act2}{$cs\bcmeq{}\{pro\}\domsub{}cs$}{true}{}
 	}
 }
 }

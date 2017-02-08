@@ -6,73 +6,92 @@
 \VARIABLES{
 	\Variable{wait}{}
 	\Variable{process}{}
+	\Variable{cs}{}
 	\Variable{clk}{}
 	\Variable{t1}{}
 	\Variable{t2}{}
-	\Variable{t3}{}
-	\Variable{position}{}
-	\Variable{index}{}
 	\Variable{qsize}{}
-	\Variable{dleave}{}
+	\Variable{queue}{}
+	\Variable{twish}{}
+	\Variable{tenter}{}
+	\Variable{tleave}{}
 }
 \INVARIANTS{
-	\Invariant{inv3}{false}{$finite(ran(t3))$}{}
-	\Invariant{inv1}{false}{$\forall{}p\qdot{}p\in{}dom(t1)\limp{}p\in{}dom(index)$}{\\@inv4 $\forall{}$p$\qdot{}$(p$\in{}$dom(t1)$\land{}$p$\in{}$dom(t2)$\land{}$t2(p)$\geq{}$t1(p))$\limp{}$t2(p)$-$t1(p)$\leq{}$index(p)$*$(ddl2+ddl4)+ddl4}
-	\Invariant{inv5}{false}{$dleave \in{} \nat{}$}{}
-	\Invariant{inv6}{false}{$ran(position)\subseteq{}dom(t1)$}{}
-	\Invariant{inv7}{false}{$process=\emptyset{} \land{} wait\neq{}\emptyset{} \land{}dleave=0\limp{}clk-t1(position(1))\leq{}ddl4$}{}
-	\Invariant{inv8}{false}{$process=\emptyset{} \land{} wait\neq{}\emptyset{} \land{} dleave\neq{}0\limp{}clk-dleave\leq{}ddl4$}{}
-	\Invariant{inv9}{false}{$dleave\geq{}0  \land{} dleave\leq{}clk$}{}
-	\Invariant{inv10}{false}{$\forall{}p\qdot{}(p\in{}wait\land{}p\in{}dom(t1))\limp{}clk-t1(p)\leq{}index(p)*(ddl2+ddl4)+ddl4$}{}
+	\Invariant{inv1}{false}{$twish \in{} \nat{}$}{}
+	\Invariant{inv2}{false}{$tenter \in{} 1\upto{}csnum \pfun{} \nat{}$}{}
+	\Invariant{inv3}{false}{$tleave \in{} 1\upto{}csnum \pfun{} \nat{}$}{}
+	\Invariant{inv4}{false}{$\forall{}i\qdot{}i\in{}ran(cs)\limp{}i\in{}dom(tenter)$}{}
+	\Invariant{inv5}{false}{$\forall{}i\qdot{}i\in{}ran(cs)\limp{}i\in{}dom(tleave)$}{}
 }
 \EVENTS{
 \INITIALISATION{true}{}{
 	\ACTIONS{false}{
 		\Action{act1}{$wait \bcmeq{} \emptyset{}$}{false}{}
 		\Action{act2}{$process \bcmeq{} \emptyset{}$}{false}{}
-		\Action{act3}{$clk \bcmeq{} 0$}{false}{}
-		\Action{act4}{$t1 \bcmeq{} \emptyset{}$}{false}{}
-		\Action{act5}{$t2 \bcmeq{} \emptyset{}$}{false}{}
-		\Action{act6}{$t3 \bcmeq{} \emptyset{}$}{false}{}
-		\Action{act7}{$position \bcmeq{} \emptyset{}$}{false}{}
-		\Action{act8}{$index \bcmeq{} \emptyset{}$}{false}{}
-		\Action{act9}{$qsize \bcmeq{} 0$}{false}{}
-		\Action{act10}{$dleave \bcmeq{} 0$}{true}{}
+		\Action{act3}{$cs \bcmeq{} \emptyset{}$}{false}{}
+		\Action{act4}{$clk \bcmeq{} 0$}{false}{}
+		\Action{act5}{$t1 \bcmeq{} \emptyset{}$}{false}{}
+		\Action{act6}{$t2 \bcmeq{} \emptyset{}$}{false}{}
+		\Action{act7}{$qsize \bcmeq{} 0$}{false}{}
+		\Action{act8}{$queue\bcmeq{}\emptyset{}$}{false}{}
+		\Action{act9}{$twish \bcmeq{} 0$}{true}{}
+		\Action{act10}{$tenter \bcmeq{} 1\upto{}csnum \cprod{} \{0\}$}{true}{}
+		\Action{act11}{$tleave \bcmeq{} 1\upto{}csnum \cprod{} \{0\}$}{true}{}
 	}
 }
-\EVT{wish}{true}{ordinary}{wish}{}{
+\EVT{wish\_empty}{true}{ordinary}{wish}{}{
 	\ANY{
 		\Param{pro}{false}{}
 	}
 	\GUARDS{true}{
 		\Guard{grd1}{false}{$pro\in{}PROCESS\setminus{}wait$}{false}{}
 		\Guard{grd2}{false}{$pro\in{}PROCESS\setminus{}process$}{false}{}
+		\Guard{grd3}{false}{$wait=\emptyset{}\land{}process=\emptyset{}$}{true}{}
 	}
 	\ACTIONS{true}{
 		\Action{act1}{$wait\bcmeq{}wait\bunion{}\{pro\}$}{false}{}
 		\Action{act2}{$t1(pro)\bcmeq{}clk$}{false}{}
-		\Action{act4}{$index(pro)\bcmeq{}qsize$}{false}{}
-		\Action{act3}{$position(qsize+1)\bcmeq{}pro$}{false}{}
-		\Action{act5}{$qsize\bcmeq{}qsize+1$}{false}{}
+		\Action{act3}{$queue(qsize+1)\bcmeq{}pro$}{false}{}
+		\Action{act4}{$qsize\bcmeq{}qsize+1$}{false}{}
+		\Action{act5}{$twish\bcmeq{}clk$}{true}{}
+	}
+}
+\EVT{wish\_nonempty}{true}{ordinary}{wish}{}{
+	\ANY{
+		\Param{pro}{false}{}
+	}
+	\GUARDS{true}{
+		\Guard{grd1}{false}{$pro\in{}PROCESS\setminus{}wait$}{false}{}
+		\Guard{grd2}{false}{$pro\in{}PROCESS\setminus{}process$}{false}{}
+		\Guard{grd3}{false}{$wait\neq{}\emptyset{}\lor{}process\neq{}\emptyset{}$}{true}{}
+	}
+	\ACTIONS{true}{
+		\Action{act1}{$wait\bcmeq{}wait\bunion{}\{pro\}$}{false}{}
+		\Action{act2}{$t1(pro)\bcmeq{}clk$}{false}{}
+		\Action{act3}{$queue(qsize+1)\bcmeq{}pro$}{false}{}
+		\Action{act4}{$qsize\bcmeq{}qsize+1$}{false}{}
 	}
 }
 \EVT{enter}{true}{ordinary}{enter}{}{
 	\ANY{
 		\Param{pro}{false}{}
+		\Param{i}{false}{}
 	}
 	\GUARDS{true}{
 		\Guard{grd1}{false}{$pro\in{}wait$}{false}{}
-		\Guard{grd2}{false}{$card(process)=0$}{false}{}
-		\Guard{grd3}{false}{$qsize>0$}{false}{}
-		\Guard{grd4}{false}{$pro=position(1)$}{false}{}
+		\Guard{grd2}{false}{$i\in{}1\upto{}csnum$}{false}{}
+		\Guard{grd3}{false}{$i\notin{}ran(cs)$}{false}{}
+		\Guard{grd4}{false}{$qsize>0$}{false}{}
+		\Guard{grd5}{false}{$pro=queue(1)$}{false}{}
 	}
 	\ACTIONS{true}{
 		\Action{act1}{$wait\bcmeq{}wait\setminus{}\{pro\}$}{false}{}
 		\Action{act2}{$process\bcmeq{}process \bunion{} \{pro\}$}{false}{}
-		\Action{act3}{$t2(pro)\bcmeq{}clk$}{false}{}
-		\Action{act5}{$position\bcmsuch{}position'\in{}1\upto{}qsize-1\tbij{}wait\setminus{}\{position(1)\}\land{}(\forall{}i\qdot{}i\in{}1\upto{}qsize-1\limp{}position'(i)=position(i+1))$}{false}{}
+		\Action{act3}{$cs(pro)\bcmeq{}i$}{false}{}
+		\Action{act4}{$t2(pro)\bcmeq{}clk$}{false}{}
+		\Action{act5}{$queue\bcmsuch{}queue'\in{}1\upto{}qsize-1\tbij{}wait\setminus{}\{queue(1)\}\land{}(\forall{}j\qdot{}j\in{}1\upto{}qsize-1\limp{}queue'(j)=queue(j+1))$}{false}{}
 		\Action{act6}{$qsize\bcmeq{}qsize-1$}{false}{}
-		\Action{act7}{$dleave\bcmeq{}0$}{true}{}
+		\Action{act7}{$tenter(i)\bcmeq{}clk$}{true}{}
 	}
 }
 \EVT{leave}{true}{ordinary}{leave}{}{
@@ -81,32 +100,34 @@
 	}
 	\GUARDS{true}{
 		\Guard{grd1}{false}{$pro\in{}process$}{false}{}
-		\Guard{grd2}{false}{$position\neq{}\emptyset{}$}{true}{}
+		\Guard{grd2}{false}{$queue\neq{}\emptyset{}$}{true}{}
 	}
 	\ACTIONS{true}{
 		\Action{act1}{$process\bcmeq{}process\setminus{}\{pro\}$}{false}{}
-		\Action{act3}{$t3(pro)\bcmeq{}clk$}{false}{}
-		\Action{act4}{$dleave\bcmeq{}clk$}{true}{}
+		\Action{act2}{$cs\bcmeq{}\{pro\}\domsub{}cs$}{false}{}
+		\Action{act3}{$tleave(cs(pro))\bcmeq{}clk$}{true}{}
 	}
 }
-\EVT{leave\_idle}{false}{ordinary}{leave}{}{
+\EVT{leave\_idle}{true}{ordinary}{leave}{}{
 	\ANY{
-		\Param{pro}{true}{}
+		\Param{pro}{false}{}
 	}
 	\GUARDS{true}{
-		\Guard{grd1}{false}{$pro\in{}process$}{true}{}
-		\Guard{grd2}{false}{$position=\emptyset{}$}{true}{}
+		\Guard{grd1}{false}{$pro\in{}process$}{false}{}
+		\Guard{grd2}{false}{$queue=\emptyset{}$}{true}{}
 	}
 	\ACTIONS{true}{
-		\Action{act1}{$process\bcmeq{}process\setminus{}\{pro\}$}{true}{}
-		\Action{act2}{$t3(pro)\bcmeq{}clk$}{true}{}
+		\Action{act1}{$process\bcmeq{}process\setminus{}\{pro\}$}{false}{}
+		\Action{act2}{$cs\bcmeq{}\{pro\}\domsub{}cs$}{false}{}
+		\Action{act3}{$tleave(cs(pro))\bcmeq{}clk$}{true}{}
 	}
 }
 \EVT{tick}{false}{ordinary}{tick}{}{
 	\GUARDS{false}{
-		\Guard{grd4}{false}{$\forall{}p\qdot{}(p\in{}process \land{} p\in{}dom(t2))\limp{}clk+1-t2(p)\leq{}ddl2$}{true}{}
-		\Guard{grd5}{false}{$process=\emptyset{} \land{} wait\neq{}\emptyset{} \land{}dleave=0\limp{}clk+1-t1(position(1))\leq{}ddl4$}{true}{}
-		\Guard{grd7}{false}{$process=\emptyset{} \land{} wait\neq{}\emptyset{} \land{} dleave\neq{}0\limp{}clk+1-dleave\leq{}ddl4$}{true}{}
+		\Guard{grd1}{false}{$\forall{}p\qdot{}(p\in{}wait \land{} p\in{}dom(t1))\limp{}clk+1-t1(p)\leq{}ddl1$}{true}{}
+		\Guard{grd2}{false}{$\forall{}i\qdot{}(i\in{}1\upto{}csnum\land{}i\notin{}ran(cs)\land{}wait\neq{}\emptyset{}\land{}twish\geq{}tleave(i))\limp{}clk+1-twish\leq{}ddl4$}{true}{}
+		\Guard{grd3}{false}{$\forall{}i\qdot{}(i\in{}1\upto{}csnum\land{}i\notin{}ran(cs)\land{}wait\neq{}\emptyset{}\land{}tleave(i)\geq{}twish)\limp{}clk+1-tleave(i)\leq{}ddl4$}{true}{}
+		\Guard{grd4}{false}{$\forall{}i\qdot{}i\in{}ran(cs)\limp{}clk+1-tenter(i)\leq{}ddl2$}{true}{}
 	}
 	\ACTIONS{true}{
 		\Action{act1}{$clk\bcmeq{}clk+1$}{true}{}

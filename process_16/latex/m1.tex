@@ -6,35 +6,29 @@
 \VARIABLES{
 	\Variable{wait}{}
 	\Variable{process}{}
+	\Variable{cs}{}
 	\Variable{clk}{}
 	\Variable{t1}{}
 	\Variable{t2}{}
-	\Variable{t3}{}
 }
 \INVARIANTS{
 	\Invariant{inv1}{false}{$clk \in{} \nat{}$}{}
 	\Invariant{inv2}{false}{$t1 \in{} PROCESS \pfun{} \nat{}$}{}
 	\Invariant{inv3}{false}{$t2 \in{} PROCESS \pfun{} \nat{}$}{}
-	\Invariant{inv4}{false}{$finite(wait)$}{}
-	\Invariant{inv5}{false}{$t3 \in{} PROCESS \pfun{} \nat{}$}{}
-	\Invariant{inv6}{false}{$\forall{}p\qdot{}(p\in{}wait \land{} p\in{}dom(t1))\limp{}clk-t1(p)\leq{}ddl1$}{}
-	\Invariant{inv8}{false}{$\forall{}p\qdot{}(p\in{}dom(t1)\land{}p\in{}dom(t2)\land{}t2(p)\geq{}t1(p))\limp{}t2(p)-t1(p)\leq{}ddl1$}{\\deadline(t1,t2,ddl1)}
-	\Invariant{inv13}{false}{$\forall{}p\qdot{}(p\in{}process \land{} p\in{}dom(t1))\limp{}clk-t1(p)\leq{}ddl3$}{}
-	\Invariant{inv14}{false}{$\forall{}p\qdot{}(p\in{}dom(t1)\land{}p\in{}dom(t3)\land{}t3(p)\geq{}t1(p))\limp{}t3(p)-t1(p)\leq{}ddl3$}{\\deadline(t1,t3,ddl3)}
-	\Invariant{inv10}{false}{$\forall{}p\qdot{}p\in{}dom(t1)\limp{}0\leq{}t1(p)\land{}t1(p)\leq{}clk$}{}
-	\Invariant{inv11}{false}{$\forall{}p\qdot{}p\in{}dom(t2)\limp{}0\leq{}t2(p)\land{}t2(p)\leq{}clk$}{}
-	\Invariant{inv12}{false}{$\forall{}p\qdot{}p\in{}dom(t3)\limp{}0\leq{}t3(p)\land{}t3(p)\leq{}clk$}{}
-	\Invariant{inv15}{false}{$\forall{}p\qdot{}(p\in{}process \land{} p\in{}dom(t1))\limp{} p\in{}dom(t2) \land{} t2(p)\geq{}t1(p)$}{}
+	\Invariant{inv4}{false}{$\forall{}p\qdot{}p\in{}dom(t1)\limp{}0\leq{}t1(p)\land{}t1(p)\leq{}clk$}{}
+	\Invariant{inv5}{false}{$\forall{}p\qdot{}p\in{}dom(t2)\limp{}0\leq{}t2(p)\land{}t2(p)\leq{}clk$}{}
+	\Invariant{inv8}{false}{$\forall{}p\qdot{}(p\in{}wait\land{}p\in{}dom(t1))\limp{}clk-t1(p)\leq{}ddl1$}{}
+	\Invariant{inv9}{false}{$\forall{}p\qdot{}(p\in{}dom(t1)\land{}p\in{}dom(t2)\land{}t2(p)\geq{}t1(p))\limp{}t2(p)-t1(p)\leq{}ddl1$}{\\deadline(t1,t2,ddl1)}
 }
 \EVENTS{
 \INITIALISATION{true}{}{
 	\ACTIONS{false}{
 		\Action{act1}{$wait \bcmeq{} \emptyset{}$}{false}{}
 		\Action{act2}{$process \bcmeq{} \emptyset{}$}{false}{}
-		\Action{act3}{$clk \bcmeq{} 0$}{true}{}
-		\Action{act4}{$t1 \bcmeq{} \emptyset{}$}{true}{}
-		\Action{act5}{$t2 \bcmeq{} \emptyset{}$}{true}{}
-		\Action{act6}{$t3 \bcmeq{} \emptyset{}$}{true}{}
+		\Action{act3}{$cs \bcmeq{} \emptyset{}$}{false}{}
+		\Action{act4}{$clk \bcmeq{} 0$}{true}{}
+		\Action{act5}{$t1 \bcmeq{} \emptyset{}$}{true}{}
+		\Action{act6}{$t2 \bcmeq{} \emptyset{}$}{true}{}
 	}
 }
 \EVT{wish}{true}{ordinary}{wish}{}{
@@ -53,15 +47,18 @@
 \EVT{enter}{true}{ordinary}{enter}{}{
 	\ANY{
 		\Param{pro}{false}{}
+		\Param{i}{false}{}
 	}
 	\GUARDS{true}{
 		\Guard{grd1}{false}{$pro\in{}wait$}{false}{}
-		\Guard{grd2}{false}{$card(process)=0$}{false}{}
+		\Guard{grd2}{false}{$i\in{}1\upto{}csnum$}{false}{}
+		\Guard{grd3}{false}{$i\notin{}ran(cs)$}{false}{}
 	}
 	\ACTIONS{true}{
 		\Action{act1}{$wait\bcmeq{}wait\setminus{}\{pro\}$}{false}{}
 		\Action{act2}{$process\bcmeq{}process \bunion{} \{pro\}$}{false}{}
-		\Action{act3}{$t2(pro)\bcmeq{}clk$}{true}{}
+		\Action{act3}{$cs(pro)\bcmeq{}i$}{false}{}
+		\Action{act4}{$t2(pro)\bcmeq{}clk$}{true}{}
 	}
 }
 \EVT{leave}{true}{ordinary}{leave}{}{
@@ -73,13 +70,12 @@
 	}
 	\ACTIONS{true}{
 		\Action{act1}{$process\bcmeq{}process\setminus{}\{pro\}$}{false}{}
-		\Action{act3}{$t3(pro)\bcmeq{}clk$}{true}{}
+		\Action{act2}{$cs\bcmeq{}\{pro\}\domsub{}cs$}{false}{}
 	}
 }
 \EVT{tick}{false}{ordinary}{}{}{
 	\GUARDS{false}{
-		\Guard{grd2}{false}{$\forall{}p\qdot{}(p\in{}wait \land{} p\in{}dom(t1))\limp{}clk+1-t1(p)\leq{}ddl1$}{true}{}
-		\Guard{grd3}{false}{$\forall{}p\qdot{}(p\in{}process \land{} p\in{}dom(t1))\limp{}clk+1-t1(p)\leq{}ddl3$}{true}{}
+		\Guard{grd1}{false}{$\forall{}p\qdot{}(p\in{}wait \land{} p\in{}dom(t1))\limp{}clk+1-t1(p)\leq{}ddl1$}{true}{}
 	}
 	\ACTIONS{true}{
 		\Action{act1}{$clk\bcmeq{}clk+1$}{true}{}

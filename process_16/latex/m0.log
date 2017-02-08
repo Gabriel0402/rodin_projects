@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.10.14)  8 FEB 2017 13:13
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.10.14)  8 FEB 2017 13:19
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**m1.tex
-(./m1.tex
+**m0.tex
+(./m0.tex
 LaTeX2e <2016/02/01>
 Babel <3.9q> and hyphenation patterns for 81 language(s) loaded.
 (/usr/share/texlive/texmf-dist/tex/latex/base/report.cls
@@ -483,8 +483,9 @@ Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
 Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 )
 \Gread@gobject=\count118
-))) (./m1.aux)
-\openout1 = `m1.aux'.
+)))
+No file m0.aux.
+\openout1 = `m0.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 3.
 LaTeX Font Info:    ... okay on input line 3.
@@ -498,7 +499,6 @@ LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 3.
 LaTeX Font Info:    ... okay on input line 3.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 3.
 LaTeX Font Info:    ... okay on input line 3.
-
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -550,40 +550,54 @@ Package lastpage Info: Please have a look at the pageslts package at
 \makeMPintoPDFobject=\count124
 \everyMPtoPDFconversion=\toks25
 )
-LaTeX Font Info:    Try loading font information for U+msa on input line 21.
+LaTeX Font Info:    Try loading font information for U+msa on input line 15.
  (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 21.
+LaTeX Font Info:    Try loading font information for U+msb on input line 15.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
+)
 
-] 
+Package lastpage Warning: Rerun to get the references right on input line 66.
+
+
 AED: lastpage setting LastPage
-[2] (./m1.aux) ) 
+
+LaTeX Warning: Reference `LastPage' on page 1 undefined on input line 66.
+
+[1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
+
+] (./m0.aux)
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ ) 
 Here is how much of TeX's memory you used:
- 3645 strings out of 493029
- 46258 string characters out of 6136233
- 137738 words of memory out of 5000000
- 7127 multiletter control sequences out of 15000+600000
- 9261 words of font info for 37 fonts, out of 8000000 for 9000
+ 3641 strings out of 493029
+ 46225 string characters out of 6136233
+ 134726 words of memory out of 5000000
+ 7126 multiletter control sequences out of 15000+600000
+ 8916 words of font info for 36 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 42i,11n,45p,1037b,361s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/c
-mbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.
-pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></u
-sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/shar
-e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/share/texliv
-e/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/share/texlive/texmf
--dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/share/texlive/texmf-dist/f
-onts/type1/public/amsfonts/cm/cmtt9.pfb></usr/share/texlive/texmf-dist/fonts/ty
-pe1/public/amsfonts/symbols/msbm10.pfb>
-Output written on m1.pdf (2 pages, 95752 bytes).
+ 42i,11n,45p,1037b,315s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
+r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/shar
+e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/share/texli
+ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/share/texlive/texmf-dist/f
+onts/type1/public/amsfonts/cm/cmsy9.pfb></usr/share/texlive/texmf-dist/fonts/ty
+pe1/public/amsfonts/cm/cmtt9.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
+lic/amsfonts/symbols/msam10.pfb></usr/share/texlive/texmf-dist/fonts/type1/publ
+ic/amsfonts/symbols/msbm10.pfb>
+Output written on m0.pdf (1 page, 91381 bytes).
 PDF statistics:
- 47 PDF objects out of 1000 (max. 8388607)
- 33 compressed objects within 1 object stream
+ 44 PDF objects out of 1000 (max. 8388607)
+ 31 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

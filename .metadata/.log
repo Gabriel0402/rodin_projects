@@ -2331,3 +2331,512 @@ org.eclipse.core.internal.resources.ResourceException: Resource '/process_16/m3.
 
 !ENTRY org.eventb.ui 4 4 2017-02-07 16:54:44.191
 !MESSAGE Null or invalid application returned by org.eventb.theory.rbp.RbPth
+
+!ENTRY org.eventb.ui 4 4 2017-02-08 12:33:35.071
+!MESSAGE Null or invalid application returned by org.eventb.theory.rbp.RbPxd
+
+!ENTRY org.eventb.ui 4 4 2017-02-08 12:33:35.075
+!MESSAGE Null or invalid application returned by org.eventb.theory.rbp.RbPth
+
+!ENTRY org.eventb.ui 4 4 2017-02-08 12:33:39.782
+!MESSAGE Null or invalid application returned by org.eventb.theory.rbp.RbPxd
+
+!ENTRY org.eventb.ui 4 4 2017-02-08 12:33:39.782
+!MESSAGE Null or invalid application returned by org.eventb.theory.rbp.RbPth
+
+!ENTRY org.eventb.ui 4 4 2017-02-08 12:33:48.050
+!MESSAGE Null or invalid application returned by org.eventb.theory.rbp.RbPxd
+
+!ENTRY org.eventb.ui 4 4 2017-02-08 12:33:48.051
+!MESSAGE Null or invalid application returned by org.eventb.theory.rbp.RbPth
+
+!ENTRY org.eventb.ui 4 4 2017-02-08 12:33:49.602
+!MESSAGE Null or invalid application returned by org.eventb.theory.rbp.RbPxd
+
+!ENTRY org.eventb.ui 4 4 2017-02-08 12:33:49.602
+!MESSAGE Null or invalid application returned by org.eventb.theory.rbp.RbPth
+
+!ENTRY org.eclipse.ui 4 0 2017-02-08 12:39:33.933
+!MESSAGE Unhandled event loop exception
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.e4.ui.workbench.addons.dndaddon.DetachedDropAgent.drop(DetachedDropAgent.java:60)
+	at org.eclipse.e4.ui.workbench.addons.dndaddon.DragAgent.dragFinished(DragAgent.java:159)
+	at org.eclipse.e4.ui.workbench.addons.dndaddon.PartDragAgent.dragFinished(PartDragAgent.java:111)
+	at org.eclipse.e4.ui.workbench.addons.dndaddon.DnDManager.finishDrag(DnDManager.java:276)
+	at org.eclipse.e4.ui.workbench.addons.dndaddon.DnDManager.startDrag(DnDManager.java:243)
+	at org.eclipse.e4.ui.workbench.addons.dndaddon.DnDManager$1.dragDetected(DnDManager.java:87)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:127)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4454)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1388)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:3799)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3409)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$9.run(PartRenderingEngine.java:1151)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1032)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:148)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:636)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:579)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:135)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:648)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:603)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1438)
+
+!ENTRY org.eclipse.core.jobs 2 2 2017-02-08 12:51:48.804
+!MESSAGE Job found still running after platform shutdown.  Jobs should be canceled by the plugin that scheduled them during shutdown: org.eventb.theory.internal.core.util.DeployedStatusUpdater
+!SESSION 2017-02-08 12:51:50.072 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_121
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY de.prob.core 1 0 2017-02-08 12:51:59.019
+!MESSAGE Starting ProB CLI for linux ... Path is /home/cz4g16/Desktop/rodin/plugins/de.prob.core_9.4.3.201605040709/prob/linux64/probcli.sh
+
+!ENTRY de.prob.core 1 0 2017-02-08 12:52:00.166
+!MESSAGE Server has startet and listens on port 43551
+
+!ENTRY de.prob.core 1 0 2017-02-08 12:52:00.167
+!MESSAGE Server can receive user interrupts via reference 125901
+
+!ENTRY org.eclipse.ui 4 0 2017-02-08 12:52:01.910
+!MESSAGE Unhandled event loop exception
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.ui.internal.ShowInMenu.getSourcePart(ShowInMenu.java:334)
+	at org.eclipse.ui.internal.ShowInMenu.fillMenu(ShowInMenu.java:182)
+	at org.eclipse.ui.internal.ShowInMenu.fill(ShowInMenu.java:141)
+	at org.eclipse.jface.action.MenuManager.doItemFill(MenuManager.java:780)
+	at org.eclipse.jface.action.MenuManager.update(MenuManager.java:861)
+	at org.eclipse.jface.action.MenuManager.handleAboutToShow(MenuManager.java:494)
+	at org.eclipse.jface.action.MenuManager.access$1(MenuManager.java:487)
+	at org.eclipse.jface.action.MenuManager$2.menuShown(MenuManager.java:519)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:255)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4454)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1388)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1412)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1393)
+	at org.eclipse.swt.widgets.Menu.gtk_show(Menu.java:674)
+	at org.eclipse.swt.widgets.Widget.windowProc(Widget.java:2047)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:4662)
+	at org.eclipse.swt.internal.gtk.OS._g_main_context_iteration(Native Method)
+	at org.eclipse.swt.internal.gtk.OS.g_main_context_iteration(OS.java:2477)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3407)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$9.run(PartRenderingEngine.java:1151)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1032)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:148)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:636)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:579)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:135)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:648)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:603)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1438)
+
+!ENTRY de.prob.core 1 0 2017-02-08 12:53:21.049
+!MESSAGE Starting ProB CLI for linux ... Path is /home/cz4g16/Desktop/rodin/plugins/de.prob.core_9.4.3.201605040709/prob/linux64/probcli.sh
+
+!ENTRY de.prob.core 1 0 2017-02-08 12:53:22.386
+!MESSAGE Server has startet and listens on port 59663
+
+!ENTRY de.prob.core 1 0 2017-02-08 12:53:22.387
+!MESSAGE Server can receive user interrupts via reference 125969
+
+!ENTRY org.eventb.ui 4 4 2017-02-08 12:53:25.045
+!MESSAGE Null or invalid application returned by org.eventb.theory.rbp.RbPxd
+
+!ENTRY org.eventb.ui 4 4 2017-02-08 12:53:25.046
+!MESSAGE Null or invalid application returned by org.eventb.theory.rbp.RbPth
+
+!ENTRY org.eventb.ui 4 4 2017-02-08 12:53:28.474
+!MESSAGE Null or invalid application returned by org.eventb.theory.rbp.RbPxd
+
+!ENTRY org.eventb.ui 4 4 2017-02-08 12:53:28.474
+!MESSAGE Null or invalid application returned by org.eventb.theory.rbp.RbPth
+
+!ENTRY org.eventb.ui 4 4 2017-02-08 12:53:34.495
+!MESSAGE Null or invalid application returned by org.eventb.theory.rbp.RbPxd
+
+!ENTRY org.eventb.ui 4 4 2017-02-08 12:53:34.495
+!MESSAGE Null or invalid application returned by org.eventb.theory.rbp.RbPth
+
+!ENTRY org.eventb.ui 4 4 2017-02-08 12:53:37.565
+!MESSAGE Null or invalid application returned by org.eventb.theory.rbp.RbPxd
+
+!ENTRY org.eventb.ui 4 4 2017-02-08 12:53:37.566
+!MESSAGE Null or invalid application returned by org.eventb.theory.rbp.RbPth
+
+!ENTRY org.eventb.ui 4 4 2017-02-08 12:53:41.901
+!MESSAGE Null or invalid application returned by org.eventb.theory.rbp.RbPxd
+
+!ENTRY org.eventb.ui 4 4 2017-02-08 12:53:41.902
+!MESSAGE Null or invalid application returned by org.eventb.theory.rbp.RbPth
+
+!ENTRY org.eventb.ui 4 4 2017-02-08 12:53:43.514
+!MESSAGE Null or invalid application returned by org.eventb.theory.rbp.RbPxd
+
+!ENTRY org.eventb.ui 4 4 2017-02-08 12:53:43.515
+!MESSAGE Null or invalid application returned by org.eventb.theory.rbp.RbPth
+
+!ENTRY org.eventb.ui 4 4 2017-02-08 12:54:19.208
+!MESSAGE Null or invalid application returned by org.eventb.theory.rbp.RbPxd
+
+!ENTRY org.eventb.ui 4 4 2017-02-08 12:54:19.209
+!MESSAGE Null or invalid application returned by org.eventb.theory.rbp.RbPth
+
+!ENTRY org.eventb.ui 4 4 2017-02-08 12:54:28.262
+!MESSAGE Null or invalid application returned by org.eventb.theory.rbp.RbPxd
+
+!ENTRY org.eventb.ui 4 4 2017-02-08 12:54:28.262
+!MESSAGE Null or invalid application returned by org.eventb.theory.rbp.RbPth
+
+!ENTRY org.eventb.ui 4 4 2017-02-08 12:54:30.347
+!MESSAGE Null or invalid application returned by org.eventb.theory.rbp.RbPxd
+
+!ENTRY org.eventb.ui 4 4 2017-02-08 12:54:30.348
+!MESSAGE Null or invalid application returned by org.eventb.theory.rbp.RbPth
+
+!ENTRY org.eventb.ui 4 4 2017-02-08 12:54:31.930
+!MESSAGE Null or invalid application returned by org.eventb.theory.rbp.RbPxd
+
+!ENTRY org.eventb.ui 4 4 2017-02-08 12:54:31.930
+!MESSAGE Null or invalid application returned by org.eventb.theory.rbp.RbPth
+
+!ENTRY org.eventb.ui 4 4 2017-02-08 12:54:34.043
+!MESSAGE Null or invalid application returned by org.eventb.theory.rbp.RbPxd
+
+!ENTRY org.eventb.ui 4 4 2017-02-08 12:54:34.044
+!MESSAGE Null or invalid application returned by org.eventb.theory.rbp.RbPth
+
+!ENTRY org.eventb.ui 4 4 2017-02-08 12:59:23.875
+!MESSAGE Null or invalid application returned by org.eventb.theory.rbp.RbPxd
+
+!ENTRY org.eventb.ui 4 4 2017-02-08 12:59:23.875
+!MESSAGE Null or invalid application returned by org.eventb.theory.rbp.RbPth
+
+!ENTRY org.eventb.ui 4 4 2017-02-08 12:59:27.859
+!MESSAGE Null or invalid application returned by org.eventb.theory.rbp.RbPxd
+
+!ENTRY org.eventb.ui 4 4 2017-02-08 12:59:27.859
+!MESSAGE Null or invalid application returned by org.eventb.theory.rbp.RbPth
+
+!ENTRY org.eventb.ui 4 4 2017-02-08 12:59:30.468
+!MESSAGE Null or invalid application returned by org.eventb.theory.rbp.RbPxd
+
+!ENTRY org.eventb.ui 4 4 2017-02-08 12:59:30.469
+!MESSAGE Null or invalid application returned by org.eventb.theory.rbp.RbPth
+
+!ENTRY org.eventb.ui 4 4 2017-02-08 13:05:22.203
+!MESSAGE Null or invalid application returned by org.eventb.theory.rbp.RbPxd
+
+!ENTRY org.eventb.ui 4 4 2017-02-08 13:05:22.205
+!MESSAGE Null or invalid application returned by org.eventb.theory.rbp.RbPth
+
+!ENTRY org.eventb.ui 4 4 2017-02-08 13:05:27.447
+!MESSAGE Null or invalid application returned by org.eventb.theory.rbp.RbPxd
+
+!ENTRY org.eventb.ui 4 4 2017-02-08 13:05:27.447
+!MESSAGE Null or invalid application returned by org.eventb.theory.rbp.RbPth
+
+!ENTRY org.eventb.ui 4 4 2017-02-08 13:05:30.746
+!MESSAGE Null or invalid application returned by org.eventb.theory.rbp.RbPxd
+
+!ENTRY org.eventb.ui 4 4 2017-02-08 13:05:30.747
+!MESSAGE Null or invalid application returned by org.eventb.theory.rbp.RbPth
+
+!ENTRY org.eventb.ui 4 4 2017-02-08 13:05:50.479
+!MESSAGE Null or invalid application returned by org.eventb.theory.rbp.RbPxd
+
+!ENTRY org.eventb.ui 4 4 2017-02-08 13:05:50.479
+!MESSAGE Null or invalid application returned by org.eventb.theory.rbp.RbPth
+
+!ENTRY org.eventb.ui 4 4 2017-02-08 13:05:55.933
+!MESSAGE Null or invalid application returned by org.eventb.theory.rbp.RbPxd
+
+!ENTRY org.eventb.ui 4 4 2017-02-08 13:05:55.934
+!MESSAGE Null or invalid application returned by org.eventb.theory.rbp.RbPth
+
+!ENTRY org.eventb.ui 4 4 2017-02-08 13:05:58.494
+!MESSAGE Null or invalid application returned by org.eventb.theory.rbp.RbPxd
+
+!ENTRY org.eventb.ui 4 4 2017-02-08 13:05:58.494
+!MESSAGE Null or invalid application returned by org.eventb.theory.rbp.RbPth
+
+!ENTRY org.eventb.ui 4 4 2017-02-08 13:06:12.410
+!MESSAGE Null or invalid application returned by org.eventb.theory.rbp.RbPxd
+
+!ENTRY org.eventb.ui 4 4 2017-02-08 13:06:12.411
+!MESSAGE Null or invalid application returned by org.eventb.theory.rbp.RbPth
+
+!ENTRY org.eventb.ui 4 4 2017-02-08 13:08:17.328
+!MESSAGE Null or invalid application returned by org.eventb.theory.rbp.RbPxd
+
+!ENTRY org.eventb.ui 4 4 2017-02-08 13:08:17.328
+!MESSAGE Null or invalid application returned by org.eventb.theory.rbp.RbPth
+
+!ENTRY org.eventb.ui 4 4 2017-02-08 13:08:22.976
+!MESSAGE Null or invalid application returned by org.eventb.theory.rbp.RbPxd
+
+!ENTRY org.eventb.ui 4 4 2017-02-08 13:08:22.976
+!MESSAGE Null or invalid application returned by org.eventb.theory.rbp.RbPth
+
+!ENTRY org.eventb.ui 4 4 2017-02-08 13:08:28.071
+!MESSAGE Null or invalid application returned by org.eventb.theory.rbp.RbPxd
+
+!ENTRY org.eventb.ui 4 4 2017-02-08 13:08:28.071
+!MESSAGE Null or invalid application returned by org.eventb.theory.rbp.RbPth
+
+!ENTRY org.eventb.ui 4 4 2017-02-08 13:09:20.905
+!MESSAGE Null or invalid application returned by org.eventb.theory.rbp.RbPxd
+
+!ENTRY org.eventb.ui 4 4 2017-02-08 13:09:20.906
+!MESSAGE Null or invalid application returned by org.eventb.theory.rbp.RbPth
+
+!ENTRY org.eventb.ui 4 4 2017-02-08 13:09:33.818
+!MESSAGE Null or invalid application returned by org.eventb.theory.rbp.RbPxd
+
+!ENTRY org.eventb.ui 4 4 2017-02-08 13:09:33.819
+!MESSAGE Null or invalid application returned by org.eventb.theory.rbp.RbPth
+
+!ENTRY org.eventb.ui 4 4 2017-02-08 13:09:35.614
+!MESSAGE Null or invalid application returned by org.eventb.theory.rbp.RbPxd
+
+!ENTRY org.eventb.ui 4 4 2017-02-08 13:09:35.614
+!MESSAGE Null or invalid application returned by org.eventb.theory.rbp.RbPth
+
+!ENTRY org.eventb.ui 4 4 2017-02-08 13:09:38.523
+!MESSAGE Null or invalid application returned by org.eventb.theory.rbp.RbPxd
+
+!ENTRY org.eventb.ui 4 4 2017-02-08 13:09:38.523
+!MESSAGE Null or invalid application returned by org.eventb.theory.rbp.RbPth
+
+!ENTRY org.eventb.ui 4 4 2017-02-08 13:09:41.583
+!MESSAGE Null or invalid application returned by org.eventb.theory.rbp.RbPxd
+
+!ENTRY org.eventb.ui 4 4 2017-02-08 13:09:41.583
+!MESSAGE Null or invalid application returned by org.eventb.theory.rbp.RbPth
+
+!ENTRY org.eventb.ui 4 4 2017-02-08 13:09:44.817
+!MESSAGE Null or invalid application returned by org.eventb.theory.rbp.RbPxd
+
+!ENTRY org.eventb.ui 4 4 2017-02-08 13:09:44.818
+!MESSAGE Null or invalid application returned by org.eventb.theory.rbp.RbPth
+
+!ENTRY org.eventb.ui 4 4 2017-02-08 13:09:48.011
+!MESSAGE Null or invalid application returned by org.eventb.theory.rbp.RbPxd
+
+!ENTRY org.eventb.ui 4 4 2017-02-08 13:09:48.011
+!MESSAGE Null or invalid application returned by org.eventb.theory.rbp.RbPth
+
+!ENTRY org.eventb.ui 4 4 2017-02-08 13:09:54.303
+!MESSAGE Null or invalid application returned by org.eventb.theory.rbp.RbPxd
+
+!ENTRY org.eventb.ui 4 4 2017-02-08 13:09:54.303
+!MESSAGE Null or invalid application returned by org.eventb.theory.rbp.RbPth
+
+!ENTRY org.eventb.ui 4 4 2017-02-08 13:09:55.525
+!MESSAGE Null or invalid application returned by org.eventb.theory.rbp.RbPxd
+
+!ENTRY org.eventb.ui 4 4 2017-02-08 13:09:55.526
+!MESSAGE Null or invalid application returned by org.eventb.theory.rbp.RbPth
+
+!ENTRY org.eventb.ui 4 4 2017-02-08 13:09:56.499
+!MESSAGE Null or invalid application returned by org.eventb.theory.rbp.RbPxd
+
+!ENTRY org.eventb.ui 4 4 2017-02-08 13:09:56.499
+!MESSAGE Null or invalid application returned by org.eventb.theory.rbp.RbPth
+
+!ENTRY org.eventb.ui 4 4 2017-02-08 13:09:58.603
+!MESSAGE Null or invalid application returned by org.eventb.theory.rbp.RbPxd
+
+!ENTRY org.eventb.ui 4 4 2017-02-08 13:09:58.603
+!MESSAGE Null or invalid application returned by org.eventb.theory.rbp.RbPth
+
+!ENTRY org.eventb.ui 4 4 2017-02-08 13:10:10.508
+!MESSAGE Null or invalid application returned by org.eventb.theory.rbp.RbPxd
+
+!ENTRY org.eventb.ui 4 4 2017-02-08 13:10:10.508
+!MESSAGE Null or invalid application returned by org.eventb.theory.rbp.RbPth
+
+!ENTRY org.eventb.ui 4 4 2017-02-08 13:10:18.693
+!MESSAGE Null or invalid application returned by org.eventb.theory.rbp.RbPxd
+
+!ENTRY org.eventb.ui 4 4 2017-02-08 13:10:18.694
+!MESSAGE Null or invalid application returned by org.eventb.theory.rbp.RbPth
+
+!ENTRY org.eventb.ui 4 4 2017-02-08 13:10:24.424
+!MESSAGE Null or invalid application returned by org.eventb.theory.rbp.RbPxd
+
+!ENTRY org.eventb.ui 4 4 2017-02-08 13:10:24.425
+!MESSAGE Null or invalid application returned by org.eventb.theory.rbp.RbPth
+
+!ENTRY org.eventb.ui 4 4 2017-02-08 13:10:27.186
+!MESSAGE Null or invalid application returned by org.eventb.theory.rbp.RbPxd
+
+!ENTRY org.eventb.ui 4 4 2017-02-08 13:10:27.186
+!MESSAGE Null or invalid application returned by org.eventb.theory.rbp.RbPth
+
+!ENTRY org.eventb.ui 4 4 2017-02-08 13:10:28.053
+!MESSAGE Null or invalid application returned by org.eventb.theory.rbp.RbPxd
+
+!ENTRY org.eventb.ui 4 4 2017-02-08 13:10:28.054
+!MESSAGE Null or invalid application returned by org.eventb.theory.rbp.RbPth
+
+!ENTRY org.eventb.ui 4 4 2017-02-08 13:10:28.630
+!MESSAGE Null or invalid application returned by org.eventb.theory.rbp.RbPxd
+
+!ENTRY org.eventb.ui 4 4 2017-02-08 13:10:28.630
+!MESSAGE Null or invalid application returned by org.eventb.theory.rbp.RbPth
+
+!ENTRY org.eventb.ui 4 4 2017-02-08 13:10:29.108
+!MESSAGE Null or invalid application returned by org.eventb.theory.rbp.RbPxd
+
+!ENTRY org.eventb.ui 4 4 2017-02-08 13:10:29.109
+!MESSAGE Null or invalid application returned by org.eventb.theory.rbp.RbPth
+
+!ENTRY org.eventb.ui 4 4 2017-02-08 13:10:29.700
+!MESSAGE Null or invalid application returned by org.eventb.theory.rbp.RbPxd
+
+!ENTRY org.eventb.ui 4 4 2017-02-08 13:10:29.700
+!MESSAGE Null or invalid application returned by org.eventb.theory.rbp.RbPth
+
+!ENTRY org.eventb.ui 4 4 2017-02-08 13:10:31.262
+!MESSAGE Null or invalid application returned by org.eventb.theory.rbp.RbPxd
+
+!ENTRY org.eventb.ui 4 4 2017-02-08 13:10:31.262
+!MESSAGE Null or invalid application returned by org.eventb.theory.rbp.RbPth
+
+!ENTRY org.eventb.ui 4 4 2017-02-08 13:10:37.361
+!MESSAGE Null or invalid application returned by org.eventb.theory.rbp.RbPxd
+
+!ENTRY org.eventb.ui 4 4 2017-02-08 13:10:37.362
+!MESSAGE Null or invalid application returned by org.eventb.theory.rbp.RbPth
+
+!ENTRY org.eventb.ui 4 4 2017-02-08 13:10:39.794
+!MESSAGE Null or invalid application returned by org.eventb.theory.rbp.RbPxd
+
+!ENTRY org.eventb.ui 4 4 2017-02-08 13:10:39.794
+!MESSAGE Null or invalid application returned by org.eventb.theory.rbp.RbPth
+
+!ENTRY org.eventb.ui 4 4 2017-02-08 13:10:43.872
+!MESSAGE Null or invalid application returned by org.eventb.theory.rbp.RbPxd
+
+!ENTRY org.eventb.ui 4 4 2017-02-08 13:10:43.872
+!MESSAGE Null or invalid application returned by org.eventb.theory.rbp.RbPth
+
+!ENTRY org.eventb.ui 4 4 2017-02-08 13:10:45.037
+!MESSAGE Null or invalid application returned by org.eventb.theory.rbp.RbPxd
+
+!ENTRY org.eventb.ui 4 4 2017-02-08 13:10:45.037
+!MESSAGE Null or invalid application returned by org.eventb.theory.rbp.RbPth
+
+!ENTRY org.eventb.ui 4 4 2017-02-08 13:10:46.953
+!MESSAGE Null or invalid application returned by org.eventb.theory.rbp.RbPxd
+
+!ENTRY org.eventb.ui 4 4 2017-02-08 13:10:46.954
+!MESSAGE Null or invalid application returned by org.eventb.theory.rbp.RbPth
+
+!ENTRY org.eventb.ui 4 4 2017-02-08 13:11:42.432
+!MESSAGE Null or invalid application returned by org.eventb.theory.rbp.RbPxd
+
+!ENTRY org.eventb.ui 4 4 2017-02-08 13:11:42.433
+!MESSAGE Null or invalid application returned by org.eventb.theory.rbp.RbPth
+
+!ENTRY org.eventb.ui 4 4 2017-02-08 13:11:46.398
+!MESSAGE Null or invalid application returned by org.eventb.theory.rbp.RbPxd
+
+!ENTRY org.eventb.ui 4 4 2017-02-08 13:11:46.398
+!MESSAGE Null or invalid application returned by org.eventb.theory.rbp.RbPth
+
+!ENTRY org.eventb.ui 4 4 2017-02-08 13:11:51.214
+!MESSAGE Null or invalid application returned by org.eventb.theory.rbp.RbPxd
+
+!ENTRY org.eventb.ui 4 4 2017-02-08 13:11:51.214
+!MESSAGE Null or invalid application returned by org.eventb.theory.rbp.RbPth
+
+!ENTRY org.eventb.ui 4 4 2017-02-08 13:12:15.148
+!MESSAGE Null or invalid application returned by org.eventb.theory.rbp.RbPxd
+
+!ENTRY org.eventb.ui 4 4 2017-02-08 13:12:15.148
+!MESSAGE Null or invalid application returned by org.eventb.theory.rbp.RbPth
+
+!ENTRY org.eventb.ui 4 4 2017-02-08 13:12:18.845
+!MESSAGE Null or invalid application returned by org.eventb.theory.rbp.RbPxd
+
+!ENTRY org.eventb.ui 4 4 2017-02-08 13:12:18.845
+!MESSAGE Null or invalid application returned by org.eventb.theory.rbp.RbPth
+
+!ENTRY org.eventb.ui 4 4 2017-02-08 13:12:21.266
+!MESSAGE Null or invalid application returned by org.eventb.theory.rbp.RbPxd
+
+!ENTRY org.eventb.ui 4 4 2017-02-08 13:12:21.266
+!MESSAGE Null or invalid application returned by org.eventb.theory.rbp.RbPth
+
+!ENTRY org.eventb.ui 4 4 2017-02-08 13:12:22.980
+!MESSAGE Null or invalid application returned by org.eventb.theory.rbp.RbPxd
+
+!ENTRY org.eventb.ui 4 4 2017-02-08 13:12:22.980
+!MESSAGE Null or invalid application returned by org.eventb.theory.rbp.RbPth
+
+!ENTRY org.eventb.ui 4 4 2017-02-08 13:12:24.812
+!MESSAGE Null or invalid application returned by org.eventb.theory.rbp.RbPxd
+
+!ENTRY org.eventb.ui 4 4 2017-02-08 13:12:24.813
+!MESSAGE Null or invalid application returned by org.eventb.theory.rbp.RbPth
+
+!ENTRY org.eventb.ui 4 4 2017-02-08 13:12:26.969
+!MESSAGE Null or invalid application returned by org.eventb.theory.rbp.RbPxd
+
+!ENTRY org.eventb.ui 4 4 2017-02-08 13:12:26.969
+!MESSAGE Null or invalid application returned by org.eventb.theory.rbp.RbPth
+
+!ENTRY org.eventb.ui 4 4 2017-02-08 13:12:29.589
+!MESSAGE Null or invalid application returned by org.eventb.theory.rbp.RbPxd
+
+!ENTRY org.eventb.ui 4 4 2017-02-08 13:12:29.590
+!MESSAGE Null or invalid application returned by org.eventb.theory.rbp.RbPth
+
+!ENTRY org.eventb.ui 4 4 2017-02-08 13:12:30.747
+!MESSAGE Null or invalid application returned by org.eventb.theory.rbp.RbPxd
+
+!ENTRY org.eventb.ui 4 4 2017-02-08 13:12:30.748
+!MESSAGE Null or invalid application returned by org.eventb.theory.rbp.RbPth
+
+!ENTRY org.eventb.ui 4 4 2017-02-08 13:12:32.073
+!MESSAGE Null or invalid application returned by org.eventb.theory.rbp.RbPxd
+
+!ENTRY org.eventb.ui 4 4 2017-02-08 13:12:32.074
+!MESSAGE Null or invalid application returned by org.eventb.theory.rbp.RbPth
+
+!ENTRY org.eventb.ui 4 4 2017-02-08 13:12:54.857
+!MESSAGE Null or invalid application returned by org.eventb.theory.rbp.RbPxd
+
+!ENTRY org.eventb.ui 4 4 2017-02-08 13:12:54.857
+!MESSAGE Null or invalid application returned by org.eventb.theory.rbp.RbPth

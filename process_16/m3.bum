@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<org.eventb.core.machineFile org.eventb.core.configuration="org.eventb.core.fwd;de.prob.units.mchBase" org.eventb.texttools.text_lastmodified="1486489076439" org.eventb.texttools.text_representation="machine m3 refines m2  sees c0&#10;&#10;variables wait process cs clk t1 t2 qsize queue twish tenter tleave&#10;&#10;invariants&#10;  @inv1 twish ∈ N&#10;  @inv2 tenter ∈ 1‥csnum ⇸ ℕ&#10;  @inv3 tleave ∈ 1‥csnum ⇸ ℕ&#10;&#10;events&#10;  event INITIALISATION extends INITIALISATION&#10;    then&#10;      @act9 twish ≔ 0&#10;      @act10 tenter ≔ 1‥csnum × {0}&#10;      @act11 tleave ≔ 1‥csnum × {0}&#10;  end&#10;&#10;  event wish_empty extends wish&#10;   where&#10;      @grd3 wait=∅∧process=∅&#10;    then&#10;      @act5 twish≔clk&#10;  end&#10;&#10;  event wish_nonempty extends wish&#10;    where&#10;      @grd3 wait≠∅∨process≠∅&#10;  end&#10;&#10;  event enter extends enter&#10;  end&#10;&#10;  event leave extends leave&#10;  end&#10;&#10;  event tick extends tick&#10;  end&#10;end&#10;" version="5">
+<org.eventb.core.machineFile org.eventb.core.configuration="org.eventb.core.fwd;de.prob.units.mchBase" org.eventb.texttools.text_lastmodified="1486558456806" org.eventb.texttools.text_representation="machine m3 refines m2  sees c0&#10;&#10;variables wait process cs clk t1 t2 qsize queue twish tenter tleave&#10;&#10;invariants&#10;  @inv1 twish ∈ ℕ&#10;  @inv2 tenter ∈ 1‥csnum ⇸ ℕ&#10;  @inv3 tleave ∈ 1‥csnum ⇸ ℕ&#10;  @inv4 ∀i·i∈ran(cs)⇒i∈dom(tenter)&#10;  @inv5 ∀i·i∈ran(cs)⇒i∈dom(tleave)&#10;&#10;events&#10;  event INITIALISATION extends INITIALISATION&#10;    then&#10;      @act9 twish ≔ 0&#10;      @act10 tenter ≔ 1‥csnum × {0}&#10;      @act11 tleave ≔ 1‥csnum × {0}&#10;  end&#10;&#10;  event wish_empty extends wish&#10;    where&#10;      @grd3 wait=∅∧process=∅&#10;    then&#10;      @act5 twish≔clk&#10;  end&#10;&#10;  event wish_nonempty extends wish&#10;    where&#10;      @grd3 wait≠∅∨process≠∅&#10;  end&#10;&#10;  event enter extends enter&#10;    then&#10;      @act7 tenter(i)≔clk&#10;  end&#10;&#10;  event leave extends leave&#10;    where&#10;      @grd2 queue≠∅&#10;    then&#10;      @act3 tleave(cs(pro))≔clk&#10;  end&#10;&#10;  event leave_idle extends leave&#10;    where&#10;      @grd2 queue=∅&#10;    then&#10;      @act3 tleave(cs(pro))≔clk&#10;  end&#10;&#10;  event tick refines tick&#10;    where&#10;      @grd1 ∀p·(p∈wait ∧ p∈dom(t1))⇒clk+1−t1(p)≤ddl1&#10;      @grd2 ∀i·(i∈1‥csnum∧i∉ran(cs)∧wait≠∅∧twish≥tleave(i))⇒clk+1−twish≤ddl4&#10;      @grd3 ∀i·(i∈1‥csnum∧i∉ran(cs)∧wait≠∅∧tleave(i)≥twish)⇒clk+1−tleave(i)≤ddl4&#10;      @grd4 ∀i·i∈ran(cs)⇒clk+1−tenter(i)≤ddl2&#10;    then&#10;      @act1 clk≔clk+1&#10;  end&#10;end&#10;" version="5">
 <org.eventb.core.refinesMachine name="'" org.eventb.core.target="m2"/>
 <org.eventb.core.seesContext name="/" org.eventb.core.target="c0"/>
 <org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="(" org.eventb.core.identifier="wait"/>
@@ -26,9 +26,12 @@
 </org.eventb.core.event>
 <org.eventb.core.event name="_jEnLku1NEeanNe0iiRALsE" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="enter">
 <org.eventb.core.refinesEvent name="_x2GbNO1TEeanNe0iiRALsA" org.eventb.core.target="enter"/>
+<org.eventb.core.action name="_x2GbNO1TEeanNe0iiRALsB" org.eventb.core.assignment="tenter(i)≔clk" org.eventb.core.label="act7"/>
 </org.eventb.core.event>
 <org.eventb.core.event name="_jEnLku1NEeanNe0iiRALsF" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="leave">
 <org.eventb.core.refinesEvent name="_x2GbNe1TEeanNe0iiRALsA" org.eventb.core.target="leave"/>
+<org.eventb.core.guard name="_lfUoUO3uEeanNe0iiRALsA" org.eventb.core.label="grd2" org.eventb.core.predicate="queue≠∅"/>
+<org.eventb.core.action name="_x2GbNe1TEeanNe0iiRALsB" org.eventb.core.assignment="tleave(cs(pro))≔clk" org.eventb.core.label="act3"/>
 </org.eventb.core.event>
 <org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="_jEnLku1NEeanNe0iiRALsG" org.eventb.core.identifier="twish"/>
 <org.eventb.core.invariant name="_jEnLku1NEeanNe0iiRALsH" org.eventb.core.label="inv1" org.eventb.core.predicate="twish ∈ ℕ"/>
@@ -36,7 +39,19 @@
 <org.eventb.core.variable name="_9_tGwu1SEeanNe0iiRALsA" org.eventb.core.identifier="tleave"/>
 <org.eventb.core.invariant name="_9_tGw-1SEeanNe0iiRALsA" org.eventb.core.label="inv2" org.eventb.core.predicate="tenter ∈ 1‥csnum ⇸ ℕ"/>
 <org.eventb.core.invariant name="_9_tGxO1SEeanNe0iiRALsA" org.eventb.core.label="inv3" org.eventb.core.predicate="tleave ∈ 1‥csnum ⇸ ℕ"/>
-<org.eventb.core.event name="_x2HCQO1TEeanNe0iiRALsA" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="tick">
-<org.eventb.core.refinesEvent name="_x2HCQe1TEeanNe0iiRALsA" org.eventb.core.target="tick"/>
+<org.eventb.core.event name="_x2HCQO1TEeanNe0iiRALsA" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="leave_idle">
+<org.eventb.core.refinesEvent name="_lfUoUe3uEeanNe0iiRALsA" org.eventb.core.target="leave"/>
+<org.eventb.core.guard name="_lfUoUu3uEeanNe0iiRALsA" org.eventb.core.label="grd2" org.eventb.core.predicate="queue=∅"/>
+<org.eventb.core.action name="_lfUoUu3uEeanNe0iiRALsB" org.eventb.core.assignment="tleave(cs(pro))≔clk" org.eventb.core.label="act3"/>
 </org.eventb.core.event>
+<org.eventb.core.event name="_lfUoU-3uEeanNe0iiRALsA" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="tick">
+<org.eventb.core.refinesEvent name="_lfUoVO3uEeanNe0iiRALsA" org.eventb.core.target="tick"/>
+<org.eventb.core.guard name="__sMsge1MEeanNe0iiRALsA" org.eventb.core.label="grd1" org.eventb.core.predicate="∀p·(p∈wait ∧ p∈dom(t1))⇒clk+1−t1(p)≤ddl1"/>
+<org.eventb.core.action name="__sMsgu1MEeanNe0iiRALsA" org.eventb.core.assignment="clk≔clk+1" org.eventb.core.label="act1"/>
+<org.eventb.core.guard name="_7aohsO3xEeanNe0iiRALsA" org.eventb.core.label="grd2" org.eventb.core.predicate="∀i·(i∈1‥csnum∧i∉ran(cs)∧wait≠∅∧twish≥tleave(i))⇒clk+1−twish≤ddl4"/>
+<org.eventb.core.guard name="_NljaAO3yEeanNe0iiRALsA" org.eventb.core.label="grd3" org.eventb.core.predicate="∀i·(i∈1‥csnum∧i∉ran(cs)∧wait≠∅∧tleave(i)≥twish)⇒clk+1−tleave(i)≤ddl4"/>
+<org.eventb.core.guard name="_NlkBEO3yEeanNe0iiRALsA" org.eventb.core.label="grd4" org.eventb.core.predicate="∀i·i∈ran(cs)⇒clk+1−tenter(i)≤ddl2"/>
+</org.eventb.core.event>
+<org.eventb.core.invariant name="_X7prIO3yEeanNe0iiRALsA" org.eventb.core.label="inv4" org.eventb.core.predicate="∀i·i∈ran(cs)⇒i∈dom(tenter)"/>
+<org.eventb.core.invariant name="_UVANMO31EeaorcpaRBh7_A" org.eventb.core.label="inv5" org.eventb.core.predicate="∀i·i∈ran(cs)⇒i∈dom(tleave)"/>
 </org.eventb.core.machineFile>
