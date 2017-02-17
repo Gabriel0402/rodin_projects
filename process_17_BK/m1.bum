@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<org.eventb.core.machineFile org.eventb.core.configuration="org.eventb.core.fwd;de.prob.units.mchBase" org.eventb.texttools.text_lastmodified="1486637518601" org.eventb.texttools.text_representation="machine m1 refines m0  sees c0&#10;&#10;variables wait process clk t1 t2&#10;&#10;invariants&#10;  @inv1 clk ∈ ℕ&#10;  @inv2 t1 ∈ PROCESS ⇸ ℕ&#10;  @inv3 t2 ∈ PROCESS ⇸ ℕ&#10;  @inv5 ∀p·p∈dom(t1)⇒0≤t1(p)∧t1(p)≤clk&#10;  @inv6 ∀p·p∈dom(t2)⇒0≤t2(p)∧t2(p)≤clk&#10;  @inv8 ∀p·(p∈wait∧p∈dom(t1))⇒clk−t1(p)≤ddl1&#10;  @inv9 ∀p·(p∈dom(t1)∧p∈dom(t2)∧t2(p)≥t1(p))⇒t2(p)−t1(p)≤ddl1 // deadline(t1,t2,ddl1)&#10;&#10;events&#10;  event INITIALISATION extends INITIALISATION&#10;    then&#10;      @act3 clk ≔ 0&#10;      @act4 t1 ≔ ∅&#10;      @act5 t2 ≔ ∅&#10;  end&#10;&#10;  event wish extends wish&#10;    then&#10;      @act2 t1(pro)≔clk&#10;  end&#10;&#10;  event enter extends enter&#10;    then&#10;      @act3 t2(pro)≔clk&#10;  end&#10;&#10;  event leave extends leave&#10;  end&#10;&#10;  event tick&#10;    where&#10;      @grd1 ∀p·(p∈wait ∧ p∈dom(t1))⇒clk+1−t1(p)≤ddl1&#10;    then&#10;      @act1 clk≔clk+1&#10;  end&#10;end&#10;" version="5">
+<org.eventb.core.machineFile org.eventb.core.configuration="org.eventb.core.fwd;de.prob.units.mchBase" org.eventb.texttools.text_lastmodified="1487255224472" org.eventb.texttools.text_representation="machine m1 refines m0  sees c0&#10;&#10;variables wait process clk t1 r1&#10;&#10;invariants&#10;  @inv1 clk ∈ ℕ&#10;  @inv2 t1 ∈ PROCESS → 0‥clk&#10;  @inv3 r1 ∈ PROCESS → 0‥clk&#10;  @inv5 ∀p·p∈dom(t1)⇒0≤t1(p)∧t1(p)≤clk&#10;  @inv6 ∀p·p∈dom(r1)⇒0≤r1(p)∧r1(p)≤clk&#10;  @inv8 ∀p·(p∈wait∧p∈dom(t1))⇒clk−t1(p)≤ddl1&#10;  @inv9 ∀p·(p∈dom(t1)∧p∈dom(r1)∧r1(p)≥t1(p))⇒r1(p)−t1(p)≤ddl1 // deadline(t1,r1,ddl1)&#10;&#10;events&#10;  event INITIALISATION extends INITIALISATION&#10;    then&#10;      @act3 clk ≔ 0&#10;      @act4 t1 ≔ PROCESS × {0}&#10;      @act5 r1 ≔ PROCESS × {0}&#10;  end&#10;&#10;  event wish extends wish&#10;    then&#10;      @acr1 t1(pro)≔clk&#10;  end&#10;&#10;  event enter extends enter&#10;    then&#10;      @act3 r1(pro)≔clk&#10;  end&#10;&#10;  event leave extends leave&#10;  end&#10;&#10;  event tick&#10;    where&#10;      @grd1 ∀p·(p∈wait ∧ p∈dom(t1))⇒clk+1−t1(p)≤ddl1&#10;    then&#10;      @act1 clk≔clk+1&#10;  end&#10;end&#10;" version="5">
 <org.eventb.core.refinesMachine name="'" org.eventb.core.target="m0"/>
 <org.eventb.core.seesContext name="/" org.eventb.core.target="c0"/>
 <org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="(" org.eventb.core.identifier="wait"/>
 <org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="*" org.eventb.core.identifier="process"/>
 <org.eventb.core.event name="0" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="INITIALISATION">
 <org.eventb.core.action name="'" org.eventb.core.assignment="clk ≔ 0" org.eventb.core.label="act3"/>
-<org.eventb.core.action name="(" org.eventb.core.assignment="t1 ≔ ∅" org.eventb.core.label="act4"/>
-<org.eventb.core.action name=")" org.eventb.core.assignment="t2 ≔ ∅" org.eventb.core.label="act5"/>
+<org.eventb.core.action name="(" org.eventb.core.assignment="t1 ≔ PROCESS × {0}" org.eventb.core.label="act4"/>
+<org.eventb.core.action name=")" org.eventb.core.assignment="r1 ≔ PROCESS × {0}" org.eventb.core.label="act5"/>
 </org.eventb.core.event>
 <org.eventb.core.event name="1" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="wish">
 <org.eventb.core.refinesEvent name="'" org.eventb.core.target="wish"/>
-<org.eventb.core.action name="*" org.eventb.core.assignment="t1(pro)≔clk" org.eventb.core.label="act2"/>
+<org.eventb.core.action name="*" org.eventb.core.assignment="t1(pro)≔clk" org.eventb.core.label="acr1"/>
 </org.eventb.core.event>
 <org.eventb.core.event name="2" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="enter">
 <org.eventb.core.refinesEvent name="_dW3BcNi7Eea_Xv6ojnvGJQ" org.eventb.core.target="enter"/>
-<org.eventb.core.action name="(" org.eventb.core.assignment="t2(pro)≔clk" org.eventb.core.label="act3"/>
+<org.eventb.core.action name="(" org.eventb.core.assignment="r1(pro)≔clk" org.eventb.core.label="act3"/>
 </org.eventb.core.event>
 <org.eventb.core.event name="3" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="leave">
 <org.eventb.core.refinesEvent name="_dW3Bcdi7Eea_Xv6ojnvGJQ" org.eventb.core.target="leave"/>
@@ -23,15 +23,15 @@
 <org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="4" org.eventb.core.identifier="clk"/>
 <org.eventb.core.invariant name="5" org.eventb.core.label="inv1" org.eventb.core.predicate="clk ∈ ℕ"/>
 <org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="6" org.eventb.core.identifier="t1"/>
-<org.eventb.core.invariant name="7" org.eventb.core.label="inv2" org.eventb.core.predicate="t1 ∈ PROCESS ⇸ ℕ"/>
-<org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="8" org.eventb.core.identifier="t2"/>
-<org.eventb.core.invariant name="9" org.eventb.core.label="inv3" org.eventb.core.predicate="t2 ∈ PROCESS ⇸ ℕ"/>
+<org.eventb.core.invariant name="7" org.eventb.core.label="inv2" org.eventb.core.predicate="t1 ∈ PROCESS → 0‥clk"/>
+<org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="8" org.eventb.core.identifier="r1"/>
+<org.eventb.core.invariant name="9" org.eventb.core.label="inv3" org.eventb.core.predicate="r1 ∈ PROCESS → 0‥clk"/>
 <org.eventb.core.event name=":" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="tick">
 <org.eventb.core.guard name=")" org.eventb.core.label="grd1" org.eventb.core.predicate="∀p·(p∈wait ∧ p∈dom(t1))⇒clk+1−t1(p)≤ddl1"/>
 <org.eventb.core.action name="(" org.eventb.core.assignment="clk≔clk+1" org.eventb.core.label="act1"/>
 </org.eventb.core.event>
 <org.eventb.core.invariant name=";" org.eventb.core.label="inv5" org.eventb.core.predicate="∀p·p∈dom(t1)⇒0≤t1(p)∧t1(p)≤clk"/>
-<org.eventb.core.invariant name="=" org.eventb.core.label="inv6" org.eventb.core.predicate="∀p·p∈dom(t2)⇒0≤t2(p)∧t2(p)≤clk"/>
+<org.eventb.core.invariant name="=" org.eventb.core.label="inv6" org.eventb.core.predicate="∀p·p∈dom(r1)⇒0≤r1(p)∧r1(p)≤clk"/>
 <org.eventb.core.invariant name="&gt;" org.eventb.core.label="inv8" org.eventb.core.predicate="∀p·(p∈wait∧p∈dom(t1))⇒clk−t1(p)≤ddl1"/>
-<org.eventb.core.invariant name="?" org.eventb.core.comment="deadline(t1,t2,ddl1)" org.eventb.core.label="inv9" org.eventb.core.predicate="∀p·(p∈dom(t1)∧p∈dom(t2)∧t2(p)≥t1(p))⇒t2(p)−t1(p)≤ddl1"/>
+<org.eventb.core.invariant name="?" org.eventb.core.comment="deadline(t1,r1,ddl1)" org.eventb.core.label="inv9" org.eventb.core.predicate="∀p·(p∈dom(t1)∧p∈dom(r1)∧r1(p)≥t1(p))⇒r1(p)−t1(p)≤ddl1"/>
 </org.eventb.core.machineFile>

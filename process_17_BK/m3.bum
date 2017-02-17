@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.machineFile org.eventb.core.configuration="org.eventb.core.fwd;de.prob.units.mchBase" org.eventb.texttools.text_lastmodified="1487258089871" org.eventb.texttools.text_representation="machine m3 refines m2  sees c0&#10;&#10;variables wait process clk t1 r1 qsize queue t2 r2 t3 r3&#10;&#10;invariants&#10;  @inv1 t2 ∈ 0‥clk // time of trigger event for deadline2&#10;  @inv2 r2 ∈ 0‥clk // time of response event for deadline2&#10;  @inv3 t3 ∈ 0‥clk // time of trigger event for deadline3&#10;  @inv4 r3 ∈ 0‥clk // time of response event for deadline3&#10;  @inv5 r2&gt;t2 ⇒ r2−t2≤ddl2 // deadline2( enter, leave_idle|leave_nonempty, ddl2)&#10;  @inv6 r3&gt;t3 ⇒ r3−t3≤ddl3 // deadline3( wish_empty|leave_nonempty, enter, ddl3 )&#10;  @inv7 queue≠∅ ∧ process=∅ ⇒ clk−t3≤ddl3 // required for enter to preserve inv6&#10;  @inv8 process≠∅ ⇒ clk−t2≤ddl2 // required for leave to preserve inv5&#10;  @inv9 ∀p·process=∅ ∧ p∈wait ⇒&#10;        t3+(queue∼(p)∗ddl4)+ddl3 ≤ t1(p)+ddl1&#10;  /* t1(p)+dd1 is the time by which p is guaranteed to enter in the abstract model.&#10;     When process is empty, t3+(queue∼(p)∗ddl4)+ddl3 is the time by which p is guaranteed to enter in the refinement.&#10;     The refined guaranteed time must be less than the abstract guaranteed time for p. */&#10;  @inv10 ∀p·process≠∅ ∧ p∈wait ⇒&#10;         t2+(queue∼(p)∗ddl4)+ddl4 ≤ t1(p)+ddl1 // When process not empty, t2+(queue∼(p)∗ddl4)+ddl4 is the time by which p is guaranteed to enter in the refinement.&#10;&#10;events&#10;  event INITIALISATION extends INITIALISATION&#10;    then&#10;      @act9 t2 ≔ 0&#10;      @act10 r2 ≔ 0&#10;      @act11 t3 ≔ 0&#10;      @act12 r3 ≔ 0&#10;  end&#10;&#10;  event wish_empty extends wish&#10;    where&#10;      @grd4 wait=∅∧process=∅&#10;    then&#10;      @act5 t3 ≔ clk&#10;  end&#10;&#10;  event wish_nonempty extends wish&#10;    where&#10;      @grd4 wait≠∅∨process≠∅&#10;      @grd5 ⊤&#10;  end&#10;&#10;  event enter extends enter&#10;    then&#10;      @act6 t2 ≔ clk&#10;      @act7 r3 ≔ clk&#10;  end&#10;&#10;  event leave_nonempty extends leave&#10;    where&#10;      @grd2 queue≠∅&#10;    then&#10;      @act3 r2 ≔ clk&#10;      @act4 t3 ≔ clk&#10;  end&#10;&#10;  event leave_idle extends leave&#10;    where&#10;      @grd2 queue=∅&#10;    then&#10;      @act2 r2 ≔ clk&#10;  end&#10;&#10;  event tick refines tick&#10;    where&#10;      @grd2 process=∅ ∧ wait≠∅ ⇒ clk+1−t3≤ddl3&#10;      @grd4 process≠∅ ⇒ clk+1−t2≤ddl2&#10;    then&#10;      @act1 clk≔clk+1&#10;  end&#10;end&#10;" version="5">
+<org.eventb.core.refinesMachine name="'" org.eventb.core.target="m2"/>
+<org.eventb.core.seesContext name="/" org.eventb.core.target="c0"/>
+<org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="(" org.eventb.core.identifier="wait"/>
+<org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="*" org.eventb.core.identifier="process"/>
+<org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="4" org.eventb.core.identifier="clk"/>
+<org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="6" org.eventb.core.identifier="t1"/>
+<org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="8" org.eventb.core.identifier="r1"/>
+<org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="@" org.eventb.core.identifier="qsize"/>
+<org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="F" org.eventb.core.identifier="queue"/>
+<org.eventb.core.event name="G" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="INITIALISATION">
+<org.eventb.core.action name="'" org.eventb.core.assignment="t2 ≔ 0" org.eventb.core.label="act9"/>
+<org.eventb.core.action name="(" org.eventb.core.assignment="r2 ≔ 0" org.eventb.core.label="act10"/>
+<org.eventb.core.action name=")" org.eventb.core.assignment="t3 ≔ 0" org.eventb.core.label="act11"/>
+<org.eventb.core.action name="*" org.eventb.core.assignment="r3 ≔ 0" org.eventb.core.label="act12"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="H" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="wish_empty">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="wish"/>
+<org.eventb.core.guard name="_8W7Q4N5FEeaTwdaYxVgujg" org.eventb.core.label="grd4" org.eventb.core.predicate="wait=∅∧process=∅"/>
+<org.eventb.core.action name="_8W7Q4d5FEeaTwdaYxVgujg" org.eventb.core.assignment="t3 ≔ clk" org.eventb.core.label="act5"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="I" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="wish_nonempty">
+<org.eventb.core.refinesEvent name="_8W7Q4t5FEeaTwdaYxVgujg" org.eventb.core.target="wish"/>
+<org.eventb.core.guard name="_8W7Q495FEeaTwdaYxVgujg" org.eventb.core.label="grd4" org.eventb.core.predicate="wait≠∅∨process≠∅"/>
+<org.eventb.core.guard name="_8W7Q4t5FEeaTwdaYxVgujh" org.eventb.core.label="grd5" org.eventb.core.predicate="⊤"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="J" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="enter">
+<org.eventb.core.refinesEvent name="_8W7Q5N5FEeaTwdaYxVgujg" org.eventb.core.target="enter"/>
+<org.eventb.core.action name="_8W7Q5N5FEeaTwdaYxVgujh" org.eventb.core.assignment="t2 ≔ clk" org.eventb.core.label="act6"/>
+<org.eventb.core.action name="_8W7Q5N5FEeaTwdaYxVguji" org.eventb.core.assignment="r3 ≔ clk" org.eventb.core.label="act7"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="K" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="leave_nonempty">
+<org.eventb.core.refinesEvent name="_8W7Q5d5FEeaTwdaYxVgujg" org.eventb.core.target="leave"/>
+<org.eventb.core.guard name="_8W738N5FEeaTwdaYxVgujg" org.eventb.core.label="grd2" org.eventb.core.predicate="queue≠∅"/>
+<org.eventb.core.action name="_8W738d5FEeaTwdaYxVgujg" org.eventb.core.assignment="r2 ≔ clk" org.eventb.core.label="act3"/>
+<org.eventb.core.action name="_8W7Q5d5FEeaTwdaYxVgujh" org.eventb.core.assignment="t3 ≔ clk" org.eventb.core.label="act4"/>
+</org.eventb.core.event>
+<org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="L" org.eventb.core.identifier="t2"/>
+<org.eventb.core.invariant name="M" org.eventb.core.comment="time of trigger event for deadline2" org.eventb.core.label="inv1" org.eventb.core.predicate="t2 ∈ 0‥clk"/>
+<org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="N" org.eventb.core.identifier="r2"/>
+<org.eventb.core.invariant name="O" org.eventb.core.comment="time of response event for deadline2" org.eventb.core.label="inv2" org.eventb.core.predicate="r2 ∈ 0‥clk"/>
+<org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="P" org.eventb.core.identifier="t3"/>
+<org.eventb.core.invariant name="Q" org.eventb.core.comment="time of trigger event for deadline3" org.eventb.core.label="inv3" org.eventb.core.predicate="t3 ∈ 0‥clk"/>
+<org.eventb.core.event name="_8W738t5FEeaTwdaYxVgujg" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="leave_idle">
+<org.eventb.core.refinesEvent name="_8W73895FEeaTwdaYxVgujg" org.eventb.core.target="leave"/>
+<org.eventb.core.guard name="_8W739N5FEeaTwdaYxVgujg" org.eventb.core.label="grd2" org.eventb.core.predicate="queue=∅"/>
+<org.eventb.core.action name="_8W739N5FEeaTwdaYxVgujh" org.eventb.core.assignment="r2 ≔ clk" org.eventb.core.label="act2"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_8W739d5FEeaTwdaYxVgujg" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="tick">
+<org.eventb.core.refinesEvent name="_8W739t5FEeaTwdaYxVgujg" org.eventb.core.target="tick"/>
+<org.eventb.core.guard name=")" org.eventb.core.label="grd2" org.eventb.core.predicate="process=∅ ∧ wait≠∅ ⇒ clk+1−t3≤ddl3"/>
+<org.eventb.core.action name="(" org.eventb.core.assignment="clk≔clk+1" org.eventb.core.label="act1"/>
+<org.eventb.core.guard name="_8W739t5FEeaTwdaYxVgujh" org.eventb.core.label="grd4" org.eventb.core.predicate="process≠∅ ⇒ clk+1−t2≤ddl2"/>
+</org.eventb.core.event>
+<org.eventb.core.invariant name="_tx9gsN5HEeaTwdaYxVgujg" org.eventb.core.comment="time of response event for deadline3" org.eventb.core.label="inv4" org.eventb.core.predicate="r3 ∈ 0‥clk"/>
+<org.eventb.core.invariant name="_wcz2Ad5KEeaTwdaYxVgujg" org.eventb.core.comment="deadline2( enter, leave_idle|leave_nonempty, ddl2)" org.eventb.core.label="inv5" org.eventb.core.predicate="r2&gt;t2 ⇒ r2−t2≤ddl2"/>
+<org.eventb.core.invariant name="_tx-Hwd5HEeaTwdaYxVgujg" org.eventb.core.comment="deadline3( wish_empty|leave_nonempty, enter, ddl3 )" org.eventb.core.label="inv6" org.eventb.core.predicate="r3&gt;t3 ⇒ r3−t3≤ddl3"/>
+<org.eventb.core.invariant name="_tx-HwN5HEeaTwdaYxVgujg" org.eventb.core.comment="required for enter to preserve inv6" org.eventb.core.label="inv7" org.eventb.core.predicate="queue≠∅ ∧ process=∅ ⇒ clk−t3≤ddl3"/>
+<org.eventb.core.invariant name="_XGQdcN5KEeaTwdaYxVgujg" org.eventb.core.comment="required for leave to preserve inv5" org.eventb.core.label="inv8" org.eventb.core.predicate="process≠∅ ⇒ clk−t2≤ddl2"/>
+<org.eventb.core.invariant name="_qBMWcO-uEea7zonbeotAzw" org.eventb.core.comment="t1(p)+dd1 is the time by which p is guaranteed to enter in the abstract model.&#10;     When process is empty, t3+(queue∼(p)∗ddl4)+ddl3 is the time by which p is guaranteed to enter in the refinement.&#10;     The refined guaranteed time must be less than the abstract guaranteed time for p. " org.eventb.core.label="inv9" org.eventb.core.predicate="∀p·process=∅ ∧ p∈wait ⇒&#10;        t3+(queue∼(p)∗ddl4)+ddl3 ≤ t1(p)+ddl1"/>
+<org.eventb.core.invariant name="_wcz2Ad5KEeaTwdaYxVgujh" org.eventb.core.comment="When process not empty, t2+(queue∼(p)∗ddl4)+ddl4 is the time by which p is guaranteed to enter in the refinement." org.eventb.core.label="inv10" org.eventb.core.predicate="∀p·process≠∅ ∧ p∈wait ⇒&#10;         t2+(queue∼(p)∗ddl4)+ddl4 ≤ t1(p)+ddl1"/>
+<org.eventb.core.variable name="_wcz2Ad5KEeaTwdaYxVgujj" org.eventb.core.identifier="r3"/>
+</org.eventb.core.machineFile>
