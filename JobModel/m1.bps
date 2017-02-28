@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.psFile>
+<org.eventb.core.psStatus name="inv4/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="18" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="inv5/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="18" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="inv7/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="18" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="inv8/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="18" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="INITIALISATION/inv1/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="18" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="INITIALISATION/inv2/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="18" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="INITIALISATION/inv3/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="18" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="INITIALISATION/inv6/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="18" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="INITIALISATION/inv4/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="18" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="INITIALISATION/inv5/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="18" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="INITIALISATION/inv7/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="18" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="INITIALISATION/inv8/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="18" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="wake_up/grd2/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="18" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="wake_up/inv2/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="18" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="wake_up/inv4/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="18" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="wake_up/inv5/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="18" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="wake_up/inv7/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="18" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="wait_to_run/inv3/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="18" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="wait_to_run/inv4/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="18" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="wait_to_run/inv5/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="18" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="wait_to_run/inv8/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="18" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="goto_sleep/grd2/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="18" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="goto_sleep/inv6/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="18" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="goto_sleep/inv7/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="18" org.eventb.core.psManual="true"/>
+<org.eventb.core.psStatus name="goto_sleep/inv8/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="18" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="tick/grd1/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="18" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="tick/grd2/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="18" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="tick/grd3/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="18" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="tick/inv1/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="18" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="tick/inv2/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="18" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="tick/inv3/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="18" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="tick/inv6/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="18" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="tick/inv4/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="18" org.eventb.core.psManual="false"/>
+</org.eventb.core.psFile>

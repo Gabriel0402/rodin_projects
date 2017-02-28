@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.machineFile org.eventb.core.configuration="org.eventb.core.fwd;de.prob.units.mchBase" org.eventb.texttools.text_lastmodified="1488298729665" org.eventb.texttools.text_representation="machine m0 sees c0&#10;&#10;variables sleep wait run&#10;&#10;invariants&#10;&#9;@inv1 sleep ⊆ TASKS&#10;&#9;@inv2 wait ⊆ TASKS&#10;&#9;@inv3 run ⊆ TASKS&#10;&#9;@inv4 finite(run)&#10;    @inv5 card(run)≤1&#10;&#10;events&#10;  event INITIALISATION&#10;  &#9;then&#10;      @act1 sleep ≔ TASKS&#10;      @act2 wait ≔ ∅&#10;      @act3 run ≔ ∅&#10;  end&#10;&#10;  event wake_up&#10;    any pro&#10;    where&#10;      @grd1 pro∈sleep&#10;    then&#10;      @act1 wait≔wait∪{pro}&#10;      @act2 sleep≔sleep∖{pro}&#10;  end&#10;&#10;  event wait_to_run&#10;    any pro&#10;    where&#10;      @grd1 pro∈wait&#10;      @grd2 run=∅&#10;    then&#10;      @act1 run≔run∪{pro}&#10;      @act2 wait≔wait∖{pro}&#10;  end&#10;&#10;  event goto_sleep&#10;    any pro&#10;    where&#10;      @grd1 pro∈run&#10;    then&#10;      @act1 sleep≔sleep∪{pro}&#10;      @act2 run≔run∖{pro}&#10;  end&#10;&#10;end&#10;" version="5">
+<org.eventb.core.seesContext name="_ty0s4P3DEeaVcaelLDr9sQ" org.eventb.core.target="c0"/>
+<org.eventb.core.event name="'" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="INITIALISATION">
+<org.eventb.core.action name="_Qcd6EP3HEeaVcaelLDr9sQ" org.eventb.core.assignment="sleep ≔ TASKS" org.eventb.core.label="act1"/>
+<org.eventb.core.action name="_QcehIP3HEeaVcaelLDr9sQ" org.eventb.core.assignment="wait ≔ ∅" org.eventb.core.label="act2"/>
+<org.eventb.core.action name="_QcehIf3HEeaVcaelLDr9sQ" org.eventb.core.assignment="run ≔ ∅" org.eventb.core.label="act3"/>
+</org.eventb.core.event>
+<org.eventb.core.variable name="_AtoCoP3HEeaVcaelLDr9sQ" org.eventb.core.identifier="sleep"/>
+<org.eventb.core.variable name="_AtoCof3HEeaVcaelLDr9sQ" org.eventb.core.identifier="wait"/>
+<org.eventb.core.variable name="_AtoCov3HEeaVcaelLDr9sQ" org.eventb.core.identifier="run"/>
+<org.eventb.core.invariant name="_AtoCo_3HEeaVcaelLDr9sQ" org.eventb.core.label="inv1" org.eventb.core.predicate="sleep ⊆ TASKS"/>
+<org.eventb.core.invariant name="_AtoCpP3HEeaVcaelLDr9sQ" org.eventb.core.label="inv2" org.eventb.core.predicate="wait ⊆ TASKS"/>
+<org.eventb.core.invariant name="_AtoCpf3HEeaVcaelLDr9sQ" org.eventb.core.label="inv3" org.eventb.core.predicate="run ⊆ TASKS"/>
+<org.eventb.core.invariant name="_JWKlwP3HEeaVcaelLDr9sQ" org.eventb.core.label="inv4" org.eventb.core.predicate="finite(run)"/>
+<org.eventb.core.invariant name="_JWKlwf3HEeaVcaelLDr9sQ" org.eventb.core.label="inv5" org.eventb.core.predicate="card(run)≤1"/>
+<org.eventb.core.event name="_-xQAEP3HEeaVcaelLDr9sQ" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="wake_up">
+<org.eventb.core.parameter name="_-xQAEf3HEeaVcaelLDr9sQ" org.eventb.core.identifier="pro"/>
+<org.eventb.core.guard name="_-xQnIP3HEeaVcaelLDr9sQ" org.eventb.core.label="grd1" org.eventb.core.predicate="pro∈sleep"/>
+<org.eventb.core.action name="_-xQnIf3HEeaVcaelLDr9sQ" org.eventb.core.assignment="wait≔wait∪{pro}" org.eventb.core.label="act1"/>
+<org.eventb.core.action name="_-xQnIv3HEeaVcaelLDr9sQ" org.eventb.core.assignment="sleep≔sleep∖{pro}" org.eventb.core.label="act2"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_2eDlYP3IEeaVcaelLDr9sQ" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="wait_to_run">
+<org.eventb.core.parameter name="_2eDlYf3IEeaVcaelLDr9sQ" org.eventb.core.identifier="pro"/>
+<org.eventb.core.guard name="_2eDlYv3IEeaVcaelLDr9sQ" org.eventb.core.label="grd1" org.eventb.core.predicate="pro∈wait"/>
+<org.eventb.core.guard name="_2eDlZ_3IEeaVcaelLDr9sQ" org.eventb.core.label="grd2" org.eventb.core.predicate="run=∅"/>
+<org.eventb.core.action name="_2eDlY_3IEeaVcaelLDr9sQ" org.eventb.core.assignment="run≔run∪{pro}" org.eventb.core.label="act1"/>
+<org.eventb.core.action name="_2eDlZP3IEeaVcaelLDr9sQ" org.eventb.core.assignment="wait≔wait∖{pro}" org.eventb.core.label="act2"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_2eDlZf3IEeaVcaelLDr9sQ" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="goto_sleep">
+<org.eventb.core.parameter name="_2eDlZv3IEeaVcaelLDr9sQ" org.eventb.core.identifier="pro"/>
+<org.eventb.core.guard name="_5HFdIP3IEeaVcaelLDr9sQ" org.eventb.core.label="grd1" org.eventb.core.predicate="pro∈run"/>
+<org.eventb.core.action name="_2eDlaP3IEeaVcaelLDr9sQ" org.eventb.core.assignment="sleep≔sleep∪{pro}" org.eventb.core.label="act1"/>
+<org.eventb.core.action name="_2eDlaf3IEeaVcaelLDr9sQ" org.eventb.core.assignment="run≔run∖{pro}" org.eventb.core.label="act2"/>
+</org.eventb.core.event>
+</org.eventb.core.machineFile>

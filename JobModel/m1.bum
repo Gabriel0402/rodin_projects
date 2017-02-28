@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.machineFile org.eventb.core.configuration="org.eventb.core.fwd;de.prob.units.mchBase" org.eventb.texttools.text_lastmodified="1488307554915" org.eventb.texttools.text_representation="machine m1 refines m0  sees c1&#10;&#10;variables sleep wait run clk pStart eStart eEnd&#10;&#10;invariants&#10;  @inv1 clk ∈ ℕ&#10;  @inv2 pStart ∈ TASKS → 0‥clk&#10;  @inv3 eStart ∈ TASKS → 0‥clk&#10;  @inv6 eEnd ∈ TASKS → 0‥clk&#10;  @inv4 ∀p·p∈wait⇒clk−pStart(p)≤deadline−WCET&#10;  @inv5 ∀p·eStart(p)&gt;pStart(p)⇒eStart(p)−pStart(p)≤deadline−WCET&#10;  @inv7 ∀p·eEnd(p)&gt;pStart(p)⇒eEnd(p)−pStart(p)≤deadline&#10;  @inv8 ∀p·eEnd(p)&gt;eStart(p)⇒eEnd(p)−eStart(p)=WCET&#10;&#10;events&#10;  event INITIALISATION extends INITIALISATION&#10;    then&#10;      @act4 clk ≔ 0&#10;      @act5 pStart ≔ TASKS×{0}&#10;      @act6 eStart ≔ TASKS×{0}&#10;      @act7 eEnd ≔ TASKS×{0}&#10;  end&#10;&#10;  event wake_up extends wake_up&#10;    where&#10;      @grd2 pStart(pro)+period=clk&#10;    then&#10;      @act3 pStart(pro)≔clk&#10;  end&#10;&#10;  event wait_to_run extends wait_to_run&#10;    then&#10;      @act3 eStart(pro)≔clk&#10;  end&#10;&#10;  event goto_sleep extends goto_sleep&#10;    where&#10;      @grd2 eStart(pro)+WCET=clk&#10;    then&#10;      @act3 eEnd(pro)≔clk&#10;  end&#10;&#10;  event tick&#10;    where&#10;      @grd1 ∀p·p∈wait⇒clk+1−pStart(p)≤deadline−WCET&#10;      @grd2 ∀p·p∈sleep⇒pStart(p)+period≠clk&#10;      @grd3 ∀p·p∈run⇒eStart(p)+WCET≠clk&#10;    then&#10;      @act1 clk≔clk+1&#10;  end&#10;end&#10;" version="5">
+<org.eventb.core.refinesMachine name="'" org.eventb.core.target="m0"/>
+<org.eventb.core.seesContext name="_FYsjQP3KEeaVcaelLDr9sQ" org.eventb.core.target="c1"/>
+<org.eventb.core.variable name="_AtoCoP3HEeaVcaelLDr9sQ" org.eventb.core.identifier="sleep"/>
+<org.eventb.core.variable name="_AtoCof3HEeaVcaelLDr9sQ" org.eventb.core.identifier="wait"/>
+<org.eventb.core.variable name="_AtoCov3HEeaVcaelLDr9sQ" org.eventb.core.identifier="run"/>
+<org.eventb.core.event name="_ty0s4P3DEeaVcaelLDr9sR" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="INITIALISATION">
+<org.eventb.core.action name="'" org.eventb.core.assignment="clk ≔ 0" org.eventb.core.label="act4"/>
+<org.eventb.core.action name="(" org.eventb.core.assignment="pStart ≔ TASKS×{0}" org.eventb.core.label="act5"/>
+<org.eventb.core.action name=")" org.eventb.core.assignment="eStart ≔ TASKS×{0}" org.eventb.core.label="act6"/>
+<org.eventb.core.action name="_mZkeAP3cEeaVwMRj6MEPJA" org.eventb.core.assignment="eEnd ≔ TASKS×{0}" org.eventb.core.label="act7"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_ty0s4P3DEeaVcaelLDr9sS" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="wake_up">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="wake_up"/>
+<org.eventb.core.guard name="(" org.eventb.core.label="grd2" org.eventb.core.predicate="pStart(pro)+period=clk"/>
+<org.eventb.core.action name="(" org.eventb.core.assignment="pStart(pro)≔clk" org.eventb.core.label="act3"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_ty0s4P3DEeaVcaelLDr9sT" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="wait_to_run">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="wait_to_run"/>
+<org.eventb.core.action name="'" org.eventb.core.assignment="eStart(pro)≔clk" org.eventb.core.label="act3"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_ty0s4P3DEeaVcaelLDr9sU" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="goto_sleep">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="goto_sleep"/>
+<org.eventb.core.guard name="(" org.eventb.core.label="grd2" org.eventb.core.predicate="eStart(pro)+WCET=clk"/>
+<org.eventb.core.action name="_mZlsIP3cEeaVwMRj6MEPJA" org.eventb.core.assignment="eEnd(pro)≔clk" org.eventb.core.label="act3"/>
+</org.eventb.core.event>
+<org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="_ty0s4P3DEeaVcaelLDr9sV" org.eventb.core.identifier="clk"/>
+<org.eventb.core.invariant name="_ty0s4P3DEeaVcaelLDr9sW" org.eventb.core.label="inv1" org.eventb.core.predicate="clk ∈ ℕ"/>
+<org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="_ty0s4P3DEeaVcaelLDr9sX" org.eventb.core.identifier="pStart"/>
+<org.eventb.core.invariant name="_ty0s4P3DEeaVcaelLDr9sY" org.eventb.core.label="inv2" org.eventb.core.predicate="pStart ∈ TASKS → 0‥clk"/>
+<org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="_ty0s4P3DEeaVcaelLDr9sZ" org.eventb.core.identifier="eStart"/>
+<org.eventb.core.invariant name="_ty0s4P3DEeaVcaelLDr9s[" org.eventb.core.label="inv3" org.eventb.core.predicate="eStart ∈ TASKS → 0‥clk"/>
+<org.eventb.core.event name="_ty0s4P3DEeaVcaelLDr9s\" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="tick">
+<org.eventb.core.guard name="_6CC6cP3REeaVwMRj6MEPJA" org.eventb.core.label="grd1" org.eventb.core.predicate="∀p·p∈wait⇒clk+1−pStart(p)≤deadline−WCET"/>
+<org.eventb.core.guard name="_mZlsIf3cEeaVwMRj6MEPJA" org.eventb.core.label="grd2" org.eventb.core.predicate="∀p·p∈sleep⇒pStart(p)+period≠clk"/>
+<org.eventb.core.action name="_mZlsIv3cEeaVwMRj6MEPJA" org.eventb.core.assignment="clk≔clk+1" org.eventb.core.label="act1"/>
+<org.eventb.core.guard name="_6y7j0P3cEeaVwMRj6MEPJA" org.eventb.core.label="grd3" org.eventb.core.predicate="∀p·p∈run⇒eStart(p)+WCET≠clk"/>
+</org.eventb.core.event>
+<org.eventb.core.invariant name="_9W39sP3QEeaVwMRj6MEPJA" org.eventb.core.label="inv6" org.eventb.core.predicate="eEnd ∈ TASKS → 0‥clk"/>
+<org.eventb.core.invariant name="_9W39sf3QEeaVwMRj6MEPJA" org.eventb.core.label="inv4" org.eventb.core.predicate="∀p·p∈wait⇒clk−pStart(p)≤deadline−WCET"/>
+<org.eventb.core.variable name="_mZmTMP3cEeaVwMRj6MEPJA" org.eventb.core.identifier="eEnd"/>
+<org.eventb.core.invariant name="_mZmTMf3cEeaVwMRj6MEPJA" org.eventb.core.label="inv5" org.eventb.core.predicate="∀p·eStart(p)&gt;pStart(p)⇒eStart(p)−pStart(p)≤deadline−WCET"/>
+<org.eventb.core.invariant name="_a2IakP3dEeaVwMRj6MEPJA" org.eventb.core.label="inv7" org.eventb.core.predicate="∀p·eEnd(p)&gt;pStart(p)⇒eEnd(p)−pStart(p)≤deadline"/>
+<org.eventb.core.invariant name="_wQVSUP3dEeaVwMRj6MEPJA" org.eventb.core.label="inv8" org.eventb.core.predicate="∀p·eEnd(p)&gt;eStart(p)⇒eEnd(p)−eStart(p)=WCET"/>
+</org.eventb.core.machineFile>

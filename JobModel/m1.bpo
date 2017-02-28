@@ -1,0 +1,371 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.poFile org.eventb.core.poStamp="18">
+<org.eventb.core.poPredicateSet name="CTXHYP" org.eventb.core.poStamp="18">
+<org.eventb.core.poIdentifier name="TASKS" org.eventb.core.type="ℙ(TASKS)"/>
+<org.eventb.core.poIdentifier name="N" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poPredicate name="TASKT" org.eventb.core.predicate="finite(TASKS)" org.eventb.core.source="/JobModel/c0.buc|org.eventb.core.contextFile#c0|org.eventb.core.axiom#_bSoIIP3DEeaVcaelLDr9sQ"/>
+<org.eventb.core.poPredicate name="TASKU" org.eventb.core.predicate="card(TASKS)=N" org.eventb.core.source="/JobModel/c0.buc|org.eventb.core.contextFile#c0|org.eventb.core.axiom#_bSoIIf3DEeaVcaelLDr9sQ"/>
+<org.eventb.core.poPredicate name="TASKV" org.eventb.core.predicate="N&gt;0" org.eventb.core.source="/JobModel/c0.buc|org.eventb.core.contextFile#c0|org.eventb.core.axiom#_bSoIIv3DEeaVcaelLDr9sQ"/>
+<org.eventb.core.poIdentifier name="WCET" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="deadline" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="period" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poPredicate name="deadlinf" org.eventb.core.predicate="WCET&gt;0" org.eventb.core.source="/JobModel/c1.buc|org.eventb.core.contextFile#c1|org.eventb.core.axiom#_2M1kc_3GEeaVcaelLDr9sQ"/>
+<org.eventb.core.poPredicate name="deadling" org.eventb.core.predicate="deadline&gt;0" org.eventb.core.source="/JobModel/c1.buc|org.eventb.core.contextFile#c1|org.eventb.core.axiom#_2M1kdP3GEeaVcaelLDr9sQ"/>
+<org.eventb.core.poPredicate name="deadlinh" org.eventb.core.predicate="period&gt;0" org.eventb.core.source="/JobModel/c1.buc|org.eventb.core.contextFile#c1|org.eventb.core.axiom#_2M1kdf3GEeaVcaelLDr9sQ"/>
+<org.eventb.core.poPredicate name="deadlini" org.eventb.core.predicate="deadline&gt;WCET" org.eventb.core.source="/JobModel/c1.buc|org.eventb.core.contextFile#c1|org.eventb.core.axiom#_2M1kdv3GEeaVcaelLDr9sQ"/>
+<org.eventb.core.poPredicate name="deadlinj" org.eventb.core.predicate="period&gt;deadline" org.eventb.core.source="/JobModel/c1.buc|org.eventb.core.contextFile#c1|org.eventb.core.axiom#_Dm31wP3JEeaVcaelLDr9sQ"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.parentSet="/JobModel/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="18">
+<org.eventb.core.poIdentifier name="clk" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="eEnd" org.eventb.core.type="ℙ(TASKS×ℤ)"/>
+<org.eventb.core.poIdentifier name="eStart" org.eventb.core.type="ℙ(TASKS×ℤ)"/>
+<org.eventb.core.poIdentifier name="pStart" org.eventb.core.type="ℙ(TASKS×ℤ)"/>
+<org.eventb.core.poIdentifier name="run" org.eventb.core.type="ℙ(TASKS)"/>
+<org.eventb.core.poIdentifier name="sleep" org.eventb.core.type="ℙ(TASKS)"/>
+<org.eventb.core.poIdentifier name="wait" org.eventb.core.type="ℙ(TASKS)"/>
+<org.eventb.core.poPredicate name="pStaru" org.eventb.core.predicate="sleep⊆TASKS" org.eventb.core.source="/JobModel/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.invariant#_AtoCo_3HEeaVcaelLDr9sQ"/>
+<org.eventb.core.poPredicate name="pStarv" org.eventb.core.predicate="wait⊆TASKS" org.eventb.core.source="/JobModel/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.invariant#_AtoCpP3HEeaVcaelLDr9sQ"/>
+<org.eventb.core.poPredicate name="pStarw" org.eventb.core.predicate="run⊆TASKS" org.eventb.core.source="/JobModel/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.invariant#_AtoCpf3HEeaVcaelLDr9sQ"/>
+<org.eventb.core.poPredicate name="pStarx" org.eventb.core.predicate="finite(run)" org.eventb.core.source="/JobModel/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.invariant#_JWKlwP3HEeaVcaelLDr9sQ"/>
+<org.eventb.core.poPredicate name="pStary" org.eventb.core.predicate="card(run)≤1" org.eventb.core.source="/JobModel/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.invariant#_JWKlwf3HEeaVcaelLDr9sQ"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="inv4/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Invariant" org.eventb.core.poStamp="18">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/JobModel/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#HYPc9"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀p⦂TASKS·p∈wait⇒p∈dom(pStart)∧pStart∈TASKS ⇸ ℤ" org.eventb.core.source="/JobModel/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.invariant#_9W39sf3QEeaVwMRj6MEPJA"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/JobModel/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.invariant#_9W39sf3QEeaVwMRj6MEPJA"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/JobModel/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/JobModel/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#HYPc9"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="inv5/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Invariant" org.eventb.core.poStamp="18">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/JobModel/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#HYPc:"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀p⦂TASKS·p∈dom(eStart)∧eStart∈TASKS ⇸ ℤ∧p∈dom(pStart)∧pStart∈TASKS ⇸ ℤ" org.eventb.core.source="/JobModel/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.invariant#_mZmTMf3cEeaVwMRj6MEPJA"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/JobModel/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.invariant#_mZmTMf3cEeaVwMRj6MEPJA"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/JobModel/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/JobModel/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#HYPc:"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="inv7/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Invariant" org.eventb.core.poStamp="18">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/JobModel/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#HYPc;"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀p⦂TASKS·p∈dom(eEnd)∧eEnd∈TASKS ⇸ ℤ∧p∈dom(pStart)∧pStart∈TASKS ⇸ ℤ" org.eventb.core.source="/JobModel/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.invariant#_a2IakP3dEeaVwMRj6MEPJA"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/JobModel/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.invariant#_a2IakP3dEeaVwMRj6MEPJA"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/JobModel/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/JobModel/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#HYPc;"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="inv8/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Invariant" org.eventb.core.poStamp="18">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/JobModel/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#HYPc="/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀p⦂TASKS·p∈dom(eEnd)∧eEnd∈TASKS ⇸ ℤ∧p∈dom(eStart)∧eStart∈TASKS ⇸ ℤ" org.eventb.core.source="/JobModel/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.invariant#_wQVSUP3dEeaVwMRj6MEPJA"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/JobModel/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.invariant#_wQVSUP3dEeaVwMRj6MEPJA"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/JobModel/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/JobModel/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#HYPc="/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="INITIALISATION/inv1/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="18">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/JobModel/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#EVTALLHYPpStaru"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="0∈ℕ" org.eventb.core.source="/JobModel/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.invariant#_ty0s4P3DEeaVcaelLDr9sW"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/JobModel/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#'"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/JobModel/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#_ty0s4P3DEeaVcaelLDr9sR"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/JobModel/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.invariant#_ty0s4P3DEeaVcaelLDr9sW"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/JobModel/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/JobModel/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poSequent#INITIALISATION\/inv1\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/JobModel/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#HYPc9|org.eventb.core.poPredicate#PRD0"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="INITIALISATION/inv2/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="18">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/JobModel/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#EVTALLHYPpStaru"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="TASKS × {0}∈TASKS → 0 ‥ 0" org.eventb.core.source="/JobModel/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.invariant#_ty0s4P3DEeaVcaelLDr9sY"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/JobModel/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#'"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/JobModel/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#_ty0s4P3DEeaVcaelLDr9sR"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/JobModel/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.invariant#_ty0s4P3DEeaVcaelLDr9sY"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/JobModel/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/JobModel/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poSequent#INITIALISATION\/inv2\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/JobModel/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#HYPc9|org.eventb.core.poPredicate#PRD1"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="INITIALISATION/inv3/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="18">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/JobModel/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#EVTALLHYPpStaru"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="TASKS × {0}∈TASKS → 0 ‥ 0" org.eventb.core.source="/JobModel/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.invariant#_ty0s4P3DEeaVcaelLDr9s["/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/JobModel/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#'"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/JobModel/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#_ty0s4P3DEeaVcaelLDr9sR"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/JobModel/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.invariant#_ty0s4P3DEeaVcaelLDr9s["/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/JobModel/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/JobModel/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poSequent#INITIALISATION\/inv3\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/JobModel/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#HYPc9|org.eventb.core.poPredicate#PRD2"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="INITIALISATION/inv6/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="18">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/JobModel/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#EVTALLHYPpStaru"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="TASKS × {0}∈TASKS → 0 ‥ 0" org.eventb.core.source="/JobModel/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.invariant#_9W39sP3QEeaVwMRj6MEPJA"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/JobModel/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#'"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/JobModel/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#_ty0s4P3DEeaVcaelLDr9sR"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/JobModel/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.invariant#_9W39sP3QEeaVwMRj6MEPJA"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/JobModel/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/JobModel/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poSequent#INITIALISATION\/inv6\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/JobModel/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#HYPc9|org.eventb.core.poPredicate#PRD3"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="INITIALISATION/inv4/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="18">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/JobModel/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#EVTALLHYPpStaru"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀p⦂TASKS·p∈(∅ ⦂ ℙ(TASKS))⇒0 − (TASKS × {0})(p)≤deadline − WCET" org.eventb.core.source="/JobModel/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.invariant#_9W39sf3QEeaVwMRj6MEPJA"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/JobModel/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#'"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/JobModel/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#_ty0s4P3DEeaVcaelLDr9sR"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/JobModel/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.invariant#_9W39sf3QEeaVwMRj6MEPJA"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/JobModel/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/JobModel/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poSequent#INITIALISATION\/inv4\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/JobModel/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#HYPc:|org.eventb.core.poPredicate#PRD4"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="INITIALISATION/inv5/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="18">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/JobModel/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#EVTALLHYPpStaru"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀p⦂TASKS·(TASKS × {0})(p)&gt;(TASKS × {0})(p)⇒(TASKS × {0})(p) − (TASKS × {0})(p)≤deadline − WCET" org.eventb.core.source="/JobModel/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.invariant#_mZmTMf3cEeaVwMRj6MEPJA"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/JobModel/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#'"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/JobModel/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#_ty0s4P3DEeaVcaelLDr9sR"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/JobModel/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.invariant#_mZmTMf3cEeaVwMRj6MEPJA"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/JobModel/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/JobModel/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poSequent#INITIALISATION\/inv5\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/JobModel/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#HYPc;|org.eventb.core.poPredicate#PRD5"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="INITIALISATION/inv7/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="18">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/JobModel/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#EVTALLHYPpStaru"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀p⦂TASKS·(TASKS × {0})(p)&gt;(TASKS × {0})(p)⇒(TASKS × {0})(p) − (TASKS × {0})(p)≤deadline" org.eventb.core.source="/JobModel/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.invariant#_a2IakP3dEeaVwMRj6MEPJA"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/JobModel/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#'"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/JobModel/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#_ty0s4P3DEeaVcaelLDr9sR"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/JobModel/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.invariant#_a2IakP3dEeaVwMRj6MEPJA"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/JobModel/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/JobModel/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poSequent#INITIALISATION\/inv7\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/JobModel/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#HYPc=|org.eventb.core.poPredicate#PRD6"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="INITIALISATION/inv8/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="18">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/JobModel/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#EVTALLHYPpStaru"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀p⦂TASKS·(TASKS × {0})(p)&gt;(TASKS × {0})(p)⇒(TASKS × {0})(p) − (TASKS × {0})(p)=WCET" org.eventb.core.source="/JobModel/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.invariant#_wQVSUP3dEeaVwMRj6MEPJA"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/JobModel/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#'"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/JobModel/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#_ty0s4P3DEeaVcaelLDr9sR"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/JobModel/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.invariant#_wQVSUP3dEeaVwMRj6MEPJA"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/JobModel/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/JobModel/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poSequent#INITIALISATION\/inv8\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/JobModel/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD7"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTpStaru" org.eventb.core.parentSet="/JobModel/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="18">
+<org.eventb.core.poIdentifier name="clk'" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="pStart'" org.eventb.core.type="ℙ(TASKS×ℤ)"/>
+<org.eventb.core.poIdentifier name="wait'" org.eventb.core.type="ℙ(TASKS)"/>
+<org.eventb.core.poIdentifier name="eStart'" org.eventb.core.type="ℙ(TASKS×ℤ)"/>
+<org.eventb.core.poIdentifier name="run'" org.eventb.core.type="ℙ(TASKS)"/>
+<org.eventb.core.poIdentifier name="eEnd'" org.eventb.core.type="ℙ(TASKS×ℤ)"/>
+<org.eventb.core.poIdentifier name="sleep'" org.eventb.core.type="ℙ(TASKS)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPpStaru" org.eventb.core.parentSet="/JobModel/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#EVTIDENTpStaru" org.eventb.core.poStamp="18"/>
+<org.eventb.core.poSequent name="wake_up/grd2/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="18">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/JobModel/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#EVTHYPpStarv'"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="pro∈dom(pStart)∧pStart∈TASKS ⇸ ℤ" org.eventb.core.source="/JobModel/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#_ty0s4P3DEeaVcaelLDr9sS|org.eventb.core.guard#("/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/JobModel/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#_ty0s4P3DEeaVcaelLDr9sS|org.eventb.core.guard#("/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/JobModel/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/JobModel/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#EVTHYPpStarv'"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="wake_up/inv2/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="18">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/JobModel/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#EVTALLHYPpStarv"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="pStart{pro ↦ clk}∈TASKS → 0 ‥ clk" org.eventb.core.source="/JobModel/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.invariant#_ty0s4P3DEeaVcaelLDr9sY"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/JobModel/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#_-xQAEP3HEeaVcaelLDr9sQ"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/JobModel/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#_ty0s4P3DEeaVcaelLDr9sS"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/JobModel/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.invariant#_ty0s4P3DEeaVcaelLDr9sY"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/JobModel/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/JobModel/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poSequent#wake_up\/inv2\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/JobModel/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#HYPc9|org.eventb.core.poPredicate#PRD1"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="wake_up/inv4/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="18">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/JobModel/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#EVTALLHYPpStarv"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀p⦂TASKS·p∈wait∪{pro}⇒clk − (pStart{pro ↦ clk})(p)≤deadline − WCET" org.eventb.core.source="/JobModel/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.invariant#_9W39sf3QEeaVwMRj6MEPJA"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/JobModel/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#_-xQAEP3HEeaVcaelLDr9sQ"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/JobModel/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#_ty0s4P3DEeaVcaelLDr9sS"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/JobModel/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.invariant#_9W39sf3QEeaVwMRj6MEPJA"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/JobModel/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/JobModel/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poSequent#wake_up\/inv4\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/JobModel/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#HYPc:|org.eventb.core.poPredicate#PRD4"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="wake_up/inv5/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="18">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/JobModel/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#EVTALLHYPpStarv"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀p⦂TASKS·eStart(p)&gt;(pStart{pro ↦ clk})(p)⇒eStart(p) − (pStart{pro ↦ clk})(p)≤deadline − WCET" org.eventb.core.source="/JobModel/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.invariant#_mZmTMf3cEeaVwMRj6MEPJA"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/JobModel/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#_-xQAEP3HEeaVcaelLDr9sQ"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/JobModel/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#_ty0s4P3DEeaVcaelLDr9sS"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/JobModel/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.invariant#_mZmTMf3cEeaVwMRj6MEPJA"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/JobModel/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/JobModel/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poSequent#wake_up\/inv5\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/JobModel/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#HYPc;|org.eventb.core.poPredicate#PRD5"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="wake_up/inv7/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="18">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/JobModel/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#EVTALLHYPpStarv"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀p⦂TASKS·eEnd(p)&gt;(pStart{pro ↦ clk})(p)⇒eEnd(p) − (pStart{pro ↦ clk})(p)≤deadline" org.eventb.core.source="/JobModel/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.invariant#_a2IakP3dEeaVwMRj6MEPJA"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/JobModel/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#_-xQAEP3HEeaVcaelLDr9sQ"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/JobModel/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#_ty0s4P3DEeaVcaelLDr9sS"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/JobModel/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.invariant#_a2IakP3dEeaVwMRj6MEPJA"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/JobModel/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/JobModel/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poSequent#wake_up\/inv7\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/JobModel/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#HYPc=|org.eventb.core.poPredicate#PRD6"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTpStarv" org.eventb.core.parentSet="/JobModel/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="18">
+<org.eventb.core.poIdentifier name="pStart'" org.eventb.core.type="ℙ(TASKS×ℤ)"/>
+<org.eventb.core.poIdentifier name="wait'" org.eventb.core.type="ℙ(TASKS)"/>
+<org.eventb.core.poIdentifier name="pro" org.eventb.core.type="TASKS"/>
+<org.eventb.core.poIdentifier name="sleep'" org.eventb.core.type="ℙ(TASKS)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTHYPpStarv'" org.eventb.core.parentSet="/JobModel/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#EVTIDENTpStarv" org.eventb.core.poStamp="18">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="pro∈sleep" org.eventb.core.source="/JobModel/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#_-xQAEP3HEeaVcaelLDr9sQ|org.eventb.core.guard#_-xQnIP3HEeaVcaelLDr9sQ"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPpStarv" org.eventb.core.parentSet="/JobModel/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#EVTHYPpStarv'" org.eventb.core.poStamp="18">
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="pStart(pro)+period=clk" org.eventb.core.source="/JobModel/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#_ty0s4P3DEeaVcaelLDr9sS|org.eventb.core.guard#("/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="wait_to_run/inv3/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="18">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/JobModel/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#EVTALLHYPpStarw"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="eStart{pro ↦ clk}∈TASKS → 0 ‥ clk" org.eventb.core.source="/JobModel/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.invariant#_ty0s4P3DEeaVcaelLDr9s["/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/JobModel/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#_2eDlYP3IEeaVcaelLDr9sQ"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/JobModel/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#_ty0s4P3DEeaVcaelLDr9sT"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/JobModel/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.invariant#_ty0s4P3DEeaVcaelLDr9s["/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/JobModel/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/JobModel/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poSequent#wait_to_run\/inv3\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/JobModel/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#HYPc9|org.eventb.core.poPredicate#PRD2"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="wait_to_run/inv4/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="18">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/JobModel/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#EVTALLHYPpStarw"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀p⦂TASKS·p∈wait ∖ {pro}⇒clk − pStart(p)≤deadline − WCET" org.eventb.core.source="/JobModel/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.invariant#_9W39sf3QEeaVwMRj6MEPJA"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/JobModel/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#_2eDlYP3IEeaVcaelLDr9sQ"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/JobModel/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#_ty0s4P3DEeaVcaelLDr9sT"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/JobModel/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.invariant#_9W39sf3QEeaVwMRj6MEPJA"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/JobModel/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/JobModel/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poSequent#wait_to_run\/inv4\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/JobModel/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#HYPc:|org.eventb.core.poPredicate#PRD4"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="wait_to_run/inv5/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="18">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/JobModel/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#EVTALLHYPpStarw"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀p⦂TASKS·(eStart{pro ↦ clk})(p)&gt;pStart(p)⇒(eStart{pro ↦ clk})(p) − pStart(p)≤deadline − WCET" org.eventb.core.source="/JobModel/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.invariant#_mZmTMf3cEeaVwMRj6MEPJA"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/JobModel/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#_2eDlYP3IEeaVcaelLDr9sQ"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/JobModel/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#_ty0s4P3DEeaVcaelLDr9sT"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/JobModel/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.invariant#_mZmTMf3cEeaVwMRj6MEPJA"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/JobModel/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/JobModel/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poSequent#wait_to_run\/inv5\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/JobModel/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#HYPc;|org.eventb.core.poPredicate#PRD5"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="wait_to_run/inv8/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="18">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/JobModel/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#EVTALLHYPpStarw"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀p⦂TASKS·eEnd(p)&gt;(eStart{pro ↦ clk})(p)⇒eEnd(p) − (eStart{pro ↦ clk})(p)=WCET" org.eventb.core.source="/JobModel/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.invariant#_wQVSUP3dEeaVwMRj6MEPJA"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/JobModel/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#_2eDlYP3IEeaVcaelLDr9sQ"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/JobModel/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#_ty0s4P3DEeaVcaelLDr9sT"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/JobModel/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.invariant#_wQVSUP3dEeaVwMRj6MEPJA"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/JobModel/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/JobModel/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poSequent#wait_to_run\/inv8\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/JobModel/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD7"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTpStarw" org.eventb.core.parentSet="/JobModel/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="18">
+<org.eventb.core.poIdentifier name="wait'" org.eventb.core.type="ℙ(TASKS)"/>
+<org.eventb.core.poIdentifier name="pro" org.eventb.core.type="TASKS"/>
+<org.eventb.core.poIdentifier name="eStart'" org.eventb.core.type="ℙ(TASKS×ℤ)"/>
+<org.eventb.core.poIdentifier name="run'" org.eventb.core.type="ℙ(TASKS)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPpStarw" org.eventb.core.parentSet="/JobModel/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#EVTIDENTpStarw" org.eventb.core.poStamp="18">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="pro∈wait" org.eventb.core.source="/JobModel/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#_2eDlYP3IEeaVcaelLDr9sQ|org.eventb.core.guard#_2eDlYv3IEeaVcaelLDr9sQ"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="run=(∅ ⦂ ℙ(TASKS))" org.eventb.core.source="/JobModel/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#_2eDlYP3IEeaVcaelLDr9sQ|org.eventb.core.guard#_2eDlZ_3IEeaVcaelLDr9sQ"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="goto_sleep/grd2/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="18">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/JobModel/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#EVTHYPpStarx'"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="pro∈dom(eStart)∧eStart∈TASKS ⇸ ℤ" org.eventb.core.source="/JobModel/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#_ty0s4P3DEeaVcaelLDr9sU|org.eventb.core.guard#("/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/JobModel/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#_ty0s4P3DEeaVcaelLDr9sU|org.eventb.core.guard#("/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/JobModel/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/JobModel/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#EVTHYPpStarx'"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="goto_sleep/inv6/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="18">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/JobModel/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#EVTALLHYPpStarx"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="eEnd{pro ↦ clk}∈TASKS → 0 ‥ clk" org.eventb.core.source="/JobModel/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.invariant#_9W39sP3QEeaVwMRj6MEPJA"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/JobModel/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#_2eDlZf3IEeaVcaelLDr9sQ"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/JobModel/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#_ty0s4P3DEeaVcaelLDr9sU"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/JobModel/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.invariant#_9W39sP3QEeaVwMRj6MEPJA"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/JobModel/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/JobModel/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poSequent#goto_sleep\/inv6\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/JobModel/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#HYPc9|org.eventb.core.poPredicate#PRD3"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="goto_sleep/inv7/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="18">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/JobModel/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#EVTALLHYPpStarx"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀p⦂TASKS·(eEnd{pro ↦ clk})(p)&gt;pStart(p)⇒(eEnd{pro ↦ clk})(p) − pStart(p)≤deadline" org.eventb.core.source="/JobModel/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.invariant#_a2IakP3dEeaVwMRj6MEPJA"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/JobModel/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#_2eDlZf3IEeaVcaelLDr9sQ"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/JobModel/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#_ty0s4P3DEeaVcaelLDr9sU"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/JobModel/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.invariant#_a2IakP3dEeaVwMRj6MEPJA"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/JobModel/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/JobModel/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poSequent#goto_sleep\/inv7\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/JobModel/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#HYPc=|org.eventb.core.poPredicate#PRD6"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="goto_sleep/inv8/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="18">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/JobModel/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#EVTALLHYPpStarx"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀p⦂TASKS·(eEnd{pro ↦ clk})(p)&gt;eStart(p)⇒(eEnd{pro ↦ clk})(p) − eStart(p)=WCET" org.eventb.core.source="/JobModel/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.invariant#_wQVSUP3dEeaVwMRj6MEPJA"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/JobModel/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#_2eDlZf3IEeaVcaelLDr9sQ"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/JobModel/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#_ty0s4P3DEeaVcaelLDr9sU"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/JobModel/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.invariant#_wQVSUP3dEeaVwMRj6MEPJA"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/JobModel/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/JobModel/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poSequent#goto_sleep\/inv8\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/JobModel/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD7"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTpStarx" org.eventb.core.parentSet="/JobModel/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="18">
+<org.eventb.core.poIdentifier name="pro" org.eventb.core.type="TASKS"/>
+<org.eventb.core.poIdentifier name="run'" org.eventb.core.type="ℙ(TASKS)"/>
+<org.eventb.core.poIdentifier name="eEnd'" org.eventb.core.type="ℙ(TASKS×ℤ)"/>
+<org.eventb.core.poIdentifier name="sleep'" org.eventb.core.type="ℙ(TASKS)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTHYPpStarx'" org.eventb.core.parentSet="/JobModel/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#EVTIDENTpStarx" org.eventb.core.poStamp="18">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="pro∈run" org.eventb.core.source="/JobModel/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#_2eDlZf3IEeaVcaelLDr9sQ|org.eventb.core.guard#_5HFdIP3IEeaVcaelLDr9sQ"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPpStarx" org.eventb.core.parentSet="/JobModel/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#EVTHYPpStarx'" org.eventb.core.poStamp="18">
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="eStart(pro)+WCET=clk" org.eventb.core.source="/JobModel/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#_ty0s4P3DEeaVcaelLDr9sU|org.eventb.core.guard#("/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="tick/grd1/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="18">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/JobModel/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#EVTIDENTpStary"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀p⦂TASKS·p∈wait⇒p∈dom(pStart)∧pStart∈TASKS ⇸ ℤ" org.eventb.core.source="/JobModel/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#_ty0s4P3DEeaVcaelLDr9s\\|org.eventb.core.guard#_6CC6cP3REeaVwMRj6MEPJA"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/JobModel/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#_ty0s4P3DEeaVcaelLDr9s\\|org.eventb.core.guard#_6CC6cP3REeaVwMRj6MEPJA"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/JobModel/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/JobModel/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#EVTIDENTpStary"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="tick/grd2/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="18">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/JobModel/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#EVTHYPpStary'"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀p⦂TASKS·p∈sleep⇒p∈dom(pStart)∧pStart∈TASKS ⇸ ℤ" org.eventb.core.source="/JobModel/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#_ty0s4P3DEeaVcaelLDr9s\\|org.eventb.core.guard#_mZlsIf3cEeaVwMRj6MEPJA"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/JobModel/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#_ty0s4P3DEeaVcaelLDr9s\\|org.eventb.core.guard#_mZlsIf3cEeaVwMRj6MEPJA"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/JobModel/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/JobModel/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#EVTHYPpStary'"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="tick/grd3/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="18">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/JobModel/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#EVTHYPpStary("/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀p⦂TASKS·p∈run⇒p∈dom(eStart)∧eStart∈TASKS ⇸ ℤ" org.eventb.core.source="/JobModel/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#_ty0s4P3DEeaVcaelLDr9s\\|org.eventb.core.guard#_6y7j0P3cEeaVwMRj6MEPJA"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/JobModel/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#_ty0s4P3DEeaVcaelLDr9s\\|org.eventb.core.guard#_6y7j0P3cEeaVwMRj6MEPJA"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/JobModel/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/JobModel/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#EVTHYPpStary("/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="tick/inv1/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="18">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/JobModel/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#EVTALLHYPpStary"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="clk+1∈ℕ" org.eventb.core.source="/JobModel/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.invariant#_ty0s4P3DEeaVcaelLDr9sW"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/JobModel/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#_ty0s4P3DEeaVcaelLDr9s\\"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/JobModel/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.invariant#_ty0s4P3DEeaVcaelLDr9sW"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/JobModel/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/JobModel/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poSequent#tick\/inv1\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/JobModel/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#HYPc9|org.eventb.core.poPredicate#PRD0"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="tick/inv2/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="18">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/JobModel/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#EVTALLHYPpStary"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="pStart∈TASKS → 0 ‥ clk+1" org.eventb.core.source="/JobModel/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.invariant#_ty0s4P3DEeaVcaelLDr9sY"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/JobModel/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#_ty0s4P3DEeaVcaelLDr9s\\"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/JobModel/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.invariant#_ty0s4P3DEeaVcaelLDr9sY"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/JobModel/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/JobModel/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poSequent#tick\/inv2\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/JobModel/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#HYPc9|org.eventb.core.poPredicate#PRD1"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="tick/inv3/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="18">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/JobModel/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#EVTALLHYPpStary"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="eStart∈TASKS → 0 ‥ clk+1" org.eventb.core.source="/JobModel/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.invariant#_ty0s4P3DEeaVcaelLDr9s["/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/JobModel/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#_ty0s4P3DEeaVcaelLDr9s\\"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/JobModel/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.invariant#_ty0s4P3DEeaVcaelLDr9s["/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/JobModel/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/JobModel/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poSequent#tick\/inv3\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/JobModel/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#HYPc9|org.eventb.core.poPredicate#PRD2"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="tick/inv6/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="18">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/JobModel/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#EVTALLHYPpStary"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="eEnd∈TASKS → 0 ‥ clk+1" org.eventb.core.source="/JobModel/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.invariant#_9W39sP3QEeaVwMRj6MEPJA"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/JobModel/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#_ty0s4P3DEeaVcaelLDr9s\\"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/JobModel/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.invariant#_9W39sP3QEeaVwMRj6MEPJA"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/JobModel/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/JobModel/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poSequent#tick\/inv6\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/JobModel/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#HYPc9|org.eventb.core.poPredicate#PRD3"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="tick/inv4/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="18">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/JobModel/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#EVTALLHYPpStary"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀p⦂TASKS·p∈wait⇒clk+1 − pStart(p)≤deadline − WCET" org.eventb.core.source="/JobModel/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.invariant#_9W39sf3QEeaVwMRj6MEPJA"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/JobModel/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#_ty0s4P3DEeaVcaelLDr9s\\"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/JobModel/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.invariant#_9W39sf3QEeaVwMRj6MEPJA"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/JobModel/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/JobModel/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poSequent#tick\/inv4\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/JobModel/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#HYPc:|org.eventb.core.poPredicate#PRD4"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTpStary" org.eventb.core.parentSet="/JobModel/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="18">
+<org.eventb.core.poIdentifier name="clk'" org.eventb.core.type="ℤ"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTHYPpStary'" org.eventb.core.parentSet="/JobModel/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#EVTIDENTpStary" org.eventb.core.poStamp="18">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="∀p⦂TASKS·p∈wait⇒clk+1 − pStart(p)≤deadline − WCET" org.eventb.core.source="/JobModel/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#_ty0s4P3DEeaVcaelLDr9s\\|org.eventb.core.guard#_6CC6cP3REeaVwMRj6MEPJA"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTHYPpStary(" org.eventb.core.parentSet="/JobModel/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#EVTHYPpStary'" org.eventb.core.poStamp="18">
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="∀p⦂TASKS·p∈sleep⇒pStart(p)+period≠clk" org.eventb.core.source="/JobModel/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#_ty0s4P3DEeaVcaelLDr9s\\|org.eventb.core.guard#_mZlsIf3cEeaVwMRj6MEPJA"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPpStary" org.eventb.core.parentSet="/JobModel/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#EVTHYPpStary(" org.eventb.core.poStamp="18">
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="∀p⦂TASKS·p∈run⇒eStart(p)+WCET≠clk" org.eventb.core.source="/JobModel/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#_ty0s4P3DEeaVcaelLDr9s\\|org.eventb.core.guard#_6y7j0P3cEeaVwMRj6MEPJA"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="HYPc9" org.eventb.core.parentSet="/JobModel/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="18">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="clk∈ℕ" org.eventb.core.source="/JobModel/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.invariant#_ty0s4P3DEeaVcaelLDr9sW"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="pStart∈TASKS → 0 ‥ clk" org.eventb.core.source="/JobModel/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.invariant#_ty0s4P3DEeaVcaelLDr9sY"/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="eStart∈TASKS → 0 ‥ clk" org.eventb.core.source="/JobModel/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.invariant#_ty0s4P3DEeaVcaelLDr9s["/>
+<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="eEnd∈TASKS → 0 ‥ clk" org.eventb.core.source="/JobModel/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.invariant#_9W39sP3QEeaVwMRj6MEPJA"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="HYPc:" org.eventb.core.parentSet="/JobModel/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#HYPc9" org.eventb.core.poStamp="18">
+<org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="∀p⦂TASKS·p∈wait⇒clk − pStart(p)≤deadline − WCET" org.eventb.core.source="/JobModel/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.invariant#_9W39sf3QEeaVwMRj6MEPJA"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="HYPc;" org.eventb.core.parentSet="/JobModel/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#HYPc:" org.eventb.core.poStamp="18">
+<org.eventb.core.poPredicate name="PRD5" org.eventb.core.predicate="∀p⦂TASKS·eStart(p)&gt;pStart(p)⇒eStart(p) − pStart(p)≤deadline − WCET" org.eventb.core.source="/JobModel/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.invariant#_mZmTMf3cEeaVwMRj6MEPJA"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="HYPc=" org.eventb.core.parentSet="/JobModel/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#HYPc;" org.eventb.core.poStamp="18">
+<org.eventb.core.poPredicate name="PRD6" org.eventb.core.predicate="∀p⦂TASKS·eEnd(p)&gt;pStart(p)⇒eEnd(p) − pStart(p)≤deadline" org.eventb.core.source="/JobModel/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.invariant#_a2IakP3dEeaVwMRj6MEPJA"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/JobModel/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#HYPc=" org.eventb.core.poStamp="18">
+<org.eventb.core.poPredicate name="PRD7" org.eventb.core.predicate="∀p⦂TASKS·eEnd(p)&gt;eStart(p)⇒eEnd(p) − eStart(p)=WCET" org.eventb.core.source="/JobModel/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.invariant#_wQVSUP3dEeaVwMRj6MEPJA"/>
+</org.eventb.core.poPredicateSet>
+</org.eventb.core.poFile>

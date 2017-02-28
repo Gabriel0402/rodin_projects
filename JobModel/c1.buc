@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.contextFile org.eventb.core.configuration="org.eventb.core.fwd;de.prob.symbolic.ctxBase;de.prob.units.mchBase" org.eventb.texttools.text_lastmodified="1488298665367" org.eventb.texttools.text_representation="context c1 extends c0&#10;&#10;constants WCET deadline period&#10;&#10;axioms&#10;  @axm1 WCET &gt; 0&#10;  @axm2 deadline &gt; 0&#10;  @axm3 period &gt; 0&#10;  @axm4 deadline&gt;WCET&#10;  @axm5 period&gt;deadline&#10;end&#10;" version="3">
+<org.eventb.core.extendsContext name="'" org.eventb.core.target="c0"/>
+<org.eventb.core.constant name="_2M1kcP3GEeaVcaelLDr9sQ" org.eventb.core.identifier="WCET"/>
+<org.eventb.core.constant name="_2M1kcf3GEeaVcaelLDr9sQ" org.eventb.core.identifier="deadline"/>
+<org.eventb.core.constant name="_2M1kcv3GEeaVcaelLDr9sQ" org.eventb.core.identifier="period"/>
+<org.eventb.core.axiom name="_2M1kc_3GEeaVcaelLDr9sQ" org.eventb.core.label="axm1" org.eventb.core.predicate="WCET &gt; 0"/>
+<org.eventb.core.axiom name="_2M1kdP3GEeaVcaelLDr9sQ" org.eventb.core.label="axm2" org.eventb.core.predicate="deadline &gt; 0"/>
+<org.eventb.core.axiom name="_2M1kdf3GEeaVcaelLDr9sQ" org.eventb.core.label="axm3" org.eventb.core.predicate="period &gt; 0"/>
+<org.eventb.core.axiom name="_2M1kdv3GEeaVcaelLDr9sQ" org.eventb.core.label="axm4" org.eventb.core.predicate="deadline&gt;WCET"/>
+<org.eventb.core.axiom name="_Dm31wP3JEeaVcaelLDr9sQ" org.eventb.core.label="axm5" org.eventb.core.predicate="period&gt;deadline"/>
+</org.eventb.core.contextFile>

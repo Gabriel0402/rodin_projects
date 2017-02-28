@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.scContextFile org.eventb.core.accurate="true" org.eventb.core.configuration="org.eventb.core.fwd;de.prob.symbolic.ctxBase;de.prob.units.mchBase">
+<org.eventb.core.scExtendsContext name="'" org.eventb.core.scTarget="/JobModel/c0.bcc|org.eventb.core.scContextFile#c0" org.eventb.core.source="/JobModel/c1.buc|org.eventb.core.contextFile#c1|org.eventb.core.extendsContext#'"/>
+<org.eventb.core.scInternalContext name="c0">
+<org.eventb.core.scAxiom name="'" org.eventb.core.label="axm1" org.eventb.core.predicate="finite(TASKS)" org.eventb.core.source="/JobModel/c0.buc|org.eventb.core.contextFile#c0|org.eventb.core.axiom#_bSoIIP3DEeaVcaelLDr9sQ" org.eventb.core.theorem="false"/>
+<org.eventb.core.scAxiom name="(" org.eventb.core.label="axm2" org.eventb.core.predicate="card(TASKS)=N" org.eventb.core.source="/JobModel/c0.buc|org.eventb.core.contextFile#c0|org.eventb.core.axiom#_bSoIIf3DEeaVcaelLDr9sQ" org.eventb.core.theorem="false"/>
+<org.eventb.core.scAxiom name=")" org.eventb.core.label="axm3" org.eventb.core.predicate="N&gt;0" org.eventb.core.source="/JobModel/c0.buc|org.eventb.core.contextFile#c0|org.eventb.core.axiom#_bSoIIv3DEeaVcaelLDr9sQ" org.eventb.core.theorem="false"/>
+<org.eventb.core.scConstant name="N" org.eventb.core.source="/JobModel/c0.buc|org.eventb.core.contextFile#c0|org.eventb.core.constant#_bSnhEf3DEeaVcaelLDr9sQ" org.eventb.core.type="ℤ"/>
+<org.eventb.core.scCarrierSet name="TASKS" org.eventb.core.source="/JobModel/c0.buc|org.eventb.core.contextFile#c0|org.eventb.core.carrierSet#_bSnhEP3DEeaVcaelLDr9sQ" org.eventb.core.type="ℙ(TASKS)"/>
+</org.eventb.core.scInternalContext>
+<org.eventb.core.scAxiom name="c1" org.eventb.core.label="axm1" org.eventb.core.predicate="WCET&gt;0" org.eventb.core.source="/JobModel/c1.buc|org.eventb.core.contextFile#c1|org.eventb.core.axiom#_2M1kc_3GEeaVcaelLDr9sQ" org.eventb.core.theorem="false"/>
+<org.eventb.core.scAxiom name="c2" org.eventb.core.label="axm2" org.eventb.core.predicate="deadline&gt;0" org.eventb.core.source="/JobModel/c1.buc|org.eventb.core.contextFile#c1|org.eventb.core.axiom#_2M1kdP3GEeaVcaelLDr9sQ" org.eventb.core.theorem="false"/>
+<org.eventb.core.scAxiom name="c3" org.eventb.core.label="axm3" org.eventb.core.predicate="period&gt;0" org.eventb.core.source="/JobModel/c1.buc|org.eventb.core.contextFile#c1|org.eventb.core.axiom#_2M1kdf3GEeaVcaelLDr9sQ" org.eventb.core.theorem="false"/>
+<org.eventb.core.scAxiom name="c4" org.eventb.core.label="axm4" org.eventb.core.predicate="deadline&gt;WCET" org.eventb.core.source="/JobModel/c1.buc|org.eventb.core.contextFile#c1|org.eventb.core.axiom#_2M1kdv3GEeaVcaelLDr9sQ" org.eventb.core.theorem="false"/>
+<org.eventb.core.scAxiom name="c5" org.eventb.core.label="axm5" org.eventb.core.predicate="period&gt;deadline" org.eventb.core.source="/JobModel/c1.buc|org.eventb.core.contextFile#c1|org.eventb.core.axiom#_Dm31wP3JEeaVcaelLDr9sQ" org.eventb.core.theorem="false"/>
+<org.eventb.core.scConstant name="WCET" org.eventb.core.source="/JobModel/c1.buc|org.eventb.core.contextFile#c1|org.eventb.core.constant#_2M1kcP3GEeaVcaelLDr9sQ" org.eventb.core.type="ℤ"/>
+<org.eventb.core.scConstant name="deadline" org.eventb.core.source="/JobModel/c1.buc|org.eventb.core.contextFile#c1|org.eventb.core.constant#_2M1kcf3GEeaVcaelLDr9sQ" org.eventb.core.type="ℤ"/>
+<org.eventb.core.scConstant name="period" org.eventb.core.source="/JobModel/c1.buc|org.eventb.core.contextFile#c1|org.eventb.core.constant#_2M1kcv3GEeaVcaelLDr9sQ" org.eventb.core.type="ℤ"/>
+</org.eventb.core.scContextFile>

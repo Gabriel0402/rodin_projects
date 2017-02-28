@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.poFile org.eventb.core.poStamp="7">
+<org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.poStamp="7">
+<org.eventb.core.poIdentifier name="TASKS" org.eventb.core.type="ℙ(TASKS)"/>
+<org.eventb.core.poIdentifier name="N" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poPredicate name="TASKT" org.eventb.core.predicate="finite(TASKS)" org.eventb.core.source="/JobModel/c0.buc|org.eventb.core.contextFile#c0|org.eventb.core.axiom#_bSoIIP3DEeaVcaelLDr9sQ"/>
+<org.eventb.core.poPredicate name="TASKU" org.eventb.core.predicate="card(TASKS)=N" org.eventb.core.source="/JobModel/c0.buc|org.eventb.core.contextFile#c0|org.eventb.core.axiom#_bSoIIf3DEeaVcaelLDr9sQ"/>
+<org.eventb.core.poPredicate name="TASKV" org.eventb.core.predicate="N&gt;0" org.eventb.core.source="/JobModel/c0.buc|org.eventb.core.contextFile#c0|org.eventb.core.axiom#_bSoIIv3DEeaVcaelLDr9sQ"/>
+<org.eventb.core.poIdentifier name="WCET" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="deadline" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="period" org.eventb.core.type="ℤ"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/JobModel/c1.bpo|org.eventb.core.poFile#c1|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="7">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="WCET&gt;0" org.eventb.core.source="/JobModel/c1.buc|org.eventb.core.contextFile#c1|org.eventb.core.axiom#_2M1kc_3GEeaVcaelLDr9sQ"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="deadline&gt;0" org.eventb.core.source="/JobModel/c1.buc|org.eventb.core.contextFile#c1|org.eventb.core.axiom#_2M1kdP3GEeaVcaelLDr9sQ"/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="period&gt;0" org.eventb.core.source="/JobModel/c1.buc|org.eventb.core.contextFile#c1|org.eventb.core.axiom#_2M1kdf3GEeaVcaelLDr9sQ"/>
+<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="deadline&gt;WCET" org.eventb.core.source="/JobModel/c1.buc|org.eventb.core.contextFile#c1|org.eventb.core.axiom#_2M1kdv3GEeaVcaelLDr9sQ"/>
+<org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="period&gt;deadline" org.eventb.core.source="/JobModel/c1.buc|org.eventb.core.contextFile#c1|org.eventb.core.axiom#_Dm31wP3JEeaVcaelLDr9sQ"/>
+</org.eventb.core.poPredicateSet>
+</org.eventb.core.poFile>
